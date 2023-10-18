@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import "global.scss";
+
+body{
+	margin: 0;
+}
+
+
+header{
+	.header-box{
+		background-color: #ffffff;
+
+		.logo-box{
+			height: 105px;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.logo{
+				max-width: 108px;
+				display: block;
+
+
+				img{
+					width: 100%;
+					height: 100%;
+
+				}
+			}
+		}
+	}
+}
+
+
+section.esg-contents{
+	.esg-group{
+		background: url("../img/esg_bg.png") repeat center;
+		.esg-visual-box{
+			.inner{
+
+				.visual-tit-box{
+					img{
+
+					}
+				}
+
+			}
+		}
+	}
+}

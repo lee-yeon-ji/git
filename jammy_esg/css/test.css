@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*
+AUTH : ssooya
+VERSION : version 2
+*/
+/**********
+펑션
+***********/
+/**********
+텍스트 자간
+***********/
+/**********
+텍스트 말줄임
+***********/
+/**********
+아이콘
+***********/
+body {
+  margin: 0;
+}
+
+header .header-box {
+  background-color: #ffffff;
+}
+
+header .header-box .logo-box {
+  height: 105px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .header-box .logo-box .logo {
+  max-width: 108px;
+  display: block;
+}
+
+header .header-box .logo-box .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+section.esg-contents .esg-group {
+  background: url("../img/esg_bg.png") repeat center;
+}
+
+/*# sourceMappingURL=test.css.map */
