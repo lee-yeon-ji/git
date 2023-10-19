@@ -19,6 +19,11 @@ body {
   margin: 0;
 }
 
+.inner {
+  max-width: 1042px;
+  margin: 0 auto;
+}
+
 header .header-box {
   background-color: #ffffff;
 }
@@ -42,7 +47,49 @@ header .header-box .logo-box .logo img {
 }
 
 section.esg-contents .esg-group {
-  background: url("../img/esg_bg.png") repeat center;
+  background: url("../img/esg_bg.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+section.esg-contents .esg-group .esg-visual-box {
+  padding-top: 70px;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-tit-box {
+  text-align: center;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tit-txt img {
+  max-width: 554px;
+  height: auto;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-sub-txt {
+  padding-top: 25px;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-sub-txt img {
+  max-width: 458px;
+  height: auto;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tip-txt {
+  padding-top: 20px;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tip-txt .tip-txt {
+  color: #555;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tip-txt .tip-txt .tip-point {
+  color: #568EFF;
+  box-shadow: inset 0 -11px 0 #D5FB4E;
 }
 
 /*# sourceMappingURL=test.css.map */
