@@ -92,4 +92,62 @@ section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tip-txt 
   box-shadow: inset 0 -11px 0 #D5FB4E;
 }
 
+section.esg-contents .esg-group .esg-visual-box .visual-bg-box {
+  max-width: 1042px;
+  position: relative;
+  padding-top: 72px;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-bg-box img {
+  width: 100%;
+  height: 100%;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-con-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box {
+  display: flex;
+  align-items: center;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box + .row-box {
+  padding-top: 21px;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box .label-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background: #00A76F;
+  color: #D5FB4E;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.72px;
+  padding: 6px 14px;
+  width: 120px;
+  box-sizing: border-box;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box .label-box .label-txt {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box .desc-box {
+  padding-left: 10px;
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.36px;
+}
+
 /*# sourceMappingURL=test.css.map */
