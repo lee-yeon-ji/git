@@ -108,53 +108,71 @@ section.esg-contents{
 				position: absolute;
 				left: 0;
 				right: 0;
-				bottom: 80px;
-				.row-box{
-					display: flex;
-					align-items: center;
+				bottom: 315px;
+				display: flex;
+				justify-content: center;
 
-					& + .row-box{
-						padding-top: 21px;
-					}
-					.label-box{//큰 라벨 박스는 크게 감싸고 있는 부모요소에게 주기
+				.row-wrap{
+
+					.row-box{
 						display: flex;
-						justify-content: center;
 						align-items: center;
-						border-radius: 999px;
-						background: #00A76F;
-						color: #D5FB4E;
-						font-size: 18px;
-						font-weight: 700;
-						line-height: 100%;
-						letter-spacing: -0.72px;
-						padding: 6px 14px;
-						width: 120px;//space-between을 하기 위한 고정값
-						box-sizing: border-box;
 
-						.label-txt{//대상 글자를 양 옆으로 정렬 시키기 위함
+						& + .row-box{
+							padding-top: 21px;
+						}
+						.label-box{//큰 라벨 박스는 크게 감싸고 있는 부모요소에게 주기
 							display: flex;
-							justify-content: space-between;//왼쪽을 기준으로 붙는다
-							width: 100%;
-							.txt{
+							justify-content: center;
+							align-items: center;
+							border-radius: 999px;
+							background: #00A76F;
+							color: #D5FB4E;
+							font-size: 18px;
+							font-weight: 700;
+							line-height: 100%;
+							letter-spacing: -0.72px;
+							padding: 6px 14px;
+							width: 120px;//space-between을 하기 위한 고정값
+							box-sizing: border-box;//border-box, content-box 두가지 속성이 있음.
 
+							.label-txt{//대상 글자를 양 옆으로 정렬 시키기 위함
+								display: flex;
+								justify-content: space-between;//왼쪽을 기준으로 붙는다
+								width: 100%;
+								.txt{
+
+								}
 							}
+
+
+
 						}
 
 
+						.desc-box{
+							padding-left: 10px;
+							color: #555;
+							font-size: 18px;
+							font-weight: 600;
+							line-height: 100%;
+							letter-spacing: -0.36px;
+						}
+					}//visual-con-box에서 가운데 기준으로 맞추고  싶은데 안되는 이유는 큰박스로 한번 두르고 그 다음 한번 더 감싼 뒤에 기준을 주어야 정렬이 가능하므로
+				}
 
-					}
-
-
-					.desc-box{
-						padding-left: 10px;
-						color: #555;
-						font-size: 18px;
-						font-weight: 600;
-						line-height: 100%;
-						letter-spacing: -0.36px;
-					}
-				}//visual-con-box에서 가운데 기준으로 맞추고  싶은데 안되는 이유는 큰박스로 한번 두르고 그 다음 한번 더 감싼 뒤에 기준을 주어야 정렬이 가능하므로
 			}
 		}
 	}
+}
+
+section.mission-contents{
+	background: url("../img/mission_bg.png")no-repeat center/cover;
+	height: 100vh;
+
+	.mission-item-box{
+
+	}
+
+
 }

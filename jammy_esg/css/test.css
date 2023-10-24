@@ -107,19 +107,21 @@ section.esg-contents .esg-group .esg-visual-box .visual-con-box {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 80px;
+  bottom: 315px;
+  display: flex;
+  justify-content: center;
 }
 
-section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box {
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box {
   display: flex;
   align-items: center;
 }
 
-section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box + .row-box {
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box + .row-box {
   padding-top: 21px;
 }
 
-section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box .label-box {
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box .label-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,19 +137,24 @@ section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box .label-
   box-sizing: border-box;
 }
 
-section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box .label-box .label-txt {
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box .label-box .label-txt {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-box .desc-box {
+section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box .desc-box {
   padding-left: 10px;
   color: #555;
   font-size: 18px;
   font-weight: 600;
   line-height: 100%;
   letter-spacing: -0.36px;
+}
+
+section.mission-contents {
+  background: url("../img/mission_bg.png") no-repeat center/cover;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=test.css.map */
