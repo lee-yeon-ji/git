@@ -157,4 +157,60 @@ section.mission-contents {
   height: 100vh;
 }
 
+section.mission-contents .mission-item-box {
+  padding-top: 108px;
+}
+
+section.mission-contents .mission-item-box .mission-tit-box .mission-label-box {
+  max-width: 183px;
+  margin: 0 auto;
+}
+
+section.mission-contents .mission-item-box .mission-tit-box .mission-label-box img {
+  max-width: 100%;
+}
+
+section.mission-contents .mission-item-box .mission-tit-box .mission-subject-box {
+  max-width: 327px;
+  margin: 0 auto;
+  padding-top: 12px;
+}
+
+section.mission-contents .mission-item-box .mission-tit-box .mission-subject-box img {
+  max-width: 100%;
+}
+
+section.mission-contents .mission-item-box .mission-tit-box .mission-desc-box {
+  padding-top: 25px;
+  text-align: center;
+  color: #FFF;
+}
+
+section.mission-contents .mission-item-box .mission-tit-box .mission-desc-box .txt-box {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.6px;
+}
+
+section.mission-contents .mission-item-box .mission-tit-box .mission-desc-box .msg-box {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.48px;
+}
+
+section.mission-contents .mission-item-box .mission-info-box {
+  padding-top: 29px;
+}
+
+section.mission-contents .mission-item-box .mission-info-box .mission-info-wrap {
+  background: url("../img/img_mission_desc_bg.png") no-repeat center/408px 322px;
+  width: 408px;
+  height: 323px;
+  margin: 0 auto;
+  padding: 35px 52px;
+  box-sizing: border-box;
+}
+
 /*# sourceMappingURL=test.css.map */

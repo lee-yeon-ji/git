@@ -171,6 +171,86 @@ section.mission-contents{
 	height: 100vh;
 
 	.mission-item-box{
+		padding-top: 108px;
+		.mission-tit-box{
+			.mission-label-box{
+				max-width: 183px;
+				margin: 0 auto;
+				img{
+					max-width: 100%;
+
+				}
+			}
+			.mission-subject-box{
+				max-width: 327px;
+				margin: 0 auto;
+				padding-top: 12px;
+
+				img{
+					max-width: 100%;
+				}
+			}
+
+			.mission-desc-box{
+				padding-top: 25px;
+				text-align: center;
+				color: #FFF;
+
+				.txt-box{
+					font-size: 20px;
+					font-weight: 700;
+					line-height: 150%;
+					letter-spacing: -0.6px;
+
+				}
+
+				.msg-box{
+					font-size: 16px;
+					font-weight: 500;
+					line-height: 150%;
+					letter-spacing: -0.48px;
+				}
+			}
+		}
+
+		.mission-info-box{
+			padding-top: 29px;
+
+			.mission-info-wrap{
+				background: url("../img/img_mission_desc_bg.png") no-repeat center/408px 322px;
+				width: 408px;
+				height: 323px;
+				margin: 0 auto;
+				padding: 35px 52px;
+				box-sizing: border-box;//padding을 줬을 때, 콘텐츠 안이 아닌 밖으로 padding값이 적용 됐을 때, 개발자 도구에서 스타일에 있는 패딩값과 콘텐츠 값을 보고 콘텐츠 안으로 패딩 값이 들어가는지 아닌지 파악 후 box-sizing에서 border-box 요소를 넣어준다.
+
+
+				.row-box{
+					.step-tit-box{
+						.step-txt-box{
+
+						}
+						.tit-txt-box{
+
+						}
+					}
+
+					.desc-box{
+						.plus-box{
+
+						}
+
+						.txt-box{
+
+						}
+
+					}
+				}
+			}
+
+
+
+		}
 
 	}
 
