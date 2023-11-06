@@ -9,10 +9,10 @@ const $ = (node) => document.querySelector(node);
 const tiger = $('#tiger');
 
 
-gsap.to(tiger,{
+const animation = gsap.to(tiger,{
     duration:6,
     motionPath: {
-        path:'#route',
+        path:'.route',
         align:tiger,
     }
 });
@@ -20,3 +20,4 @@ gsap.to(tiger,{
  // gsap 코어를 위에 두고 그다음에 motionPath를 적어줘야 함.
 
 
+console.log(animation);
