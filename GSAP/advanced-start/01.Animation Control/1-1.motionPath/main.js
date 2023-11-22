@@ -8,7 +8,8 @@ const $ = (node) => document.querySelector(node);
 
 const tiger = $('#tiger');
 const button = $('#button');
-
+const time = $('#time');
+const progress = $('#progressSlider');
 
 const animation = gsap.to(tiger,{
     duration:6,
@@ -16,9 +17,17 @@ const animation = gsap.to(tiger,{
         path:'#route',
         align:tiger,
     },
-    onComplete: ()=>{
-        button.textContent = 'play';
-    }
+    onUpdate: update,
+    onComplete: ()=> button.textContent = 'play'
+})
+
+function update(){
+    time.textContent = animation.time().toFixed(2)
+}
+
+
+progress.addEventListener('input',()=>{
+
 })
 
 button.addEventListener('click',()=>{
