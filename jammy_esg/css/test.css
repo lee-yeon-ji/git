@@ -312,4 +312,56 @@ section.mission-contents .mission-item-box .item-box .mission-info-box .mission-
   letter-spacing: -0.57px;
 }
 
+section.benefit-contents {
+  background: url("../img/esg_bg.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 80px 0 116px;
+  text-align: center;
+}
+
+section.benefit-contents .inner.wrap {
+  max-width: 764px;
+}
+
+section.benefit-contents .benefit-list-box .row-box + .row-box {
+  padding-top: 71px;
+}
+
+section.benefit-contents .benefit-list-box .row-box .benefit-tit-box .benefit-label-box {
+  padding-bottom: 10px;
+}
+
+section.benefit-contents .benefit-list-box .row-box .benefit-tit-box .benefit-msg-box {
+  padding-top: 14px;
+}
+
+section.benefit-contents .benefit-list-box .row-box .benefit-tit-box .benefit-msg-box .msg-txt {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  color: #000000;
+}
+
+section.benefit-contents .benefit-list-box .row-box .benefit-con-box {
+  width: 100%;
+}
+
+section.benefit-contents .benefit-list-box .row-box .benefit-con-box.type1 {
+  padding-top: 30px;
+}
+
+section.benefit-contents .benefit-list-box .row-box .benefit-con-box.type1 img {
+  max-width: 371px;
+}
+
+section.benefit-contents .benefit-list-box .row-box .benefit-con-box.type2 {
+  padding-top: 11px;
+}
+
+section.benefit-contents .benefit-list-box .row-box .benefit-con-box.type2 img {
+  max-width: 356px;
+}
+
 /*# sourceMappingURL=test.css.map */
