@@ -23,10 +23,15 @@ const animation = gsap.to(tiger,{
 
 function update(){
     time.textContent = animation.time().toFixed(2)
+    progress.value = animation.progress()
 }
 
 
-progress.addEventListener('input',()=>{
+progress.addEventListener('input',(e)=>{
+    const target = e.currentTarget;
+
+    animation.progress(target.value).pause();
+    button.textContent = 'play';
 
 })
 
