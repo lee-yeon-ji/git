@@ -1,32 +1,35 @@
 @charset "UTF-8";
 
 
-//@each $fonts in T, L, R, M, B, EB {
-//
-//	@font-face {
-//		font-family: $font3;
-//		src: url('../fonts/#{$font3}-#{$fonts}.woff') format('woff');
-//		@if $fonts == T {
-//			font-weight: 200;
-//		} @else if $fonts == L {
-//			font-weight: 300;
-//		} @else if $fonts == R {
-//			font-weight: 400;
-//		} @else if $fonts == M {
-//			font-weight: 500;
-//		} @else if $fonts == B {
-//			font-weight: 700;
-//		} @else if $fonts == EB {
-//			font-weight: 900;
-//		}
-//		font-style: normal;
-//	}
-//}
+$font : 'pretendard'; //pretendard를 변수에 담은 것
+@each $fonts in T, L, R, M, B, EB {
+
+	@font-face {
+		font-family: $font; //변수로 선언한 변수명으로 적기 변수명으로 선언하지 않았을 경우 사용할 폰트명 적어주기
+		src: url('../fonts/#{$font}-#{$fonts}.woff') format('woff');
+		// 사스 문법에서는 문자열 내에서 변수를 호출하기 위해 # 문법을 사용한다.
+		@if $fonts == T {
+			font-weight: 200;
+		} @else if $fonts == L {
+			font-weight: 300;
+		} @else if $fonts == R {
+			font-weight: 400;
+		} @else if $fonts == M {
+			font-weight: 500;
+		} @else if $fonts == B {
+			font-weight: 700;
+		} @else if $fonts == EB {
+			font-weight: 900;
+		}
+		font-style: normal;
+	}
+}
 
 
 *{
 	margin: 0 ;
 	font-size: 0;
+	font-family: $font;
 
 }
 
@@ -55,10 +58,10 @@ section.goods{
 
 
 				.tit-box{
-
+					max-width: 597px;
 
 					img{
-						max-width: 597px;
+						width: 100%;
 					}
 				}
 			}
@@ -66,10 +69,11 @@ section.goods{
 			.visual-con-box{
 				padding-top: 45px;
 				.visual-img{
+					max-width: 660px;
 
 
 					img{
-						max-width: 660px;
+						width: 100%;
 
 					}
 				}
@@ -112,9 +116,9 @@ section.goods{
 					.info-tit-box{
 						.tit-txt{
 							text-align: center;
-
+							max-width: 268px;
 							img{
-								max-width: 268px;
+								width: 100%;
 
 							}
 						}
@@ -183,21 +187,27 @@ section.goods{
 										font-weight: 600;
 										line-height: normal;
 										letter-spacing: -0.8px;
-										width: 117px;
+										width: 90px;
 										padding-right: 24px;
 
 									}
 
 									.con-box {
+										flex: 1;
+										display: flex;
 
-										.ic-date {
-											background: url("../img/ic_date.svg") no-repeat center/cover;
+
+
+										.icon-box{
 											width: 16px;
 											height: 16px;
-
+											background: url("../img/ic_date.svg") no-repeat center/cover;
+											margin-right: 6px;
 										}
 
+
 										.txt-box {
+
 											color: #000;
 											font-size: 16px;
 											font-weight: 300;

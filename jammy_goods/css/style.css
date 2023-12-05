@@ -1,6 +1,49 @@
+@font-face {
+  font-family: "pretendard";
+  src: url("../fonts/pretendard-T.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pretendard";
+  src: url("../fonts/pretendard-L.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pretendard";
+  src: url("../fonts/pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pretendard";
+  src: url("../fonts/pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pretendard";
+  src: url("../fonts/pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pretendard";
+  src: url("../fonts/pretendard-EB.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   font-size: 0;
+  font-family: "pretendard";
 }
 
 section.goods header {
@@ -18,16 +61,24 @@ section.goods section.visual .visual-box .visual-tit {
   text-align: center;
 }
 
-section.goods section.visual .visual-box .visual-tit .tit-box img {
+section.goods section.visual .visual-box .visual-tit .tit-box {
   max-width: 597px;
+}
+
+section.goods section.visual .visual-box .visual-tit .tit-box img {
+  width: 100%;
 }
 
 section.goods section.visual .visual-box .visual-con-box {
   padding-top: 45px;
 }
 
-section.goods section.visual .visual-box .visual-con-box .visual-img img {
+section.goods section.visual .visual-box .visual-con-box .visual-img {
   max-width: 660px;
+}
+
+section.goods section.visual .visual-box .visual-con-box .visual-img img {
+  width: 100%;
 }
 
 section.goods section.event {
@@ -64,10 +115,11 @@ section.goods section.event .inner .event-info-box .inner {
 
 section.goods section.event .inner .event-info-box .inner .info-tit-box .tit-txt {
   text-align: center;
+  max-width: 268px;
 }
 
 section.goods section.event .inner .event-info-box .inner .info-tit-box .tit-txt img {
-  max-width: 268px;
+  width: 100%;
 }
 
 section.goods section.event .inner .event-info-box .inner .info-tit-box .desc-box {
@@ -137,14 +189,20 @@ section.goods section.event .inner .event-info-box .inner .info-date-box .info-d
   font-weight: 600;
   line-height: normal;
   letter-spacing: -0.8px;
-  width: 117px;
+  width: 90px;
   padding-right: 24px;
 }
 
-section.goods section.event .inner .event-info-box .inner .info-date-box .info-date-wrap .row-wrap .row .con-box .ic-date {
-  background: url("../img/ic_date.svg") no-repeat center/cover;
+section.goods section.event .inner .event-info-box .inner .info-date-box .info-date-wrap .row-wrap .row .con-box {
+  flex: 1;
+  display: flex;
+}
+
+section.goods section.event .inner .event-info-box .inner .info-date-box .info-date-wrap .row-wrap .row .con-box .icon-box {
   width: 16px;
   height: 16px;
+  background: url("../img/ic_date.svg") no-repeat center/cover;
+  margin-right: 6px;
 }
 
 section.goods section.event .inner .event-info-box .inner .info-date-box .info-date-wrap .row-wrap .row .con-box .txt-box {
