@@ -1,6 +1,15 @@
 @charset "UTF-8";
 
 
+// 모바일
+@mixin m{
+	@media (max-width: 1024px) {
+		@content
+	}
+}
+
+
+
 $font : 'pretendard'; //pretendard를 변수에 담은 것
 @each $fonts in T, L, R, M, B, EB {
 
@@ -33,6 +42,10 @@ $font : 'pretendard'; //pretendard를 변수에 담은 것
 
 }
 
+.inner{
+	padding: 0 20px;
+}
+
 section.goods{
 
 
@@ -47,21 +60,20 @@ section.goods{
 	}
 
 	section.visual{
-
+		background-color: #AD263B;
 		.visual-box{
-			background-color: #AD263B;
+
 			text-align: center;
 			padding: 60px 0 74px;
 
 			.visual-tit{
-				text-align: center;
-
 
 				.tit-box{
 					max-width: 597px;
-
+					margin: 0 auto;
 					img{
 						width: 100%;
+
 					}
 				}
 			}
@@ -70,6 +82,7 @@ section.goods{
 				padding-top: 45px;
 				.visual-img{
 					max-width: 660px;
+					margin: 0 auto;
 
 
 					img{
@@ -84,15 +97,25 @@ section.goods{
 	section.event{
 		background-color: #E3B2B2;
 		padding: 80px 0 100px;
-		.inner{
-			max-width: 800px;
-			margin: 0 auto;
+		@include m{
+			padding: 40px 0 60px
+		}
+		.inner {
+
+			&.wrap{
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
 
 			.event-row-box{
 				.row{
 
 					& + .row{
 						padding-top: 50px;
+						@include m{
+						    padding-top: 40px;
+						}
 					}
 
 					.con-box{
@@ -102,6 +125,10 @@ section.goods{
 						font-size: 17px;
 						font-weight: 400;
 						line-height: 140%;
+						@include m{
+							font-size: 14px;
+							line-height: 160%;
+						}
 
 					}
 
@@ -111,12 +138,21 @@ section.goods{
 			.event-info-box{
 				background-color: #ffffff;
 				margin-top: 80px;
+				@include m{
+				    margin-top: 40px;
+				}
 				.inner{
 					padding: 52px 84px 40px;
+					@include m{
+						padding: 30px 22px 30px
+					}
 					.info-tit-box{
 						.tit-txt{
-							text-align: center;
 							max-width: 268px;
+							margin: 0 auto;
+							@include m{
+							    max-width: 193px;
+							}
 							img{
 								width: 100%;
 
@@ -131,6 +167,19 @@ section.goods{
 							font-weight: 400;
 							line-height: 100%;
 							letter-spacing: -0.6px;
+							br{
+								display: none;
+							}
+							@include m{
+								padding-top: 14px;
+								font-size: 14px;
+								line-height: 130%;
+								letter-spacing: -0.42px;
+
+								br{
+									display: block;
+								}
+							}
 						}
 					}
 
@@ -140,7 +189,28 @@ section.goods{
 						img{
 							width: 100%;
 						}
+
+						@include m{
+						    display: none;
+						}
+
 					}
+					.info-con-box-mob{
+						display: none;
+
+
+						@include m{
+							display: block;
+							padding: 30px 0;
+							max-width: 269px;
+							img{
+								width: 100%;
+							}
+						}
+
+					}
+
+
 
 					.info-apply-btn-box{
 						padding-bottom: 40px;
@@ -268,5 +338,9 @@ article.label-box{
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		@include m{
+			font-size: 15px;
+		}
 	}
 }

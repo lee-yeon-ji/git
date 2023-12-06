@@ -46,23 +46,27 @@
   font-family: "pretendard";
 }
 
+.inner {
+  padding: 0 20px;
+}
+
 section.goods header {
   height: 113px;
   background-color: #ffffff;
 }
 
-section.goods section.visual .visual-box {
+section.goods section.visual {
   background-color: #AD263B;
+}
+
+section.goods section.visual .visual-box {
   text-align: center;
   padding: 60px 0 74px;
 }
 
-section.goods section.visual .visual-box .visual-tit {
-  text-align: center;
-}
-
 section.goods section.visual .visual-box .visual-tit .tit-box {
   max-width: 597px;
+  margin: 0 auto;
 }
 
 section.goods section.visual .visual-box .visual-tit .tit-box img {
@@ -75,6 +79,7 @@ section.goods section.visual .visual-box .visual-con-box {
 
 section.goods section.visual .visual-box .visual-con-box .visual-img {
   max-width: 660px;
+  margin: 0 auto;
 }
 
 section.goods section.visual .visual-box .visual-con-box .visual-img img {
@@ -86,13 +91,25 @@ section.goods section.event {
   padding: 80px 0 100px;
 }
 
-section.goods section.event .inner {
+@media (max-width: 1024px) {
+  section.goods section.event {
+    padding: 40px 0 60px;
+  }
+}
+
+section.goods section.event .inner.wrap {
   max-width: 800px;
   margin: 0 auto;
 }
 
 section.goods section.event .inner .event-row-box .row + .row {
   padding-top: 50px;
+}
+
+@media (max-width: 1024px) {
+  section.goods section.event .inner .event-row-box .row + .row {
+    padding-top: 40px;
+  }
 }
 
 section.goods section.event .inner .event-row-box .row .con-box {
@@ -104,18 +121,43 @@ section.goods section.event .inner .event-row-box .row .con-box {
   line-height: 140%;
 }
 
+@media (max-width: 1024px) {
+  section.goods section.event .inner .event-row-box .row .con-box {
+    font-size: 14px;
+    line-height: 160%;
+  }
+}
+
 section.goods section.event .inner .event-info-box {
   background-color: #ffffff;
   margin-top: 80px;
+}
+
+@media (max-width: 1024px) {
+  section.goods section.event .inner .event-info-box {
+    margin-top: 40px;
+  }
 }
 
 section.goods section.event .inner .event-info-box .inner {
   padding: 52px 84px 40px;
 }
 
+@media (max-width: 1024px) {
+  section.goods section.event .inner .event-info-box .inner {
+    padding: 30px 22px 30px;
+  }
+}
+
 section.goods section.event .inner .event-info-box .inner .info-tit-box .tit-txt {
-  text-align: center;
   max-width: 268px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  section.goods section.event .inner .event-info-box .inner .info-tit-box .tit-txt {
+    max-width: 193px;
+  }
 }
 
 section.goods section.event .inner .event-info-box .inner .info-tit-box .tit-txt img {
@@ -132,6 +174,22 @@ section.goods section.event .inner .event-info-box .inner .info-tit-box .desc-bo
   letter-spacing: -0.6px;
 }
 
+section.goods section.event .inner .event-info-box .inner .info-tit-box .desc-box br {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  section.goods section.event .inner .event-info-box .inner .info-tit-box .desc-box {
+    padding-top: 14px;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -0.42px;
+  }
+  section.goods section.event .inner .event-info-box .inner .info-tit-box .desc-box br {
+    display: block;
+  }
+}
+
 section.goods section.event .inner .event-info-box .inner .info-con-box {
   padding: 40px 0 37px;
   max-width: 655px;
@@ -139,6 +197,27 @@ section.goods section.event .inner .event-info-box .inner .info-con-box {
 
 section.goods section.event .inner .event-info-box .inner .info-con-box img {
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  section.goods section.event .inner .event-info-box .inner .info-con-box {
+    display: none;
+  }
+}
+
+section.goods section.event .inner .event-info-box .inner .info-con-box-mob {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  section.goods section.event .inner .event-info-box .inner .info-con-box-mob {
+    display: block;
+    padding: 30px 0;
+    max-width: 269px;
+  }
+  section.goods section.event .inner .event-info-box .inner .info-con-box-mob img {
+    width: 100%;
+  }
 }
 
 section.goods section.event .inner .event-info-box .inner .info-apply-btn-box {
@@ -257,6 +336,12 @@ article.label-box .label-txt {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  article.label-box .label-txt {
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
