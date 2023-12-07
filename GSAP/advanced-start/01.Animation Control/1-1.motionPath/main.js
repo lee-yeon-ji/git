@@ -53,6 +53,22 @@ button.addEventListener('click',()=>{
 
 })
 
+button.addEventListener('click', ()=>{
+
+})
+
+const home = $('#home');
+const mountain = $('#mountain');
+const river =$ ('#river');
+const company =$('#company');
+
+
+animation.pause();
+
+river.addEventListener('click',()=>{
+    gsap.to(animation,{progress:0.53,duration:3})
+})
+
 // ===는 동등 연산자로 타입이 다르면 false를 반환함. ==는 값을 비교하기 전 타입이 다를 경우 타입을 변환 후 값을 비교함.
 // 문과 식이 있는데 문은 값을 반환하지 않음. 식은 값을 반환함.
 // 문에서는 조건문(if, switch), 반복문, for, while, do..while
