@@ -53,21 +53,36 @@ button.addEventListener('click',()=>{
 
 })
 
-button.addEventListener('click', ()=>{
 
-})
+gsap.to(animation,{time:3,duration:5});
 
+
+//각 버튼을 클릭했을 때, 클릭한 버튼으로 가는 루트 만들기
 const home = $('#home');
 const mountain = $('#mountain');
-const river =$ ('#river');
+const river = $ ('#river');
 const company =$('#company');
 
 
-animation.pause();
-
+home.addEventListener('click',()=>{
+    animation.pause(); //pause가 없으면 클릭한 버튼 앞에서 멈추지 않고 끝나는 지점까지 움직이기 때문에 멈추는 애니메이션 효과를 줘야함.
+    gsap.to(animation,{progress:0,duration:3})
+})
+mountain.addEventListener('click',()=>{
+    animation.pause();
+    gsap.to(animation,{progress:0.24,duration:3})
+})
 river.addEventListener('click',()=>{
+    animation.pause(); //
     gsap.to(animation,{progress:0.53,duration:3})
 })
+company.addEventListener('click',()=>{
+    animation.pause();
+    gsap.to(animation,{progress:1,duration:3})
+})
+//이벤트 위임 event delegation으로 위에 짠 코드들은 중복적이고 클릭해야 하는 대상이 늘어날 경우 이벤트 핸들러가 계속 증가하게 되므로 중복되는 코드를 줄이고 간편하게 사용할 수 있음.
+
+
 
 // ===는 동등 연산자로 타입이 다르면 false를 반환함. ==는 값을 비교하기 전 타입이 다를 경우 타입을 변환 후 값을 비교함.
 // 문과 식이 있는데 문은 값을 반환하지 않음. 식은 값을 반환함.
