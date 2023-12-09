@@ -64,18 +64,27 @@ const river = $ ('#river');
 const company =$('#company');
 
 
+home.addEventListener('click',(e)=>{})
+
+
+home.addEventListener('click',function (e){
+
+})
+
+
 home.addEventListener('click',()=>{
     animation.pause(); //pause가 없으면 클릭한 버튼 앞에서 멈추지 않고 끝나는 지점까지 움직이기 때문에 멈추는 애니메이션 효과를 줘야함.
     gsap.to(animation,{progress:0,duration:3})
 })
 mountain.addEventListener('click',()=>{
     animation.pause();
-    gsap.to(animation,{progress:0.24,duration:3})
+    gsap.to(animation,{progress:0.24,duration:10})
 })
 river.addEventListener('click',()=>{
     animation.pause(); //
     gsap.to(animation,{progress:0.53,duration:3})
 })
+
 company.addEventListener('click',()=>{
     animation.pause();
     gsap.to(animation,{progress:1,duration:3})
