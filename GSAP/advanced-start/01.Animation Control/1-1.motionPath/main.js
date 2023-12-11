@@ -62,34 +62,36 @@ const home = $('#home');
 const mountain = $('#mountain');
 const river = $ ('#river');
 const company =$('#company');
+const svg = $('svg');
 
-
-home.addEventListener('click',(e)=>{})
-
-
-home.addEventListener('click',function (e){
-
+svg.addEventListener('click',(e)=>{
+    console.log('svg!!!');
 })
+//클릭 이벤트를 사용했을 때 자바스크립트에서 제공해주는 메서드 (너 클릭 이벤트 사용했네? 객체 하나줄게)
 
+//e.target은 마우스를 처음 만난 대상을 타겟에 감을 수 있음(이벤트 버블링의 기초)
+//closest는 내가 선택한 대상에 가장 인접한 태그를 찾아주는 역할을 하는 것. $0.closest('')
+//getAttribute는 DOM 특정 대상의 속성을 가지고 올때 쓰이는 것. $0로 특정 DOM을 클릭하고, DOM의 특정 값을 가지고 오고싶을때 $0.getAttribute('')
 
-home.addEventListener('click',()=>{
-    animation.pause(); //pause가 없으면 클릭한 버튼 앞에서 멈추지 않고 끝나는 지점까지 움직이기 때문에 멈추는 애니메이션 효과를 줘야함.
-    gsap.to(animation,{progress:0,duration:3})
-})
-mountain.addEventListener('click',()=>{
-    animation.pause();
-    gsap.to(animation,{progress:0.24,duration:10})
-})
-river.addEventListener('click',()=>{
-    animation.pause(); //
-    gsap.to(animation,{progress:0.53,duration:3})
-})
-
-company.addEventListener('click',()=>{
-    animation.pause();
-    gsap.to(animation,{progress:1,duration:3})
-})
+// home.addEventListener('click',()=>{
+//     animation.pause(); //pause가 없으면 클릭한 버튼 앞에서 멈추지 않고 끝나는 지점까지 움직이기 때문에 멈추는 애니메이션 효과를 줘야함.
+//     gsap.to(animation,{progress:0,duration:3})
+// })
+// mountain.addEventListener('click',()=>{
+//     animation.pause();
+//     gsap.to(animation,{progress:0.24,duration:10})
+// })
+// river.addEventListener('click',()=>{
+//     animation.pause(); //
+//     gsap.to(animation,{progress:0.53,duration:3})
+// })
+//
+// company.addEventListener('click',()=>{
+//     animation.pause();
+//     gsap.to(animation,{progress:1,duration:3})
+// })
 //이벤트 위임 event delegation으로 위에 짠 코드들은 중복적이고 클릭해야 하는 대상이 늘어날 경우 이벤트 핸들러가 계속 증가하게 되므로 중복되는 코드를 줄이고 간편하게 사용할 수 있음.
+
 
 
 
