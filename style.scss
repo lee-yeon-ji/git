@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+
+// 모바일
+@mixin m{
+	@media (max-width: 1024px) {
+		@content
+	}
+}
+
+
+
+$font : 'pretendard'; //pretendard를 변수에 담은 것
+@each $fonts in T, L, R, M, B, EB {
+
+	@font-face {
+		font-family: $font; //변수로 선언한 변수명으로 적기 변수명으로 선언하지 않았을 경우 사용할 폰트명 적어주기
+		src: url('../fonts/#{$font}-#{$fonts}.woff') format('woff');
+		// 사스 문법에서는 문자열 내에서 변수를 호출하기 위해 # 문법을 사용한다.
+		@if $fonts == T {
+			font-weight: 200;
+		} @else if $fonts == L {
+			font-weight: 300;
+		} @else if $fonts == R {
+			font-weight: 400;
+		} @else if $fonts == M {
+			font-weight: 500;
+		} @else if $fonts == B {
+			font-weight: 700;
+		} @else if $fonts == EB {
+			font-weight: 900;
+		}
+		font-style: normal;
+	}
+}
+
+
+*{
+	margin: 0 ;
+	font-size: 0;
+	font-family: $font;
+
+}
+
+.inner{
+	padding: 0 20px;
+}
+
+.goods-contents{
+
+
+}
+
+section.event{
+	background-color: #E3B2B2;
+	padding: 80px 0 100px;
+
+	.inner {
+
+		&.wrap{
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	}
+
+	.event-info-box{
+			.row-list-box{
+				.row{
+
+					& + .row{
+						padding-top: 50px;
+
+					}
+
+					.con-box{
+						text-align: center;
+						padding-top: 16px;
+						color: #000;
+						font-size: 17px;
+						font-weight: 400;
+						line-height: 140%;
+
+
+					}
+
+				}
+
+		}
+
+	}
+
+}
+
+article.label-box{
+	display: flex;
+	justify-content: center;
+	.label-txt{
+
+		border-radius: 50px;
+		background: #AD263B;
+		padding: 5px 14px;
+		color: #FFF;
+		font-size: 16px;
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include m{
+			font-size: 15px;
+		}
+	}
+}
