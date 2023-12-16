@@ -54,6 +54,9 @@ $font : 'pretendard'; //pretendard를 변수에 담은 것
 section.visual{
 	background-color: #AD263B;
 	padding: 60px 0 74px;
+	@include m{
+	    padding: 40px 0 40px;
+	}
 	.visual-tit-box{
 		max-width: 597px;
 		margin: 0 auto;
@@ -73,78 +76,106 @@ section.visual{
 	}
 }
 
-section.event{
+section.event {
 	background-color: #E3B2B2;
 	padding: 80px 0 100px;
+	@include m{
+	    padding: 40px 0 60px;
+	}
 
 	.inner {
 
-		&.wrap{
+		&.wrap {
 			max-width: 800px;
 			margin: 0 auto;
 		}
 	}
 
-	.event-info-box{
-			.row-list-box{
-				.row{
+	.event-info-box {
+		.row-list-box {
+			.row {
 
-					& + .row{
-						padding-top: 50px;
-
-					}
-
-					.con-box{
-						text-align: center;
-						padding-top: 16px;
-						color: #000;
-						font-size: 17px;
-						font-weight: 400;
-						line-height: 140%;
-
-
+				& + .row {
+					padding-top: 50px;
+					@include m{
+					    padding-top: 40px;
 					}
 
 				}
 
+				.con-box {
+					text-align: center;
+					padding-top: 16px;
+					color: #000;
+					font-size: 17px;
+					font-weight: 400;
+					line-height: 140%;
+
+					@include m{
+						font-size: 14px;
+						line-height: 160%;
+					}
+
+
+				}
+
+			}
+
 		}
 
-		.event-info-con-box{
+		.event-info-con-box {
 			padding: 50px 84px 40px;
 			margin-top: 80px;
 			max-width: 800px;
 			background-color: #fff;
+			@include m{
+				padding: 31px 29px 30px;
+				margin-top: 40px;
+			}
 
-			.con-tit-box{
-				.tit-txt{
+			.con-tit-box {
+				.tit-txt {
 					margin: 0 auto;
 					max-width: 286px;
-					img{
+
+					img {
 						width: 100%;
 
 					}
 				}
 
-				.desc-box{
+				.desc-box {
 					padding-top: 21px;
+					color: #000;
+					text-align: center;
+					font-size: 20px;
+					font-weight: 400;
+					line-height: 100%;
+					letter-spacing: -0.6px;
 				}
 			}
 
-			.event-info-con-img-box{
+			.event-info-con-img-box {
+				padding-top: 40px;
 				max-width: 655px;
 				margin: 0 auto;
-				img{
+
+				img {
 					width: 100%;
 
 				}
 			}
 
-			.event-apply-btn-box{
+			.event-apply-btn-box {
 				padding-top: 37px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				.apply-btn{
+				@include m{
+				    padding-top: 31px;
+				}
+
+				.apply-btn {
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -158,13 +189,139 @@ section.event{
 					font-weight: 700;
 					letter-spacing: -0.54px;
 					text-decoration: none;
+					@include m{
+						font-weight: 600;
+					}
 				}
+			}
+
+			.event-date-box {
+				margin-top: 40px;
+				border-top: 1px dashed #CECECE;
+				@include m{
+					margin-top: 30px;
+				}
+
+
+				.date-wrap {
+					padding-top: 40px;
+					padding-left: 71px;
+					@include m{
+						padding-top: 20px;
+						padding-left: 0;
+					}
+
+
+					.row-list{
+
+
+						.row {
+							display: flex;
+							align-items: center;
+							@include m{
+							    align-items: start;
+							}
+
+							& + .row {
+								padding-top: 17px;
+								@include m{
+								    padding-top: 16px;
+								}
+							}
+
+							.subject-box {
+								width: 114px;
+								@include m{
+								    width: 92px;
+								}
+								.subject-txt {
+									color: #000;
+									font-size: 16px;
+									font-weight: 600;
+									letter-spacing: -0.8px;
+									@include m{
+										font-size: 14px;
+										letter-spacing: -0.7px;
+									}
+
+								}
+							}
+
+							.desc-box {
+								display: flex;
+								justify-content: center;
+								flex: 1;
+								@include m{
+								    justify-content: start;
+								}
+
+								.icon-box {
+									width: 16px;
+									height: 16px;
+									background: url("img/ic_date.svg") no-repeat center/ 16px 16px;
+									padding-right: 6px;
+
+
+
+								}
+							}
+
+							.desc-txt {
+								flex: 1;//icon-box의 고정값을 가지고 있고 desc-txt가 그 나머지 값을 값을 갖도록하기 위함.
+								color: #000;
+								font-size: 16px;
+								font-weight: 300;
+								line-height: 18px;
+								@include m{
+									font-size: 14px;
+
+								}
+							}
+						}
+					}
+
+
+				}
+			}
+
+			.msg-box{
+				padding-top: 24px;
+				color: #854444;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 20px;
+				letter-spacing: -0.7px;
 			}
 		}
 
+		.view-btn-box{
+			padding-top: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include m{
+			    padding-top: 40px;
+			}
+			.view-btn{
+				display: flex;
+				padding: 20px 10px;
+				width: 100%;
+				max-width: 360px;
+				justify-content: center;
+				align-items: center;
+				border-radius: 10px;
+				background: #000;
+				color: #FFF;
+				font-size: 18px;
+				font-weight: 700;
+				letter-spacing: -0.54px;
+				text-decoration: none;
+			}
+		}
 	}
-
 }
+
+
 
 article.label-box{
 	display: flex;
