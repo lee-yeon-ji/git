@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+
+$font : 'NanumBarunGothic';
+@each $size in L, R, B{
+
+	@font-face{
+		font-family:$font;
+		src: url("../fonts/#{$font}-#{$size}.woff") format('woff');
+
+		@if $fonts == 
+	}
+}
+
+
