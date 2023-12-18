@@ -8,7 +8,16 @@ $font : 'NanumBarunGothic';
 		font-family:$font;
 		src: url("../fonts/#{$font}-#{$size}.woff") format('woff');
 
-		@if $fonts == 
+		@if $font == L {
+			font-weight: 300;
+		}
+		@else if $font == R {
+			font-weight: 400;
+		}
+		@else if $font == B {
+			font-weight: 700;
+		}
+		font-style:normal;
 	}
 }
 
