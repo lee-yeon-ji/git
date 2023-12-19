@@ -16,4 +16,90 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.lotto {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.lotto .lotto-contents {
+  background: #1C1D4A url("../img/img_bg.png") no-repeat center/100% 100%;
+  padding: 18px 48px 109px;
+}
+
+.lotto .lotto-contents header {
+  display: flex;
+  align-items: center;
+}
+
+.lotto .lotto-contents header h1.header-box a.lotto-logo {
+  display: block;
+  max-width: 133px;
+}
+
+.lotto .lotto-contents header h1.header-box a.lotto-logo img {
+  width: 100%;
+}
+
+.lotto .lotto-contents header .header-con-box .txt {
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.lotto .lotto-contents .lotto-play {
+  padding-top: 80px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-user-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-user-box .user-mane-box .txt {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-user-box .user-point-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-user-box .user-point-box .point-box {
+  padding-right: 24px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-user-box .user-point-box .point-box .point-txt {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-user-box .user-point-box .move-btn-box .move-btn {
+  color: #5899FA;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  text-decoration: none;
+  border-radius: 100px;
+  border: 1px solid #5899FA;
+  background: #2B2D5D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 15px;
+  max-width: 92px;
+}
+
 /*# sourceMappingURL=style.css.map */

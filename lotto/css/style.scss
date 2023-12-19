@@ -22,3 +22,97 @@ $font : 'NanumBarunGothic';
 }
 
 
+*{ //*은 전체 태그에 값을 주는 것이기 때문에 고정해야 할 콘텐츠 값을 주면 안됨.
+	margin: 0;
+	padding: 0;
+}
+
+.lotto{
+	max-width: 1024px;
+	margin: 0 auto;
+
+	.lotto-contents{
+		background: #1C1D4A url("../img/img_bg.png")no-repeat center/100% 100%;
+		padding: 18px 48px 109px ;
+		header{
+			display: flex;
+			align-items: center;
+			h1.header-box{
+				a.lotto-logo{
+					display: block;
+					max-width: 133px;
+					img{
+						width: 100%;
+					}
+				}
+			}
+
+			.header-con-box{
+				.txt{
+					color: #FFF;
+					font-size: 28px;
+					font-weight: 600;
+					line-height: 30px;
+				}
+			}
+		}
+
+
+		.lotto-play{
+			padding-top: 80px;
+			.lotto-user-box{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				.user-mane-box{
+					.txt{
+						color: #FFF;
+						font-size: 20px;
+						font-weight: 400;
+						line-height: 23px;
+					}
+				}
+
+				.user-point-box{
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+
+
+					.point-box{
+						padding-right: 24px;
+						.point-txt{
+							color: #ffffff;
+							font-size: 20px;
+							font-weight: 600;
+							line-height: 23px;
+						}
+					}
+
+					.move-btn-box{
+
+
+						.move-btn{
+							color:#5899FA;
+							font-size: 16px;
+							font-weight: 600;
+							line-height: 19px;
+							text-decoration: none;
+							border-radius: 100px;
+							border: 1px solid #5899FA;
+							background: #2B2D5D;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							padding: 12px 15px;
+							max-width: 92px;
+						}
+					}
+				}
+			}
+
+
+		}
+	}
+}
