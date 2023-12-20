@@ -32,34 +32,43 @@ $font : 'NanumBarunGothic';
 	margin: 0 auto;
 
 	.lotto-contents{
-		background: #1C1D4A url("../img/img_bg.png")no-repeat center/100% 100%;
-		padding: 18px 48px 109px ;
+		background-color: #1C1D4A;
+
 		header{
-			display: flex;
-			align-items: center;
-			h1.header-box{
-				a.lotto-logo{
-					display: block;
-					max-width: 133px;
-					img{
-						width: 100%;
+			background: url("../img/img_bg.png")no-repeat center/100% 100%;
+			height: 170px;
+			padding: 18px 48px 24px ;
+			box-sizing: border-box;
+			.header-wrap{
+				display: flex;
+				align-items: center;
+
+				h1.header-box{
+					a.lotto-logo{
+						display: block;
+						max-width: 133px;
+						img{
+							width: 100%;
+						}
+					}
+				}
+
+				.header-con-box{
+					.txt{
+						color: #FFF;
+						font-size: 28px;
+						font-weight: 600;
+						line-height: 30px;
 					}
 				}
 			}
 
-			.header-con-box{
-				.txt{
-					color: #FFF;
-					font-size: 28px;
-					font-weight: 600;
-					line-height: 30px;
-				}
-			}
 		}
 
 
 		.lotto-play{
-			padding-top: 80px;
+			padding: 24px 48px 109px;
+
 			.lotto-user-box{
 				display: flex;
 				align-items: center;
@@ -107,6 +116,53 @@ $font : 'NanumBarunGothic';
 							justify-content: center;
 							padding: 12px 15px;
 							max-width: 92px;
+						}
+					}
+				}
+			}
+
+			.lotto-check-form-box{
+				padding-top: 40px;
+
+				.lotto-tab-box{
+					.tab-wrap{
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						.tab-btn-box{
+							width: calc(25% - 2px);
+							margin: 0 2px;
+							border-radius: 10px 10px 0px 0px;
+							background: #2B2D5D;
+							box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.20);
+
+
+
+							.tab-btn{
+								padding: 15px 5px;
+								margin: 0 -2px;
+								display: flex;
+								justify-content: center;
+								color: #888;
+								font-size: 16px;
+								font-weight: 400;
+								line-height: 19px;
+								text-decoration: none;
+
+
+
+							}
+
+							&.on{
+								background: #34B5F7;
+								box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.20);
+								.tab-btn{
+									color: #FFF;
+									font-weight: 600;
+								}
+
+							}
 						}
 					}
 				}
