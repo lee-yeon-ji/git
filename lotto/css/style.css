@@ -119,16 +119,18 @@
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-tab-box .tab-wrap .tab-btn-box {
-  width: calc(25% - 2px);
-  margin: 0 2px;
-  border-radius: 10px 10px 0px 0px;
+  width: 25%;
+  border-radius: 10px 10px 0 0;
   background: #2B2D5D;
   box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-tab-box .tab-wrap .tab-btn-box + .tab-btn-box {
+  margin-left: 4px;
+}
+
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-tab-box .tab-wrap .tab-btn-box .tab-btn {
   padding: 15px 5px;
-  margin: 0 -2px;
   display: flex;
   justify-content: center;
   color: #888;
@@ -140,12 +142,48 @@
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-tab-box .tab-wrap .tab-btn-box.on {
   background: #34B5F7;
-  box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-tab-box .tab-wrap .tab-btn-box.on .tab-btn {
   color: #FFF;
   font-weight: 600;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box {
+  background: url("../img/img_check_bg.png") no-repeat center/cover;
+  width: 928px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap {
+  padding: 40px 24px 37px;
+}
+
+article.check-desc-box {
+  display: flex;
+  align-items: center;
+}
+
+article.check-desc-box .icon-box {
+  border-radius: 50%;
+  background: rgba(88, 153, 250, 0.3);
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+article.check-desc-box .txt-box {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
 }
 
 /*# sourceMappingURL=style.css.map */

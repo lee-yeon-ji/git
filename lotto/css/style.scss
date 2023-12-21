@@ -131,17 +131,18 @@ $font : 'NanumBarunGothic';
 						justify-content: center;
 
 						.tab-btn-box{
-							width: calc(25% - 2px);
-							margin: 0 2px;
-							border-radius: 10px 10px 0px 0px;
+							width: 25%;
+							border-radius: 10px 10px 0 0;
 							background: #2B2D5D;
 							box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.20);
 
+							& + .tab-btn-box{
+								margin-left: 4px;//tab 맨 양옆의 여백이 조금씩 남아서 그 다음 자식에게 마진 왼쪽 값을 주어 안에만 여백이 있도록 처리함.
 
+							}
 
 							.tab-btn{
 								padding: 15px 5px;
-								margin: 0 -2px;
 								display: flex;
 								justify-content: center;
 								color: #888;
@@ -150,13 +151,10 @@ $font : 'NanumBarunGothic';
 								line-height: 19px;
 								text-decoration: none;
 
-
-
 							}
 
 							&.on{
 								background: #34B5F7;
-								box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.20);
 								.tab-btn{
 									color: #FFF;
 									font-weight: 600;
@@ -166,9 +164,55 @@ $font : 'NanumBarunGothic';
 						}
 					}
 				}
+
+				.lotto-check-box{
+					background: url("../img/img_check_bg.png")no-repeat center/ cover;
+					width: 928px;
+
+
+
+					.check-wrap{
+						padding: 40px 24px 37px;
+					}
+				}
 			}
 
 
 		}
 	}
 }
+
+
+article.check-desc-box{
+	display: flex;
+	align-items: center;
+	.icon-box{
+		border-radius: 50% ;
+		background: rgba(88, 153, 250, 0.30);
+		width: 18px;
+		height: 18px;
+		margin-right: 10px;
+		color: #FFF;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+
+		}
+
+
+
+	.txt-box{
+		color: #FFF;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19px;
+	}
+
+
+	}
+
