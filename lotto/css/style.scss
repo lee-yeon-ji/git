@@ -173,6 +173,56 @@ $font : 'NanumBarunGothic';
 
 					.check-wrap{
 						padding: 40px 24px 37px;
+
+						.lotto-info-layout{
+							.item-list{
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								border-radius: 10px 10px 0px 0px;
+								overflow: hidden;
+								border: 1px solid var(--Lotto-EF3A81, #EF3A81);
+								.item-box{
+									width: 20%;
+
+									.subject-box{
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										//border: 1px solid var(--Lotto-EF3A81, #EF3A81);
+
+
+										.label-box{
+											background-color: #fff;
+											width: 40px;
+											height: 40px;
+
+
+											.label-txt{
+												color: #EF3A81;
+												font-size: 16px;
+												font-weight: 600;
+												line-height: 19px;
+											}
+
+										}
+
+										.price-box{
+											background: #EF3A81;
+											height: 40px;
+											flex: 1;
+											.price-txt{
+												color: #FFF;
+												font-size: 16px;
+												font-weight: 600;
+												line-height: 19px;
+											}
+										}
+									}
+
+								}
+							}
+						}
 					}
 				}
 			}

@@ -158,6 +158,51 @@
   padding: 40px 24px 37px;
 }
 
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  border: 1px solid var(--Lotto-EF3A81, #EF3A81);
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box {
+  width: 20%;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box .label-box {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box .label-box .label-txt {
+  color: #EF3A81;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box .price-box {
+  background: #EF3A81;
+  height: 40px;
+  flex: 1;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box .price-box .price-txt {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
 article.check-desc-box {
   display: flex;
   align-items: center;
