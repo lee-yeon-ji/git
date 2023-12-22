@@ -158,6 +158,10 @@
   padding: 40px 24px 37px;
 }
 
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout {
+  padding-top: 32px;
+}
+
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list {
   display: flex;
   align-items: center;
@@ -181,6 +185,9 @@
   background-color: #fff;
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box .label-box .label-txt {
@@ -194,6 +201,9 @@
   background: #EF3A81;
   height: 40px;
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box .price-box .price-txt {

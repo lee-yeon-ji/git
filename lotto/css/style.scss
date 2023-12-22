@@ -175,6 +175,7 @@ $font : 'NanumBarunGothic';
 						padding: 40px 24px 37px;
 
 						.lotto-info-layout{
+							padding-top: 32px;
 							.item-list{
 								display: flex;
 								align-items: center;
@@ -189,14 +190,16 @@ $font : 'NanumBarunGothic';
 										display: flex;
 										align-items: center;
 										justify-content: center;
-										//border: 1px solid var(--Lotto-EF3A81, #EF3A81);
+
 
 
 										.label-box{
 											background-color: #fff;
 											width: 40px;
 											height: 40px;
-
+											display: flex;
+											align-items: center;
+											justify-content: center;
 
 											.label-txt{
 												color: #EF3A81;
@@ -211,6 +214,9 @@ $font : 'NanumBarunGothic';
 											background: #EF3A81;
 											height: 40px;
 											flex: 1;
+											display: flex;
+											align-items: center;
+											justify-content: center;
 											.price-txt{
 												color: #FFF;
 												font-size: 16px;
