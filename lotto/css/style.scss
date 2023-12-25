@@ -167,7 +167,7 @@ $font : 'NanumBarunGothic';
 
 				.lotto-check-box{
 					background: url("../img/img_check_bg.png")no-repeat center/ cover;
-					width: 928px;
+
 
 
 
@@ -176,13 +176,15 @@ $font : 'NanumBarunGothic';
 
 						.lotto-info-layout{
 							padding-top: 32px;
+
 							.item-list{
 								display: flex;
 								align-items: center;
 								justify-content: center;
-								border-radius: 10px 10px 0px 0px;
+								border-radius: 10px ;
 								overflow: hidden;
-								border: 1px solid var(--Lotto-EF3A81, #EF3A81);
+								border: 1px solid #EF3A81;
+
 								.item-box{
 									width: 20%;
 
@@ -190,7 +192,7 @@ $font : 'NanumBarunGothic';
 										display: flex;
 										align-items: center;
 										justify-content: center;
-
+										border-bottom: 1px solid #EF3A81;
 
 
 										.label-box{
@@ -226,7 +228,196 @@ $font : 'NanumBarunGothic';
 										}
 									}
 
+									.con-box{
+
+										//&+.con-box{
+										//	border-left: 1px solid #EF3A81;
+										//	height: 325px;
+										//	width: 1px;
+										//}
+										.check-num-wrap{
+											background: #FFFFFF;
+											padding: 20px 17px;
+											display: flex;
+											align-items: center;
+											flex-flow: row wrap;
+
+
+
+											.check-num-box{
+												margin: 16px 12px;
+
+
+
+												.check-num-txt{
+													margin: -8px -6px;
+													color: #EF3A81;
+													text-align: center;
+													font-size: 12px;
+													font-weight: 600;
+													line-height: 15px;
+													width: 16px;
+													height: 21px;
+													position: relative;
+
+													&:after {
+														content: url("../img/ic_click_front.svg");
+														width: 15px;
+														height: 2px;
+														position: absolute;
+														top: -12px;
+														left: 0;
+													}
+
+													&:before{
+														content: url("../img/ic_click_back.svg");
+														width: 15px;
+														height: 2px;
+														position: absolute;
+														bottom: 8px;
+														left: 0;
+													}
+
+													&.on{
+														color: #FFF;
+														font-size: 12px;
+														font-weight: 600;
+														line-height: 15px;
+														height: 21px;
+														background-color: #000000;
+
+														&:after {
+															display: none;
+														}
+														&:before {
+															display: none;
+														}
+													}
+
+
+												}
+											}
+										}
+
+
+									}
+
 								}
+							}
+						}
+
+						.buy-box{
+							padding-top: 32px;
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							.total-box{
+								color: #FFF;
+								font-size: 20px;
+								font-weight: 600;
+								line-height: 23px;
+								border-radius: 50px;
+								border: 1px solid #5899FA;
+								background: rgba(43, 45, 93, 0.90);
+								display: flex;
+								align-items: center;
+								width: 280px;
+								text-align: center;
+
+
+
+
+
+
+
+								.subject-box{
+									padding: 19px 5px;
+									width: 140px;
+								}
+
+								.con-box{
+									border-left: 1px solid #5899FA;
+									padding: 19px 5px;
+									width: 140px;
+
+								}
+							}
+
+							.buy-btn-box{
+								width: 260px;
+								.buy-btn{
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									border-radius: 50px;
+									background: #34B5F7;
+									color: #FFF;
+									font-size: 20px;
+									font-weight: 600;
+									line-height: 23px;
+									text-decoration: none;
+									padding: 19px 5px;
+								}
+							}
+						}
+
+						.num-list-box{
+							margin-top: 38px;
+							border-top: 1px solid #6E6F9D;
+
+							.num-desc-box{
+								padding-top: 32px;
+
+							}
+
+							.num-group{
+								padding: 0 38px;
+
+
+								.row{
+									border-bottom: 1px solid #41427A;
+									display: flex;
+									justify-content: center;
+									padding: 28px 0 24px;
+
+
+									.num-box{
+										box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.30), -4px -4px 4px 0px rgba(0, 0, 0, 0.16) inset;
+										border-radius: 50%;
+										width: 44px;
+										height: 44px;
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										color: #FFF;
+										font-size: 20px;
+										font-weight: 600;
+										line-height: 23px;
+
+										&+.num-box{
+											margin-left: 12px;
+										}
+
+
+										&.type-yellow{
+											background: #FBB600;
+										}
+
+										&.type-blue{
+											background: #4190B5;
+
+										}
+
+										&.type-red{
+											background: #CF4748;
+										}
+
+										&.type-green{
+											background: #49AF5C;
+										}
+									}
+								}
+
 							}
 						}
 					}
