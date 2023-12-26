@@ -149,40 +149,34 @@
   font-weight: 600;
 }
 
-.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box {
-  background: url("../img/img_check_bg.png") no-repeat center/cover;
-}
-
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap {
+  background: url("../img/img_check_bg.png") no-repeat center/cover;
   padding: 40px 24px 37px;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout {
-  padding-top: 32px;
+  margin-top: 32px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #EF3A81;
+  background-color: #ffffff;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #EF3A81;
+  width: 20%;
 }
 
-.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box {
-  width: 20%;
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box + .item-box {
+  border-left: 1px solid #EF3A81;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box {
   display: flex;
-  align-items: center;
-  justify-content: center;
   border-bottom: 1px solid #EF3A81;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box .label-box {
-  background-color: #fff;
   width: 40px;
   height: 40px;
   display: flex;
@@ -200,7 +194,7 @@
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .subject-box .price-box {
   background: #EF3A81;
   height: 40px;
-  flex: 1;
+  width: 136px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,54 +207,60 @@
   line-height: 19px;
 }
 
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box {
+  padding: 20px 24px;
+}
+
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .check-num-wrap {
-  background: #FFFFFF;
-  padding: 20px 17px;
-  display: flex;
-  align-items: center;
-  flex-flow: row wrap;
+  display: inline-flex;
+  flex-flow: wrap;
+  margin: -6px -6px;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .check-num-wrap .check-num-box {
-  margin: 16px 12px;
+  width: calc(20% - 12px);
+  margin: 6px 6px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .check-num-wrap .check-num-box a {
+  text-decoration: none;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .check-num-wrap .check-num-box .check-num-txt {
-  margin: -8px -6px;
   color: #EF3A81;
   text-align: center;
   font-size: 12px;
   font-weight: 600;
   line-height: 15px;
-  width: 16px;
   height: 21px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .check-num-wrap .check-num-box .check-num-txt:after {
-  content: url("../img/ic_click_front.svg");
-  width: 15px;
+  content: '';
+  background: url("../img/ic_click_front.svg") no-repeat center/cover;
+  width: 16px;
   height: 2px;
   position: absolute;
-  top: -12px;
+  top: 0;
   left: 0;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .check-num-wrap .check-num-box .check-num-txt:before {
-  content: url("../img/ic_click_back.svg");
-  width: 15px;
+  content: '';
+  background: url("../img/ic_click_back.svg") no-repeat center/cover;
+  width: 16px;
   height: 2px;
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   left: 0;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .check-num-wrap .check-num-box .check-num-txt.on {
   color: #FFF;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 15px;
-  height: 21px;
   background-color: #000000;
 }
 
@@ -270,6 +270,45 @@
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .check-num-wrap .check-num-box .check-num-txt.on:before {
   display: none;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .option-box {
+  padding-top: 22px;
+  text-align: right;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .option-box .auto-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .option-box .auto-box + .auto-box {
+  padding-top: 8px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .option-box .auto-box .txt {
+  color: #EF3A81;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .option-box .auto-box .check-btn-box {
+  margin-left: 12px;
+  display: inline-flex;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .option-box .auto-box .check-btn-box .check-btn {
+  background: url("../img/ic_check_off.svg") no-repeat center/cover;
+  width: 15px;
+  height: 16px;
+}
+
+.lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box .con-box .option-box .auto-box .check-btn-box .check-btn.on {
+  background: url("../img/ic_check_on.svg") no-repeat center/cover;
+  width: 15px;
+  height: 16px;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .buy-box {

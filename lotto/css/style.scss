@@ -166,37 +166,39 @@ $font : 'NanumBarunGothic';
 				}
 
 				.lotto-check-box{
-					background: url("../img/img_check_bg.png")no-repeat center/ cover;
-
 
 
 
 					.check-wrap{
+						background: url("../img/img_check_bg.png")no-repeat center/ cover;
 						padding: 40px 24px 37px;
 
+
 						.lotto-info-layout{
-							padding-top: 32px;
+							margin-top: 32px;
+							border-radius: 10px ;
+							overflow: hidden;
+							border: 1px solid #EF3A81;
+							background-color: #ffffff;
 
 							.item-list{
 								display: flex;
-								align-items: center;
-								justify-content: center;
-								border-radius: 10px ;
-								overflow: hidden;
-								border: 1px solid #EF3A81;
+								width: 20%;
+
 
 								.item-box{
-									width: 20%;
+									& + .item-box{
+										border-left: 1px solid #EF3A81;
+									}
+
+
 
 									.subject-box{
 										display: flex;
-										align-items: center;
-										justify-content: center;
 										border-bottom: 1px solid #EF3A81;
 
 
 										.label-box{
-											background-color: #fff;
 											width: 40px;
 											height: 40px;
 											display: flex;
@@ -215,7 +217,7 @@ $font : 'NanumBarunGothic';
 										.price-box{
 											background: #EF3A81;
 											height: 40px;
-											flex: 1;
+											width: 136px;
 											display: flex;
 											align-items: center;
 											justify-content: center;
@@ -229,61 +231,56 @@ $font : 'NanumBarunGothic';
 									}
 
 									.con-box{
+										padding: 20px 24px;
 
-										//&+.con-box{
-										//	border-left: 1px solid #EF3A81;
-										//	height: 325px;
-										//	width: 1px;
-										//}
 										.check-num-wrap{
-											background: #FFFFFF;
-											padding: 20px 17px;
-											display: flex;
-											align-items: center;
-											flex-flow: row wrap;
-
+											display: inline-flex;
+											flex-flow: wrap;
+											margin: -6px -6px;
 
 
 											.check-num-box{
-												margin: 16px 12px;
+												width: calc(20% - 12px);
+												margin: 6px 6px;
 
+												a{
+													text-decoration: none;
+												}
 
-
-												.check-num-txt{
-													margin: -8px -6px;
+											.check-num-txt{
 													color: #EF3A81;
 													text-align: center;
 													font-size: 12px;
 													font-weight: 600;
 													line-height: 15px;
-													width: 16px;
 													height: 21px;
 													position: relative;
+													display: flex;
+													align-items: center;
+													justify-content: center;
 
 													&:after {
-														content: url("../img/ic_click_front.svg");
-														width: 15px;
+														content: '';
+														background: url("../img/ic_click_front.svg")no-repeat center/cover;
+														width: 16px;
 														height: 2px;
 														position: absolute;
-														top: -12px;
+														top: 0;
 														left: 0;
 													}
 
 													&:before{
-														content: url("../img/ic_click_back.svg");
-														width: 15px;
+														content: '';
+														background: url("../img/ic_click_back.svg") no-repeat center/cover;
+														width: 16px;
 														height: 2px;
 														position: absolute;
-														bottom: 8px;
+														bottom: 0;
 														left: 0;
 													}
 
 													&.on{
 														color: #FFF;
-														font-size: 12px;
-														font-weight: 600;
-														line-height: 15px;
-														height: 21px;
 														background-color: #000000;
 
 														&:after {
@@ -295,6 +292,46 @@ $font : 'NanumBarunGothic';
 													}
 
 
+												}
+											}
+										}
+
+
+										.option-box{
+											padding-top: 22px;
+											text-align: right;
+
+											.auto-box{
+												display: flex;
+												align-items: center;
+												justify-content: flex-end;
+
+												&+.auto-box{
+													padding-top: 8px;
+												}
+
+												.txt{
+													color: #EF3A81;
+													font-size: 13px;
+													font-weight: 600;
+													line-height: 16px;
+												}
+
+												.check-btn-box{
+													margin-left: 12px;
+													display: inline-flex;
+
+													.check-btn{
+														background: url("../img/ic_check_off.svg") no-repeat center/cover;
+														width: 15px;
+														height: 16px;
+
+														&.on{
+															background: url("../img/ic_check_on.svg")no-repeat center/cover;
+															width: 15px;
+															height: 16px;
+														}
+													}
 												}
 											}
 										}
