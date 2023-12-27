@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+
+$font : 'NanumBarunGothic';
+@each $size in L, R, B{
+
+	@font-face{
+		font-family:$font;
+		src: url("../fonts/#{$font}-#{$size}.woff") format('woff');
+
+		@if $font == L {
+			font-weight: 300;
+		}
+		@else if $font == R {
+			font-weight: 400;
+		}
+		@else if $font == B {
+			font-weight: 700;
+		}
+		font-style:normal;
+	}
+}
+
+
+*{ //*은 전체 태그에 값을 주는 것이기 때문에 고정해야 할 콘텐츠 값을 주면 안됨.
+	margin: 0;
+	padding: 0;
+}
+
+.lotto-contents{
+	width: 928px;
+	margin: 0 auto;
+	background: #1C1D4A url("../img/img_check_bg.png")no-repeat center/cover;
+
+
+	.lotto-check-layout{
+		padding: 41px 24px 31px;
+		.desc-box{
+			display: flex;
+			align-items: center;
+
+			.icon-box {
+				color: #FFF;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 14px;
+				border-radius: 100px;
+				background: rgba(88, 153, 250, 0.30);
+				display: flex;
+				justify-content: center;
+				width: 18px;
+				height: 18px;
+				margin-right: 10px;
+
+			}
+
+			.txt{
+				color: #FFF;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 19px;
+
+			}
+		}
+
+		.check-board-box{
+			margin-top: 32px;
+			border-radius: 10px;
+			border: 1px solid #EF3A81;
+			background-color: #ffffff;
+			overflow: hidden;
+
+			.number-board-wrap{
+				display: flex;
+				width: 20%;
+
+				.number-box{
+					.subject-box{
+						display: flex;
+						align-items: center;
+						border-bottom: 1px solid #EF3A81;
+						text-align: center;
+						font-size: 16px;
+						font-weight: 600;
+						line-height: 19px;
+
+						.mark-box{
+							color:#EF3A81;
+							width: 40px;
+							height: 40px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+						}
+
+						.subject-txt{
+							color: #FFF;
+							width: 136px;
+							height: 40px;
+							background-color: #EF3A81;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+						}
+					}
+
+					.con-box{
+						padding: 20px 24px;
+
+						.num-chk-group{
+							display: flex;
+							flex-flow: wrap;
+							margin: -6px -6px;
+
+							.num-chk-box{
+								width: calc(20% - 12px);
+								margin: 6px 6px;
+								position: relative;
+								display: inline-flex;
+								align-items: center;
+								font-size: 0;
+
+								label{
+									cursor: pointer;
+									align-items: center;
+									display: inline-flex;
+									width: 100%;
+
+									input[type=checkbox] {
+										position: absolute;
+										left: -9999px;
+
+
+										&:checked {
+
+											& ~ .txt{
+												background-color: #000;
+												color: #fff;
+											}
+
+										}
+									}
+
+
+									i {
+										top: 1px;
+										position: absolute;
+										width: 16px;
+										height: 17px;
+										line-height: 18px;
+										background: #0000;
+
+
+
+									}
+
+									.txt {
+										width: 100%;
+										line-height: 18px;
+										font-size: 14px;
+										display: inline-flex;
+										justify-content: center;
+										position: relative;
+
+										&:after{
+											position: absolute;
+											content:'';
+											background: url("../img/ic_click_front.svg")no-repeat center/cover;
+											width: 15px;
+											height: 2px;
+											top: 0;
+											left: 50%;
+											transform: translateX(-50%);
+
+										}
+										&:before{
+											position: absolute;
+											content:'';
+											background: url("../img/ic_click_back.svg")no-repeat center/cover;
+											width: 15px;
+											height: 2px;
+											bottom: 0;
+											left: 50%;
+											transform: translateX(-50%);
+
+										}
+									}
+								}
+
+
+								.num-chk-txt{
+									color: #EF3A81;
+									text-align: center;
+									font-size: 12px;
+									font-weight: 600;
+									line-height: 15px;
+									text-decoration: none;
+									position: relative;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									height: 20px;
+
+
+
+								}
+							}
+						}
+
+						.option-box{
+							text-align: right;
+							margin-top: 20px;
+
+							.option-btn-box{
+								position: relative;
+								font-size: 0;
+
+								& + .option-btn-box{
+									margin-top: 8px;
+								}
+
+								label{
+									cursor: pointer;
+									display: inline-flex;
+									align-items: center;
+
+									input[type=radio] , input[type=checkbox]{
+										position: absolute;
+										left: -9999px;
+
+
+										&:checked{
+											& ~ i {
+												background: url("../img/ic_check_on.svg")no-repeat center/cover;
+
+											}
+										}
+									}
+
+									i{
+										right: 0;
+										top: 1px;
+										position: absolute;
+										width: 16px;
+										height: 16px;
+										line-height: 18px;
+										background: url("../img/ic_check_off.svg")no-repeat center/cover;
+
+									}
+
+									.txt{
+										color: #EF3A81;
+										text-align: right;
+										font-size: 13px;
+										font-weight: 600;
+										line-height: 16px;
+										padding-right: 27px;
+									}
+
+								}
+							}
+						}
+					}
+
+
+
+
+
+				}
+
+
+			}
+		}
+	}
+}

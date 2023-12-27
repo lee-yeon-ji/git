@@ -165,6 +165,7 @@
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list {
   display: flex;
   width: 20%;
+  padding-bottom: 15px;
 }
 
 .lotto .lotto-contents .lotto-play .lotto-check-form-box .lotto-check-box .check-wrap .lotto-info-layout .item-list .item-box + .item-box {
