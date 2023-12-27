@@ -121,46 +121,40 @@ $font : 'NanumBarunGothic';
 								font-size: 0;
 
 								label{
-									cursor: pointer;
-									align-items: center;
-									display: inline-flex;
+									cursor: pointer; //손 모양으로 클릭을 예측 할 수 있게 도와줌
 									width: 100%;
 
 									input[type=checkbox] {
-										position: absolute;
+										position: absolute; //기존 체크 아이콘을 날리기 위한.
 										left: -9999px;
 
 
-										&:checked {
+										&:checked { //체크를 했을 때 바껴지는 체크박스 디자인 커스텀
 
-											& ~ .txt{
+											& ~ .txt{ // ~선택자는 앞에 선택한 선택자 뒤에 오는 형제들을 말함.
 												background-color: #000;
 												color: #fff;
+
+												&:after{
+													display: none;
+												}
+												&:before{
+													display: none;
+												}
 											}
-
 										}
-									}
-
-
-									i {
-										top: 1px;
-										position: absolute;
-										width: 16px;
-										height: 17px;
-										line-height: 18px;
-										background: #0000;
-
-
-
 									}
 
 									.txt {
 										width: 100%;
-										line-height: 18px;
-										font-size: 14px;
-										display: inline-flex;
+										display: flex;
 										justify-content: center;
+										align-items: center;
 										position: relative;
+										color: #EF3A81;
+										font-size: 12px;
+										font-weight: 600;
+										height: 21px;
 
 										&:after{
 											position: absolute;
@@ -180,29 +174,11 @@ $font : 'NanumBarunGothic';
 											width: 15px;
 											height: 2px;
 											bottom: 0;
-											left: 50%;
-											transform: translateX(-50%);
+											left: 50%; //가운데 정렬 맞추기
+											transform: translateX(-50%); //가운데 정렬 맞추기
 
 										}
 									}
-								}
-
-
-								.num-chk-txt{
-									color: #EF3A81;
-									text-align: center;
-									font-size: 12px;
-									font-weight: 600;
-									line-height: 15px;
-									text-decoration: none;
-									position: relative;
-									display: flex;
-									align-items: center;
-									justify-content: center;
-									height: 20px;
-
-
-
 								}
 							}
 						}

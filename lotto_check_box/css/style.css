@@ -120,8 +120,6 @@
 
 .lotto-contents .lotto-check-layout .check-board-box .number-board-wrap .number-box .con-box .num-chk-group .num-chk-box label {
   cursor: pointer;
-  align-items: center;
-  display: inline-flex;
   width: 100%;
 }
 
@@ -135,22 +133,24 @@
   color: #fff;
 }
 
-.lotto-contents .lotto-check-layout .check-board-box .number-board-wrap .number-box .con-box .num-chk-group .num-chk-box label i {
-  top: 1px;
-  position: absolute;
-  width: 16px;
-  height: 17px;
-  line-height: 18px;
-  background: #0000;
+.lotto-contents .lotto-check-layout .check-board-box .number-board-wrap .number-box .con-box .num-chk-group .num-chk-box label input[type=checkbox]:checked ~ .txt:after {
+  display: none;
+}
+
+.lotto-contents .lotto-check-layout .check-board-box .number-board-wrap .number-box .con-box .num-chk-group .num-chk-box label input[type=checkbox]:checked ~ .txt:before {
+  display: none;
 }
 
 .lotto-contents .lotto-check-layout .check-board-box .number-board-wrap .number-box .con-box .num-chk-group .num-chk-box label .txt {
   width: 100%;
-  line-height: 18px;
-  font-size: 14px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
+  color: #EF3A81;
+  font-size: 12px;
+  font-weight: 600;
+  height: 21px;
 }
 
 .lotto-contents .lotto-check-layout .check-board-box .number-board-wrap .number-box .con-box .num-chk-group .num-chk-box label .txt:after {
@@ -173,20 +173,6 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.lotto-contents .lotto-check-layout .check-board-box .number-board-wrap .number-box .con-box .num-chk-group .num-chk-box .num-chk-txt {
-  color: #EF3A81;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 15px;
-  text-decoration: none;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 20px;
 }
 
 .lotto-contents .lotto-check-layout .check-board-box .number-board-wrap .number-box .con-box .option-box {
