@@ -25,7 +25,7 @@ $font : 'NanumBarunGothic';
 *{ //*은 전체 태그에 값을 주는 것이기 때문에 고정해야 할 콘텐츠 값을 주면 안됨.
 	margin: 0;
 	padding: 0;
-	font-family: 'NanumBarunGothic'; //폰트체를 적용하고 난 뒤 전체에 적용이 될 수 있도록 지정해야함.
+	font-family: 'NanumBarunGothic'; //font를 적용하고 난 뒤 전체에 적용이 될 수 있도록 따로 이름을 지정해야함.
 }
 
 .lotto-contents{
