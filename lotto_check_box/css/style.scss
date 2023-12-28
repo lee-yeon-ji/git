@@ -25,6 +25,7 @@ $font : 'NanumBarunGothic';
 *{ //*은 전체 태그에 값을 주는 것이기 때문에 고정해야 할 콘텐츠 값을 주면 안됨.
 	margin: 0;
 	padding: 0;
+	font-family: 'NanumBarunGothic'; //폰트체를 적용하고 난 뒤 전체에 적용이 될 수 있도록 지정해야함.
 }
 
 .lotto-contents{
@@ -213,7 +214,7 @@ $font : 'NanumBarunGothic';
 										}
 									}
 
-									i{
+									i{ //아이콘을 띄우는 이유는 텍스트가 길어질 때 가운데 정렬을 하지 않고 맨 위에 그대로 고정 되어 있을 수 있도록 하기 위함. 만약 텍스트에 따라 가운데 정렬로 같이 따라가게 할 때 띄우지 않고 flex로 가운데 정렬 맞춰주기
 										right: 0;
 										top: 1px;
 										position: absolute;
@@ -249,3 +250,4 @@ $font : 'NanumBarunGothic';
 		}
 	}
 }
+
