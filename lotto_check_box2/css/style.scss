@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+
+$font: 'NanumBarunGothic';
+
+@each $font-size in L, R, B{
+	@font-face {
+		font-family:$font;
+		src: url("../font/#{$font}-#{$font-size}.woff")format('woff');
+
+		@if $font == L{
+			font-weight: 300;
+		}
+		@else if $font == R {
+			font-weight: 400;
+		}
+		@else if $font == B {
+			font-weight: 700;
+		}
+		font-style:normal;
+	}
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family:'NanumBarunGothic';
+}
+
+
+header{
+	background: url("../img/img_bg.png")no-repeat center/100% 100%;
+
+	.header-wrap{
+		padding: 18px 26px 0 26px;
+		h1{
+			display: inline-flex;
+			align-items: center;
+			.logo-box {
+				.logo {
+					width: 133px;
+					display: block;
+
+					img {
+						width: 100%;
+					}
+				}
+			}
+			.con-box{
+				font-size: 28px;
+				font-weight: 600;
+				line-height: 32px;
+				color: #ffffff;
+			}
+		}
+
+	}
+}
+
+
+.lotto-play{
+	width: 1024px;
+	margin: 0 auto;
+	background-color: #1C1D4A;
+	.lotto-play-contents{
+		padding: 80px 48px 109px;
+
+		.user-info-box{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.subject-box{
+				.subject-txt{
+					color: #ffffff;
+					font-size: 20px;
+					font-weight: 400;
+					line-height: 23px;
+				}
+			}
+
+			.con-box{
+				display: flex;
+				align-items: center;
+				.point-box{
+					color: #ffffff;
+					font-size: 20px;
+					font-weight: 600;
+					line-height: 23px;
+				}
+
+				.lobby-btn-box{
+					margin-left: 24px;
+					.lobby-btn{
+						color: #5899FA;
+						font-size: 16px;
+						font-weight: 600;
+						line-height: 19px;
+						text-decoration: none;
+						width: 92px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 100px;
+						border: 1px solid #5899FA;
+						padding: 11px 2px;
+						box-sizing: border-box;
+
+					}
+				}
+			}
+		}
+
+		.lotto-check-form-box{
+			padding-top: 40px;
+			.lotto-check-wrap{
+				.menu-tab-box{
+					.tab-list{
+						ul{
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							margin: 0 -2px;
+
+							li{
+								width: calc(25% - 4px);
+								list-style-type: none;
+								margin: 0 2px;
+
+								.btn-box{
+									padding: 15px 5px;
+									display: flex;
+									justify-content: center;
+									text-decoration: none;
+									color: #888;
+									font-size: 16px;
+									font-weight: 400;
+									line-height: 19px;
+									border-radius: 10px 10px 0 0;
+									background: #2B2D5D;
+									box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.20);
+									&.on{
+										font-weight: 600;
+										color: #ffffff;
+										background: #34B5F7;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.check-info-layout{
+					background: url("../img/img_check_bg.png")no-repeat center/100% 100%;
+
+					.check-info-wrap{
+						padding: 40px 22px 37px;
+						.desc-box{
+							display: inline-flex;
+
+
+							.label-box{
+								width: 17px;
+								height: 16px;
+								border-radius: 50%;
+								background: rgba(88, 153, 250, 0.30);
+								margin-right: 10px;
+								.label-txt{
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									color: #FFF;
+									font-size: 14px;
+									font-weight: 400;
+									line-height: 18px;
+								}
+							}
+
+							.txt{
+								color: #ffffff;
+								font-size: 16px;
+								font-weight: 400;
+								line-height: 18px;
+
+							}
+						}
+
+						.number-board-box{
+							padding-top: 32px;
+
+							.number-list-box{
+								overflow: hidden;
+								border-radius: 10px;
+								background-color: #ffffff;
+								border: 1px solid #EF3A81;
+								display: flex;
+								align-items: center;
+
+								.num-chk-box{
+									width: 20%;
+
+									.subject-box{
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										border-bottom: 1px solid #EF3A81;
+										.mark-box{
+											color: #EF3A81;
+											font-size: 16px;
+											font-weight: 600;
+											line-height: 19px;
+											width: 40px;
+											height: 40px;
+											display: inline-flex;
+											align-items: center;
+											justify-content: center;
+										}
+
+										.subject-txt{
+											color: #FFF;
+											font-size: 16px;
+											font-weight: 600;
+											line-height: 19px;
+											width: 136px;
+											height: 38px;
+											background: #EF3A81;
+											display: inline-flex;
+											align-items: center;
+											justify-content: center;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
