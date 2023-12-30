@@ -263,7 +263,7 @@
 										<div class="option-box">
 											<div class="option-btn-box">
 												<label>
-													<input type="checkbox" name="option check" value="check">
+													<input type="checkbox" name="option-check" value="check" onclick="checkOnlyOne(this)">
 													<i></i>
 													<span class="option-txt">자동선택</span>
 												</label>
@@ -271,9 +271,10 @@
 
 											<div class="option-btn-box">
 												<label>
-													<input type="checkbox" name="option check" value="cancel">
+													<input type="checkbox" name="option-check" value="cancel" 	onclick="checkOnlyOne(this)">
 													<i></i>
 													<span class="option-txt">취소</span>
+
 												</label>
 											</div>
 										</div>
@@ -1054,6 +1055,24 @@
 
 	</div>
 </div>
+
+<script>
+
+    function checkOnlyOne(element) {
+        const optionboxs = document.getElementsByName("option-check");
+
+
+        optionboxs.forEach((ob) => {
+            ob.checked = false;
+        })
+
+
+        element.checked = true;
+
+    }
+
+
+</script>
 
 
 
