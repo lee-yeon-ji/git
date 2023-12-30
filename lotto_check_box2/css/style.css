@@ -191,10 +191,15 @@ header .header-wrap h1 .con-box {
   border: 1px solid #EF3A81;
   display: flex;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box {
   width: 20%;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box + .num-chk-box {
+  border-left: 1px solid #EF3A81;
 }
 
 .lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .subject-box {
@@ -222,11 +227,129 @@ header .header-wrap h1 .con-box {
   font-weight: 600;
   line-height: 19px;
   width: 136px;
-  height: 38px;
+  height: 40px;
   background: #EF3A81;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box {
+  padding: 20px 24px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap {
+  display: flex;
+  flex-flow: wrap;
+  margin: -6px -6px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box {
+  width: calc(20% - 12px);
+  margin: 6px 6px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box label {
+  cursor: pointer;
+  width: 100%;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box label input[type=checkbox] {
+  position: absolute;
+  left: -9999px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box label input[type=checkbox]:checked ~ .txt {
+  background-color: #000;
+  color: #fff;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box label input[type=checkbox]:checked ~ .txt:after {
+  display: none;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box label input[type=checkbox]:checked ~ .txt:before {
+  display: none;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box .txt {
+  width: 100%;
+  height: 21px;
+  color: #EF3A81;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box .txt:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../img/ic_click_front.svg") no-repeat center/cover;
+  width: 16px;
+  height: 2px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .num-chk-wrap .num-btn-box .txt:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../img/ic_click_back.svg") no-repeat center/cover;
+  width: 16px;
+  height: 2px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .option-box {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .option-box .option-btn-box {
+  position: relative;
+  font-size: 0;
+  padding-right: 28px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .option-box .option-btn-box + .option-btn-box {
+  margin-top: 8px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .option-box .option-btn-box label {
+  cursor: pointer;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .option-box .option-btn-box label input[type=checkbox] {
+  position: absolute;
+  left: -9999px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .option-box .option-btn-box label input[type=checkbox]:checked ~ i {
+  background: url("../img/ic_check_on.svg") no-repeat center/cover;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .option-box .option-btn-box i {
+  background: url("../img/ic_check_off.svg") no-repeat center/cover;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box .number-list-box .num-chk-box .con-box .option-box .option-btn-box .option-txt {
+  color: #EF3A81;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
