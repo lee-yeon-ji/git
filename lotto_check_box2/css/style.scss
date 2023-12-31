@@ -185,7 +185,7 @@ header{
 							}
 						}
 
-						.number-board-box{
+						.number-board-box {
 							padding-top: 32px;
 
 							.number-list-box{
@@ -243,18 +243,19 @@ header{
 											flex-flow: wrap;
 											margin: -6px -6px;
 
+
 											.num-btn-box{
-												width: calc(20% - 12px);
 												margin: 6px 6px;
+												width: calc(20% - 12px);
 												position: relative;
 												display: inline-flex;
 												align-items: center;
 												font-size: 0;
 
-
 												label{
-													cursor: pointer;
 													width: 100%;
+													cursor: pointer;
+
 
 													input[type=checkbox]{
 														position: absolute;
@@ -263,62 +264,58 @@ header{
 														&:checked{
 
 															& ~ .txt{
-																background-color: #000;
-																color: #fff;
-
+																background: #000000;
+																color: #ffffff;
 
 																&:after{
 																	display: none;
 																}
+
 																&:before{
 																	display: none;
 																}
-
-
-
 															}
+
 														}
 													}
-												}
 
-												.txt{
-													width: 100%;
-													height: 21px;
-													color: #EF3A81;
-													font-size: 12px;
-													font-weight: 600;
-													display: flex;
-													align-items: center;
-													justify-content: center;
 
-													&:after{
-														content:"";
-														position: absolute;
-														top: 0;
-														left: 50%;
-														transform: translateX(-50%);
-														background: url("../img/ic_click_front.svg")no-repeat center/cover;
-														width: 16px;
-														height: 2px;
+													.txt{
+														color: #EF3A81;
+														font-size: 12px;
+														font-weight: 600;
+														display:flex;
+														justify-content: center;
+														align-items: center;
+														width: 100%;
+														height: 21px;
+														position: relative;
 
+														&:after{
+															content: '';
+															background: url("../img/ic_click_front.svg")no-repeat center/cover;
+															width: 16px;
+															height: 2px;
+															position: absolute;
+															top: 0;
+															left: 50%;
+															transform: translateX(-50%);
+														}
+
+														&:before{
+															content: '';
+															background: url("../img/ic_click_back.svg")no-repeat center/cover;
+															width: 16px;
+															height: 2px;
+															position: absolute;
+															bottom: 0;
+															left: 50%;
+															transform: translateX(-50%);
+														}
 													}
 
-													&:before{
-														content:"";
-														position: absolute;
-														bottom: 0;
-														left: 50%;
-														transform: translateX(-50%);
-														background: url("../img/ic_click_back.svg")no-repeat center/cover;
-														width: 16px;
-														height: 2px;
-
-													}
 
 												}
-
-
-
 											}
 										}
 

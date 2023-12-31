@@ -1093,6 +1093,7 @@
 											</div>
 
 										</div>
+
 										<div class="option-box">
 											<div class="option-btn-box">
 												<label>
@@ -1115,6 +1116,8 @@
 								</div>
 							</div>
 						</div>
+
+
 					</div>
 				</div>
 			</div>
@@ -1128,6 +1131,11 @@
 
     function checkOnlyOne(element) {
         const optionboxs = document.getElementsByName("option-check");
+
+
+        // const _box = $(element).parents('.option-box');
+        // _box.find('input[type=checkbox]').prop('checked',false)
+		    // $(element).prop('checked',true);
 
 
         optionboxs.forEach((ob) => {
