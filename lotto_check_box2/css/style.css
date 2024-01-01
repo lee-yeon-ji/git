@@ -357,6 +357,7 @@ header .header-wrap h1 .con-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 32px;
 }
 
 .lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .total-buy-box .total-box {
@@ -366,6 +367,27 @@ header .header-wrap h1 .con-box {
   line-height: 23px;
   display: flex;
   align-items: center;
+  border-radius: 50px;
+  border: 1px solid #5899FA;
+  background: rgba(43, 45, 93, 0.9);
+  width: 280px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .total-buy-box .total-box .subject-box {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px 5px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .total-buy-box .total-box .desc-box {
+  border-left: 1px solid  #5899FA;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px 5px;
 }
 
 .lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .total-buy-box .buy-btn-box .buy-btn {
