@@ -372,6 +372,45 @@ header{
 								}
 							}
 						}
+
+						.total-buy-box{
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							.total-box{
+								color: #FFF;
+								font-size: 20px;
+								font-weight: 600;
+								line-height: 23px;
+								display: flex;
+								align-items: center;
+
+								.subject-box{
+
+								}
+
+								.desc-box{
+
+								}
+							}
+
+							.buy-btn-box{
+								.buy-btn{
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									width: 260px;
+									border-radius: 50px;
+									background: #34B5F7;
+									color: #FFF;
+									font-size: 20px;
+									font-weight: 600;
+									line-height: 23px;
+									text-decoration: none;
+									padding: 19px 5px;
+								}
+							}
+						}
 					}
 				}
 			}
