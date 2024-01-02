@@ -378,6 +378,51 @@ header .header-wrap h1 .con-box {
 
 .lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box {
   padding-top: 32px;
+  margin-top: 38px;
+  border-top: 1px solid #6E6F9D;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box .buy-number-list-wrap {
+  padding: 0 18px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box .buy-number-list-wrap .con-box {
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #41427A;
+  padding-bottom: 24px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box .buy-number-list-wrap .con-box .buy-num {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  background: #FBB600;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3), -4px -4px 4px 0px rgba(0, 0, 0, 0.16) inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box .buy-number-list-wrap .con-box .buy-num + .buy-num {
+  margin-left: 12px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box .buy-number-list-wrap .con-box .buy-num.type-blue {
+  background: #4190B5;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box .buy-number-list-wrap .con-box .buy-num.type-red {
+  background: #CF4748;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box .buy-number-list-wrap .con-box .buy-num.type-green {
+  background: #6DD580;
 }
 
 article.desc-box {
