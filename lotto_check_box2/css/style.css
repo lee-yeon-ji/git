@@ -151,35 +151,6 @@ header .header-wrap h1 .con-box {
   padding: 40px 22px 37px;
 }
 
-.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .desc-box {
-  display: inline-flex;
-}
-
-.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .desc-box .label-box {
-  width: 17px;
-  height: 16px;
-  border-radius: 50%;
-  background: rgba(88, 153, 250, 0.3);
-  margin-right: 10px;
-}
-
-.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .desc-box .label-box .label-txt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFF;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .desc-box .txt {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
 .lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .number-board-box {
   padding-top: 32px;
 }
@@ -403,6 +374,39 @@ header .header-wrap h1 .con-box {
   line-height: 23px;
   text-decoration: none;
   padding: 19px 5px;
+}
+
+.lotto-play .lotto-play-contents .lotto-check-form-box .lotto-check-wrap .check-info-layout .check-info-wrap .buy-number-list-box {
+  padding-top: 32px;
+}
+
+article.desc-box {
+  display: inline-flex;
+}
+
+article.desc-box .label-box {
+  width: 17px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(88, 153, 250, 0.3);
+  margin-right: 10px;
+}
+
+article.desc-box .label-box .label-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+article.desc-box .txt {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

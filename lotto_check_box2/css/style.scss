@@ -155,35 +155,6 @@ header{
 
 					.check-info-wrap{
 						padding: 40px 22px 37px;
-						.desc-box{
-							display: inline-flex;
-
-
-							.label-box{
-								width: 17px;
-								height: 16px;
-								border-radius: 50%;
-								background: rgba(88, 153, 250, 0.30);
-								margin-right: 10px;
-								.label-txt{
-									display: flex;
-									align-items: center;
-									justify-content: center;
-									color: #FFF;
-									font-size: 14px;
-									font-weight: 400;
-									line-height: 18px;
-								}
-							}
-
-							.txt{
-								color: #ffffff;
-								font-size: 16px;
-								font-weight: 400;
-								line-height: 18px;
-
-							}
-						}
 
 						.number-board-box {
 							padding-top: 32px;
@@ -427,9 +398,45 @@ header{
 								}
 							}
 						}
+
+						.buy-number-list-box{
+							padding-top: 32px;
+						}
 					}
 				}
 			}
 		}
+	}
+}
+
+
+
+article.desc-box{
+	display: inline-flex;
+
+
+	.label-box{
+		width: 17px;
+		height: 16px;
+		border-radius: 50%;
+		background: rgba(88, 153, 250, 0.30);
+		margin-right: 10px;
+		.label-txt{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #FFF;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 18px;
+		}
+	}
+
+	.txt{
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 18px;
+
 	}
 }
