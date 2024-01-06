@@ -40,10 +40,22 @@
   background-color: #ffffff;
   border-radius: 10px;
   border: 1px solid var(--Lotto-EF3A81, #EF3A81);
+  overflow: hidden;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
 }
 
 .lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box {
   width: 20%;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box + .chk-box {
+  border-left: 1px solid #EF3A81;
 }
 
 .lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .subject-box {
@@ -82,6 +94,128 @@
   font-weight: 600;
   line-height: normal;
   background: var(--Lotto-EF3A81, #EF3A81);
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box {
+  padding: 22px 24px;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap {
+  display: flex;
+  margin: -6px -6px;
+  flex-flow: wrap;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn {
+  width: calc(20% - 12px);
+  margin: 6px 6px;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn label {
+  cursor: pointer;
+  width: 100%;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn label input[type=checkbox] {
+  position: absolute;
+  left: -9999px;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn label input[type=checkbox]:checked ~ .txt {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn label input[type=checkbox]:checked ~ .txt:after {
+  display: none;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn label input[type=checkbox]:checked ~ .txt:before {
+  display: none;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn label .txt {
+  position: relative;
+  height: 21px;
+  color: var(--Lotto-EF3A81, #EF3A81);
+  text-align: center;
+  font-family: NanumBarunGothic;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn label .txt:after {
+  content: '';
+  background: url("../img/ic_click_front.svg") no-repeat center/cover;
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .num-btn-wrap .num-btn label .txt:before {
+  content: '';
+  background: url("../img/ic_click_back.svg") no-repeat center/cover;
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .option-btn-box {
+  padding-top: 20px;
+  text-align: right;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .option-btn-box .option-btn {
+  position: relative;
+  font-size: 0;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .option-btn-box .option-btn + .option-btn {
+  margin-top: 8px;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .option-btn-box .option-btn label {
+  cursor: pointer;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .option-btn-box .option-btn label input[type=radio] {
+  position: absolute;
+  left: -9999px;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .option-btn-box .option-btn label input[type=radio]:checked ~ i {
+  background: url("../img/ic_check_on.svg") no-repeat center/cover;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .option-btn-box .option-btn label .txt {
+  padding-right: 22px;
+  color: var(--Lotto-EF3A81, #EF3A81);
+  text-align: right;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.lotto-play .lotto-contents .lotto-group .lotto-chk-form-box .lotto-chk-wrap .chk-box .con-box .option-btn-box .option-btn label i {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  background: url("../img/ic_check_off.svg") no-repeat center/cover;
+  width: 16px;
+  height: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
