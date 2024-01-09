@@ -1070,14 +1070,17 @@
 
 <script>
 	function check(obj){ //함수 선언
-		let parents = obj.parentNode.parentNode.parentNode; //부모를 찾는 과정
+		let parents = obj.parentNode.parentNode.parentNode;//부모를 찾는 과정
     let numBtn = parents.querySelectorAll('.num-btn'); //자식을 찾는 과정
     chkCnt = 0; //0 부터 카운트 할 객체 함수를 선언
 
 		//for문 실행
-    for (var i = 0; 1 < numBtn.length; i ++) { //i가 0 일 때, 1보다 numBtn이 클 때 i이가 하나씩 증가
-        if(numBtn[i].querySelector('input').checked){//i이는 input에 있는 checked를 클릭했을 때
-            chkCnt ++ ;//객체 함수를 선언했던 chkCnt가 증가함.
+    for (var i = 0; i < numBtn.length; i ++) {
+        //i가 0 일 때, 1보다 numBtn이 클 때 i이가 하나씩 증가
+        if(numBtn[i].querySelector('input').checked){
+            //i이는 input에 있는 checked를 클릭했을 때
+            chkCnt ++ ;
+            //객체 함수를 선언했던 chkCnt가 증가함.
         }
     }
 
