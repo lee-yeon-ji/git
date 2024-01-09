@@ -1069,42 +1069,24 @@
 </div>
 
 <script>
-	function check(obj){
-			let parents = obj.parentNode.parentNode.parentNode;//num-btn을 감싸고 있는 부모를 찾는과정
-      console.log(obj.parentNode.parentNode.parentNode)
-			let numBtn = parents.querySelectorAll('.num-btn');//부모에서 num-btn을 찾는 과정
-      console.log(parents.querySelectorAll('.num-btn'))
-			chkCnt = 0; //카운드 수를 0으로 선언
+	function check(obj){ //함수 선언
+		let parents = obj.parentNode.parentNode.parentNode; //부모를 찾는 과정
+    let numBtn = parents.querySelectorAll('.num-btn'); //자식을 찾는 과정
+    chkCnt = 0; //0 부터 카운트 할 객체 함수를 선언
 
-			//for문 정의하기
-			for (var i = 0; i < numBtn.length; i ++){
-					//numBtn의 체크된 숫자가 i보다 클 때, 하나씩 i를 추가함.
-					if (numBtn[i].querySelector('input').checked){
-                        chkCnt ++;
+		//for문 실행
+    for (var i = 0; 1 < numBtn.length; i ++) { //i가 0 일 때, 1보다 numBtn이 클 때 i이가 하나씩 증가
+        if(numBtn[i].querySelector('input').checked){//i이는 input에 있는 checked를 클릭했을 때
+            chkCnt ++ ;//객체 함수를 선언했던 chkCnt가 증가함.
+        }
+    }
 
-							//numBtn에 input을 체크했을 때 chkCnt도 추가함.
-					}
-			}
-
-			if(chkCnt > 6){
-					alert('6개 까지 선택할 수 있습니다.')
-					obj.checked = false;
-					return false;
-					//만약 chkCnt가 6개 이상으로 체크를 할 경우 알림창을 뜨게하고, 체크를 못하게 함. 그리고 다시 리턴 시킴.
-			}
-
-	}
-  // function check(obj){
-  //     let parents = obj.parentNode.parentNode.parentNode;
-  //     console.log(obj.parentNode.parentNode.parentNode)
-  //     let numBtn = parents.children[0].querySelectorAll('.num-btn');
-  //     console.log(parents.children[0].querySelectorAll('.num-btn'))
-	//
-	//     여기서 for문이 돌지 않은 이유는 부모에게 .children[0]으로 첫번째 자식을 찾았는데 거기서 .querySelectorAll('.num-btn')으로 자식을 또 찾으려고 하니까 nodelist에 0으로 나오는 것이였음..
-	// 하나씩 console.log에 나눠서 확인해보자...
-	//
-  //
-  // }
+    if (chkCnt > 6){ //만약에 chkCnt가 6개 이하 일 때
+        alert('6개 까지 체크 할 수 있습니다.')//알림창을 뜨게 함.
+		    obj.checked = false;// 6개 이상으로는 체크를 할 수 없도록 함.
+        return false; // 6개 이전 으로 리턴시킴.
+    }
+  }
 </script>
 
 </body>
