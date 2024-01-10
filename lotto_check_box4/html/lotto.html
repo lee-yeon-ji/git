@@ -207,7 +207,8 @@
 							<div class="option-btn-box">
 								<div class="option-btn">
 									<label>
-										<input type="radio" name="option1" value="선택"> //여러 개의 radio 가 있을 때는 name이 같으면 안되고, 각 체크 박스 별로 이름이 달라야 겹치지 않고, 각각 체크가 됨.
+										<input type="radio" name="option1" value="선택">
+										<!-- 여러 개의 radio 가 있을 때는 name이 같으면 안되고, 각 체크 박스 별로 이름이 달라야 겹치지 않고, 각각 체크가 됨. -->
 										<span class="txt">자동선택</span> <i></i>
 									</label>
 								</div>
@@ -1069,27 +1070,27 @@
 </div>
 
 <script>
-	function check(obj){ //함수 선언
-		let parents = obj.parentNode.parentNode.parentNode;//부모를 찾는 과정
-    let numBtn = parents.querySelectorAll('.num-btn'); //자식을 찾는 과정
-    chkCnt = 0; //0 부터 카운트 할 객체 함수를 선언
+    function check(obj){ //함수 선언
+        let parents = obj.parentNode.parentNode.parentNode;//부모를 찾는 과정
+        let numBtn = parents.querySelectorAll('.num-btn'); //자식을 찾는 과정
+        chkCnt = 0; //0 부터 카운트 할 객체 함수를 선언
 
-		//for문 실행
-    for (var i = 0; i < numBtn.length; i ++) {
-        //i가 0 일 때, 1보다 numBtn이 클 때 i이가 하나씩 증가
-        if(numBtn[i].querySelector('input').checked){
-            //i이는 input에 있는 checked를 클릭했을 때
-            chkCnt ++ ;
-            //객체 함수를 선언했던 chkCnt가 증가함.
+        //for문 실행
+        for (var i = 0; i < numBtn.length; i ++) {
+            //i가 0 일 때, 1보다 numBtn이 클 때 i이가 하나씩 증가
+            if(numBtn[i].querySelector('input').checked){
+                //i이는 input에 있는 checked를 클릭했을 때
+                chkCnt ++ ;
+                //객체 함수를 선언했던 chkCnt가 증가함.
+            }
+        }
+
+        if (chkCnt > 6){ //만약에 chkCnt가 6개 이하 일 때
+            alert('6개 까지 체크 할 수 있습니다.')//알림창을 뜨게 함.
+            obj.checked = false;// 6개 이상으로는 체크를 할 수 없도록 함.
+            return false; // 6개 이전 으로 리턴시킴.
         }
     }
-
-    if (chkCnt > 6){ //만약에 chkCnt가 6개 이하 일 때
-        alert('6개 까지 체크 할 수 있습니다.')//알림창을 뜨게 함.
-		    obj.checked = false;// 6개 이상으로는 체크를 할 수 없도록 함.
-        return false; // 6개 이전 으로 리턴시킴.
-    }
-  }
 </script>
 
 </body>
