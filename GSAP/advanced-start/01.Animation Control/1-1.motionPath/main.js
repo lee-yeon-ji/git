@@ -65,7 +65,37 @@ const company =$('#company');
 const svg = $('svg');
 
 svg.addEventListener('click',(e)=>{
-    console.log('svg!!!');
+    const target = e.target.closest('g');
+    if(!target) return;
+
+    const id = target.getAttribute('id');
+    if(!id) return;
+
+    let progress = 0;
+
+    switch (id) {
+        case 'home':
+            console.log('home!');
+            progress = 0;
+            break;
+
+        case 'mountain':
+            console.log('mountain!');
+            progress = 0.21;
+            break;
+
+        case 'river':
+            console.log('river!');
+            progress = 0.47;
+            break;
+
+        case 'company':
+            console.log('company!');
+            progress = 1;
+            break;
+    }
+
+    gsap.to(animation,{progress:progress,duration:1})
 })
 //클릭 이벤트를 사용했을 때 자바스크립트에서 제공해주는 메서드 (너 클릭 이벤트 사용했네? 객체 하나줄게)
 
