@@ -35,6 +35,10 @@ progress.addEventListener('input',(e)=>{
 
 })
 
+function setButtonState(){
+    button.textContent = animation.paused() ? 'play' : 'pause'; //일일이 써주기 번거로울 때는 함수로 담아서 써주면 편함. 버튼의 이름을 변경해주는데 애니메이션이 멈췄을 때 play, pause인지 텍스트의 이름을 변경하려는 것
+}
+
 button.addEventListener('click',()=>{
     animation.paused(!animation.paused()) // 멈춰있는 상태에서(true->false로 바뀐 상태) 클릭을 했을 때, paused에 있는 false를 반환하면서 움직이게 됨.
     // paused에 토글 방식으로 주기 위해 !(반대)를 주어 true/false 두가지를 반복해서 반환함.
@@ -70,32 +74,31 @@ svg.addEventListener('click',(e)=>{
 
     const id = target.getAttribute('id');
     if(!id) return;
+    if(id === 'svg') return; //===은 일치 연산자로 자료형 변환 없이 두 피연산자가 엄격히 같은지 판별
 
     let progress = 0;
+    animation.pause();
 
     switch (id) {
         case 'home':
-            console.log('home!');
             progress = 0;
             break;
 
         case 'mountain':
-            console.log('mountain!');
             progress = 0.21;
             break;
 
         case 'river':
-            console.log('river!');
             progress = 0.47;
             break;
 
         case 'company':
-            console.log('company!');
             progress = 1;
             break;
     }
 
-    gsap.to(animation,{progress:progress,duration:1})
+    gsap.to(animation,{progress:progress,duration:1});
+    setButtonState();
 })
 //클릭 이벤트를 사용했을 때 자바스크립트에서 제공해주는 메서드 (너 클릭 이벤트 사용했네? 객체 하나줄게)
 
