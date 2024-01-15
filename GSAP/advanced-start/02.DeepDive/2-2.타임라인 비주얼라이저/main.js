@@ -15,14 +15,20 @@ animation
 const children = animation.getChildren();
 const childrenList = children.length
 
-for(let i = 0; i < childrenList; i++){
-    // console.log( children[i].startTime());
 
-    gsap.set('#tween' + i,{x:children[i].startTime() * pixelPerSecond})
-    gsap.set('#rect' + i,{width:children[i].duration() * pixelPerSecond})
-    //rect 박스의 길이를 늘려주기 위해 곱하기를 해서
+children.forEach((tween,index)=> { //forEach가 배열을 하나씩 순환하는 역할을 하므로 children이 배열을 가지고 있기 때문에 children을 가지고 간단하게 만들어 볼 수 있음.
+    gsap.set('#tween' + index,{x:tween.startTime() * pixelPerSecond})
+    gsap.set('#rect' + index,{width:tween.duration() * pixelPerSecond})
+})
 
-}
+// for(let i = 0; i < childrenList; i++){
+//     // console.log( children[i].startTime());
+//
+//     gsap.set('#tween' + i,{x:children[i].startTime() * pixelPerSecond})
+//     gsap.set('#rect' + i,{width:children[i].duration() * pixelPerSecond})
+//     //rect 박스의 길이를 늘려주기 위해 곱하기를 해서
+//
+// }
 
 
 
