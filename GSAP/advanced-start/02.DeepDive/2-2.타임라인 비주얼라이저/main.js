@@ -5,7 +5,9 @@ const $ = node => document.querySelector(node);
 gsap.to('svg',{autoAlpha:1})
 
 const pixelPerSecond = 200; //rect의 박스의 너비를 지정해 줌. svg일 때
-const animation = gsap.timeline();
+const animation = gsap.timeline(
+
+);
 
 animation
     .to('#star',{duration:1,x:1150})
@@ -32,16 +34,29 @@ children.forEach((tween,index)=> { //forEach가 배열을 하나씩 순환하는
 
 
 
-
-
-
-
 //startTime() 메서드는 재생되는 시간을 알려주는 것.
 //getChildren 메서드는 tween의 값을 배열로 보여줌.
 
 
+const time = $('#time');
+const maxX = animation.duration() * pixelPerSecond
+function handleMoveHead(){
+    console.log( animation.time());
+    time.textContent = animation.time().toFixed(1); //toFixed 소수점 한자리만 표기되게
+    gsap.set('#playhead',{x:animation.progress() * maxX})
+
+}
 
 
+animation.eventCallback('onUpdate',handleMoveHead)
+
+const dragger = Draggable.create('#playhead', {
+    type: 'x', cursor: 'pointer', trigger: '#timeline', bounds: {minX: 0, maxX: maxX},
+    onDrag(){
+        animation.pause();
+        animation.progress(this.x / maxX);
+    }
+})
 
 
 
