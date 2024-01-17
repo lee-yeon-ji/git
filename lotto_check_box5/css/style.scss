@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+
+$font: 'NanumBarunGothic';
+
+@each $font-size in L, R, B{
+	@font-face {
+		font-family:$font;
+		src: url("../font/#{$font}-#{$font-size}.woff")format('woff');
+
+		@if $font == L{
+			font-weight: 300;
+		}
+		@else if $font == R {
+			font-weight: 400;
+		}
+		@else if $font == B {
+			font-weight: 700;
+		}
+		font-style:normal;
+	}
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family:'NanumBarunGothic';
+
+}
+
+
+
+.lotto-play{
+
+	.lotto-group{
+		margin: 0 auto;
+		width: 1024px;
+		background-color: #1C1D4A;
+
+		header{
+			.header-box{
+				background: url("../img/img_bg.png")no-repeat center / cover;
+				.logo-box{
+					padding: 18px 26px 0;
+					display: flex;
+					align-items: center;
+
+
+					h1.logo{
+						.logo-btn{
+							max-width: 133px;
+
+							img{
+								width: 100%;
+
+
+							}
+						}
+					}
+					.logo-txt{
+						color: #FFF;
+						font-family: NanumBarunGothic;
+						font-size: 28px;
+						font-style: normal;
+						font-weight: 600;
+						line-height: normal;
+
+					}
+				}
+			}
+		}
+
+		.user-contents{
+			padding: 0 48px 109px;
+
+			.user-box{
+				height: 42px;
+				padding-top: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.user-name-box{
+					color: var(--Lotto-FFFFFF, #FFF);
+					font-family: NanumBarunGothic;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+				}
+
+				.user-point-box{
+					display: flex;
+					align-items: center;
+					.user-point-txt{
+
+						color: var(--Lotto-FFFFFF, #FFF);
+						text-align: right;
+						font-family: NanumBarunGothic;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 600;
+						line-height: normal;
+					}
+
+					.lobby-btn-box{
+						padding-left: 24px;
+						.lobby-btn{
+
+							color: var(--Lotto-5899FA, #5899FA);
+							font-family: NanumBarunGothic;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: normal;
+							border-radius: 100px;
+							border: 1px solid var(--Lotto-5899FA, #5899FA);
+							padding: 12px 16px;
+							text-decoration: none;
+
+						}
+					}
+				}
+			}
+
+			.lotto-check-form-box{
+				padding-top: 40px;
+				.lotto-check-wrap{
+					.lotto-tab-box{
+						.tab-wrap{
+							ul{
+								list-style:none;
+								display: flex;
+								align-items: center;
+								margin: 0 -2px;
+							}
+
+							li{
+								width: calc(25% - 4px);
+								margin: 0 2px;
+
+								.tab-btn{
+									border-radius: 10px 10px 0 0;
+									background: var(--Lotto-2B2D5D, #2B2D5D);
+									box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.20);
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									width: 100%;
+									color: var(--Lotto-888888, #888);
+									font-size: 16px;
+									font-style: normal;
+									font-weight: 400;
+									line-height: normal;
+									text-decoration: none;
+									padding: 15px 0;
+
+									&.on{
+										border-radius: 10px 10px 0 0;
+										background: #34B5F7;
+										color: var(--Lotto-FFFFFF, #FFF);
+										font-weight: 600;
+									}
+
+
+								}
+
+							}
+						}
+
+					}
+				}
+			}
+
+		}
+
+
+	}
+
+}
+
+
