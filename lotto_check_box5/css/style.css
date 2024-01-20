@@ -55,6 +55,53 @@
   line-height: normal;
 }
 
+.lotto-play .lotto-group main .lotto-check-contents .inner .user-info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lotto-play .lotto-group main .lotto-check-contents .inner .user-info-box .user-subject {
+  color: #FFF;
+  font-family: NanumBarunGothic;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.lotto-play .lotto-group main .lotto-check-contents .inner .user-info-box .user-con-box {
+  display: inline-flex;
+  align-items: center;
+}
+
+.lotto-play .lotto-group main .lotto-check-contents .inner .user-info-box .user-con-box .user-point-box {
+  color: var(--Lotto-FFFFFF, #FFF);
+  text-align: right;
+  font-family: NanumBarunGothic;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.lotto-play .lotto-group main .lotto-check-contents .inner .user-info-box .user-con-box .user-lobby-btn-box {
+  padding-left: 10px;
+}
+
+.lotto-play .lotto-group main .lotto-check-contents .inner .user-info-box .user-con-box .user-lobby-btn-box .user-lobby-btn {
+  text-decoration: none;
+  color: var(--Lotto-5899FA, #5899FA);
+  font-family: NanumBarunGothic;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 100px;
+  border: 1px solid var(--Lotto-5899FA, #5899FA);
+  padding: 13px 16px;
+}
+
 article.lotto-game-layout .list-wrap {
   background-color: #ffffff;
 }
