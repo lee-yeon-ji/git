@@ -59,6 +59,9 @@ const dragger = Draggable.create('#playhead', {
 })
 
 
+$('#play').addEventListener('click',()=>{animation.play()})
+$('#pause').addEventListener('click',()=>{animation.pause()})
+$('#reverse').addEventListener('click',()=>{animation.reverse()})
 
 
 
