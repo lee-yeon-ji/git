@@ -22,6 +22,7 @@ tl.from(split.chars,{
         color:gsap.utils.wrap(['red','blue']),
         stagger: {
             each: 0.02,
+            from: 'end'
         }
     })
 
