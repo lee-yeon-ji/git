@@ -1,6 +1,4 @@
 
-
-
 gsap.to('.stage',{autoAlpha:1}) //숨겨진 글자나 이미지를 나타나게 하는 것.
 
 
@@ -25,6 +23,7 @@ tl.from(split.chars,{
             from: 'end'
         }
     })
+
 
 
 
