@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  font-size: 0;
+}
+
 @font-face {
   font-family: "NanumBarunGothic";
   src: url("../font/NanumBarunGothic-L.woff") format("woff");
@@ -168,6 +173,15 @@
   height: 18px;
 }
 
+.lotto-play-contents .lotto-group main .lotto-check-con-box .inner .lotto-check-form-box .lotto-check-layout .test-flex {
+  display: flex;
+}
+
+.lotto-play-contents .lotto-group main .lotto-check-con-box .inner .lotto-check-form-box .lotto-check-layout .test-flex .box {
+  width: 100%;
+  height: 10px;
+}
+
 .lotto-play-contents .lotto-group main .lotto-check-con-box .inner .lotto-check-form-box .lotto-check-layout .lotto-check-box {
   padding-top: 32px;
 }
@@ -175,14 +189,13 @@
 .lotto-play-contents .lotto-group main .lotto-check-con-box .inner .lotto-check-form-box .lotto-check-layout .lotto-check-box .lotto-wrap {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 1px solid var(--Lotto-EF3A81, #EF3A81);
+  border: 2px solid var(--Lotto-EF3A81, #EF3A81);
   overflow: hidden;
   display: flex;
-  align-items: center;
 }
 
 .lotto-play-contents .lotto-group main .lotto-check-con-box .inner .lotto-check-form-box .lotto-check-layout .lotto-check-box .lotto-wrap .lotto-chk-box {
-  width: 20%;
+  width: 100%;
 }
 
 .lotto-play-contents .lotto-group main .lotto-check-con-box .inner .lotto-check-form-box .lotto-check-layout .lotto-check-box .lotto-wrap .lotto-chk-box + .lotto-chk-box {
@@ -190,9 +203,9 @@
 }
 
 .lotto-play-contents .lotto-group main .lotto-check-con-box .inner .lotto-check-form-box .lotto-check-layout .lotto-check-box .lotto-wrap .lotto-chk-box .subject {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 40px;
   border-bottom: 1px solid #EF3A81;
 }
@@ -212,7 +225,6 @@
   flex: 1;
   min-width: 0;
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
