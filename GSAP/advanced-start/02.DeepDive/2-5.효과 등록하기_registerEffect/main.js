@@ -35,11 +35,11 @@ animation.textEffect('h1')
 //
 // animation.add(gsap.effects.textEffect('h1'))
 // animation.add(gsap.effects.textEffect('h2',{y:100,colors:['blue','green']}))
-
-
+//
+//
 // gsap.effects.textEffect('h1')
 // gsap.effects.textEffect('h2',{y:100,colors:['blue','green']})
-
+//
 //
 // const tl = gsap.timeline();
 // tl.from(split.chars,{y:-100,opacity:0,stagger:0.05})
