@@ -70,14 +70,15 @@ $font:'NanumBarunGothic';
 	width: 100%;
 	text-align: right;
 }
+
 .popup-layout .err-btn-box button.close-btn{
 	margin: 0;
 	font-size: 12px;
 	font-weight: 400;
-	background: url(closebtn.jpg) no-repeat center/ auto;
+	background: url(../img/ic_close.png) no-repeat center/ 30px 30px;
 	border: none;
 	border-radius: 4px;
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
 }

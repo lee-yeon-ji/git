@@ -34,17 +34,32 @@
 </div>
 
 <script>
-
+    //errBtn에 err-btn중 가장 첫번째 노드만 담는다.
 	const errBtn = document.querySelector('.err-btn');
   console.log(errBtn)
 
+	const popupEvent = document.querySelector('.popup-layout');
+  console.log(popupEvent)
+
+	const closeBtn = document.querySelector('.close-btn');
+  console.log(closeBtn)
+
+    //errBtn를 클릭할 때, 이벤트(test)를 실행한다.
 	errBtn.addEventListener('click', test);
 
+  //test 기능에
   function test(){
-      console.log(1)
+      //popupEvent에 display를 블록으로 변경한다.
+      popupEvent.style.display = 'block';
+
   }
 
+  //closeBtn에 마우스를 올렸을 때, 이벤트(test1)를 실행한다.
+  closeBtn.addEventListener('mouseenter', test1);
 
+  function test1(){
+      popupEvent.style.display = 'none';
+  }
 </script>
 
 
