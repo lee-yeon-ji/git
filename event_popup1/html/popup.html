@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>lotto play</title>
+</head>
+<body>
+
+<div class="event-popup">
+
+	<div class="err-contents">
+		<button type="button" class="err-btn" value="에러버튼1" onclick="errBtn(this)">에러버튼1</button>
+		<button type="button" class="err-btn" value="에러버튼2" onclick="errBtn(this)">에러버튼2</button>
+		<button type="button" class="err-btn" value="에러버튼3" onclick="errBtn(this)">에러버튼3</button>
+	</div>
+
+	<div class="popup-layout" style="display:none">
+		<div class="popup-bg">
+			<div class="err-btn-box">
+				<button class="close-btn"></button>
+			</div>
+			<div class="popup">
+				<h1>제목</h1>
+				<div class="con-box">내용내용</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<script>
+  //   //errBtn에 err-btn중 가장 첫번째 노드만 담는다.
+	// const errBtn = document.querySelector('.err-btn');
+  // console.log(errBtn)
+	//
+	// const popupEvent = document.querySelector('.popup-layout');
+  // console.log(popupEvent)
+	//
+	// const closeBtn = document.querySelector('.close-btn');
+  // console.log(closeBtn)
+	//
+  //   //errBtn를 클릭할 때, 이벤트(test)를 실행한다.
+	// errBtn.addEventListener('click', test);
+	//
+  // //test 기능에
+  // function test(){
+  //     //popupEvent에 display를 블록으로 변경한다.
+  //     popupEvent.style.display = 'block';
+	//
+  // }
+	//
+  // //closeBtn에 마우스를 올렸을 때, 이벤트(test1)를 실행한다.
+  // closeBtn.addEventListener('mouseenter', test1);
+	//
+  // function test1(){
+  //     popupEvent.style.display = 'none';
+  // }
+
+  function errBtn(popupBtn){
+      const parents = popupBtn.parentNode;
+      const btn = parents.querySelectorAll('.err-btn');
+      console.log(btn)
+
+
+		  forEach()
+
+
+  }
+</script>
+
+
+</body>
+</html>
