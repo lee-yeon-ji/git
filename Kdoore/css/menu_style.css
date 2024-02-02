@@ -16,9 +16,21 @@ article.menu-btn-layout .menu-btn-box .menu-btn-list ul {
   margin: -3px -3px;
 }
 
+@media (max-width: 1024px) {
+  article.menu-btn-layout .menu-btn-box .menu-btn-list ul {
+    display: block;
+  }
+}
+
 article.menu-btn-layout .menu-btn-box .menu-btn-list ul li {
   width: calc(25% - 7px);
   margin: 3px 3px;
+}
+
+@media (max-width: 1024px) {
+  article.menu-btn-layout .menu-btn-box .menu-btn-list ul li {
+    width: 100%;
+  }
 }
 
 article.menu-btn-layout .menu-btn-box .menu-btn-list ul li .menu-btn {
@@ -87,6 +99,7 @@ article.menu-btn-layout .menu-btn-box .menu-btn-list ul li .menu-btn .ic.ic-item
 article.menu-btn-layout .menu-btn-box .menu-btn-list ul li .menu-btn .subject-box {
   flex: 1;
   min-width: 0;
+  width: 100%;
   text-align: center;
   font-size: 15px;
   font-weight: 600;
