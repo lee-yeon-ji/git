@@ -1,0 +1,110 @@
+.main-wrap{
+	background: url("../img/KakaoTalk_20220416_180124428.png")no-repeat;
+	background-size: cover;
+	height: 500px;
+	font-size: 0;
+	min-width: 1400px;
+	.group{
+		margin: 0 auto;
+		max-width: 1400px;
+		padding: 50px 0;
+		.main{
+			width: 50%;
+			display: inline-block ;
+			.main-box1{
+				.main-txt{
+					.txt{
+						font-size: 30px;
+						font-weight: bold;
+						color: #fff;
+
+					}
+				}
+
+				.middle-txt{
+					padding-top: 30px;
+					.txt{
+						font-size:15px;
+						line-height: 25px;
+						color: #ffffff;
+					}
+				}
+
+				.main-btn{
+					padding-top: 40px;
+
+					.btn-box{
+						border: 1px solid green;
+						border-radius: 20px 20px;
+						padding: 8px 15px;
+						&:first-child{
+							border: 1px solid transparent;
+							background: green;
+
+						}
+
+						&:nth-child(2){
+							margin-left: 10px;
+						}
+						.txt{
+							font-size: 15px;
+							font-weight: bold;
+							text-align: center;
+							display: inline-block;
+							color: #fff;
+							vertical-align: middle;
+							line-height: 17px;
+						}
+
+						.icon-box{
+							display: inline-block;
+							vertical-align: middle;
+							margin-right: 5px;
+
+							.icon{
+								background: url("../img/KakaoTalk_20220416_180124366.png")no-repeat;
+								height: 17px;
+								width: 15px;
+								color: #ffffff;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.img-wrap{
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			.top{
+				.img-box1{
+					background-color: #ffffff;
+					border: 1px solid #ffffff;
+					width: calc(60% - 10px);
+					height: 150px;
+					margin-right: 20px;
+					display: inline-block;
+				}
+
+				.img-box2{
+					background-color: #ffffff;
+					border: 1px solid #ffffff;
+					width: calc(40% - 10px);
+					height: 150px;
+					display: inline-block;
+				}
+
+				.img-box3{
+					background-color: #ffffff;
+					border: 1px solid #ffffff;
+					width: 100%;
+					height: 150px;
+					margin-top: 20px;
+				}
+			}
+
+		}
+	}
+
+}
