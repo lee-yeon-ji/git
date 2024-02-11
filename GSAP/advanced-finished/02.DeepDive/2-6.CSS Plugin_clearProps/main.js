@@ -16,4 +16,4 @@ boxes.forEach((item)=>{
         })
     })
 })
-//gsap에 제공해주는 기능으로 한번에 DOM을 잡아주는 utils 함수의 toArray를
+//gsap에 제공해주는 기능으로 한번에 DOM을 잡아주는 utils 함수의 toArray를 해야함.
