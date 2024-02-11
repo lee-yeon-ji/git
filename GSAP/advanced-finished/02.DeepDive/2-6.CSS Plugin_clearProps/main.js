@@ -9,6 +9,7 @@ const boxes = gsap.utils.toArray('.box');
 console.log(boxes)
 //유사배열로 나오기 때문에 일반적인 배열의 능력을  사용할 수 없음.
 boxes.forEach((item)=>{
+
     item.addEventListener('click',(e)=>
     {
         gsap.to(e.currentTarget,{
