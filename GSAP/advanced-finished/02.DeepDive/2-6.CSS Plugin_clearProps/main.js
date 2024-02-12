@@ -24,9 +24,8 @@ boxes.forEach((item)=>{
 
 
 $('#reset').addEventListener('click',()=>{
-  gsap.set('.box',{clearProps:'all'})
+  gsap.set('.box',{clearProps:'scale'})
 })
-    // cllearProps는 이전으로 되돌아가게하는 플로그인으로 ''안에 초기화 하고싶은 속성을 적어주면 됨. 이벤트를 추가해 줄 때 이벤트가 인라인으로 들어가는데 이때 cllearProps 플로그인을 이용해 이벤트를 추가하기 전으로 되돌아가게 함.
 
 
 
