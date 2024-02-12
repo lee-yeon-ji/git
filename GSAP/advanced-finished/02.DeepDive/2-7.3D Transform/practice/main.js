@@ -2,17 +2,15 @@
 
 gsap.from('.stage',{autoAlpha:0})  
 
-
-
 gsap.registerEffect({
   name:'text3D',
   extendTimeline:true,
   defaults:{
-    deg: 360,
+    deg:360,
   },
   effect:(target,config)=>{
     const split = new SplitText(target,{type:'chars'});
-    gsap.set(split.chars,{transformPerspective:400})
+    gsap.set(split.chars,{transformPerspective:400}) //각각의 쪼개진 글자들에게 원근감을 주는 설정을 해놓은 것
 
     const tl = gsap.timeline();
 
@@ -27,7 +25,6 @@ gsap.registerEffect({
     })
 
     return tl;
-
   }
 })
 
@@ -36,10 +33,6 @@ gsap.registerEffect({
 const animation = gsap.timeline();
 
 animation.text3D('h1',{deg:500})
-
-
-
-
 
 
 GSDevTools.create()
