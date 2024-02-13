@@ -1,6 +1,142 @@
+@charset "utf-8";
 
-//sass 설치 완료
-//내일 제미지 작업 만들어보기
-//
-//설날이여서 제이미 작업을 하지 못했다.
-//내일 시간을 내서 꼭 작업 해봐야지
+
+$font : 'Pretendard'; // 변수를 지정
+
+@each $font-size in R, M, B, SB{
+
+	@font-face{
+		font-family: $font;
+		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+
+		@if $font-size == R {
+			font-weight: 400;
+		}
+
+		@else if $font-size == M {
+			font-weight: 500;
+		}
+
+		@else if $font-size == B {
+			font-weight: 700;
+		}
+
+		@else if $font-size == SB {
+			font-weight: 800;
+		}
+
+		font-style:normal;
+	}
+}
+
+
+*{
+	box-sizing: border-box;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	//font-family: 'Pretendard'; //대소문자를 구분하므로 정확하게 기재
+	font-family: $font; //변수는 '' 안에 넣어주지 않음.
+}
+
+
+section.PlayWith{
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+section.visual{
+	background: url("../img/img_visual_bg.png")no-repeat top / cover;
+	height: 725px;
+	padding-top: 95px;
+
+	.inner{
+		max-width: 610px;
+		margin: 0 auto;
+		padding: 0 27px;
+	}
+
+	.visual-box{
+		.visual-tit{
+			.tit-box{
+				max-width: 686px;
+				img{
+					width: 100%;
+				}
+			}
+			.sub-tit-box{
+				padding-top: 30px;
+				max-width: 470px;
+				margin: 0 auto;
+				img{
+					width: 100%;
+
+				}
+			}
+		}
+
+	}
+}
+
+section.schedule{
+	background-color: #F9E07A;
+	position: relative;
+
+	.visual-con-box{
+		padding: 263px 0 60px; //기준에 맞춰서 padding값 주기
+
+
+
+		.visual-video-img{ //visual과 schedule을 따로 만들어서 video부분을 띄어서 맞추기
+			top:-222px;//위에 끝점을 맞춘 뒤 여백만큼 빼주기
+			position: absolute;
+			left:50%;
+			transform: translateX(-50%);
+			margin:0 auto;
+			max-width: 700px;
+
+			img{
+				width: 100%;
+			}
+		}
+		.visual-date-box{
+			text-align: center;
+
+			.date-tit-box{
+				font-size: 35px;
+				font-weight: 700;
+				letter-spacing: -0.03em;
+				color: #000;
+			}
+			.row-list{
+				padding-top: 20px;
+				.row-box{
+					.subject-box{
+						font-size: 22px;
+						font-weight: 700;
+						letter-spacing: -0.03em;
+						color: #000;
+					}
+
+					.desc-box{
+						font-size: 22px;
+						font-weight: 500;
+						letter-spacing: -0.03em;
+						color: #000;
+						.label-box{
+
+						}
+
+					}
+				}
+			}
+
+
+			.msg-box{
+
+			}
+		}
+	}
+
+}

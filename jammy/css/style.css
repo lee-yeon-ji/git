@@ -1,2 +1,89 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SB.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+* {
+  box-sizing: border-box;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Pretendard"; }
+
+section.PlayWith {
+  margin: 0 auto;
+  max-width: 1920px; }
+
+section.visual {
+  background: url("../img/img_visual_bg.png") no-repeat top/cover;
+  height: 725px;
+  padding-top: 95px; }
+  section.visual .inner {
+    max-width: 610px;
+    margin: 0 auto;
+    padding: 0 27px; }
+  section.visual .visual-box .visual-tit .tit-box {
+    max-width: 686px; }
+    section.visual .visual-box .visual-tit .tit-box img {
+      width: 100%; }
+  section.visual .visual-box .visual-tit .sub-tit-box {
+    padding-top: 30px;
+    max-width: 470px;
+    margin: 0 auto; }
+    section.visual .visual-box .visual-tit .sub-tit-box img {
+      width: 100%; }
+
+section.schedule {
+  background-color: #F9E07A;
+  position: relative; }
+  section.schedule .visual-con-box {
+    padding: 263px 0 60px; }
+    section.schedule .visual-con-box .visual-video-img {
+      top: -222px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto;
+      max-width: 700px; }
+      section.schedule .visual-con-box .visual-video-img img {
+        width: 100%; }
+    section.schedule .visual-con-box .visual-date-box {
+      text-align: center; }
+      section.schedule .visual-con-box .visual-date-box .date-tit-box {
+        font-size: 35px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: #000; }
+      section.schedule .visual-con-box .visual-date-box .row-list {
+        padding-top: 20px; }
+        section.schedule .visual-con-box .visual-date-box .row-list .row-box .subject-box {
+          font-size: 22px;
+          font-weight: 700;
+          letter-spacing: -0.03em;
+          color: #000; }
+        section.schedule .visual-con-box .visual-date-box .row-list .row-box .desc-box {
+          font-size: 22px;
+          font-weight: 500;
+          letter-spacing: -0.03em;
+          color: #000; }
 
 /*# sourceMappingURL=style.css.map */
