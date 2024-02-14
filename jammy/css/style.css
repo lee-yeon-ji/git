@@ -55,6 +55,10 @@ section.visual {
 section.schedule {
   background-color: #F9E07A;
   position: relative; }
+  section.schedule .inner {
+    max-width: 610px;
+    margin: 0 auto;
+    padding: 0 27px; }
   section.schedule .visual-con-box {
     padding: 263px 0 60px; }
     section.schedule .visual-con-box .visual-video-img {
@@ -75,15 +79,49 @@ section.schedule {
         color: #000; }
       section.schedule .visual-con-box .visual-date-box .row-list {
         padding-top: 20px; }
-        section.schedule .visual-con-box .visual-date-box .row-list .row-box .subject-box {
-          font-size: 22px;
-          font-weight: 700;
-          letter-spacing: -0.03em;
-          color: #000; }
-        section.schedule .visual-con-box .visual-date-box .row-list .row-box .desc-box {
-          font-size: 22px;
-          font-weight: 500;
-          letter-spacing: -0.03em;
-          color: #000; }
+        section.schedule .visual-con-box .visual-date-box .row-list .row-box {
+          display: flex; }
+          section.schedule .visual-con-box .visual-date-box .row-list .row-box + .row-box {
+            padding-top: 10px; }
+          section.schedule .visual-con-box .visual-date-box .row-list .row-box .subject-box {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #000;
+            min-width: 149px;
+            text-align: left; }
+          section.schedule .visual-con-box .visual-date-box .row-list .row-box .desc-box {
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            color: #000; }
+            section.schedule .visual-con-box .visual-date-box .row-list .row-box .desc-box .label-box {
+              background-color: #0D2A64;
+              padding: 5px;
+              font-size: 20px;
+              font-weight: 700;
+              letter-spacing: -0.03em;
+              color: #ffffff; }
+      section.schedule .visual-con-box .visual-date-box .msg-box {
+        padding-top: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        color: #95802E; }
+
+section.benefit {
+  background-color: #FDF2C8;
+  padding: 80px 0; }
+  section.benefit .inner {
+    max-width: 730px;
+    margin: 0 auto;
+    padding: 0 27px; }
+
+article.tit-box .tit-txt {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #000000;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
