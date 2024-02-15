@@ -116,6 +116,99 @@ section.benefit {
     max-width: 730px;
     margin: 0 auto;
     padding: 0 27px; }
+  section.benefit .item-wrap .item-box + .item-box {
+    padding-top: 60px; }
+  section.benefit .item-wrap .item-box .con-box {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 39px 20px 50px;
+    margin-top: 31px; }
+    section.benefit .item-wrap .item-box .con-box .subject-box {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000;
+      letter-spacing: -0.03em;
+      text-align: center; }
+      section.benefit .item-wrap .item-box .con-box .subject-box .point-box {
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+        letter-spacing: -0.03em;
+        box-shadow: inset 0 -13px 0 #D9FCDB; }
+    section.benefit .item-wrap .item-box .con-box .desc-list {
+      padding-top: 35px;
+      display: flex;
+      align-content: center;
+      justify-content: center; }
+      section.benefit .item-wrap .item-box .con-box .desc-list .desc-box + .desc-box {
+        padding-left: 30px; }
+      section.benefit .item-wrap .item-box .con-box .desc-list .desc-box .desc-img-box {
+        border-radius: 50%;
+        background-color: #F1F1F1;
+        width: 170px;
+        height: 170px;
+        position: relative; }
+        section.benefit .item-wrap .item-box .con-box .desc-list .desc-box .desc-img-box .img-box {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%; }
+          section.benefit .item-wrap .item-box .con-box .desc-list .desc-box .desc-img-box .img-box img {
+            width: 100%; }
+          section.benefit .item-wrap .item-box .con-box .desc-list .desc-box .desc-img-box .img-box.type-item1 {
+            top: 55px;
+            max-width: 158px;
+            height: 118px; }
+          section.benefit .item-wrap .item-box .con-box .desc-list .desc-box .desc-img-box .img-box.type-item2 {
+            top: 55px;
+            max-width: 91px;
+            height: 119px; }
+          section.benefit .item-wrap .item-box .con-box .desc-list .desc-box .desc-img-box .img-box.type-item3 {
+            top: 36px;
+            max-width: 151px;
+            height: 147px; }
+      section.benefit .item-wrap .item-box .con-box .desc-list .desc-box .desc-txt {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        color: #000000;
+        text-align: center;
+        padding-top: 21px; }
+    section.benefit .item-wrap .item-box .con-box .process-list {
+      display: flex;
+      align-content: center;
+      justify-content: center; }
+      section.benefit .item-wrap .item-box .con-box .process-list .process-box {
+        position: relative; }
+        section.benefit .item-wrap .item-box .con-box .process-list .process-box + .process-box {
+          margin-left: 68px; }
+          section.benefit .item-wrap .item-box .con-box .process-list .process-box + .process-box:after {
+            content: '';
+            position: absolute;
+            background: url("../img/ic_process.svg") no-repeat center/cover;
+            width: 12px;
+            height: 12px;
+            top: 61px;
+            left: -39px; }
+        section.benefit .item-wrap .item-box .con-box .process-list .process-box .process-img-box {
+          background-color: #F1F1F1;
+          border-radius: 50%;
+          width: 138px;
+          height: 138px;
+          position: relative; }
+          section.benefit .item-wrap .item-box .con-box .process-list .process-box .process-img-box .img-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+            section.benefit .item-wrap .item-box .con-box .process-list .process-box .process-img-box .img-box img {
+              width: 100%; }
+            section.benefit .item-wrap .item-box .con-box .process-list .process-box .process-img-box .img-box.type-item1 {
+              max-width: 82px; }
+            section.benefit .item-wrap .item-box .con-box .process-list .process-box .process-img-box .img-box.type-item2 {
+              max-width: 82px; }
+            section.benefit .item-wrap .item-box .con-box .process-list .process-box .process-img-box .img-box.type-item3 {
+              max-width: 78px; }
 
 article.tit-box .tit-txt {
   font-size: 35px;
