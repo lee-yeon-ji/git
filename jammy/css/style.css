@@ -123,6 +123,24 @@ section.benefit {
     border: 2px solid #000000;
     padding: 39px 20px 50px;
     margin-top: 31px; }
+    section.benefit .item-wrap .item-box .con-box.type-cloud {
+      position: relative; }
+      section.benefit .item-wrap .item-box .con-box.type-cloud:after {
+        content: '';
+        position: absolute;
+        background: url("../img/img_cloud_1.png") no-repeat center/cover;
+        width: 166px;
+        height: 82px;
+        top: 223px;
+        left: -234px; }
+      section.benefit .item-wrap .item-box .con-box.type-cloud:before {
+        content: '';
+        position: absolute;
+        background: url("../img/img_cloud_2.png") no-repeat center/cover;
+        width: 98px;
+        height: 49px;
+        top: 392px;
+        right: -201px; }
     section.benefit .item-wrap .item-box .con-box .subject-box {
       font-size: 20px;
       font-weight: 700;

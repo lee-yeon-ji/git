@@ -176,6 +176,7 @@ section.benefit{
 	}
 
 	.item-wrap{
+
 		.item-box{
 
 			& + .item-box{
@@ -187,6 +188,28 @@ section.benefit{
 				padding: 39px 20px 50px;
 				margin-top: 31px;
 
+
+				&.type-cloud{
+					position: relative;
+					&:after{
+						content: '';
+						position: absolute;
+						background: url("../img/img_cloud_1.png")no-repeat center/cover;
+						width: 166px;
+						height: 82px;
+						top: 223px;
+						left: -234px;
+					}
+					&:before{
+						content: '';
+						position: absolute;
+						background: url("../img/img_cloud_2.png")no-repeat center/cover;
+						width: 98px;
+						height: 49px;
+						top: 392px;
+						right: -201px;
+					}
+				}
 				.subject-box{
 					font-size: 20px;
 					font-weight: 700;
