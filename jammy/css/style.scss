@@ -183,14 +183,14 @@ section.benefit{
 				padding-top: 60px;
 			}
 			.con-box{
-				background-color: #ffffff;
-				border: 2px solid #000000;
-				padding: 39px 20px 50px;
 				margin-top: 31px;
 
 
 				&.type-cloud{
 					position: relative;
+					background-color: #ffffff;
+					border: 2px solid #000000;
+					padding: 39px 20px 31px;
 					&:after{
 						content: '';
 						position: absolute;
@@ -300,7 +300,9 @@ section.benefit{
 
 				.process-list{
 					display: flex;
-					align-content: center;
+					background-color: #ffffff;
+					border: 2px solid #000000;
+					padding: 39px 20px 31px;
 					justify-content: center;
 					.process-box{
 						position: relative;
@@ -320,12 +322,14 @@ section.benefit{
 
 
 						}
+
 						.process-img-box{
 							background-color: #F1F1F1;
 							border-radius: 50%;
 							width: 138px;
 							height: 138px;
 							position: relative;
+
 
 							.img-box{
 								position: absolute;
@@ -352,6 +356,78 @@ section.benefit{
 
 								}
 							}
+						}
+
+						.txt{
+							padding-top: 18px;
+							font-size: 16px;
+							font-weight: 500;
+							letter-spacing: -0.03em;
+							color: #000;
+							line-height: 140%;
+							text-align: center;
+
+							b{
+								font-weight: 700;
+								font-size: 16px;
+							}
+
+							.msg-box{
+								font-size: 13px;
+								font-weight: 500;
+								letter-spacing: -0.03em;
+								color: #838383;
+							}
+						}
+					}
+				}
+
+				.mission-list{
+					.mission-box{
+						.mission-img-box{
+							.img-box{
+								max-width: 730px;
+								img{
+									width: 100%;
+
+								}
+							}
+						}
+					}
+				}
+
+				.date-list{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					.date-box{
+						width: 155px;
+						height: 155px;
+						border-radius: 50%;
+						border: 2px solid #000000;
+						background-color: #F9E07A;
+						display: flex;
+						flex-flow: row wrap;
+						justify-content: center;
+						padding: 38px 33px;
+						
+
+						& + .date-box{
+							margin-left: 14px;
+						}
+						.subject-box{
+							font-size: 16px;
+							font-weight: 500;
+							color: #000;
+							letter-spacing: -0.04em;
+						}
+
+						.desc-box{
+							padding-top: 14px;
+							font-size: 22px;
+							font-weight: 700;
+							line-height: 110%;
+							color: #000;
 						}
 					}
 				}

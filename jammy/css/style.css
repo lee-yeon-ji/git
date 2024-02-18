@@ -119,12 +119,12 @@ section.benefit {
   section.benefit .item-wrap .item-box + .item-box {
     padding-top: 60px; }
   section.benefit .item-wrap .item-box .con-box {
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    padding: 39px 20px 50px;
     margin-top: 31px; }
     section.benefit .item-wrap .item-box .con-box.type-cloud {
-      position: relative; }
+      position: relative;
+      background-color: #ffffff;
+      border: 2px solid #000000;
+      padding: 39px 20px 31px; }
       section.benefit .item-wrap .item-box .con-box.type-cloud:after {
         content: '';
         position: absolute;
@@ -194,7 +194,9 @@ section.benefit {
         padding-top: 21px; }
     section.benefit .item-wrap .item-box .con-box .process-list {
       display: flex;
-      align-content: center;
+      background-color: #ffffff;
+      border: 2px solid #000000;
+      padding: 39px 20px 31px;
       justify-content: center; }
       section.benefit .item-wrap .item-box .con-box .process-list .process-box {
         position: relative; }
@@ -227,6 +229,53 @@ section.benefit {
               max-width: 82px; }
             section.benefit .item-wrap .item-box .con-box .process-list .process-box .process-img-box .img-box.type-item3 {
               max-width: 78px; }
+        section.benefit .item-wrap .item-box .con-box .process-list .process-box .txt {
+          padding-top: 18px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: -0.03em;
+          color: #000;
+          line-height: 140%;
+          text-align: center; }
+          section.benefit .item-wrap .item-box .con-box .process-list .process-box .txt b {
+            font-weight: 700;
+            font-size: 16px; }
+          section.benefit .item-wrap .item-box .con-box .process-list .process-box .txt .msg-box {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            color: #838383; }
+    section.benefit .item-wrap .item-box .con-box .mission-list .mission-box .mission-img-box .img-box {
+      max-width: 730px; }
+      section.benefit .item-wrap .item-box .con-box .mission-list .mission-box .mission-img-box .img-box img {
+        width: 100%; }
+    section.benefit .item-wrap .item-box .con-box .date-list {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      section.benefit .item-wrap .item-box .con-box .date-list .date-box {
+        width: 155px;
+        height: 155px;
+        border-radius: 50%;
+        border: 2px solid #000000;
+        background-color: #F9E07A;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 38px 33px; }
+        section.benefit .item-wrap .item-box .con-box .date-list .date-box + .date-box {
+          margin-left: 14px; }
+        section.benefit .item-wrap .item-box .con-box .date-list .date-box .subject-box {
+          font-size: 16px;
+          font-weight: 500;
+          color: #000;
+          letter-spacing: -0.04em; }
+        section.benefit .item-wrap .item-box .con-box .date-list .date-box .desc-box {
+          padding-top: 14px;
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 110%;
+          color: #000; }
 
 article.tit-box .tit-txt {
   font-size: 35px;
