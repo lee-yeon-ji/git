@@ -218,6 +218,9 @@ section.benefit{
 		max-width: 730px;
 		margin: 0 auto;
 		padding: 0 27px;
+		@include m{
+		    padding: 0 21px;
+		}
 	}
 
 	.item-wrap{
@@ -494,7 +497,12 @@ section.benefit{
 
 				.mission-list{
 					.mission-box{
+
 						.mission-img-box{
+							@include m{
+								display: none;
+							}
+
 							.img-box{
 								max-width: 730px;
 								img{
@@ -503,6 +511,25 @@ section.benefit{
 								}
 							}
 						}
+
+						.mobile-img-box{
+							display: none;
+							max-width: 335px;
+
+							img{
+								width: 100%;
+
+							}
+							@include m{
+								display: block;
+
+
+							}
+
+
+						}
+
+
 					}
 				}
 

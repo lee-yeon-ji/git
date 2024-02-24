@@ -151,6 +151,9 @@ section.benefit {
     max-width: 730px;
     margin: 0 auto;
     padding: 0 27px; }
+    @media (max-width: 375px) {
+      section.benefit .inner {
+        padding: 0 21px; } }
   section.benefit .item-wrap .item-box + .item-box {
     padding-top: 60px; }
     @media (max-width: 375px) {
@@ -337,10 +340,21 @@ section.benefit {
             font-weight: 500;
             letter-spacing: -0.03em;
             color: #838383; }
+    @media (max-width: 375px) {
+      section.benefit .item-wrap .item-box .con-box .mission-list .mission-box .mission-img-box {
+        display: none; } }
     section.benefit .item-wrap .item-box .con-box .mission-list .mission-box .mission-img-box .img-box {
       max-width: 730px; }
       section.benefit .item-wrap .item-box .con-box .mission-list .mission-box .mission-img-box .img-box img {
         width: 100%; }
+    section.benefit .item-wrap .item-box .con-box .mission-list .mission-box .mobile-img-box {
+      display: none;
+      max-width: 335px; }
+      section.benefit .item-wrap .item-box .con-box .mission-list .mission-box .mobile-img-box img {
+        width: 100%; }
+      @media (max-width: 375px) {
+        section.benefit .item-wrap .item-box .con-box .mission-list .mission-box .mobile-img-box {
+          display: block; } }
     section.benefit .item-wrap .item-box .con-box .date-list {
       display: flex;
       align-items: center;
