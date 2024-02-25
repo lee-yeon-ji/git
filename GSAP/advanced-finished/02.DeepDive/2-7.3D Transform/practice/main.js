@@ -17,8 +17,9 @@ gsap.registerEffect({
     tl.to(split.chars,{
       duration:1.2,
       rotationY:config.deg,
-      rotationX:360,
-      ease:'back(3)',
+      // rotationX:360,
+      // ease:'back(3)',
+      color: '#00000',
       stagger:{
         amount:1
       }
@@ -32,7 +33,7 @@ gsap.registerEffect({
 
 const animation = gsap.timeline();
 
-animation.text3D('h1',{deg:500})
+animation.text3D('h1',{color:'#red'})
 
 
 GSDevTools.create()
