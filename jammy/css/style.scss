@@ -214,7 +214,9 @@ section.benefit{
 	background: url("../img/img_benefit_bg.png")no-repeat center/cover;
 	padding: 80px 0;
 	@include m{
-	    padding: 40px 0;
+		padding: 40px 0;
+		background: url("../img/img_m_benefit_bg.png")no-repeat center/cover;
+
 	}
 	.inner{
 		max-width: 730px;
@@ -539,13 +541,18 @@ section.benefit{
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					margin: -7px -7px;
+
 					@include m{
-					    flex-flow: wrap;
+						flex-flow: wrap;
+						padding: 0 35px;
+
 					}
 
 					.date-box{
-						max-width: 155px;
+						width: calc(25% - 14px);
 						height: 155px;
+						margin: 7px 7px;
 						border-radius: 50%;
 						border: 2px solid #000000;
 						background-color: #F9E07A;
@@ -555,20 +562,22 @@ section.benefit{
 						align-items: center;
 						padding: 38px 33px;
 						@include m{
-						    max-width: 124px;
+							width: calc(50% - 15px);
+							height: 124px;
+							padding: 36px 14px;
 
 						}
-						
 
-						& + .date-box{
-							margin-left: 14px;
-						}
 						.subject-box{
 							font-size: 16px;
 							font-weight: 500;
 							color: #000;
 							letter-spacing: -0.04em;
 							max-height: 16px;
+							@include m{
+							    font-size: 14px;
+								max-height: 14px;
+							}
 						}
 
 						.desc-box{
@@ -577,6 +586,10 @@ section.benefit{
 							font-weight: 700;
 							line-height: 110%;
 							color: #000;
+							@include m{
+							    padding-top: 7px;
+								font-size: 18px;
+							}
 						}
 					}
 				}
@@ -610,6 +623,10 @@ section.benefit{
 				color: #ffffff;
 				text-decoration: none;
 				padding: 25px 0;
+				@include m{
+					height: 55px;
+					font-size: 18px;
+				}
 
 
 			}
@@ -621,6 +638,9 @@ section.benefit{
 section.time{
 	background-color: #1EB26C;
 	padding: 80px 0 120px;
+	@include m{
+	    padding: 40px 0 100px;
+	}
 
 	.inner{
 		max-width: 730px;
@@ -634,6 +654,10 @@ section.time{
 		letter-spacing: -0.03em;
 		color: #000;
 		text-align: center;
+		@include m{
+		    font-size: 24px;
+
+		}
 
 
 	}
@@ -645,7 +669,23 @@ section.time{
 		img{
 			width: 100%;
 		}
+		@include m{
+		    display: none;
+		}
 
+	}
+
+	.time-mob-con-box{
+		display: none;
+		padding-top: 20px;
+		max-width: 332px;
+
+		img{
+			width: 100%;
+		}
+		@include m{
+		    display: block;
+		}
 	}
 
 	.more-btn-box{
@@ -655,6 +695,9 @@ section.time{
 		justify-content: center;
 		max-width: 480px;
 		margin: 0 auto;
+		@include m{
+		    padding-top: 20px;
+		}
 
 		.more-btn{
 			display: flex;
@@ -669,6 +712,10 @@ section.time{
 			height: 70px;
 			border-radius: 999px;
 			text-decoration: none;
+			@include m{
+				font-size: 18px;
+				height: 55px;
+			}
 
 
 
@@ -678,6 +725,9 @@ section.time{
 
 	.warning-box{
 		padding-top: 60px;
+		@include m{
+		    padding-top: 40px;
+		}
 		.subject-box{
 			color: #265740;
 			font-size: 16px;
@@ -694,6 +744,9 @@ section.time{
 			letter-spacing: -0.05em;
 			line-height: 160%;
 			color: #265740;
+			@include m{
+			    font-size: 12px;
+			}
 
 		}
 

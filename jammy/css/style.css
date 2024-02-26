@@ -146,7 +146,8 @@ section.benefit {
   padding: 80px 0; }
   @media (max-width: 375px) {
     section.benefit {
-      padding: 40px 0; } }
+      padding: 40px 0;
+      background: url("../img/img_m_benefit_bg.png") no-repeat center/cover; } }
   section.benefit .inner {
     max-width: 730px;
     margin: 0 auto;
@@ -358,13 +359,16 @@ section.benefit {
     section.benefit .item-wrap .item-box .con-box .date-list {
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      margin: -7px -7px; }
       @media (max-width: 375px) {
         section.benefit .item-wrap .item-box .con-box .date-list {
-          flex-flow: wrap; } }
+          flex-flow: wrap;
+          padding: 0 35px; } }
       section.benefit .item-wrap .item-box .con-box .date-list .date-box {
-        max-width: 155px;
+        width: calc(25% - 14px);
         height: 155px;
+        margin: 7px 7px;
         border-radius: 50%;
         border: 2px solid #000000;
         background-color: #F9E07A;
@@ -375,21 +379,29 @@ section.benefit {
         padding: 38px 33px; }
         @media (max-width: 375px) {
           section.benefit .item-wrap .item-box .con-box .date-list .date-box {
-            max-width: 124px; } }
-        section.benefit .item-wrap .item-box .con-box .date-list .date-box + .date-box {
-          margin-left: 14px; }
+            width: calc(50% - 15px);
+            height: 124px;
+            padding: 36px 14px; } }
         section.benefit .item-wrap .item-box .con-box .date-list .date-box .subject-box {
           font-size: 16px;
           font-weight: 500;
           color: #000;
           letter-spacing: -0.04em;
           max-height: 16px; }
+          @media (max-width: 375px) {
+            section.benefit .item-wrap .item-box .con-box .date-list .date-box .subject-box {
+              font-size: 14px;
+              max-height: 14px; } }
         section.benefit .item-wrap .item-box .con-box .date-list .date-box .desc-box {
           padding-top: 14px;
           font-size: 22px;
           font-weight: 700;
           line-height: 110%;
           color: #000; }
+          @media (max-width: 375px) {
+            section.benefit .item-wrap .item-box .con-box .date-list .date-box .desc-box {
+              padding-top: 7px;
+              font-size: 18px; } }
   section.benefit .benefit-btn-box {
     padding-top: 44px; }
     section.benefit .benefit-btn-box .btn-box {
@@ -411,10 +423,17 @@ section.benefit {
         color: #ffffff;
         text-decoration: none;
         padding: 25px 0; }
+        @media (max-width: 375px) {
+          section.benefit .benefit-btn-box .btn-box .btn {
+            height: 55px;
+            font-size: 18px; } }
 
 section.time {
   background-color: #1EB26C;
   padding: 80px 0 120px; }
+  @media (max-width: 375px) {
+    section.time {
+      padding: 40px 0 100px; } }
   section.time .inner {
     max-width: 730px;
     margin: 0 auto;
@@ -425,11 +444,26 @@ section.time {
     letter-spacing: -0.03em;
     color: #000;
     text-align: center; }
+    @media (max-width: 375px) {
+      section.time .time-tit-box {
+        font-size: 24px; } }
   section.time .time-con-box {
     padding-top: 30px;
     max-width: 730px; }
     section.time .time-con-box img {
       width: 100%; }
+    @media (max-width: 375px) {
+      section.time .time-con-box {
+        display: none; } }
+  section.time .time-mob-con-box {
+    display: none;
+    padding-top: 20px;
+    max-width: 332px; }
+    section.time .time-mob-con-box img {
+      width: 100%; }
+    @media (max-width: 375px) {
+      section.time .time-mob-con-box {
+        display: block; } }
   section.time .more-btn-box {
     padding-top: 40px;
     display: flex;
@@ -437,6 +471,9 @@ section.time {
     justify-content: center;
     max-width: 480px;
     margin: 0 auto; }
+    @media (max-width: 375px) {
+      section.time .more-btn-box {
+        padding-top: 20px; } }
     section.time .more-btn-box .more-btn {
       display: flex;
       align-items: center;
@@ -450,8 +487,15 @@ section.time {
       height: 70px;
       border-radius: 999px;
       text-decoration: none; }
+      @media (max-width: 375px) {
+        section.time .more-btn-box .more-btn {
+          font-size: 18px;
+          height: 55px; } }
   section.time .warning-box {
     padding-top: 60px; }
+    @media (max-width: 375px) {
+      section.time .warning-box {
+        padding-top: 40px; } }
     section.time .warning-box .subject-box {
       color: #265740;
       font-size: 16px;
@@ -464,6 +508,9 @@ section.time {
       letter-spacing: -0.05em;
       line-height: 160%;
       color: #265740; }
+      @media (max-width: 375px) {
+        section.time .warning-box .desc-box {
+          font-size: 12px; } }
 
 article.tit-box .tit-txt {
   font-size: 35px;
