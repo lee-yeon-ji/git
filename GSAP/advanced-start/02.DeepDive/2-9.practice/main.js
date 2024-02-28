@@ -27,14 +27,9 @@ gsap.registerEffect({
     }
 })
 
-// let index = 1
-// let _str = `.bg > div:nth-child(${index}) ${index}) ${index})  `;
-// let _str = '.bg > <a href=\"javscript:item(\"\")">:nth-child('+index+')' + index  + ')' + index ;
-// let _str = 'asdf';
-//
-
 
 function textAnimation(){
+
 
     const animation = gsap.timeline();
 
@@ -42,8 +37,6 @@ function textAnimation(){
     animation.textEffect('.ex1')
             .textEffect('.ex2')
             .textEffect('.ex3')
-
-
             .textEffect('.ex4')
 
     animation.eventCallback('onUpdate',()=>{
