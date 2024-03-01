@@ -20,5 +20,3 @@ gsap.to('.bar',{
 
 
 GSDevTools.create()
-
-//push 한번 더
