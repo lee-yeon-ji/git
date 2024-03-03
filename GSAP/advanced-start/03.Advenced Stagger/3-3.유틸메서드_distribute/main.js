@@ -14,8 +14,9 @@ gsap.to('.bar',{
     duration:2,
     stagger:{
         each:0.1,
+        from:'center'
 
-    }
+    },
 })
 
 
