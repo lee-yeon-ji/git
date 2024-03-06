@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+
+$font:'NanumBarunGothic';
+
+@each $font-size in L, R, B{
+	@font-face {
+		font-family:$font;
+		src: url("../font/#{$font}-#{$font-size}.woff")format('woff');
+
+		@if $font == L{
+			font-weight: 300;
+		}
+		@else if $font == R {
+			font-weight: 400;
+		}
+		@else if $font == B {
+			font-weight: 700;
+		}
+		font-style:normal;
+	}
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family:'NanumBarunGothic';
+
+}
+
+
+<style type="text/css">
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+.tal{text-align:left!important}
+.ml-1{margin-left:20px!important}
+.mt-0{margin-top:0!important}
+.mt-1{margin-top:20px!important}
+caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;text-indent:-9999px}
+.ir-hidden{position:absolute;margin:-1px;width:1px;height:1px;padding:0;border:0;white-space:nowrap;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%)}
+.content-service-view{font-family:'Noto Sans','Noto Sans KR',sans-serif;font-size:14px;line-height:1.6}
+.content-service-view .lg-red{color:#ec455a!important}
+.content-service-view .c-gray{color:#999!important}
+.content-service-view strong{font-weight:600}
+.content-service-view p{margin:0 0 10px 0;padding:0}
+.content-service-view ol,.content-service-view ul{margin:0 0 20px;padding:0;list-style:none}
+.content-service-view [class^=iframe-wrap]{margin-top:15px}
+.content-service-view .iframe-wrap iframe{width:640px}
+.content-service-view .iframe-wrap-shorts iframe{width:365px}
+.content-service-view .info-subject{margin:0 0 15px;padding:0;font-size:18px;color:#444;line-height:1.5}
+.content-service-view .tit{position:relative;margin:60px 0 15px 0;padding:0;font-weight:600;font-size:22px;color:#444;line-height:1.5}
+.content-service-view .tit:before{content:"";overflow:hidden;position:absolute;left:0;top:-8px;width:25px;height:3px;background:#ec455a}
+.content-service-view .tit:first-child{margin-top:0}
+.content-service-view .info-subject+.tit{margin-top:40px}
+.content-service-view .sub-tit{position:relative;margin:60px 0 10px;padding:0 0 0 22px;font-size:17px;font-weight:500;line-height:1.5}
+.content-service-view .sub-tit:before{content:"";overflow:hidden;position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;background:#999 url(https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=CYfUaCPKDZkbFewB3OjoAA&amp;portalId=P1) no-repeat 4px 50%;background-size:10px}
+.content-service-view .sub-tit:first-child,.content-service-view .tit+.sub-tit{margin-top:20px}
+.content-service-view .sub-tit .num{display:block;position:absolute;left:0;top:5px;width:17px;height:17px;text-align:center;border-radius:50%;font-size:11px;color:#fff;background:#999}
+.content-service-view .info-tit{margin:20px 0 0;padding-left:20px;font-size:15px;font-weight:500;color:#000;background:url(https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=81CJtgOoS8EBzjcpk4oCvA&amp;portalId=P1) no-repeat 0 5px;background-size:16px}
+.content-service-view .info-desc{margin:5px 0;font-weight:500;color:#000}
+.content-service-view .info-desc.idt{margin-left:18px;text-indent:-18px}
+.content-service-view .txt-idt{margin-left:16px!important;text-indent:-16px}
+.content-service-view .txt-idt *{text-indent:0}
+.content-service-view .img-only{margin:0 0 20px}
+.content-service-view .img-only img{max-width:100%;margin-bottom:15px}
+.content-service-view .img-only img:last-child{margin-bottom:0}
+.content-service-view .img-box{margin:15px 0;font-size:0;line-height:0}
+.content-service-view .img-box a{font-size:0;line-height:0}
+.content-service-view .cause-list{margin-top:0}
+.content-service-view .cause-list li{position:relative;margin-top:5px;padding-left:10px;line-height:1.5}
+.content-service-view .cause-list li:before{content:"";position:absolute;left:0;top:9px;overflow:hidden;width:3px;height:3px;border-radius:50%;background:#000}
+.content-service-view .bul-list{margin-top:15px}
+.content-service-view .bul-list li{position:relative;margin-top:7px;padding-left:10px;line-height:1.5}
+.content-service-view .bul-list li:before{content:"";position:absolute;left:0;top:9px;overflow:hidden;width:4px;height:4px;border-radius:50%;background:#ec455a}
+.content-service-view .tbl-scroll{position:relative;overflow-x:auto;margin:0 0 15px}
+.content-service-view .tbl-scroll table{border-collapse:collapse}
+.content-service-view .tbl-scroll td,.content-service-view .tbl-scroll th{padding:7px;border:1px solid #ccc;text-align:center;white-space:nowrap;vertical-align:middle;font-size:14px;line-height:1.6}
+.content-service-view .tbl-scroll th{font-size:15px;font-weight:600;background:#ddd}
+.content-service-view .tbl-scroll td p{margin-bottom:0}
+.content-service-view .tbl-scroll .bg-red td{background-color:rgba(236,69,90,.06)}
+.content-service-view [class^=icon-]{display:inline-block;overflow:hidden;width:14px;height:14px;text-indent:-5000px;margin-right:2px;vertical-align:-2px;background-image:url(https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=e6Br68S0ipa4zVZ3ZhqQ&amp;portalId=P1);background-size:100%}
+.content-service-view .icon-down{background-image:url(https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=cSrRVKKz6eHJNHzIRgzWA&amp;portalId=P1)}
+.content-service-view [class^=btn0]{display:inline-block;height:32px;padding:0 15px;border:1px solid #ec455a;border-radius:18px;text-decoration:none;font-size:14px;color:#ec455a;line-height:2;background:#fff}
+.content-service-view .btn01:hover{color:#fff;background:#ec455a}
+.content-service-view .link-btn{display:inline-block;height:32px;margin-top:5px;padding:0 15px;border:1px solid #d2d2d7;border-radius:18px;text-decoration:none;font-size:14px;color:#ec455a;line-height:2;background:#fff}
+.content-service-view .link-btn:hover{border-color:#ec455a}
+.content-service-view .link-txt{text-decoration:underline;vertical-align:top;color:#ec455a;word-break:keep-all;word-wrap:break-word}
+.content-service-view .tip-box{margin:25px 0;padding:20px 20px 10px;border:2px solid #ddd;border-radius:8px}
+.content-service-view .tip-box .tip-tit{display:block;position:relative;padding-left:20px;font-size:15px!important;color:#222}
+.content-service-view .tip-box .tip-tit:before{content:"!";position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;text-align:center;font-size:11px;color:#fff;background:silver}
+.content-service-view .tip-box p{margin-top:10px;color:#ec455a!important}
+.content-service-view .tip-box strong{font-size:14px}
+.content-service-view .tip-box>p>strong{color:#ec455a!important}
+.content-service-view .tip-box .con-view{margin:10px 0;color:#333}
+.content-service-view .tip-box p+.con-view{margin-top:-5px}
+.content-service-view .tip-box .bul-list{margin-bottom:15px}
+.content-service-view .tip-box .con-view+[class^=img-]{margin-top:20px}
+.content-service-view .img-banner{margin-top:30px}
+.content-service-view .img-banner .mo{display:none}
+.content-service-view .img-banner .pc{display:block;position:relative;height:168px;margin-right:175px;background:#e9ecf1 url(https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=1LKxgclhHWvKxN7aMUkPyg&portalId=P1) no-repeat 0 50%;background-size:contain}
+.content-service-view .img-banner .pc a{position:absolute;top:0;right:-175px}
+.content-service-view .img-banner .pc a img{-webkit-box-shadow:2px 2px 5px 0 rgba(118,118,118,1);-moz-box-shadow:2px 2px 5px 0 rgba(118,118,118,1);box-shadow:2px 2px 5px 0 rgba(118,118,118,1)}
+.content-service-view .mobile-txt{display:none;margin-top:-10px;padding-left:20px;color:#999;background:url(https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=Xw5rvb0UTyjfo1LwHfIJ7w&amp;portalId=P1) no-repeat 0 5px;background-size:15px}
+.content-service-view .link-list{margin-top:10px}
+.content-service-view .link-list li{display:table;box-sizing:border-box;width:100%;margin-top:10px;padding:8px 15px;border-radius:8px;box-shadow:2px 4px 16px 1px rgba(0,0,0,.14)}
+.content-service-view .link-list li .link-tit{display:table-cell;padding-right:5px;font-weight:600;vertical-align:middle}
+.content-service-view .link-list li .right{display:table-cell;text-align:right}
+.content-service-view .link-list li .ver{display:inline-block;margin-top:5px;color:#999}
+.content-service-view .link-list li .right a{margin-left:10px}
+.content-service-view .txt-box{max-width:600px}
+.content-service-view .txt-box+.txt-box{margin-top:25px}
+.content-service-view .txt-box h4{margin:0;padding:6px;text-align:center;font-size:18px;font-weight:600;background:#ddd}
+.content-service-view .txt-box ul{margin:0 7px}
+.content-service-view .txt-box li{display:flex;flex-wrap:wrap;padding:5px;border-bottom:1px solid #ddd}
+.content-service-view .txt-box li div{flex:1 1 50%}
+.content-service-view .txt-box li span{display:block;position:relative;padding-left:10px;font-size:16px;font-weight:600}
+.content-service-view .txt-box li span:before{content:"";position:absolute;left:0;top:10px;overflow:hidden;width:4px;height:4px;border-radius:50%;background:#000}
+.content-service-view .txt-box li p{margin:0;padding:0 0 0 10px;font-size:14px}
+.content-service-view .help-txt{position:relative;margin:30px 0 0;padding:0 0 0 15px;font-size:14px;color:#666}
+.content-service-view .help-txt:before{content:'＊';position:absolute;left:0;top:0;font-size:12px;font-weight:600;color:#ec455a}
+#contentsViewer .content-service-view .iframe-wrap iframe{height:360px!important}
+#contentsViewer .content-service-view .iframe-wrap-shorts iframe{height:650px!important}
+#contentsViewer .content-service-view .info-subject{margin:0;padding:0 0 15px}
+@media screen and (max-width:768px){
+	.content-service-view img{max-width:100%!important}
+	.content-service-view .mobile-txt{display:block}
+	.content-service-view [class^=iframe-wrap]{position:relative;overflow:hidden;height:0;padding-top:30px;padding-bottom:56.25%}
+	.content-service-view .iframe-wrap-shorts{padding-bottom:120%}
+	.content-service-view [class^=iframe-wrap] iframe{position:absolute;top:0;left:0;width:100%;height:90%!important}
+	.content-service-view [class^=iframe-wrap]+.tit{margin-top:0}
+	.content-service-view .img-banner .mo{display:block}
+	.content-service-view .img-banner .mo img{width:100%}
+	.content-service-view .img-banner .pc{display:none}
+	#contentsViewer .content-service-view [class^=iframe-wrap] iframe{height:90%!important}
+}
+
+
+.err-contents button{ -webkit-appearance: none; -moz-appearance: none; appearance: none;
+	margin: 0;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 10px 5px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #ec455a;
+	border: none;
+	border-radius: 4px;
+	width: auto;
+	cursor: pointer;
+}
+.popup-layout{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5)
+}
+.popup-layout .popup-bg{
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	background-color: #ffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	border-radius: 20px;
+	border: 3px solid #ec455a;
+}
+.popup-layout .err-btn-box{
+	width: 100%;
+	text-align: right;
+}
+.popup-layout .err-btn-box button.close-btn{
+	margin: 0;
+	font-size: 12px;
+	font-weight: 400;
+	background: url(closebtn.jpg) no-repeat center/ auto;
+	border: none;
+	border-radius: 4px;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+</style>
+
+
+.err-contents button{ -webkit-appearance: none; -moz-appearance: none; appearance: none;
+	margin: 0;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 10px 5px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #ec455a;
+	border: none;
+	border-radius: 4px;
+	width: auto;
+	cursor: pointer;
+}
+.popup-layout{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5)
+}
+.popup-layout .popup-bg{
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	background-color: #ffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	border-radius: 20px;
+	border: 3px solid #ec455a;
+}
+.popup-layout .err-btn-box{
+	width: 100%;
+	text-align: right;
+}
+
+.popup-layout .err-btn-box button.close-btn{
+	margin: 0;
+	font-size: 12px;
+	font-weight: 400;
+	background: url(../img/ic_close.png) no-repeat center/ 30px 30px;
+	border: none;
+	border-radius: 4px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
