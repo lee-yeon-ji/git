@@ -646,7 +646,7 @@ section.romantic-culture {
         padding-top: 36px; }
         @media (max-width: 1160px) {
           section.romantic-culture .section-wrap .group-box + .group-box {
-            padding-top: 50px; } }
+            padding-top: 40px; } }
       section.romantic-culture .section-wrap .group-box .tip-box {
         width: 100%;
         flex: 1;
@@ -710,14 +710,43 @@ section.romantic-culture {
                   font-size: 16px;
                   line-height: 22px;
                   letter-spacing: -0.05em; } }
+        section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line {
+          display: flex; }
+          @media (max-width: 1160px) {
+            section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line {
+              display: block; } }
+          section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line .visual-box + .visual-box {
+            margin-left: 36px;
+            margin-top: auto; }
+            @media (max-width: 1160px) {
+              section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line .visual-box + .visual-box {
+                margin-left: auto;
+                margin-top: 40px; } }
+          section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line .visual-box.type-img3 {
+            background: url("../img/img_board_item5.png") no-repeat center/cover;
+            width: 279px; }
+            @media (max-width: 1160px) {
+              section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line .visual-box.type-img3 {
+                background: url("../img/img_board_item5_mob.png") no-repeat center/cover;
+                width: 100%; } }
+          section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line .visual-box.type-img4 {
+            background: url("../img/img_board_item6.png") no-repeat center/cover;
+            flex: 1;
+            width: 100%; }
+            section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line .visual-box.type-img4 .con-box .subject-box {
+              color: #000; }
+            section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line .visual-box.type-img4 .con-box .sub-box {
+              color: #000; }
+            @media (max-width: 1160px) {
+              section.romantic-culture .section-wrap .group-box .tip-box .visual-wrap.type-line .visual-box.type-img4 {
+                background: url("../img/img_board_item6_mob.png") no-repeat center/cover; } }
       section.romantic-culture .section-wrap .group-box .talk-box {
         margin-left: 36px;
         width: 280px; }
         @media (max-width: 1160px) {
           section.romantic-culture .section-wrap .group-box .talk-box {
             width: 100%;
-            margin-top: 50px;
-            margin-left: 0;
-            flex: auto; } }
+            margin-top: 40px;
+            margin-left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

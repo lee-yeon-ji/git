@@ -935,7 +935,7 @@ section.romantic-culture{
       & + .group-box{
         padding-top: 36px;
         @include m{
-          padding-top: 50px;
+          padding-top: 40px;
         }
       }
 
@@ -956,6 +956,8 @@ section.romantic-culture{
               padding: 0 0 108%;
 
             }
+
+
 
 
             & + .visual-box{
@@ -1028,6 +1030,60 @@ section.romantic-culture{
               }
             }
           }
+
+          &.type-line{
+            display: flex;
+            @include m{
+                display: block;
+            }
+
+            .visual-box{
+
+              & + .visual-box{
+                margin-left: 36px;
+                margin-top: auto;
+                @include m{
+                  margin-left: auto;
+                  margin-top: 40px;
+                }
+              }
+
+
+              &.type-img3{
+                background:url("../img/img_board_item5.png")no-repeat center/cover;
+                width: 279px;
+
+
+                @include m{
+                  background:url("../img/img_board_item5_mob.png")no-repeat center/cover;
+                  width: 100%;
+
+
+                }
+              }
+
+              &.type-img4{
+                background:url("../img/img_board_item6.png")no-repeat center/cover;
+                flex: 1;
+                width: 100%;
+                .con-box{
+                  .subject-box{
+                    color: #000;
+                  }
+                  .sub-box{
+                    color: #000;
+                  }
+                }
+                @include m{
+                  background:url("../img/img_board_item6_mob.png")no-repeat center/cover;
+
+                }
+              }
+
+            }
+
+          }
+
         }
 
       }
@@ -1038,9 +1094,8 @@ section.romantic-culture{
 
         @include m{
           width: 100%;
-          margin-top: 50px;
+          margin-top: 40px;
           margin-left: 0;
-          flex: auto;
         }
 
 
