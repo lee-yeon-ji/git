@@ -42,9 +42,12 @@
 //위에는 타이거를 움직이게 하는 코드//
 
 
-const {chars,lines,words} = new SplitText('.word > div')
+const {chars,lines,words} = new SplitText('.word > div');
+const tl = gsap.timeline();
 
-gsap.from(chars,{
+
+
+tl.from(chars,{
   opacity:0,
   duration:2,
   stagger:{
@@ -54,10 +57,20 @@ gsap.from(chars,{
     onComplete(){
       gsap.to(this.targets()[0],{
         delay:0.5,
-        duration: 2,
+        duration: 0,
         color:'#51ff00'
       })
     },
+  }
+})
+
+.to(lines,{
+  delay:1, //from에서 애니메이션을 시작할 때 OnComPlete가 끝날 때까지 기다려 주지 않기 때문에 delay이를 줘서 위에 애니메이션이 끝난 뒤에 실행 할 수 있도록 해줘야함.//
+  y:30,
+  opacity:0,
+  stagger:{
+    each:0.3,
+    from:'end'
   }
 })
 
