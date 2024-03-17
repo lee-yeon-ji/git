@@ -81,17 +81,35 @@ for(let i = 0; i < l; i++){
 }
 
 
-gsap.to('.box',{
+const tween = gsap.to('.box',{
   scale:0.3,
 
   stagger:{
-    each0:0.5,
+    each:0.5,
     onStart(){
-      console.log('start');
+      const target = this.targets()[0];
+
+      if(target.dataset.stop === 'stop'){
+        tween.pause( this.startTime())//각 재생시간이 있는 box 를 눌렀을 때 움찔하는 모션이 있음 그걸 방지하기 위해 지금 클릭한 순간이 멈춰야 할 시간임을 지정해주기 위해 this.startTime()을 써준다//
+      }
     }
   }
 })
 
 
+const stage = document.querySelector('.stage');
 
+stage.addEventListener('click',(e)=>{
+
+  if(e.target.matches('.box')){
+    gsap.to(e.target,{
+      backgroundColor:'red',
+      attr:{//setAttribute를 gsap에서 플로그인으로 쓸 수 있는 attr 라는게 있음. 내가 설정한 값을 넣어 줄 수 있음.//
+        'data-stop':'stop',
+
+      }
+    })
+  }
+})
+//matches는 대상과 즉, box를 가지고 있는지 매치가 되는지 확인하는 식으로 위힘을 줄 수 있음. 그리고 matches를 쓸때는 정확하게 클래스의 box를 가지고 있는지 물어봐야 하기 때문에 .을 붙여준다.//
 
