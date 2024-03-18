@@ -1,26 +1,27 @@
 
 
 
-const duration = 0.2 //동일하게 관리되는 애들은 변수를 따로 빼서 쓰는 것이 좋음. stagger에 변수를 넣어준걸 볼 수 있음.
+const duration = 0.2; //동일하게 관리되는 애들은 변수를 따로 빼서 쓰는 것이 좋움. stagger에 변수를 넣어준걸 볼 수 있음.//
 //더빨리 나오게 하고 싶으면 값을 줄이면 됨.//
 
 const numberOfTargtets = gsap.utils.toArray('.utils > div').length
-const pause = 2;//pause도 마찬가지로 duration과 같이 값을 조절해서 멈춰있는 시간을 자유롭게 할 수 있음//
+const pause = 1.2;
+//pause도 마찬가지로 duration과 같이 값을 조절해서 멈춰있는 시간을 자유롭게 할 수 있음//
 const stagger = duration + pause;
-const delay = duration * (numberOfTargtets - 1) + pause;
-//빼기를 우선순위로 주기 위해서 구름 연산자로 ()를 묶어주기
+const delay = stagger * (numberOfTargtets - 1) + pause;
+//빼기를 우선순위로 주기 위해서 구름 연산자로 ()를 묶어주기//
 
 
 
 const tl = gsap.timeline();
 
-gsap.set('.utils > div',{transformOrigin: '50% 50% -50'}) //x,y,z 순으로 되어있음.
+gsap.set('.utils > div',{transformOrigin: '50% 50% -50'}) //x,y,z 순으로 되어있음.//
 
 
 
 tl.from('.utils > div',{
     rotationX:-90,
-    rotationY:-90,
+    rotationY:-50,
     opacity:0,
     duration: duration,
     stagger:{
