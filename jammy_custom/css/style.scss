@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+
+$font : 'Pretendard'; // 변수를 지정
+
+@each $font-size in R, M, B, SB{
+
+	@font-face{
+		font-family: $font;
+		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+
+		@if $font-size == R {
+			font-weight: 400;
+		}
+
+		@else if $font-size == M {
+			font-weight: 500;
+		}
+
+		@else if $font-size == B {
+			font-weight: 700;
+		}
+
+		@else if $font-size == SB {
+			font-weight: 800;
+		}
+
+		font-style:normal;
+	}
+}
+
+
+
+
+// 모바일
+@mixin m{
+	@media (max-width: 375px) {
+		@content
+	}
+}
+
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: $font;
+
+}
+
+
+section.custom{
+	.custom-group{
+		background: url("../img/img_bg.png") no-repeat top/ auto;
+		height: 100vh;
+		.inner{
+			.tit-box{
+				max-width: 995px;
+				margin: 0 auto;
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
