@@ -245,6 +245,87 @@ section.custom{
 								}
 							}
 						}
+
+						.agree-box{
+							padding-top: 57px;
+
+							.agree-wrap{
+								.agree-chk-box{
+
+									& + .agree-chk-box{
+										padding-top: 20px;
+									}
+									.cbox{
+										label{
+											cursor: pointer;
+											width: 100%;
+											display: flex;
+											align-items: center;
+
+											input[type=checkbox]{
+												position: absolute;
+												left: -9999px;
+
+												&:checked{
+
+													& ~ i{
+														background: url("../img/ic_chk_on.svg")no-repeat center/cover;
+														width: 33px;
+														height: 33px;
+
+													}
+
+												}
+											}
+
+										}
+
+										i{
+											background: url("../img/ic_chk_off.svg")no-repeat center/cover;
+											width: 33px;
+											height: 33px;
+											display: block;
+										}
+
+
+										.txt{
+											padding-left: 10px;
+											color: #303030;
+											font-size: 18px;
+											font-weight: 500;
+											line-height: 31px;
+											letter-spacing: -1.26px;
+
+											.text-underline{
+												font-weight: 700;
+												text-decoration-line: underline;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.send-btn-box{
+							padding-top: 75px;
+
+
+							.send-btn{
+								margin: 0 auto;
+								border-radius: 3px;
+								background: #000;
+								max-width: 360px;
+								color: #FFF;
+								font-size: 18px;
+								font-weight: 700;
+								letter-spacing: -0.54px;
+								text-decoration: none;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								padding: 20px 5px;
+							}
+						}
 					}
 				}
 			}
