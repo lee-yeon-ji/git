@@ -7,14 +7,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>jammey custom</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+<!--	<link-->
+<!--					rel="stylesheet"-->
+<!--					href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"-->
+<!--	/>-->
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
 <section class="custom">
 	<div class="custom-group">
 		<div class="inner wrap">
-			<div class="tit-box">
-				<img src="../img/img_tit.png" alt="타이틀 이미지">
-			</div>
 
 			<div class="sing-contents">
 				<div class="sing-wrap">
@@ -47,10 +51,40 @@
 
 							<div class="img-list-box">
 
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" >
+											<a href="#none" class="ic-close"></a>
+										</div>
+										<div class="swiper-slide" >
+											<a href="#none" class="ic-close"></a>
+										</div>
+										<div class="swiper-slide" >
+											<a href="#none" class="ic-close"></a>
+										</div>
+										<div class="swiper-slide" >
+											<a href="#none" class="ic-close"></a>
+										</div>
 
+										<div class="swiper-slide" >
+											<a href="#none" class="ic-close"></a>
+										</div>
+
+										<div class="swiper-slide" >
+											<div class="item-wrap">
+												<a href="#none" class="ic-close"></a>
+												<img src="../img/ic_chk_on.svg" alt="이미지">
+											</div>
+
+										</div>
+
+
+									</div>
+
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+								</div>
 							</div>
-
-
 						</div>
 					</div>
 
@@ -60,6 +94,7 @@
 						<div class="con-box">
 							<div class="form-box">
 								<div class="form-wrap">
+<!--									박스를 하나 더 감싸서 여백이 공통으로 똑같이 적용될 수 있도록 하기 각각 다른 input을 만들 때 계속해서 여백값을 주면 코드가 늘어나니까.-->
 									<div class="form-con-box">
 										<div class="subject-box">이름</div>
 										<div class="tbox">
@@ -138,15 +173,42 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
 </section>
 
 
+<script>
+	const mySwiper = new Swiper('.swiper-container',{
+
+      spaceBetween: 12,
+      slidesPerView : 5,
+      navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+      },
+
+
+
+	});
+</script>
+
+<script>
+    const closeBtn = document.querySelectorAll('.ic-close');
+    console.log(closeBtn);
+
+    const slide = document.querySelectorAll('.swiper-slide');
+    console.log(slide)
+
+
+    closeBtn.addEventListener('click', btn);
+    function btn(){
+        console.log(btn)
+
+
+    }
+
+
+
+</script>
 
 </body>
 </html>

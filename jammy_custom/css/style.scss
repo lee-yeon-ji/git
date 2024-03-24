@@ -51,12 +51,24 @@ $font : 'Pretendard'; // 변수를 지정
 
 
 section.custom{
+	background: url("../img/img_bg.png") repeat top/ auto auto;
+
 	.custom-group{
-		background: url("../img/img_bg.png") repeat top/ auto auto;
+		background: url("../img/img_tit.png") no-repeat top center / 994px 515px;
+		padding-top: 276px;
+
+		@include m{
+			background-size: 331px 171px;
+			padding-top: 150px;
+
+		}
 
 		.inner{
 			max-width: 995px;
 			margin: 0 auto;
+			@include m{
+				padding: 0 20px;
+			}
 
 			.tit-box{
 				img{
@@ -68,7 +80,6 @@ section.custom{
 				margin: 0 auto;
 				max-width: 700px;
 				position: relative;
-				top: -236px;
 
 				.sing-wrap{
 					.item-box{
@@ -89,6 +100,79 @@ section.custom{
 							font-weight: 500;
 							letter-spacing: -0.05em;
 							color: #303030;
+						}
+
+						.img-list-box{
+							padding-top: 30px;
+
+							.swiper-container{
+								overflow: hidden;
+								position: relative;
+								padding: 0 27px;
+								//swiper btn들로 인해 안에 콘텐츠들이 가리기 때문에 padding 값을 줘서 가리지 않도록 해줌. //
+
+
+								.swiper-wrapper{
+
+									.swiper-slide{
+
+										.item-wrap{
+											border-radius: 4px;
+											background: #C7C7C7;
+											height: 118px;
+											position: relative;
+
+											img{
+												width: 100%;
+												height: 100%;
+												object-fit: cover;
+
+											}
+										}
+
+
+										.ic-close{
+											background: url("../img/ic_close.svg") no-repeat center/cover;
+											width: 24px;
+											height: 24px;
+											position: absolute;
+											right: 10px;
+											top: 10px;
+										}
+
+									}
+
+
+
+								}
+
+								.swiper-button-prev,
+								.swiper-button-next{ //공통으로 쓰이는 부분은 하나만 작성할 수 있도록 하기//
+									margin-top: 0;
+									width: 17px;
+									height: 118px;
+									top:0;
+
+									&:after{
+										display: none;
+									}
+
+								}
+								.swiper-button-prev{
+									background: url("../img/ic_prev.svg")no-repeat top / cover;
+									left: 0;
+								}
+
+								.swiper-button-next{
+									background: url("../img/ic_next.svg")no-repeat top / cover;
+									right: 0;
+								}
+
+
+
+
+
+							}
 						}
 
 						.con-box{
@@ -157,10 +241,18 @@ section.custom{
 
 							.form-box{
 								.form-wrap{
+
 									.form-con-box{
 
 										&+ .form-con-box{
 											padding-top: 20px;
+										}
+
+										.item-box{
+
+											& + .item-box{
+												margin-top: 20px;
+											}
 
 										}
 
