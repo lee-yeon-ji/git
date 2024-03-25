@@ -54,26 +54,35 @@
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide" >
-											<a href="#none" class="ic-close"></a>
+											<div class="item-wrap">
+												<a href="#none" class="ic-close" ></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="item-wrap">
+												<a href="#none" class="ic-close" ></a>
+											</div>
 										</div>
 										<div class="swiper-slide" >
-											<a href="#none" class="ic-close"></a>
+											<div class="item-wrap" >
+												<a href="#none" class="ic-close" ></a>
+											</div>
 										</div>
 										<div class="swiper-slide" >
-											<a href="#none" class="ic-close"></a>
-										</div>
-										<div class="swiper-slide" >
-											<a href="#none" class="ic-close"></a>
-										</div>
-
-										<div class="swiper-slide" >
-											<a href="#none" class="ic-close"></a>
+											<div class="item-wrap" >
+												<a href="#none" class="ic-close" > </a>
+											</div>
 										</div>
 
 										<div class="swiper-slide" >
 											<div class="item-wrap">
 												<a href="#none" class="ic-close"></a>
-												<img src="../img/ic_chk_on.svg" alt="이미지">
+											</div>
+										</div>
+
+										<div class="swiper-slide" >
+											<div class="item-wrap" style="display: block">
+												<a href="#none" class="ic-close"></a>
 											</div>
 
 										</div>
@@ -192,20 +201,21 @@
 </script>
 
 <script>
-    const closeBtn = document.querySelectorAll('.ic-close');
-    console.log(closeBtn);
-
-    const slide = document.querySelectorAll('.swiper-slide');
-    console.log(slide)
+  const swiperClose = document.querySelectorAll('.ic-close');
+  const swiperBox = document.querySelectorAll('.item-wrap .ic-close');
+  console.log(swiperBox);
 
 
-    closeBtn.addEventListener('click', btn);
-    function btn(){
+  swiperClose.forEach(function (closeBtn) {
 
-
-
-    }
-
+      closeBtn.addEventListener('click', function () {
+          // 닫기 버튼이 속한 가장 가까운 팝업 레이아웃을 찾아서 숨깁니다.
+          let swiperCon = closeBtn.closest('.item-wrap');
+          if (swiperCon) {
+              swiperCon.style.display = 'none';
+          }
+      });
+  });
 
 
 </script>
