@@ -81,7 +81,7 @@
 										</div>
 
 										<div class="swiper-slide" >
-											<div class="item-wrap" style="display: block">
+											<div class="item-wrap" >
 												<a href="#none" class="ic-close"></a>
 											</div>
 
@@ -202,7 +202,7 @@
 
 <script>
   const swiperClose = document.querySelectorAll('.ic-close');
-  const swiperBox = document.querySelectorAll('.item-wrap .ic-close');
+  const swiperBox = document.querySelectorAll('.swiper-slide .ic-close');
   console.log(swiperBox);
 
 
@@ -210,7 +210,7 @@
 
       closeBtn.addEventListener('click', function () {
           // 닫기 버튼이 속한 가장 가까운 팝업 레이아웃을 찾아서 숨깁니다.
-          let swiperCon = closeBtn.closest('.item-wrap');
+          let swiperCon = closeBtn.closest('.swiper-slide');
           if (swiperCon) {
               swiperCon.style.display = 'none';
           }
