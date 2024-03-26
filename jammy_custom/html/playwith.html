@@ -54,34 +54,34 @@
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide" >
-											<div class="item-wrap">
+											<div class="item-wrap">1
 												<a href="#none" class="ic-close" ></a>
 											</div>
 										</div>
 										<div class="swiper-slide">
-											<div class="item-wrap">
+											<div class="item-wrap">2
 												<a href="#none" class="ic-close" ></a>
 											</div>
 										</div>
 										<div class="swiper-slide" >
-											<div class="item-wrap" >
+											<div class="item-wrap" >3
 												<a href="#none" class="ic-close" ></a>
 											</div>
 										</div>
 										<div class="swiper-slide" >
-											<div class="item-wrap" >
+											<div class="item-wrap" >4
 												<a href="#none" class="ic-close" > </a>
 											</div>
 										</div>
 
 										<div class="swiper-slide" >
-											<div class="item-wrap">
+											<div class="item-wrap">5
 												<a href="#none" class="ic-close"></a>
 											</div>
 										</div>
 
 										<div class="swiper-slide" >
-											<div class="item-wrap" >
+											<div class="item-wrap" >6
 												<a href="#none" class="ic-close"></a>
 											</div>
 
@@ -194,10 +194,9 @@
           prevEl: '.swiper-button-prev',
           nextEl: '.swiper-button-next',
       },
-
-
-
 	});
+
+
 </script>
 
 <script>
@@ -209,10 +208,17 @@
   swiperClose.forEach(function (closeBtn) {
 
       closeBtn.addEventListener('click', function () {
+
+
+          console.log("HERE")
+
           // 닫기 버튼이 속한 가장 가까운 팝업 레이아웃을 찾아서 숨깁니다.
           let swiperCon = closeBtn.closest('.swiper-slide');
           if (swiperCon) {
-              swiperCon.style.display = 'none';
+
+              console.log(swiperCon.attr())
+
+              // swiperCon.style.display = 'none';
           }
       });
   });
