@@ -53,39 +53,41 @@
 
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
-										<div class="swiper-slide" >
+										<div class="swiper-slide" data-order="0">
 											<div class="item-wrap">1
 												<a href="#none" class="ic-close" ></a>
 											</div>
 										</div>
-										<div class="swiper-slide">
+										<div class="swiper-slide" data-order="1">
 											<div class="item-wrap">2
 												<a href="#none" class="ic-close" ></a>
 											</div>
 										</div>
-										<div class="swiper-slide" >
+
+										<div class="swiper-slide" data-order="2">
 											<div class="item-wrap" >3
 												<a href="#none" class="ic-close" ></a>
 											</div>
 										</div>
-										<div class="swiper-slide" >
+										<div class="swiper-slide" data-order="3">
 											<div class="item-wrap" >4
 												<a href="#none" class="ic-close" > </a>
 											</div>
 										</div>
 
-										<div class="swiper-slide" >
+										<div class="swiper-slide" data-order="4">
 											<div class="item-wrap">5
 												<a href="#none" class="ic-close"></a>
 											</div>
 										</div>
 
-										<div class="swiper-slide" >
+										<div class="swiper-slide" data-order="5">
 											<div class="item-wrap" >6
 												<a href="#none" class="ic-close"></a>
 											</div>
 
 										</div>
+
 
 
 									</div>
@@ -186,7 +188,7 @@
 
 
 <script>
-	const mySwiper = new Swiper('.swiper-container',{
+	const swiper = new Swiper('.swiper-container',{
 
       spaceBetween: 12, //swiper 각 여백 //
       slidesPerView : 5, //한번에 보여질 swiper 갯수//
@@ -194,7 +196,8 @@
           prevEl: '.swiper-button-prev',
           nextEl: '.swiper-button-next',
       },
-	});
+
+  });
 
 
 </script>
@@ -216,12 +219,21 @@
           let swiperCon = closeBtn.closest('.swiper-slide');
           if (swiperCon) {
 
-              console.log(swiperCon.attr())
+              console.log(swiperCon.dataset.order)
+              swiper.removeSlide(swiperCon.dataset.order)
+
 
               // swiperCon.style.display = 'none';
           }
+
+
       });
   });
+
+  const numberMake = () => {
+
+      // for문
+  }
 
 
 </script>
