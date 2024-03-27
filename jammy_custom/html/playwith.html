@@ -203,40 +203,58 @@
 </script>
 
 <script>
-  const swiperClose = document.querySelectorAll('.ic-close');
-  const swiperBox = document.querySelectorAll('.swiper-slide .ic-close');
-  console.log(swiperBox);
+	document.querySelector('.swiper-container').addEventListener('click',function(event){
+       //swiper-container에 클릭 이벤트를 걸어줌.
+        if (event.target.matches('.ic-close')){
+            //event가 발생한 요소를 반환하기 위해 matches를 이용해 정규 표현식과 일치하는지 확인(.ic-colose)
+            var slideIndex = swiper.clickedIndex;
+            //클릭한 스와이퍼 인덱스를 가지고 오기 위해 clickedIndex를 줌.
+            swiper.removeSlide(slideIndex);
+		        //가지고 온 스와이퍼 인덱스를 removeSlide를 통해 삭제
+            console.log(slideIndex);
+        }
+	});
 
 
-  swiperClose.forEach(function (closeBtn) {
-
-      closeBtn.addEventListener('click', function () {
-
-
-          console.log("HERE")
-
-          // 닫기 버튼이 속한 가장 가까운 팝업 레이아웃을 찾아서 숨깁니다.
-          let swiperCon = closeBtn.closest('.swiper-slide');
-          if (swiperCon) {
-
-              console.log(swiperCon.dataset.order)
-              swiper.removeSlide(swiperCon.dataset.order)
-
-
-              // swiperCon.style.display = 'none';
-          }
-
-
-      });
-  });
-
-  const numberMake = () => {
-
-      // for문
-  }
 
 
 </script>
+
+<!--<script>-->
+<!--  const swiperClose = document.querySelectorAll('.ic-close');-->
+<!--  const swiperBox = document.querySelectorAll('.swiper-slide .ic-close');-->
+<!--  console.log(swiperBox);-->
+
+
+<!--  swiperClose.forEach(function (closeBtn) {-->
+
+<!--      closeBtn.addEventListener('click', function () {-->
+
+
+<!--          console.log("HERE")-->
+
+<!--          // 닫기 버튼이 속한 가장 가까운 팝업 레이아웃을 찾아서 숨깁니다.-->
+<!--          let swiperCon = closeBtn.closest('.swiper-slide');-->
+<!--          if (swiperCon) {-->
+
+<!--              console.log(swiperCon.dataset.order)-->
+<!--              swiper.removeSlide(swiperCon.dataset.order)-->
+
+<!-- -->
+<!--              // swiperCon.style.display = 'none';-->
+<!--          }-->
+
+
+<!--      });-->
+<!--  });-->
+
+<!--  const numberMake = () => {-->
+
+<!--      // for문-->
+<!--  }-->
+
+
+<!--</script>-->
 
 </body>
 </html>
