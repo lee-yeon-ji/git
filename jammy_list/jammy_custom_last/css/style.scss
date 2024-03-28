@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+
+$font : 'Pretendard'; // 변수를 지정
+
+@each $font-size in R, M, B, SB{
+
+	@font-face{
+		font-family: $font;
+		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+
+		@if $font-size == R {
+			font-weight: 400;
+		}
+
+		@else if $font-size == M {
+			font-weight: 500;
+		}
+
+		@else if $font-size == B {
+			font-weight: 700;
+		}
+
+		@else if $font-size == SB {
+			font-weight: 800;
+		}
+
+		font-style:normal;
+	}
+}
+
+
+
+
+// 모바일
+@mixin m{
+	@media (max-width: 375px) {
+		@content
+	}
+}
+
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: $font;
+
+}
+
+
+section.custom{
+	background: url("../img/img_bg.png") repeat top/ auto auto;
+
+	.custom-group{
+		background: url("../img/img_tit_bg.png") no-repeat top center / 994px 515px;
+		padding-top: 61px;
+
+
+
+		.inner{
+			max-width: 995px;
+			margin: 0 auto;
+
+
+			.custom-tit-box{
+				max-width: 488px;
+				margin: 0 auto;
+				img{
+					width: 100%;
+				}
+			}
+
+			.step-content{
+				padding: 75px 0 165px;
+				.step-wrap{
+					max-width: 700px;
+					margin: 0 auto;
+					.step-box{
+
+						& + .step-box{
+							padding-top: 56px;
+						}
+						.step-tit-box{
+							color: #303030;
+							font-size: 20px;
+							font-weight: 700;
+							line-height: 31px;
+							letter-spacing: -1px;
+
+
+						}
+						.con-box{
+							padding-top: 20px;
+
+							.item-box{
+
+								.tbox{
+									input{
+										::placeholder{
+
+										}
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+
+		}
+	}
+}

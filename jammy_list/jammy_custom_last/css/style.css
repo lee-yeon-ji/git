@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SB.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Pretendard"; }
+
+section.custom {
+  background: url("../img/img_bg.png") repeat top/auto auto; }
+  section.custom .custom-group {
+    background: url("../img/img_tit_bg.png") no-repeat top center/994px 515px;
+    padding-top: 61px; }
+    section.custom .custom-group .inner {
+      max-width: 995px;
+      margin: 0 auto; }
+      section.custom .custom-group .inner .custom-tit-box {
+        max-width: 488px;
+        margin: 0 auto; }
+        section.custom .custom-group .inner .custom-tit-box img {
+          width: 100%; }
+      section.custom .custom-group .inner .step-content {
+        padding: 75px 0 165px; }
+        section.custom .custom-group .inner .step-content .step-wrap {
+          max-width: 700px;
+          margin: 0 auto; }
+          section.custom .custom-group .inner .step-content .step-wrap .step-box + .step-box {
+            padding-top: 56px; }
+          section.custom .custom-group .inner .step-content .step-wrap .step-box .step-tit-box {
+            color: #303030;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 31px;
+            letter-spacing: -1px; }
+          section.custom .custom-group .inner .step-content .step-wrap .step-box .con-box {
+            padding-top: 20px; }
+
+/*# sourceMappingURL=style.css.map */
