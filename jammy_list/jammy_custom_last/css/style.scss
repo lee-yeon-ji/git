@@ -149,6 +149,7 @@ section.custom{
 
 									.add-box{
 										padding-left: 12px;
+
 										.add-btn{
 											color: #FFF;
 											font-size: 18px;
@@ -158,7 +159,7 @@ section.custom{
 											background: #000;
 											width: 284px;
 											height: 65px;
-											padding: 23px 0px 21px 0px;
+											padding: 23px 2px;
 											display: flex;
 											align-items: center;
 											justify-content: center;
@@ -181,7 +182,7 @@ section.custom{
 										letter-spacing: -0.72px;
 										border-radius: 3px;
 										border: 2px solid #19191A;
-										background: var(--00_ffffff, #FFF);
+										background:  #FFF;
 
 									}
 								}
@@ -213,6 +214,53 @@ section.custom{
 
 								& + .agree-btn-box {
 									padding-top: 20px;
+								}
+
+								.chk-box{
+									label{
+										cursor: pointer;
+										width: 100%;
+										display: flex;
+										align-items: center;
+
+										input[type=checkbox]{
+											position: absolute;
+											left: -9999px;
+
+											&:checked{
+												& ~ i{
+													background: url("../img/ic_chk_on.svg")no-repeat center/cover;
+													width: 33px;
+													height: 33px;
+												}
+											}
+
+										}
+
+									}
+
+									i{
+										background: url("../img/ic_chk_off.svg")no-repeat center/cover;
+										width: 33px;
+										height: 33px;
+										display: block;
+									}
+
+
+									.txt{
+										padding-left: 10px;
+										color: #303030;
+										font-size: 18px;
+										font-style: normal;
+										font-weight: 500;
+										line-height: 31px;
+										letter-spacing: -1.26px;
+										.strong{
+											font-weight: 700;
+											text-decoration-line: underline;
+										}
+
+									}
 								}
 							}
 

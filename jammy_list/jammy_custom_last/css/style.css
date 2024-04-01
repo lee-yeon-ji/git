@@ -105,7 +105,7 @@ section.custom {
                   background: #000;
                   width: 284px;
                   height: 65px;
-                  padding: 23px 0px 21px 0px;
+                  padding: 23px 2px;
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -121,7 +121,7 @@ section.custom {
               letter-spacing: -0.72px;
               border-radius: 3px;
               border: 2px solid #19191A;
-              background: var(0_ffffff, #FFF); }
+              background: #FFF; }
             section.custom .custom-group .inner .step-content .step-wrap .step-box .con-box .item-box .textbox textarea {
               width: 100%;
               height: 500px;
@@ -139,6 +139,34 @@ section.custom {
             padding-top: 57px; }
             section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .agree-btn-box + .agree-btn-box {
               padding-top: 20px; }
+            section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .agree-btn-box .chk-box label {
+              cursor: pointer;
+              width: 100%;
+              display: flex;
+              align-items: center; }
+              section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .agree-btn-box .chk-box label input[type=checkbox] {
+                position: absolute;
+                left: -9999px; }
+                section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .agree-btn-box .chk-box label input[type=checkbox]:checked ~ i {
+                  background: url("../img/ic_chk_on.svg") no-repeat center/cover;
+                  width: 33px;
+                  height: 33px; }
+            section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .agree-btn-box .chk-box i {
+              background: url("../img/ic_chk_off.svg") no-repeat center/cover;
+              width: 33px;
+              height: 33px;
+              display: block; }
+            section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .agree-btn-box .chk-box .txt {
+              padding-left: 10px;
+              color: #303030;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 31px;
+              letter-spacing: -1.26px; }
+              section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .agree-btn-box .chk-box .txt .strong {
+                font-weight: 700;
+                text-decoration-line: underline; }
             section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .sing-box {
               padding-top: 76px; }
               section.custom .custom-group .inner .step-content .step-wrap .step-box .agree-box .sing-box .sing-btn {

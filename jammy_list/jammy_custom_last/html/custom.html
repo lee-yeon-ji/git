@@ -46,6 +46,47 @@
 							<a href="#none" class="upload-btn">사진 업로드</a>
 						</div>
 						<div class="con-box">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" data-order="0">
+										<div class="item-wrap">1
+											<a href="#none" class="ic-close"></a>
+										</div>
+									</div>
+
+									<div class="swiper-slide" data-order="1">
+										<div class="item-wrap">2
+											<a href="#none" class="ic-close"></a>
+										</div>
+									</div>
+
+
+									<div class="swiper-slide" data-order="2">
+										<div class="item-wrap">3
+											<a href="#none" class="ic-close"></a>
+										</div>
+									</div>
+
+
+
+									<div class="swiper-slide" data-order="3">
+										<div class="item-wrap">4
+											<a href="#none" class="ic-close"></a>
+										</div>
+									</div>
+
+
+									<div class="swiper-slide" data-order="4">
+										<div class="item-wrap">5
+											<a href="#none" class="ic-close"></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+							</div>
 
 						</div>
 					</div>
@@ -98,17 +139,17 @@
 							<div class="agree-btn-box">
 								<div class="chk-box">
 									<label>
+										<input type="checkbox" name="agree" value="개인정보 동의">
 										<i></i>
-										<input type="checkbox">
-										<span class="txt">이벤트 참여를 위한 <span>개인정보 수집/활용 및 문자를 통한 이벤트 상품 관련 안내 발송</span>에 동의합니다.</span>
+										<span class="txt">이벤트 참여를 위한 <span class="strong">개인정보 수집/활용 및 문자를 통한 이벤트 상품 관련 안내 발송</span>에 동의합니다.</span>
 									</label>
 								</div>
 							</div>
 							<div class="agree-btn-box">
 								<div class="chk-box">
 									<label>
+										<input type="checkbox" name="agree" value="마케팅 동의">
 										<i></i>
-										<input type="checkbox">
 										<span class="txt">제출하신 사연과 사진이 Jammy이벤트 페이지에 게시되며, 추후 마케팅에 활용될 수 있음에 동의합니다.</span>
 									</label>
 								</div>
@@ -126,6 +167,17 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	const swiper = new Swiper('.swiper-container',{
+			spaceBetween: 12,
+			slidePerView: 5,
+			navigation: {
+                prevEl:'.swiper-button-prev',
+								nextEl:'.swiper-button-next'
+			},
+	});
+</script>
 
 
 </body>

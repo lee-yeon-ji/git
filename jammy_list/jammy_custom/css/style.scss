@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+
+$font : 'Pretendard'; // 변수를 지정
+
+@each $font-size in R, M, B, SB{
+
+	@font-face{
+		font-family: $font;
+		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+
+		@if $font-size == R {
+			font-weight: 400;
+		}
+
+		@else if $font-size == M {
+			font-weight: 500;
+		}
+
+		@else if $font-size == B {
+			font-weight: 700;
+		}
+
+		@else if $font-size == SB {
+			font-weight: 800;
+		}
+
+		font-style:normal;
+	}
+}
+
+
+
+
+// 모바일
+@mixin m{
+	@media (max-width: 375px) {
+		@content
+	}
+}
+
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: $font;
+
+}
+
+
+section.custom{
+	background: url("../img/img_bg.png") repeat top/ auto auto;
+
+	.custom-group{
+		background: url("../img/img_tit.png") no-repeat top center / 994px 515px;
+		padding-top: 276px;
+
+		@include m{
+			background-size: 331px 171px;
+			padding-top: 150px;
+
+		}
+
+		.inner{
+			max-width: 995px;
+			margin: 0 auto;
+			@include m{
+				padding: 0 20px;
+			}
+
+			.tit-box{
+				img{
+					width: 100%;
+				}
+			}
+
+			.sing-contents{
+				margin: 0 auto;
+				max-width: 700px;
+				position: relative;
+
+				.sing-wrap{
+					.item-box{
+
+						&+ .item-box{
+							padding-top: 56px;
+						}
+						.step-tit-box{
+							font-size: 20px;
+							font-weight: 700;
+							color: #303030;
+							letter-spacing: -0.05em;
+						}
+
+						.info-box{
+							padding-top: 10px;
+							font-size: 20px;
+							font-weight: 500;
+							letter-spacing: -0.05em;
+							color: #303030;
+						}
+
+						.img-list-box{
+							padding-top: 30px;
+
+							.swiper-container{
+								overflow: hidden;
+								position: relative;
+								padding: 0 27px;
+								//swiper btn들로 인해 안에 콘텐츠들이 가리기 때문에 padding 값을 줘서 가리지 않도록 해줌. //
+
+
+								.swiper-wrapper{
+
+									.swiper-slide{
+
+										.item-wrap{
+											border-radius: 4px;
+											background: #C7C7C7;
+											height: 118px;
+											position: relative;
+
+											img{
+												width: 100%;
+												height: 100%;
+												object-fit: cover;
+
+											}
+										}
+
+
+										.ic-close{
+											background: url("../img/ic_close.svg") no-repeat center/cover;
+											width: 24px;
+											height: 24px;
+											position: absolute;
+											right: 10px;
+											top: 10px;
+										}
+
+									}
+
+
+
+								}
+
+								.swiper-button-prev,
+								.swiper-button-next{ //공통으로 쓰이는 부분은 하나만 작성할 수 있도록 하기//
+									margin-top: 0;
+									width: 17px;
+									height: 118px;
+									top:0;
+
+									&:after{
+										display: none;
+									}
+
+								}
+								.swiper-button-prev{
+									background: url("../img/ic_prev.svg")no-repeat top / cover;
+									left: 0;
+								}
+
+								.swiper-button-next{
+									background: url("../img/ic_next.svg")no-repeat top / cover;
+									right: 0;
+								}
+
+
+
+
+
+							}
+						}
+
+						.con-box{
+							padding-top: 20px;
+
+							.sing-subject-box{
+								.tbox{
+									input{
+										color: #2E2E2E;
+										font-size: 18px;
+										letter-spacing: -0.04em;
+										width: 100%;
+										padding: 20px 16px;
+										font-weight: 700;
+										outline: none;
+										border: 2px solid #19191A ;
+										border-radius: 3px;
+
+										::placeholder{
+											color: #dddddd;
+										}
+
+									}
+								}
+							}
+
+							.sing-con-box {
+								padding-top: 20px;
+
+								.textbox{
+									textarea{
+										width: 100%;
+										height: 500px;
+										resize: none;
+										padding: 20px 16px;
+										font-size: 18px;
+										font-weight: 600;
+										letter-spacing: -0.04em;
+										color: #2E2E2E;
+										line-height: 25px;
+										border: 2px solid #19191A ;
+										border-radius: 3px;
+									}
+								}
+							}
+
+							.upload-btn-box{
+
+
+								.img-upload{
+									max-width: 360px;
+									background-color: #000000;
+									border-radius: 3px;
+									padding: 20px 5px;
+									font-size: 18px;
+									font-weight: 700;
+									letter-spacing: -0.03em;
+									color: #FFFFff;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									text-decoration: none;
+
+								}
+							}
+
+							.form-box{
+								.form-wrap{
+
+									.form-con-box{
+
+										&+ .form-con-box{
+											padding-top: 20px;
+										}
+
+										.item-box{
+
+											& + .item-box{
+												margin-top: 20px;
+											}
+
+										}
+
+										.subject-box{
+											font-size: 20px;
+											font-weight: 500;
+											letter-spacing: -0.05em;
+											color: #303030;
+
+										}
+
+										.tbox{
+											padding-top: 12px;
+
+											input{
+												font-size: 18px;
+												font-weight: 600;
+												letter-spacing: -0.04em;
+												color: #2E2E2E;
+												width: 100%;
+												padding: 20px 16px;
+												outline: none;
+												border: 2px solid #19191A;
+												border-radius: 3px;
+											}
+
+										}
+
+										.addressbox{
+											padding-top: 12px;
+
+											.add-box{
+												display: flex;
+												align-items: center;
+
+												& + .add-box{
+													padding-top: 12px;
+
+												}
+
+												.tbox{
+													padding-top: 0;
+													width: 100%;
+													input{
+														font-size: 18px;
+														font-weight: 600;
+														letter-spacing: -0.04em;
+														color: #2E2E2E;
+														width: 100%;
+														padding: 20px 16px;
+														outline: none;
+														border: 2px solid #19191A;
+														border-radius: 3px;
+														flex: 1;
+													}
+												}
+
+
+												.search-btn-box{
+													padding-left: 12px;
+													.search-btn{
+														background-color: #000000;
+														width: 284px;
+														padding: 20px 5px;
+														text-decoration: none;
+														display: flex;
+														align-items: center;
+														justify-content: center;
+														font-size: 18px;
+														font-weight: 800;
+														letter-spacing: -0.03em;
+														color: #FFFFff;
+														border-radius: 3px;
+
+
+
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.agree-box{
+							padding-top: 57px;
+
+							.agree-wrap{
+								.agree-chk-box{
+
+									& + .agree-chk-box{
+										padding-top: 20px;
+									}
+									.cbox{
+										label{
+											cursor: pointer;
+											width: 100%;
+											display: flex;
+											align-items: center;
+
+											input[type=checkbox]{
+												position: absolute;
+												left: -9999px;
+
+												&:checked{
+
+													& ~ i{
+														background: url("../img/ic_chk_on.svg")no-repeat center/cover;
+														width: 33px;
+														height: 33px;
+
+													}
+
+												}
+											}
+
+										}
+
+										i{
+											background: url("../img/ic_chk_off.svg")no-repeat center/cover;
+											width: 33px;
+											height: 33px;
+											display: block;
+										}
+
+
+										.txt{
+											padding-left: 10px;
+											color: #303030;
+											font-size: 18px;
+											font-weight: 500;
+											line-height: 31px;
+											letter-spacing: -1.26px;
+
+											.text-underline{
+												font-weight: 700;
+												text-decoration-line: underline;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.send-btn-box{
+							padding-top: 75px;
+
+
+							.send-btn{
+								margin: 0 auto;
+								border-radius: 3px;
+								background: #000;
+								max-width: 360px;
+								color: #FFF;
+								font-size: 18px;
+								font-weight: 700;
+								letter-spacing: -0.54px;
+								text-decoration: none;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								padding: 20px 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
