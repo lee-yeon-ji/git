@@ -43,56 +43,76 @@
 						<div class="step-tit-box">[STEP. 2] 사연이 담긴 사진을 첨부해주세요. (0/8)</div>
 						<div class="msg-box">*이미지 첨부 없이도 사연 올리기가 가능합니다.</div>
 						<div class="img-upload">
-							<a href="#none" class="upload-btn">사진 업로드</a>
+							<label>
+								<input type="file" multiple accept="image/*">
+								<span class="txt">사진 업로드</span>
+							</label>
 						</div>
 						<div class="con-box">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide" data-order="0">
-										<div class="item-wrap">1
+									<div class="swiper-slide" >
+										<div class="item-wrap">
+											<span class="txt">1</span>
 											<a href="#none" class="ic-close"></a>
+											<img class="img-box">
+
 										</div>
 									</div>
 
-									<div class="swiper-slide" data-order="1">
-										<div class="item-wrap">2
+									<div class="swiper-slide" >
+										<div class="item-wrap">
+											<span class="txt">2</span>
 											<a href="#none" class="ic-close"></a>
-										</div>
-									</div>
-
-
-									<div class="swiper-slide" data-order="2">
-										<div class="item-wrap">3
-											<a href="#none" class="ic-close"></a>
-										</div>
-									</div>
-
-
-
-									<div class="swiper-slide" data-order="3">
-										<div class="item-wrap">4
-											<a href="#none" class="ic-close"></a>
+											<img class="img-box">
 										</div>
 									</div>
 
 
-									<div class="swiper-slide" data-order="4">
-										<div class="item-wrap">5
+									<div class="swiper-slide" >
+										<div class="item-wrap">
+											<span class="txt">3</span>
 											<a href="#none" class="ic-close"></a>
-										</div>
-									</div>
-
-									<div class="swiper-slide" data-order="4">
-										<div class="item-wrap">6
-											<a href="#none" class="ic-close"></a>
+											<img class="img-box">
 										</div>
 									</div>
 
 
-									<div class="swiper-slide" data-order="4">
-										<div class="item-wrap">7
+
+									<div class="swiper-slide" >
+										<div class="item-wrap">
+											<span class="txt">4</span>
 											<a href="#none" class="ic-close"></a>
+											<img class="img-box">
 										</div>
+									</div>
+
+
+									<div class="swiper-slide" >
+										<div class="item-wrap">
+											<span class="txt">5</span>
+											<a href="#none" class="ic-close"></a>
+											<img class="img-box">
+										</div>
+									</div>
+
+									<div class="swiper-slide" >
+										<div class="item-wrap">
+											<span class="txt">6</span>
+											<a href="#none" class="ic-close"></a>
+											<img class="img-box">
+										</div>
+									</div>
+
+
+									<div class="swiper-slide" >
+										<div class="item-wrap">
+											<span class="txt">7</span>
+											<a href="#none" class="ic-close"></a>
+											<img class="img-box">
+										</div>
+
+
 									</div>
 								</div>
 
@@ -190,6 +210,56 @@
 								nextEl:'.swiper-button-next'
 			},
 	});
+</script>
+
+<script>
+	document.querySelector('.swiper-container').addEventListener('click',function(event){
+        if(event.target.matches('.ic-close')){
+            var slideIndex = swiper.clickedIndex;
+            swiper.removeSlide(slideIndex);
+
+        }
+	})
+</script>
+
+<script>
+	const file = document.querySelector('input[type=file]');
+	const imgBox  = document.querySelector('.img-box');
+
+
+  file.addEventListener('change', () => {
+      const reader = new FileReader();
+      reader.onload = ({ target }) => {
+          imgBox.src = target.result;
+      };
+      reader.readAsDataURL(file.files[0]);
+  });
+
+  // console.log(file);
+	//
+  // file.addEventListener('change',() =>{
+  //     readURL(file);
+  // })
+	//
+	// const readURL = (input) =>{
+  //     if(input.files[0]){
+  //         let reader = new FileReader();
+	//
+  //         reader.onload = function(e){
+	//
+  //             console.log(e)
+  //             console.log(e.target)
+  //             document.getElementById('preview').src = e.target.result;
+	//
+  //         };
+	//
+  //         reader.readAsDataURL(input.files[0]);
+	//
+  //     } else{
+  //         document.getElementById('preview').src = "";
+  //     }
+	// }
+
 </script>
 
 
