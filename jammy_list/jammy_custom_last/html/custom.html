@@ -223,17 +223,39 @@
 </script>
 
 <script>
-	const file = document.querySelector('input[type=file]');
-	const imgBox  = document.querySelector('.img-box');
+
+		/*단일 이미지 구현*/
+	// const file = document.querySelector('input[type=file]');
+	// const imgBox  = document.querySelector('.img-box');
+	//
+	//
+  // file.addEventListener('change', () => {
+  //     const reader = new FileReader();
+  //     reader.onload = ({ target }) => {
+  //         imgBox.src = target.result;
+  //     };
+  //     reader.readAsDataURL(file.files[0]);
+  // });
 
 
-  file.addEventListener('change', () => {
-      const reader = new FileReader();
-      reader.onload = ({ target }) => {
-          imgBox.src = target.result;
+    /*다중 이미지 구현*/
+  const [postImg, setPostImg] = useState([]);
+  const [previewImg, setPreviewImg] = useState([]);
+
+  function uploadFile(e) {
+      let fileArr = e.target.files;
+      setPostImg(Array.from(fileArr));
+
+      let fileUrl = [];
+      for(let i = 0; i < fileArr.length; i++){
+          let fileRead = new FileReader();
+          fileRead.onload = function(){
+              fileUrl[i] = fileRead.result;
+              setPreviewImg([...fileUrl]);
+              fileRead.readAsDataURL(fileArr[i]);
+          }
       };
-      reader.readAsDataURL(file.files[0]);
-  });
+  }
 
   // console.log(file);
 	//
