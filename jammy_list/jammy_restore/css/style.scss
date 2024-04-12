@@ -53,15 +53,58 @@ $font : 'Pretendard'; // 변수를 지정
 	.wrapper{
 		margin: 0 auto;
 		width: 700px;
-		.title-box{
+		padding: 46px 0 200px;
+		.tittle-box{
 			h2.tit-txt{
+				font-size: 28px;
+				font-weight: 700;
+				letter-spacing: -5%;
+				color: #000000;
+
 				.txt{
-
-				}
-				.txt-view{
-
 				}
 
+				.tit-view{
+					color: #FF813B;
+
+				}
+
+			}
+
+			.toggle-box{
+				display: flex;
+				align-items: center;
+				justify-content: end;
+				.toggle-txt{
+					& + .toggle-txt{
+						padding-left: 24px;
+					}
+					.txt{
+						font-weight: 500;
+						font-size: 16px;
+						color: #BABCC2;
+						text-decoration: none;
+						& + .txt{
+							position: relative;
+
+							&:after{
+								content: '';
+								width: 1px;
+								height: 14px;
+								background-color: #BABCC2;
+								position: absolute;
+								top: 0;
+								left: -20px;
+							}
+						}
+
+
+						&.on{
+
+							color: #FF813B;
+						}
+					}
+				}
 			}
 		}
 	}

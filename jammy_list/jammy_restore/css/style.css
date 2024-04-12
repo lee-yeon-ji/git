@@ -30,6 +30,37 @@
 
 .restore .wrapper {
   margin: 0 auto;
-  width: 700px; }
+  width: 700px;
+  padding: 46px 0 200px; }
+  .restore .wrapper .tittle-box h2.tit-txt {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -5%;
+    color: #000000; }
+    .restore .wrapper .tittle-box h2.tit-txt .tit-view {
+      color: #FF813B; }
+  .restore .wrapper .tittle-box .toggle-box {
+    display: flex;
+    align-items: center;
+    justify-content: end; }
+    .restore .wrapper .tittle-box .toggle-box .toggle-txt + .toggle-txt {
+      padding-left: 24px; }
+    .restore .wrapper .tittle-box .toggle-box .toggle-txt .txt {
+      font-weight: 500;
+      font-size: 16px;
+      color: #BABCC2;
+      text-decoration: none; }
+      .restore .wrapper .tittle-box .toggle-box .toggle-txt .txt + .txt {
+        position: relative; }
+        .restore .wrapper .tittle-box .toggle-box .toggle-txt .txt + .txt:after {
+          content: '';
+          width: 1px;
+          height: 14px;
+          background-color: #BABCC2;
+          position: absolute;
+          top: 0;
+          left: -20px; }
+      .restore .wrapper .tittle-box .toggle-box .toggle-txt .txt.on {
+        color: #FF813B; }
 
 /*# sourceMappingURL=style.css.map */
