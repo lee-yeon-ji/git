@@ -39,28 +39,42 @@
     color: #000000; }
     .restore .wrapper .tittle-box h2.tit-txt .tit-view {
       color: #FF813B; }
-  .restore .wrapper .tittle-box .toggle-box {
+  .restore .wrapper .tittle-box .tabs {
+    position: relative;
+    padding: 0;
+    list-style: none;
     display: flex;
-    align-items: center;
     justify-content: end; }
-    .restore .wrapper .tittle-box .toggle-box .toggle-txt + .toggle-txt {
-      padding-left: 24px; }
-    .restore .wrapper .tittle-box .toggle-box .toggle-txt .txt {
-      font-weight: 500;
-      font-size: 16px;
-      color: #BABCC2;
-      text-decoration: none; }
-      .restore .wrapper .tittle-box .toggle-box .toggle-txt .txt + .txt {
-        position: relative; }
-        .restore .wrapper .tittle-box .toggle-box .toggle-txt .txt + .txt:after {
-          content: '';
-          width: 1px;
-          height: 14px;
-          background-color: #BABCC2;
-          position: absolute;
-          top: 0;
-          left: -20px; }
-      .restore .wrapper .tittle-box .toggle-box .toggle-txt .txt.on {
-        color: #FF813B; }
+    .restore .wrapper .tittle-box .tabs .tab-box {
+      display: flex; }
+      .restore .wrapper .tittle-box .tabs .tab-box label {
+        position: relative;
+        background: #FFFFff;
+        padding: 8px 12px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #BABCC2;
+        letter-spacing: -0.025em; }
+      .restore .wrapper .tittle-box .tabs .tab-box .content {
+        display: none;
+        position: absolute;
+        background: white;
+        top: 40px;
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+        box-sizing: border-box;
+        border-top: 1px solid #ECEDF0;
+        border-bottom: 1px solid #ECEDF0; }
+    .restore .wrapper .tittle-box .tabs .tab-box [type="radio"] {
+      display: none; }
+    .restore .wrapper .tittle-box .tabs .tab-box [type="radio"]:checked ~ label {
+      background: white;
+      border-bottom: 1px solid white;
+      z-index: 2;
+      color: #FF813B; }
+    .restore .wrapper .tittle-box .tabs .tab-box [type="radio"]:checked + label + .content {
+      z-index: 1;
+      display: block; }
 
 /*# sourceMappingURL=style.css.map */

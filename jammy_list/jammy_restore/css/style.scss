@@ -70,44 +70,68 @@ $font : 'Pretendard'; // 변수를 지정
 				}
 
 			}
-
-			.toggle-box{
+			.tabs{
+				position: relative;
+				padding: 0;
+				list-style: none;
 				display: flex;
-				align-items: center;
 				justify-content: end;
-				.toggle-txt{
-					& + .toggle-txt{
-						padding-left: 24px;
-					}
-					.txt{
-						font-weight: 500;
+
+				.tab-box{
+					display: flex;
+
+					label{
+						position: relative;
+						background: #FFFFff;
+						padding: 8px 12px;
 						font-size: 16px;
+						font-weight: 500;
 						color: #BABCC2;
-						text-decoration: none;
-						& + .txt{
-							position: relative;
+						letter-spacing: -0.025em;
 
-							&:after{
-								content: '';
-								width: 1px;
-								height: 14px;
-								background-color: #BABCC2;
-								position: absolute;
-								top: 0;
-								left: -20px;
-							}
-						}
+					}
 
 
-						&.on{
-
-							color: #FF813B;
-						}
+					.content{
+						display: none;
+						position: absolute;
+						background: white;
+						top: 40px;
+						left: 0;
+						right: 0;
+						padding: 20px 0;
+						box-sizing: border-box;
+						border-top: 1px solid #ECEDF0;
+						border-bottom: 1px solid #ECEDF0;
 					}
 				}
+
+				.tab-box [type="radio"]{
+					display: none;
+				}
+
+				.tab-box [type="radio"]:checked ~ label {
+					background: white;
+					border-bottom: 1px solid white;
+					z-index: 2;
+					color: #FF813B;
+				}
+
+				.tab-box [type="radio"]:checked + label + .content {
+					z-index: 1;
+					display: block;
+				}
+
+
+
+
 			}
+
+
 		}
 	}
 }
+
+
 
 
