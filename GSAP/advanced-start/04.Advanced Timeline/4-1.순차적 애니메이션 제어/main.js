@@ -13,18 +13,25 @@ const tl = gsap.timeline({
 
 
 tl.from('.tiger[data-name="a0"]',{})
-tl.from('.tiger[data-name="a0"]',{})
-tl.from('.tiger[data-name="a0"]',{})
-tl.from('.tiger[data-name="a0"]',{})
-tl.from('.tiger[data-name="a0"]',{})
+tl.from('.tiger[data-name="a1"]',{y:100,rotation:360})
+tl.from('.tiger[data-name="a2"]',{y:-100,rotation:360})
+tl.from('.tiger[data-name="a3"]',{scale:2,rotation:-360})
 
 
 
 
 
+const prev = $('.prev');
+const next = $('.next');
+
+prev.addEventListener('click',()=>{
+
+})
 
 
+next.addEventListener('click',()=>{
 
+})
 
 
 
