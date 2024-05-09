@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/*
+AUTH : ssooya
+VERSION : version 2
+*/
+/**********
+펑션
+***********/
+/**********
+텍스트 자간
+***********/
+/**********
+텍스트 말줄임
+***********/
+/**********
+아이콘
+***********/
+body {
+  margin: 0; }
+
+.inner {
+  max-width: 1042px;
+  margin: 0 auto; }
+
+header .header-box {
+  background-color: #000000; }
+  header .header-box .logo-box {
+    height: 105px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    header .header-box .logo-box .logo {
+      max-width: 108px;
+      display: block; }
+      header .header-box .logo-box .logo img {
+        width: 100%;
+        height: 100%; }
+
+section.esg-contents .esg-group {
+  background: url("../img/esg_bg.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center; }
+  section.esg-contents .esg-group .esg-visual-box {
+    padding-top: 70px; }
+    section.esg-contents .esg-group .esg-visual-box .visual-tit-box {
+      text-align: center; }
+      section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tit-txt img {
+        max-width: 554px;
+        height: auto; }
+      section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-sub-txt {
+        padding-top: 25px; }
+        section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-sub-txt img {
+          max-width: 458px;
+          height: auto; }
+      section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tip-txt {
+        padding-top: 20px; }
+        section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tip-txt .tip-txt {
+          color: #555;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 20px;
+          letter-spacing: -0.04em; }
+          section.esg-contents .esg-group .esg-visual-box .visual-tit-box .visual-tip-txt .tip-txt .tip-point {
+            color: #568EFF;
+            box-shadow: inset 0 -11px 0 #D5FB4E; }
+    section.esg-contents .esg-group .esg-visual-box .visual-bg-box {
+      max-width: 1042px;
+      position: relative;
+      padding-top: 72px;
+      margin-bottom: -5px; }
+      section.esg-contents .esg-group .esg-visual-box .visual-bg-box img {
+        width: 100%;
+        height: 100%; }
+    section.esg-contents .esg-group .esg-visual-box .visual-con-box {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 315px;
+      display: flex;
+      justify-content: center; }
+      section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box {
+        display: flex;
+        align-items: center; }
+        section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box + .row-box {
+          padding-top: 21px; }
+        section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box .label-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 999px;
+          background: #00A76F;
+          color: #D5FB4E;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 100%;
+          letter-spacing: -0.72px;
+          padding: 6px 14px;
+          width: 120px;
+          box-sizing: border-box; }
+          section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box .label-box .label-txt {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; }
+        section.esg-contents .esg-group .esg-visual-box .visual-con-box .row-wrap .row-box .desc-box {
+          padding-left: 10px;
+          color: #555;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 100%;
+          letter-spacing: -0.36px; }
+
+section.mission-contents {
+  background: url("../img/mission_bg.png") no-repeat center/cover;
+  height: 100vh; }
+  section.mission-contents .mission-item-box {
+    padding-top: 108px; }
+    section.mission-contents .mission-item-box .item-box + .item-box {
+      padding-top: 54px; }
+    section.mission-contents .mission-item-box .item-box .mission-tit-box .mission-label-box {
+      max-width: 183px;
+      margin: 0 auto; }
+      section.mission-contents .mission-item-box .item-box .mission-tit-box .mission-label-box img {
+        max-width: 100%; }
+    section.mission-contents .mission-item-box .item-box .mission-tit-box .mission-subject-box {
+      max-width: 327px;
+      margin: 0 auto;
+      padding-top: 12px;
+      text-align: center; }
+      section.mission-contents .mission-item-box .item-box .mission-tit-box .mission-subject-box img {
+        max-width: 100%; }
+    section.mission-contents .mission-item-box .item-box .mission-tit-box .mission-desc-box {
+      padding-top: 25px;
+      text-align: center;
+      color: #FFF; }
+      section.mission-contents .mission-item-box .item-box .mission-tit-box .mission-desc-box .txt-box {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -0.6px; }
+      section.mission-contents .mission-item-box .item-box .mission-tit-box .mission-desc-box .msg-box {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.48px; }
+    section.mission-contents .mission-item-box .item-box .mission-info-box {
+      padding-top: 29px; }
+      section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group {
+        margin: 0 auto;
+        max-width: 408px;
+        position: relative; }
+        section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .ic {
+          position: absolute;
+          z-index: 1; }
+          section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .ic.ic-item1 {
+            background: url("../img/img_mission_item2.svg") no-repeat center/cover;
+            width: 117px;
+            height: 69px;
+            left: -83px;
+            bottom: 10px; }
+          section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .ic.ic-item2 {
+            background: url("../img/img_mission_item1.svg") no-repeat center/cover;
+            width: 87px;
+            height: 46px;
+            right: -140px;
+            top: 86px; }
+        section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap {
+          background: url("../img/img_mission_desc_bg.png") no-repeat center/408px 322px;
+          width: 408px;
+          height: 323px;
+          margin: 0 auto;
+          padding: 35px 33px;
+          box-sizing: border-box;
+          z-index: 10;
+          position: relative; }
+          section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box {
+            display: flex;
+            flex-flow: column;
+            align-items: center; }
+            section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box + .row-box {
+              padding-top: 20px; }
+            section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box .step-tit-box {
+              display: flex;
+              align-items: center; }
+              section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box .step-tit-box .step-txt-box {
+                color: #4A86FF;
+                font-size: 21px;
+                font-weight: 800;
+                line-height: 160%;
+                letter-spacing: -0.63px;
+                padding-right: 10px; }
+              section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box .step-tit-box .tit-txt-box {
+                color: #444;
+                font-size: 21px;
+                font-weight: 600;
+                line-height: 160%;
+                letter-spacing: -0.63px; }
+            section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box .desc-box {
+              display: inline-flex;
+              position: relative; }
+              section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box .desc-box:after {
+                content: '';
+                width: 100%;
+                height: 8px;
+                opacity: 0.5;
+                background: #D5FB4E;
+                position: absolute;
+                top: 23px; }
+              section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box .desc-box .plus-box {
+                color: #00A76F;
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 160%;
+                letter-spacing: -0.63px;
+                padding-right: 10px; }
+              section.mission-contents .mission-item-box .item-box .mission-info-box .mission-info-group .mission-info-wrap .row-box .desc-box .txt-box {
+                color: #444;
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 160%;
+                letter-spacing: -0.57px; }
+
+section.benefit-contents {
+  background: url("../img/esg_bg.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 80px 0 116px;
+  text-align: center; }
+  section.benefit-contents .inner.wrap {
+    max-width: 764px; }
+  section.benefit-contents .benefit-list-box .row-box + .row-box {
+    padding-top: 71px; }
+  section.benefit-contents .benefit-list-box .row-box .benefit-tit-box .benefit-label-box {
+    padding-bottom: 10px; }
+  section.benefit-contents .benefit-list-box .row-box .benefit-tit-box .benefit-msg-box {
+    padding-top: 14px; }
+    section.benefit-contents .benefit-list-box .row-box .benefit-tit-box .benefit-msg-box .msg-txt {
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.03em;
+      color: #000000; }
+  section.benefit-contents .benefit-list-box .row-box .benefit-con-box {
+    width: 100%; }
+    section.benefit-contents .benefit-list-box .row-box .benefit-con-box.type1 {
+      padding-top: 30px; }
+      section.benefit-contents .benefit-list-box .row-box .benefit-con-box.type1 img {
+        max-width: 371px; }
+    section.benefit-contents .benefit-list-box .row-box .benefit-con-box.type2 {
+      padding-top: 11px; }
+      section.benefit-contents .benefit-list-box .row-box .benefit-con-box.type2 img {
+        max-width: 356px; }
+
+/*# sourceMappingURL=test.css.map */

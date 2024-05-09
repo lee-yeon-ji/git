@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+
+$font: 'NanumBarunGothic';
+
+@each $font-size in L, R, B{
+	@font-face {
+		font-family:$font;
+		src: url("../font/#{$font}-#{$font-size}.woff")format('woff');
+
+		@if $font == L{
+			font-weight: 300;
+		}
+		@else if $font == R {
+			font-weight: 400;
+		}
+		@else if $font == B {
+			font-weight: 700;
+		}
+		font-style:normal;
+	}
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family:'NanumBarunGothic';
+}
+
+
+.lotto-play {
+	width: 1024px;
+	margin: 0 auto;
+
+	.lotto-contents{
+		background: #1C1D4A url("../img/img_check_bg.png")no-repeat center/cover;
+		border-radius: 10px;
+		.lotto-group{
+			padding: 37px 24px;
+
+			.lotto-chk-form-box{
+				background-color: #ffffff;
+				border-radius: 10px;
+				border: 1px solid var(--Lotto-EF3A81, #EF3A81);
+				overflow: hidden;
+
+
+				.lotto-chk-wrap{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding-bottom: 15px; //밑에 여백을 남기려면 padding 값으로 주는게 맞나?
+
+					.chk-box{
+						width: 20%;
+
+						&+.chk-box{
+							border-left: 1px solid #EF3A81;
+						}
+						.subject-box{
+							display: flex;
+							align-items: center;
+							height: 40px;
+							border-bottom: 1px solid var(--Lotto-EF3A81, #EF3A81);
+
+							.mark-box{
+								color: var(--Lotto-EF3A81, #EF3A81);
+								text-align: center;
+								font-family: NanumBarunGothic;
+								font-size: 16px;
+								font-style: normal;
+								font-weight: 600;
+								line-height: normal;
+								width: 40px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							}
+							.pay-box{
+								flex: 1;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								min-width: 0;//자신의 width가 지정이 안되어 있으므로 텍스트가 길어졌을 때 부모의 width에서 넘어가게 됨. 그러므로 min-width를 지정해주면 플렉스로 지정한 박스 안에 자식이 넘어가지 않게 해줄 수 있음.
+								height: 100%;
+								color: var(--Lotto-FFFFFF, #FFF);
+								text-align: center;
+								font-family: NanumBarunGothic;
+								font-size: 16px;
+								font-style: normal;
+								font-weight: 600;
+								line-height: normal;
+								background: var(--Lotto-EF3A81, #EF3A81);
+							}
+						}
+
+						.con-box{
+							padding: 22px 24px;
+							.num-btn-wrap{
+								display: flex;
+								margin: -6px -6px;
+								flex-flow: wrap;
+
+
+								.num-btn{
+									width: calc(20% - 12px);
+									margin: 6px 6px;
+
+									label{
+										cursor: pointer;
+										width: 100%;
+
+
+										input[type=checkbox]{
+											position: absolute;
+											left: -9999px;
+
+											&:checked{
+
+
+												 & ~ .txt{
+													 background-color: #000000;
+													 color: #ffffff;
+
+													 &:after{
+														 display: none;
+
+													 }
+
+													 &:before{
+														 display: none;
+													 }
+												 }
+											}
+										}
+
+										.txt{
+											position: relative;
+											height: 21px;
+											color: var(--Lotto-EF3A81, #EF3A81);
+											text-align: center;
+											font-family: NanumBarunGothic;
+											font-size: 12px;
+											font-style: normal;
+											font-weight: 600;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											width: 100%;
+
+
+											&:after{
+												content: '';
+												background: url("../img/ic_click_front.svg")no-repeat center/cover;
+												width: 15px;
+												height: 2px;
+												position: absolute;
+												top: 0;
+												left: 50%;
+												transform: translateX(-50%);
+
+											}
+
+											&:before{
+												content: '';
+												background: url("../img/ic_click_back.svg")no-repeat center/cover;
+												width: 15px;
+												height: 2px;
+												position: absolute;
+												bottom: 0;
+												left: 50%;
+												transform: translateX(-50%);
+											}
+										}
+									}
+								}
+							}
+
+							.option-btn-box{
+								padding-top: 20px;
+								text-align: right;
+
+								.option-btn{
+									position: relative;//아이콘이 띄워질 때 자리 위치를 가까운 부모에게 지정해야 하므로
+									font-size: 0;
+
+									&+.option-btn{
+									margin-top: 8px;
+									}
+
+									label{
+										cursor: pointer; //이 태그는 label에서만 쓰이는걸 기억하자 아무대나 주지 말고..
+										input[type=radio]{
+											position: absolute;
+											left: -9999px;
+
+											&:checked{
+
+												& ~ i{
+													background: url("../img/ic_check_on.svg")no-repeat center/cover;
+
+												}
+
+
+											}
+										}
+
+
+										.txt{
+											padding-right: 22px;
+											color: var(--Lotto-EF3A81, #EF3A81);
+											text-align: right;
+											font-size: 13px;
+											font-style: normal;
+											font-weight: 600;
+											line-height: normal;
+
+										}
+
+										i{ //아까 i가 안보이고 다른 위치에 가있던 거는 제대로 부모에게 position:relative를 안줘서 그럼
+											position: absolute;
+											content: '';
+											top: 0;
+											right: 0;
+											background: url("../img/ic_check_off.svg")no-repeat center/cover;
+											width: 16px;
+											height: 16px;
+
+
+										}
+
+									}
+
+
+								}
+							}
+						}
+
+
+					}
+				}
+
+
+			}
+		}
+	}
+
+
+}
+

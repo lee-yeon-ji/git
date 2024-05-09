@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SB.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Pretendard"; }
+
+section.WorkShop {
+  background: url("../img/img_bg.png") no-repeat top/100% 100%;
+  padding: 53px 20px 250px; }
+  section.WorkShop .inner {
+    max-width: 627px;
+    margin: 0 auto; }
+    section.WorkShop .inner .tit-box {
+      text-align: center; }
+      section.WorkShop .inner .tit-box .subject-box {
+        max-width: 627px; }
+        section.WorkShop .inner .tit-box .subject-box img {
+          width: 100%; }
+      section.WorkShop .inner .tit-box .sub-tit-box {
+        padding-top: 34px;
+        max-width: 224px;
+        margin: 0 auto; }
+        section.WorkShop .inner .tit-box .sub-tit-box img {
+          width: 100%; }
+    section.WorkShop .inner .form-box {
+      padding-top: 86px; }
+      section.WorkShop .inner .form-box .form-wrap {
+        padding: 0 50px 0 117px; }
+        section.WorkShop .inner .form-box .form-wrap .con-box + .con-box {
+          padding-top: 56px; }
+        section.WorkShop .inner .form-box .form-wrap .con-box .txt {
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: -0.06em;
+          color: #2E2E2E; }
+        section.WorkShop .inner .form-box .form-wrap .con-box .tbox {
+          padding-top: 20px; }
+          section.WorkShop .inner .form-box .form-wrap .con-box .tbox input {
+            border-radius: 8px;
+            width: 100%;
+            padding: 20px 16px;
+            outline: none;
+            border-color: #000000; }
+          section.WorkShop .inner .form-box .form-wrap .con-box .tbox :focus {
+            border-color: transparent;
+            outline: 2px solid #d50000; }
+          section.WorkShop .inner .form-box .form-wrap .con-box .tbox ::placeholder {
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            color: #BABCC2; }
+        section.WorkShop .inner .form-box .form-wrap .next-btn-box {
+          padding-top: 50px; }
+          section.WorkShop .inner .form-box .form-wrap .next-btn-box .next-btn {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            max-width: 360px;
+            padding: 20px 5px;
+            border-radius: 10px;
+            background-color: #000000; }
+
+/*# sourceMappingURL=style.css.map */

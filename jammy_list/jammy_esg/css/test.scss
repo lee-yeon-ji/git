@@ -1,0 +1,420 @@
+@charset "UTF-8";
+@import "global.scss";
+
+body{
+	margin: 0;
+}
+
+.inner{
+	max-width: 1042px;
+	margin: 0 auto;
+}
+
+
+header{
+	.header-box{
+		background-color: #000000;
+
+		.logo-box{
+			height: 105px;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.logo{
+				max-width: 108px;
+				display: block;
+
+
+				img{
+					width: 100%;
+					height: 100%;
+
+				}
+			}
+		}
+	}
+}
+
+
+section.esg-contents{
+
+	.esg-group{
+		background: url("../img/esg_bg.png");
+		background-repeat: repeat;//컨테이너를 가득 채우지 못할 때 반복해서 채우기
+		background-size: cover;//사이즈가 container에 맞지 않아도 꽉 차도록 채운다.(100%, 100% )
+		background-position: center center; //가로 세로 background-image가 컨테이너에 가운데로 오도록 한다.(top)
+
+		.esg-visual-box{
+			padding-top: 70px;
+
+
+
+
+			.visual-tit-box {
+				text-align: center;
+
+
+				.visual-tit-txt {
+					img {
+						max-width: 554px;
+						height: auto;
+
+					}
+				}
+
+				.visual-sub-txt {
+					padding-top: 25px;
+
+					img {
+						max-width: 458px;
+						height: auto;
+
+					}
+				}
+
+				.visual-tip-txt {
+					padding-top: 20px;
+
+					.tip-txt {
+						color: #555;
+						font-size: 20px;
+						font-weight: 600;
+						line-height: 20px;
+						letter-spacing: -0.04em;
+
+						.tip-point {
+							color: #568EFF;
+							box-shadow: inset 0 -11px 0 #D5FB4E; //박스 안쪽에 그림자를 넣어줄 때 inset로 적용
+						}
+					}
+				}
+			}
+
+
+			.visual-bg-box{
+				max-width: 1042px;
+				position: relative;
+				padding-top: 72px;
+				margin-bottom: -5px;
+
+				img{
+					width: 100%;
+					height: 100%;
+
+				}
+			}
+
+			.visual-con-box{
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 315px;
+				display: flex;
+				justify-content: center;
+
+				.row-wrap{
+
+					.row-box{
+						display: flex;
+						align-items: center;
+
+						& + .row-box{
+							padding-top: 21px;
+						}
+						.label-box{//큰 라벨 박스는 크게 감싸고 있는 부모요소에게 주기
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							border-radius: 999px;
+							background: #00A76F;
+							color: #D5FB4E;
+							font-size: 18px;
+							font-weight: 700;
+							line-height: 100%;
+							letter-spacing: -0.72px;
+							padding: 6px 14px;
+							width: 120px;//space-between을 하기 위한 고정값
+							box-sizing: border-box;//border-box, content-box 두가지 속성이 있음.
+
+							.label-txt{//대상 글자를 양 옆으로 정렬 시키기 위함
+								display: flex;
+								justify-content: space-between;//왼쪽을 기준으로 붙는다
+								width: 100%;
+								.txt{
+
+								}
+							}
+
+
+
+						}
+
+
+						.desc-box{
+							padding-left: 10px;
+							color: #555;
+							font-size: 18px;
+							font-weight: 600;
+							line-height: 100%;
+							letter-spacing: -0.36px;
+						}
+					}//visual-con-box에서 가운데 기준으로 맞추고  싶은데 안되는 이유는 큰박스로 한번 두르고 그 다음 한번 더 감싼 뒤에 기준을 주어야 정렬이 가능하므로
+				}
+
+			}
+		}
+	}
+}
+
+section.mission-contents{
+	background: url("../img/mission_bg.png")no-repeat center/cover;
+	height: 100vh;
+
+	.mission-item-box{
+		padding-top: 108px;
+
+		.item-box{
+
+			& + .item-box{
+				padding-top: 54px;
+
+			}
+			.mission-tit-box{
+				.mission-label-box{
+					max-width: 183px;
+					margin: 0 auto;
+					img{
+						max-width: 100%;
+
+					}
+				}
+				.mission-subject-box{
+					max-width: 327px;
+					margin: 0 auto;
+					padding-top: 12px;
+					text-align: center;
+					img{
+						max-width: 100%;
+					}
+				}
+
+				.mission-desc-box{
+					padding-top: 25px;
+					text-align: center;
+					color: #FFF;
+
+					.txt-box{
+						font-size: 20px;
+						font-weight: 700;
+						line-height: 150%;
+						letter-spacing: -0.6px;
+
+					}
+
+					.msg-box{
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 150%;
+						letter-spacing: -0.48px;
+					}
+				}
+			}
+
+			.mission-info-box{
+				padding-top: 29px;
+				.mission-info-group{
+					margin: 0 auto;
+					max-width: 408px;
+					position: relative;
+
+					.ic{
+						position: absolute;
+						z-index: 1;
+
+						&.ic-item1{
+							background: url("../img/img_mission_item2.svg")no-repeat center/cover;
+							width: 117px;
+							height: 69px;
+							left: -83px;
+							bottom: 10px;
+
+						}
+						&.ic-item2{
+							background: url("../img/img_mission_item1.svg")no-repeat center/cover;
+							width: 87px;
+							height: 46px;
+							right: -140px;
+							top: 86px;
+
+						}
+					}
+
+					.mission-info-wrap{
+						background: url("../img/img_mission_desc_bg.png") no-repeat center/408px 322px;
+						width: 408px;
+						height: 323px;
+						margin: 0 auto;
+						padding: 35px 33px;
+						box-sizing: border-box;//padding,margin을 줬을 때, 원하는대로 적용이 안됐을 때, box-sizing의 요소를 생각할 필요가 있음. 개발자 도구에서 padding값과 콘텐츠 너비,높이 값을 보고 contents를 기준으로 하는지 border를 기준으로 하는지  아닌지 파악한다.
+						z-index: 10;//기준이 되는 position: relative,absolute의 값을 주어야 계층적으로 띄울 수 있음. 이걸 모르고 계속 z-index만 줌....
+						position: relative;
+
+						.row-box{
+							display: flex;
+							flex-flow: column;
+							align-items: center;
+
+							&+ .row-box{
+								padding-top: 20px;
+
+							}
+							.step-tit-box{
+								display: flex;
+								align-items: center;
+								.step-txt-box{
+									color: #4A86FF;
+									font-size: 21px;
+									font-weight: 800;
+									line-height: 160%;
+									letter-spacing: -0.63px;
+									padding-right: 10px;
+
+								}
+								.tit-txt-box{
+									color: #444;
+									font-size: 21px;
+									font-weight: 600;
+									line-height: 160%;
+									letter-spacing: -0.63px;
+								}
+							}
+
+							.desc-box{
+								display: inline-flex;
+								position: relative;
+
+								&:after{
+									content:'';
+									width: 100%;
+									height: 8px;
+									opacity: 0.5;
+									background: #D5FB4E;
+									position: absolute;
+									top: 23px;
+								}
+								.plus-box{
+									color: #00A76F;
+									font-size: 21px;
+									font-weight: 700;
+									line-height: 160%;
+									letter-spacing: -0.63px;
+									padding-right: 10px;
+								}
+
+								.txt-box{
+									color: #444;
+									font-size: 19px;
+									font-weight: 600;
+									line-height: 160%;
+									letter-spacing: -0.57px;
+								}
+
+							}
+						}
+
+					}
+
+
+				}
+
+
+
+
+
+			}
+
+		}
+
+
+	}
+
+
+}
+
+section.benefit-contents{
+	background: url("../img/esg_bg.png");
+	background-repeat: repeat;//컨테이너를 가득 채우지 못할 때 반복해서 채우기
+	background-size: cover;//사이즈가 container에 맞지 않아도 꽉 차도록 채운다.(100%, 100% )
+	background-position: center center; //가로 세로 background-image가 컨테이너에 가운데로 오도록 한다
+	padding: 80px 0 116px;
+	text-align: center;
+
+	.inner{
+		&.wrap{
+			max-width: 764px;
+		}
+	}
+
+	.benefit-list-box{
+		.row-box{
+
+			& + .row-box{
+				padding-top: 71px;
+			}
+			.benefit-tit-box{
+				.benefit-label-box{
+					padding-bottom: 10px;
+
+				}
+
+				.benefit-subject-box{
+
+
+				}
+
+				.benefit-msg-box{
+					padding-top: 14px;
+					.msg-txt{
+						font-size: 16px;
+						line-height: 150%;
+						letter-spacing: -0.03em;
+						color: #000000;
+
+
+					}
+				}
+
+			}
+
+			.benefit-con-box{
+				width: 100%;
+
+				&.type1{
+					padding-top: 30px;
+
+					img{
+						max-width: 371px;
+
+
+					}
+				}
+				&.type2{
+					padding-top: 11px;
+
+					img{
+						max-width: 356px;
+
+
+					}
+				}
+
+
+
+
+
+			}
+		}
+
+	}
+}
