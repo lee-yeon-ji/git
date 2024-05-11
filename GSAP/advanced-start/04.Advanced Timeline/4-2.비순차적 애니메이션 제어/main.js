@@ -15,17 +15,21 @@ const tl = gsap.timeline({
 });
 
 
+tl
+    .add('orange')
+    .from('.tiger[data-name="a0"]', {})
+    .addPause()
 
-tl.from('.tiger[data-name="a0"]',{})
-  .addPause()
+    .add('green')
+    .from('.tiger[data-name="a1"]', {y: 100, rotation: 360})
+    .addPause()
 
-  .from('.tiger[data-name="a1"]',{y:100,rotation:360})
-  .addPause()
+    .add('pink')
+    .from('.tiger[data-name="a2"]', {y: -100, rotation: 360})
+    .addPause()
 
-  .from('.tiger[data-name="a2"]',{y:-100,rotation:360})
-  .addPause()
-
-  .from('.tiger[data-name="a3"]',{scale:2,rotation:-360})
+    .add('blue')
+    .from('.tiger[data-name="a3"]', {scale: 2, rotation: -360})
 
 
 
@@ -37,8 +41,20 @@ tl.from('.tiger[data-name="a0"]',{})
 
   prev.addEventListener('click',()=>tl.reverse())
 
+
   next.addEventListener('click',()=>tl.play())
 
+Object.keys(tl.labels).forEach((label,index)=>{
+  const template = `<div class="dot" data-label="${label}"></div>`
+
+  $('.dotNav').insertAdjacentHTML('beforeend',template)
+
+  gsap.utils.toArray('.dot')[index].addEventListener('click',(e)=>{
+    const label = e.target.dataset.label;
+
+    tl.play(label)
+  })
+})
 
 
 
