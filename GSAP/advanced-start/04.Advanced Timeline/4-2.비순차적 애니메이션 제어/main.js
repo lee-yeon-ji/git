@@ -52,6 +52,8 @@ Object.keys(tl.labels).forEach((label,index)=>{
   gsap.utils.toArray('.dot')[index].addEventListener('click',(e)=>{
     const label = e.target.dataset.label;
 
+    gsap.to(tl,{time:index + 1})
+
     tl.play(label)
   })
 })
