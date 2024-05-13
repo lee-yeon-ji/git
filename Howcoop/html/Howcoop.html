@@ -200,7 +200,7 @@
 						<div class="chk-group">
 							<div class="cbox type-all-agree">
 								<label>
-									<input type="checkbox" name="agree" value="전체 동의합니다.">
+									<input type="checkbox" id="checkAll" name="agree" value="전체 동의합니다.">
 									<i></i>
 									<span class="txt">전체 동의합니다.</span>
 								</label>
@@ -210,7 +210,7 @@
 						<div class="chk-group">
 							<div class="cbox">
 								<label>
-									<input type="checkbox" name="agree" value="서비스 이용약관 동의 (필수) ">
+									<input type="checkbox" class="chk" name="agree" value="서비스 이용약관 동의 (필수) ">
 									<i></i>
 									<span class="txt">서비스 이용약관 동의 (필수) </span>
 								</label>
@@ -223,7 +223,7 @@
 						<div class="chk-group">
 							<div class="cbox">
 								<label>
-									<input type="checkbox" name="agree" value="만 14세 이상 (필수) ">
+									<input type="checkbox" class="chk" name="agree" value="만 14세 이상 (필수) ">
 									<i></i>
 									<span class="txt">만 14세 이상 (필수) </span>
 								</label>
@@ -238,7 +238,7 @@
 						<div class="chk-group">
 							<div class="cbox">
 								<label>
-									<input type="checkbox" name="agree" value="교육 및 정보수신문의 (필수)">
+									<input type="checkbox" class="chk" name="agree" value="교육 및 정보수신문의 (필수)">
 									<i></i>
 									<span class="txt">교육 및 정보수신문의 (필수)</span>
 								</label>
@@ -252,7 +252,7 @@
 						<div class="chk-group">
 							<div class="cbox">
 								<label>
-									<input type="checkbox" name="agree" value="마케팅 수신 동의 (선택)">
+									<input type="checkbox" class="chk" name="agree" value="마케팅 수신 동의 (선택)">
 									<i></i>
 									<span class="txt">마케팅 수신 동의 (선택)</span>
 								</label>
@@ -276,6 +276,47 @@
 
 
 </div>
+
+
+<script>
+	document.querySelector('#checkAll');
+    checkAll.addEventListener('click',function (){
+        const isChecked = checkAll.checked;
+
+        if(isChecked){
+            const checkboxes = document.querySelectorAll('.chk');
+
+            for(const checkbox of checkboxes){
+                checkbox.checked = true;
+            }
+        }
+
+        else{
+            const checkboxes = document.querySelectorAll('.chk');
+            for(const checkbox of checkboxes){
+                checkbox.checked = false;
+            }
+        }
+    })
+
+
+	const checkboxes = document.querySelectorAll('.chk');
+    for(const checkbox of checkboxes){
+        checkbox.addEventListener('click',function (){
+            const totalCnt = checkboxes.length;
+
+            const checkedCnt = document.querySelectorAll('.chk:checked').length;
+
+            if(totalCnt == checkedCnt){
+                document.querySelector('#checkAll').checked = true;
+            }
+            else{
+                document.querySelector('#checkAll').checked = false;
+
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
