@@ -291,32 +291,32 @@
 
 
 <script>
-	document.querySelector('#checkAll');
-    checkAll.addEventListener('click', ()=>{
-        const isChecked = checkAll.checked;
+	const checkAll = document.getElementById('checkAll');
+	const checkboxes = document.querySelectorAll('.chk');
+
+  function allinput(e) {
+
+        const isChecked = e.target.checked
+      console.log(isChecked);
 
         if(isChecked){
-            const checkboxes = document.querySelectorAll('.chk');
 
             for(const checkbox of checkboxes){
                 checkbox.checked = true;
             }
         }
-
         else{
-            const checkboxes = document.querySelectorAll('.chk');
             for(const checkbox of checkboxes){
                 checkbox.checked = false;
             }
         }
-    })
+    }
 
+  checkAll.addEventListener('click',allinput)
 
-	const checkboxes = document.querySelectorAll('.chk');
     for(const checkbox of checkboxes){
         checkbox.addEventListener('click', ()=>{
             const totalCnt = checkboxes.length;
-
             const checkedCnt = document.querySelectorAll('.chk:checked').length;
 
             if(totalCnt == checkedCnt){
@@ -328,6 +328,7 @@
             }
         });
     }
+
 </script>
 
 </body>
