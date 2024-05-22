@@ -74,7 +74,8 @@ const master = gsap.timeline()
 .add(pinkA)
 .add(quoteAnimation('pink tiger!'))
 
-
+    .add(greenA)
+    .add(quoteAnimation('green tiger!'))
 
 
 
