@@ -33,3 +33,20 @@ $font: 'pretendard';
 	padding: 0;
 	font-family: $font;
 }
+
+.shoes-event-wrap{
+	background-color: #3C3968;
+	.inner{
+		margin: 0 auto;
+		width: 700px;
+		padding: 100px 20px 150px;
+
+		.shoes-title-box{
+			max-width: 427px;
+			margin: 0 auto;
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
