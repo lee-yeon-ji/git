@@ -1438,7 +1438,12 @@ caption {
 }
 
 .content-service-view .cs-error-code .error-modal-content {
-    /* display: none; */
+
+
+}
+
+
+.content-service-view .cs-error-code .error-modal-content .modal-background {
     position: fixed;
     padding-top: 100px;
     left: 0;
@@ -1448,6 +1453,8 @@ caption {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 99999;
 }
+
+
 
 .content-service-view .cs-error-code .error-modal-content .error-code-modal {
     background-color: #ffff;

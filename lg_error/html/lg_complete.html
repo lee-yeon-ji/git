@@ -317,8 +317,139 @@
     (() => {
         const tabListElement = document.querySelector('.cs-tab-list');
         const modalBtn = document.querySelectorAll('.cs-tab-list button');
+        const modalListElement = document.querySelectorAll('.error-modal-content');
+        const modalDim = document.querySelectorAll('.modal-background');
 
 
+        const modalCloseBtn = document.querySelectorAll('.error-modal-content .modal-close');
+        function updateVisibility() {
+            if (window.innerWidth > 768) {
+                tabListElement.setAttribute('aria-hidden', 'false');
+            } else {
+                tabListElement.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        /*error 버튼 클릭 시 modal 열림*/
+        console.log(modalBtn)
+		    modalBtn.forEach(function (btn){
+
+
+            btn.addEventListener('click', function () {
+                console.log('클릭 확인');
+                console.log('===============');
+
+                const modalId = this.getAttribute('aria-controls');
+                console.log('클릭한 버튼의 모달 ID값 확인');
+                console.log(modalId);
+
+                // 모든 [모달 컨텐츠 닫기]
+                modalListElement.forEach((modalContents)=> {
+                    modalContents.style.display='none';
+                })
+
+		            // 모달 ID와 동일한 [모달 컨텐츠 열기]
+		            let modalView = document.querySelector(`#${modalId}`);
+                modalView.style.display='block';
+                console.log(modalView.children);
+
+
+
+                modalView.children[0].style.display='block';
+
+
+
+
+            })
+
+		    })
+
+        /*modal 페이지에 닫기 버튼 클릭 시 modal 닫힘*/
+        modalCloseBtn.forEach( (closeBtn)=> {
+            closeBtn.addEventListener('click', function () {
+                let modalContent = closeBtn.closest('.error-modal-content');
+                if (modalContent) {
+                    modalContent.style.display = 'none';
+                }
+            });
+        });
+
+
+        // document.addEventListener("click", function(e) {
+        //     const modalDim = document.querySelectorAll('.modal-background');
+				//
+        //     if (e.target !== modalDim && !modalDim.contains(e.target)) {
+        //         modalDim.parentNode.removeChild(modalDim);
+        //     }
+        // });
+
+        // modalDim.forEach(function (dim){
+        //     dim.addEventListener('click', function(){
+        //         if(e.target === )
+        //     })
+        // })
+
+        console.log("숫자 문자 비교")
+
+
+        modalDim.forEach(function (dim){
+            dim.addEventListener('click', function(e){
+
+
+                console.log("e는 뭘까")
+                console.log(e)
+
+                console.log("e.target은 뭘까")
+                console.log(e.target);
+
+
+                // 현재 클릭한 노드가 딤인지 아닌지 확인
+                if(e.target === dim) { // 현재 클릭한 노드가 딤일 경우
+                    dim.style.display = 'none';
+                } else{ // 현재 클릭한 노드가 딤이 아닐 경우
+                    dim.style.display = 'block';
+                }
+
+            })
+        })
+
+
+        // console.log(modalDim);
+        // console.log("모달 딤")
+				// modalDim.addEventListener("click", function (e){
+        //     const element = document.querySelector('.modal-background');
+        //     console.log(element);
+				//
+				//
+        //     // console.log("e.target")
+        //     // console.log(e.target) //클릭 이벤트를 modaldim에 추가함.
+				// 		//클릭 이벤트가 발생한 대상 객체
+				//
+				//
+        //     // console.log("!element")
+        //     // console.log(!element) //
+				// 		//
+        //     // console.log("element contains")
+        //     // console.log(element.contains(e.target)) //모달 백그라운드가 자식인지 아닌지에 따라 블린값으로 나타낸다.
+				// 		//클릭 이벤트가 발생한 대상 객체가 모달 백드라운드의 자식인지 아닌지에 따라 블린값으로 나타낸다.
+				//
+				//
+				// 		//조건 이벤트가 발생한 대상 객체가 모달 백드라운드와 같지 않으면 true
+				// 		//조건 이벤트가 발생한 대상 객체가 모달 백드라운드와 같으면 false
+				// 		// 동등관계대수로 체크 &&
+				// 		if(e.target !== element && [] ) {
+        //         element.style.display = 'block';
+				//
+        //     }
+				// 		else{
+        //         element.style.display = 'none';
+				// 		}
+				//
+        //     // true modal-background이 아닌 곳을 클릭 했을 때
+        //     // false modal-background를 클릭 했을 때
+				//
+        //     // e.target == element
+        // })
 
 
 
