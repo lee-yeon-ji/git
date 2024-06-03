@@ -346,6 +346,7 @@
                 // 모든 [모달 컨텐츠 닫기]
                 modalListElement.forEach((modalContents)=> {
                     modalContents.style.display='none';
+                    document.body.style.overflow='auto';
                 })
 
 		            // 모달 ID와 동일한 [모달 컨텐츠 열기]
@@ -355,7 +356,9 @@
 
 
 
+
                 modalView.children[0].style.display='block';
+                document.body.style.overflow='hidden';
 
 
 
