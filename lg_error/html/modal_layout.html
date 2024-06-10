@@ -1,0 +1,308 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link href="https://www.lg.com/lg5-common/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+	<link href="https://www.lg.com/lg5-common/css/default.min.css" type="text/css" rel="stylesheet"/>
+	<link href="https://www.lg.com/us/support/assets/css/help-library.css" type="text/css" rel="stylesheet"/>
+	<link href="../css/modal_layout.css" type="text/css" rel="stylesheet"/>
+	<style>
+      .multi-box-inline {
+          width: 100%;
+          padding-top: 0 !important;
+          flex-flow: row wrap;
+          justify-content: center;
+      }
+      .multi-box-inline > * {
+          width: 41% !important;
+          margin: 5px;
+          padding: 10px;
+          text-align: center;
+          box-sizing: border-box;
+      }
+      .scroll-wrapper {
+          width: 100%;
+          overflow-x: auto;
+      }
+      a.lgeai-box-hover img {
+          width: initial;
+          min-height: initial;
+      }
+      .lgeai-wrapper .multi-box.answer-text > a.selected,
+      .lgeai-wrapper .answer-text > a.lgeai-box-hover:focus {
+          background: #a50034;
+          border-color: #333;
+          color: #fff !important;
+          outline: none;
+      }
+      span.answer-ice.multi-box-inline.is-mobile {
+          align-items: stretch;
+      }
+      @media (min-width: 500px) {
+          .multi-box-inline {
+              width: 100%;
+              flex-flow: row wrap;
+              justify-content: center;
+          }
+          .scroll-wrapper {
+              width: 100%;
+              overflow: hidden;
+          }
+          .scroll-content-holder {
+              width: 100% !important;
+          }
+          .multi-box-inline > * {
+              width: 20% !important;
+          }
+          a.lgeai-box-hover {
+              border: solid 5px #999;
+              box-sizing: border-box;
+          }
+          a.lgeai-box-hover:hovera.lgeai-box-hover:focus,
+          a.lgeai-box-hover:active {
+              text-decoration: none !important;
+          }
+          .answer-ice.multi-box-inline .lgeai-box-hover p {
+              font-size: 2rem;
+          }
+      }
+      .card-body ol > li {
+          list-style: decimal;
+      }
+	</style>
+	<style>
+      .lgeai-error-code-list {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-direction: normal;
+          -webkit-box-orient: horizontal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-pack: space-between;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: space-between;
+          justify-content: space-between;
+          -webkit-align-content: stretch;
+          -ms-flex-line-pack: stretch;
+          align-content: stretch;
+          -webkit-box-align: stretch;
+          -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+          align-items: stretch;
+          padding-left: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+      }
+      .lgeai-error-code-item {
+          -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+          min-height: 50px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          list-style: none;
+          overflow: hidden;
+      }
+      .lgeai-error-code-item img {
+          max-width: 60px;
+          filter: opacity(0.7);
+      }
+      .lgeai-error-code-item a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          vertical-align: middle;
+          color: #333 !important;
+          padding: 1rem;
+      }
+      .lgeai-error-code-item:hover,
+      .lgeai-error-code-item:focus,
+      .lgeai-error-code-item:active {
+          background-color: #a50034;
+          border-color: #a50034;
+          cursor: pointer;
+      }
+      .lgeai-error-code-item:hover > a,
+      .lgeai-error-code-item:active > a {
+          color: #fff !important;
+          text-decoration: none !important;
+      }
+      .lgeai-error-code-item:hover img,
+      .lgeai-error-code-item:active img,
+      .lgeai-error-code-item:focus img {
+          -webkit-filter: brightness(0) invert(1);
+          -moz-filter: brightness(0) invert(1);
+          -o-filter: brightness(0) invert(1);
+          -ms-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+      }
+      .lgeai-error-code-item:hover,
+      .lgeai-error-code-item:focus,
+      .lgeai-error-code-item:active {
+          background-color: #a50034;
+          border-color: #a50034;
+          outline: none;
+      }
+      @media (min-width: 500px) {
+          .lgeai-error-code-item img {
+              max-width: 80px;
+          }
+      }
+      @media (min-width: 500px) {
+          .multi-box-inline {
+              width: 100%;
+              flex-flow: row wrap;
+              justify-content: center;
+              align-items: stretch;
+              display: flex;
+              align-self: center;
+              justify-self: center;
+              justify-items: center;
+          }
+      }
+      .modal ol > li {
+          list-style: decimal;
+          list-style-position: inside;
+      }
+	</style>
+	<style>
+      a.lgeai-box-hover img {
+          min-height: auto !important;
+          width: 100%;
+      }
+      h1.big-list-number {
+          color: #a50034;
+          display: inline;
+          font-size: 3rem;
+          font-family: "LG Smart Bold", arial;
+      }
+	</style>
+</head>
+<body class="fake-wrapper" >
+
+<!-- 첫번째 탭 -->
+<div class="code-contents">
+
+	<!-- 버튼 영역 -->
+	<div class="code-list" data-group="1">
+		<div class="code-item"><button type="button" class="code-btn" data-code="IF"><img src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=FVisfJyWloK9BWytrEAow&amp;portalId=P1" alt="IF"></button></div>
+		<div class="code-item"><button type="button" class="code-btn" data-code="FF">FF</button></div>
+	</div>
+
+	<!-- 레이어 -->
+	<div class="code-modal-layer" tabindex="-1" data-code="IF" data-group="1">
+		<div class="layer-contents">
+			<div class="layer-view">IF</div>
+		</div>
+	</div>
+
+	<div class="code-modal-layer" tabindex="-1" data-code="FF" data-group="1">
+		<div class="layer-contents">
+			<div class="layer-view">FF</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+<!-- 두번째 탭 -->
+<div class="code-contents">
+
+	<!-- 버튼 영역 -->
+	<div class="code-list" data-group="2">
+		<div class="code-item"><button type="button" class="code-btn" data-code="IF" ><img src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=FVisfJyWloK9BWytrEAow&amp;portalId=P1" alt="IF"></button></div>
+		<div class="code-item"><button type="button" class="code-btn" data-code="FF">FF</button></div>
+	</div>
+
+	<!-- 레이어 -->
+	<div class="code-modal-layer" tabindex="-1" data-code="IF" data-group="2">
+		<div class="layer-contents">
+			<div class="layer-view">IF2</div>
+		</div>
+	</div>
+
+	<div class="code-modal-layer" tabindex="-1" data-code="FF" data-group="2">
+		<div class="layer-contents">
+			<div class="layer-view">FF2</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+
+<script src="https://www.lg.com/lg5-common/library/jquery.min.js"></script>
+<script src="https://www.lg.com/lg5-common/library/bootstrap.min.js"></script>
+<script src="https://www.lg.com/us/support/assets/js/help-library.js"></script>
+<script>
+
+
+    const codeBtnList = document.querySelectorAll('.code-btn');
+    // console.log(codeBtnList)
+
+
+    codeBtnList.forEach((btn) => {
+        btn.addEventListener('click', () => {
+
+            // 노드를 통해 찾는 방식
+            let group = btn.parentNode.parentNode;
+
+            group =  group.getAttribute('data-group')
+            // console.log(group)
+
+            let code = btn.getAttribute('data-code')
+            // console.log("코드" + code)
+
+            modalOpen(group, code);
+        })
+    })
+
+
+
+    const modalOpen = (group, code) => {
+
+        let modal = document.querySelector(`.code-modal-layer[data-group="${group}"][data-code="${code}"]`);
+        modal.classList.add('active');
+        scrollHidden();
+
+        console.log(modal)
+
+        modal.addEventListener('click',function (event){
+            if (event.target === modal) { // 현재 클릭한 노드가 딤일 경우
+                modalClose();
+            }
+        })  // once : true 옵션 확인
+
+    }
+
+
+    const modalClose = () => {
+        let modal = document.querySelector(`.code-modal-layer.active`);
+
+        modal.classList.remove('active');
+        scrollVisible();
+
+    }
+
+
+    const scrollHidden = () => {
+        document.body.style.overflow = 'hidden';
+    }
+
+    const scrollVisible = () => {
+        document.body.style.overflow = 'visible';
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+.code-modal-layer {
+  visibility: hidden;
+  /*display: none;*/
+  position: fixed;
+  padding-top: 100px;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  max-height: 100vh;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .code-modal-layer.active {
+    visibility: visible;
+    /*display: block;*/ }
+    .code-modal-layer.active .layer-contents {
+      transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+      transform: translate(-50%, 25px); }
+    .code-modal-layer.active.active {
+      /*transition: transform .3s ease-out, -webkit-transform .3s ease-out;*/
+      /*transform: translate(-50%, 25px);*/ }
+  .code-modal-layer .layer-contents {
+    z-index: 100;
+    background-color: #ffff;
+    max-width: 710px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    /*transition: transform .3s linear;*/
+    text-align: start; }
+    .code-modal-layer .layer-contents .layer-view {
+      width: 100%;
+      height: 800px;
+      background-color: #fff; }
+
+.code-list {
+  display: flex;
+  flex-flow: row wrap; }
+  .code-list .code-item {
+    width: calc(20% - 16px);
+    margin: 8px; }
+    .code-list .code-item .code-btn {
+      box-sizing: border-box;
+      outline: none;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: gray;
+      height: 50px;
+      cursor: pointer;
+      border: 2px solid #999;
+      background-color: #f4f4f4; }
+      .code-list .code-item .code-btn:hover, .code-list .code-item .code-btn.active {
+        background-color: red; }
+        .code-list .code-item .code-btn:hover img, .code-list .code-item .code-btn.active img {
+          filter: invert(100%); }
+      .code-list .code-item .code-btn img {
+        max-width: 100%;
+        max-height: 100%; }
+
+/*# sourceMappingURL=modal_layout.css.map */

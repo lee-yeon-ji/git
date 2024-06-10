@@ -1,12 +1,13 @@
-@charset "UTF-8";
 
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, table, td, textarea, th, ul {word-break:break-word;}
 .tal{text-align:left!important}
 .ml-1{margin-left:20px!important}
 .mt-0{margin-top:0!important}
 .mt-1{margin-top:20px!important}
 caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;text-indent:-9999px}
 .ir-hidden{position:absolute;margin:-1px;width:1px;height:1px;padding:0;border:0;white-space:nowrap;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%)}
-.content-service-view{font-family:'Noto Sans','Noto Sans KR',sans-serif;font-size:14px;line-height:1.6;}
+.content-service-view{font-family:'Noto Sans','Noto Sans KR',sans-serif;font-size:14px;line-height:1.6}
 .content-service-view .lg-red{color:#ec455a!important}
 .content-service-view .c-gray{color:#999!important}
 .content-service-view strong{font-weight:600}
@@ -150,7 +151,7 @@ caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;te
 [dir="rtl"] .content-service-view .help-txt {padding:0 15px 0 0;}
 [dir="rtl"] .content-service-view .help-txt:before {left:auto; right:0;}
 
-/* .content-service-view .cs-tabs [role="tabpanel"].is-hidden {display:none;}
+.content-service-view .cs-tabs [role="tabpanel"].is-hidden {display:none;}
 .content-service-view .cs-tabs .cs-tab-list button {border:0 none; border-radius:0; background-color:transparent; cursor:pointer}
 .content-service-view .cs-tabs .cs-tab-list button:focus,
 .content-service-view .cs-tabs .cs-tab-list button:hover {text-decoration:none;}
@@ -183,7 +184,7 @@ caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;te
     .content-service-view .cs-tabs .cs-sub-tabpanel-inner.d-flex .cs-image-wrap {flex-shrink:1; width:600px; padding:0;}
     .content-service-view .cs-tabs .cs-sub-tabpanel-inner.d-flex .cs-image-wrap img {width:100%;}
     .content-service-view .cs-tabs .cs-sub-tabpanel-inner.d-flex .cs-copy-wrap {flex-grow:1; padding-left:30px;}
-} */
+}
 
 .content-service-view .flex-tv-webos-list li {padding:4px 0;}
 @media screen and (min-width:769px) {
@@ -263,20 +264,39 @@ caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;te
 [dir="rtl"] .content-service-view .opt-li {padding:10px 15px 10px 45px;}
 [dir="rtl"] .content-service-view .opt-li.arrow-right:after {right:auto; left:15px; top: 53%; transform:rotate(135deg); transition:transform .3s ease; transform-origin:5px 2px; content:''}
 
+/*통합 에러코드 style*/
+.content-service-view .er-tabs {text-align: center; font-size:18px; overflow-x: hidden; overflow-y: hidden;}
+.content-service-view .er-tabs [role="tabpanel"].is-hidden {display:none;}
+.content-service-view .er-tabs .cs-tab-list button {border:0 none; border-radius:0; background-color:transparent; cursor:pointer;}
+.content-service-view .er-tabs .cs-tab-list button:focus,
+.content-service-view .er-tabs .cs-tab-list button:hover {text-decoration:none;}
+.content-service-view .er-tabs .er-tab-list {display:flex; justify-content:space-around; padding: 32px; margin:-8px;}
+.content-service-view .er-tabs .er-tab-list button {display:block; position:relative; width: calc(50% - 16px); margin:8px; padding:8px 0; font-weight:bold; font-size:17px; line-height:1.6; letter-spacing:-1px; border-radius: 16px; border:5px solid #999; color:#a50034; max-width: 300px;}
+.content-service-view .er-tabs .er-tab-list button[aria-selected="true"] {color:#fff; border:5px solid #333; background-color:#a50034;}
+.content-service-view .er-tabs .er-tab-list button img {opacity: 0.5;}
+.content-service-view .er-tabs .er-tab-list button[aria-selected="true"] img {opacity: 1;}
+.content-service-view .er-tabs .er-tab-list button .txt{display: block; padding-top: 8px;}
+.content-service-view .er-tabs .tabpanel-wrap {padding: 50px 30px; border: 1px solid #ddd; border-radius: 8px; transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1); }
+
+@media screen and (min-width:1024px) {
+    .content-service-view .er-tabs .er-tab-list {justify-content:center;}
+    .content-service-view .er-tabs .er-tab-list button {margin:0 20px; padding:8px 0;}
+}
+
 /*통합 에러코드 팝업 리스트*/
 
-.content-service-view .cs-error-code [role="tabpanel"].is-hidden {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code [role="tabpanel"].is-hidden {
     display: none;
 }
 
-.content-service-view .error-code-list {
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-content: stretch;
 }
 
-.content-service-view .error-code-list button {
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button {
     display: block;
     flex: 0 0 45%;
     max-width: 45%;
@@ -288,104 +308,105 @@ caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;te
     background-color: #f4f4f4;
     cursor: pointer;
 }
-.content-service-view .error-code-list button:hover{
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button:hover{
     background-color: #a50034;
     border-color: #a50034;
 }
-.content-service-view .error-code-list button:hover img{
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button:hover img{
     filter: invert(100%);
 }
 
-.content-service-view .error-code-list button:focus,
-.content-service-view .error-code-list button[aria-selected="true"] {
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button:focus,
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button[aria-selected="true"] {
     text-decoration: none;
     background-color: #a50034;
     border-color: #a50034;
 }
 
-.content-service-view .error-code-list button .btn-focus {
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button .btn-focus {
     display: block;
     padding: 0;
 }
 
-.content-service-view .error-code-list button img {
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button img {
     max-width: 80px;
     filter: opacity(0.7);
 }
 
-.content-service-view .error-code-list button:focus img,
-.content-service-view .error-code-list button[aria-selected="true"] img {
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button:focus img,
+.content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button[aria-selected="true"] img {
     filter: invert(100%);
 }
 
 
-.content-service-view .cs-error-code .error-modal-content {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-modal-content {
     overflow-x: hidden;
     overflow-y: auto;
 
 }
 
 
-.content-service-view .cs-error-code .error-modal-content .modal-background {
-    visibility: hidden;
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-modal-content .modal-background {
     position: fixed;
     padding-top: 100px;
+    /*border-box를 주어 border,padding 값을 포함하게 설정, 스크롤이 생길 때 맨 아래 화살표가 표기 되는지 확인하자*/
+    box-sizing: border-box;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    /*box-sizing: border-box;*/
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 99999;
     max-height: 100vh;
     overflow-y: scroll;
 }
 
-.content-service-view .cs-error-code .error-modal-content.show .error-code-modal {
-
-}
 
 
-.content-service-view .cs-error-code .error-modal-content .error-code-modal {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-modal-content .error-code-modal {
     background-color: #ffff;
     max-width: 710px;
     width: 100%;
     position: absolute;
     top: 0;
     left: 50%;
-    /* transform: translate(-50%, 0); */
     transform: translate(-50%, -100%);
     transition: transform .3s linear;
+    text-align: start;
+
+
 
 }
 
-
-.content-service-view .cs-error-code .error-modal-content .error-code-modal.show{
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-modal-content  .error-code-modal.show {
     transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     transform: translate(-50%, 25px);
 }
 
 
-
-
 @media screen and (max-width: 769px) {
 
-    .content-service-view .cs-error-code .error-modal-content .modal-background .error-code-modal {
+    .content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-modal-content .modal-background .error-code-modal {
         left: 0;
-        transform: translate(0, 0);
+        transform: translate(0, -100%);
         margin: 47px 12px 0;
         width: calc(100% - 24px);
+    }
+
+    .content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-modal-content  .error-code-modal.show {
+        transform: translate(0, 25px);
+
     }
 
 }
 
 
 
-.content-service-view .cs-error-code .error-code-modal .modal-header {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-header {
     position: relative;
 }
 
-.content-service-view .cs-error-code .error-code-modal .modal-header .modal-close {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-header .modal-close {
     position: absolute;
     top: 29px;
     right: 16px;
@@ -396,30 +417,30 @@ caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;te
     border: 0;
 }
 
-.content-service-view .cs-error-code .error-code-modal .modal-header .modal-close:hover, .content-service-view .cs-error-code .error-code-modal .modal-header .modal-close:focus {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-header .modal-close:hover, .content-service-view .cs-error-code .error-code-modal .modal-header .modal-close:focus {
     text-decoration: none;
     cursor: pointer;
 }
 
-.content-service-view .cs-error-code .error-code-modal .modal-header {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-header {
     background-color: #efefef;
     padding: 16px;
     margin-bottom: 16px;
 }
 
-.content-service-view .cs-error-code .error-code-modal .modal-header .subject-txt {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-header .subject-txt {
     font-size: 28px;
     color: #000;
     font-weight: 500;
 }
 
-.content-service-view .cs-error-code .error-code-modal .modal-body {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-body {
     width: auto;
     margin: 0 auto;
     padding: 32px;
 }
 
-.content-service-view .cs-error-code .error-code-modal .modal-body .error-tittle-box {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-body .error-tittle-box {
     margin: 0 auto;
     width: 100%;
     display: flex;
@@ -427,7 +448,7 @@ caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;te
     justify-content: center;
 }
 
-.content-service-view .cs-error-code .error-code-modal .modal-body .error-tittle-box .img-box {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-body .error-tittle-box .img-box {
     display: block;
     min-width: 15%;
     margin: 8px;
@@ -439,17 +460,18 @@ caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;te
     text-align: center;
 }
 
-.content-service-view .cs-error-code .error-code-modal .modal-body .error-tittle-box .img-box img {
+.content-service-view .er-tabs .tabpanel-wrap .er .cs-error-code .error-code-modal .modal-body .error-tittle-box .img-box img {
     max-width: 100px;
     width: 100%;
 }
 
 
 @media screen and (min-width: 769px) {
-    .content-service-view .error-code-list button {
+    .content-service-view .er-tabs .tabpanel-wrap .er .error-code-list button {
         flex: 0 0 18.667%;
         max-width: 18.667%;
         min-height: 50px;
     }
 
 }
+

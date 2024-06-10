@@ -1,0 +1,1308 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link href="https://www.lg.com/lg5-common/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+	<link href="https://www.lg.com/lg5-common/css/default.min.css" type="text/css" rel="stylesheet"/>
+	<link href="https://www.lg.com/us/support/assets/css/help-library.css" type="text/css" rel="stylesheet"/>
+	<style>
+      .multi-box-inline {
+          width: 100%;
+          padding-top: 0 !important;
+          flex-flow: row wrap;
+          justify-content: center;
+      }
+      .multi-box-inline > * {
+          width: 41% !important;
+          margin: 5px;
+          padding: 10px;
+          text-align: center;
+          box-sizing: border-box;
+      }
+      .scroll-wrapper {
+          width: 100%;
+          overflow-x: auto;
+      }
+      a.lgeai-box-hover img {
+          width: initial;
+          min-height: initial;
+      }
+      .lgeai-wrapper .multi-box.answer-text > a.selected,
+      .lgeai-wrapper .answer-text > a.lgeai-box-hover:focus {
+          background: #a50034;
+          border-color: #333;
+          color: #fff !important;
+          outline: none;
+      }
+      span.answer-ice.multi-box-inline.is-mobile {
+          align-items: stretch;
+      }
+      @media (min-width: 500px) {
+          .multi-box-inline {
+              width: 100%;
+              flex-flow: row wrap;
+              justify-content: center;
+          }
+          .scroll-wrapper {
+              width: 100%;
+              overflow: hidden;
+          }
+          .scroll-content-holder {
+              width: 100% !important;
+          }
+          .multi-box-inline > * {
+              width: 20% !important;
+          }
+          a.lgeai-box-hover {
+              border: solid 5px #999;
+              box-sizing: border-box;
+          }
+          a.lgeai-box-hover:hovera.lgeai-box-hover:focus,
+          a.lgeai-box-hover:active {
+              text-decoration: none !important;
+          }
+          .answer-ice.multi-box-inline .lgeai-box-hover p {
+              font-size: 2rem;
+          }
+      }
+      .card-body ol > li {
+          list-style: decimal;
+      }
+	</style>
+	<style>
+      .lgeai-error-code-list {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-direction: normal;
+          -webkit-box-orient: horizontal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-pack: space-between;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: space-between;
+          justify-content: space-between;
+          -webkit-align-content: stretch;
+          -ms-flex-line-pack: stretch;
+          align-content: stretch;
+          -webkit-box-align: stretch;
+          -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+          align-items: stretch;
+          padding-left: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+      }
+      .lgeai-error-code-item {
+          -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+          min-height: 50px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          list-style: none;
+          overflow: hidden;
+      }
+      .lgeai-error-code-item img {
+          max-width: 60px;
+          filter: opacity(0.7);
+      }
+      .lgeai-error-code-item a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          vertical-align: middle;
+          color: #333 !important;
+          padding: 1rem;
+      }
+      .lgeai-error-code-item:hover,
+      .lgeai-error-code-item:focus,
+      .lgeai-error-code-item:active {
+          background-color: #a50034;
+          border-color: #a50034;
+          cursor: pointer;
+      }
+      .lgeai-error-code-item:hover > a,
+      .lgeai-error-code-item:active > a {
+          color: #fff !important;
+          text-decoration: none !important;
+      }
+      .lgeai-error-code-item:hover img,
+      .lgeai-error-code-item:active img,
+      .lgeai-error-code-item:focus img {
+          -webkit-filter: brightness(0) invert(1);
+          -moz-filter: brightness(0) invert(1);
+          -o-filter: brightness(0) invert(1);
+          -ms-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+      }
+      .lgeai-error-code-item:hover,
+      .lgeai-error-code-item:focus,
+      .lgeai-error-code-item:active {
+          background-color: #a50034;
+          border-color: #a50034;
+          outline: none;
+      }
+      @media (min-width: 500px) {
+          .lgeai-error-code-item img {
+              max-width: 80px;
+          }
+      }
+      @media (min-width: 500px) {
+          .multi-box-inline {
+              width: 100%;
+              flex-flow: row wrap;
+              justify-content: center;
+              align-items: stretch;
+              display: flex;
+              align-self: center;
+              justify-self: center;
+              justify-items: center;
+          }
+      }
+      .modal ol > li {
+          list-style: decimal;
+          list-style-position: inside;
+      }
+	</style>
+	<style>
+      a.lgeai-box-hover img {
+          min-height: auto !important;
+          width: 100%;
+      }
+      h1.big-list-number {
+          color: #a50034;
+          display: inline;
+          font-size: 3rem;
+          font-family: "LG Smart Bold", arial;
+      }
+	</style>
+</head>
+<body class="fake-wrapper" >
+<div class="lgeai-wrapper">
+	<div class="lgeai-description">
+		<h2 class="tit">At a Glance</h2>
+		<p>
+			LG makes it easy to diagnose problems with your refrigerator, should
+			you run into any issues. If an issue occurs, the refrigerator is
+			programmed to communicate diagnostic messages, displayed as codes,
+			that can assist you, or a technician, in getting the unit back to
+			optimum performance.
+		</p>    </div>
+	<ol class="lgeai-dec-tree" role="region" aria-label="A decision tree with questions and options you can select">
+		<li class="start center" aria-expanded="false" aria-hidden="true">
+			<p><b>Select your refrigerator type:</b></p>
+			<span class="answer-ice answer-text center multi-box-inline scroll-content-holder">
+<a class="lgeai-box-hover small xfe_just_info" role="option" aria-selected="false" aria-label="This option will open related content" href="#" data-link="1" data-btn="0" alt=" ">
+<img class="img-fluid" style="width: 6rem; height: 12rem;" alt="Side-by-Side" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=WuXleHFohFPzhQO6ENSw&portalId=P1"/>
+<span class="lgeai-box-title" role="presentation">
+French Door
+</span>
+</a>
+<a class="lgeai-box-hover small xfe_just_info" role="option" aria-selected="false" aria-label="This option will open related content" href="#" data-link="1" data-btn="1" alt=" ">
+<img class="img-fluid" style="width: 6rem; height: 12rem;" alt="Side-by-Side" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=0m5BeuXNrs91su4EnLVNw&portalId=P1"/>
+<span class="lgeai-box-title" role="presentation">
+Side-by-Side
+</span>
+</a>
+<a class="lgeai-box-hover small xfe_just_info" role="option" aria-selected="false" aria-label="This option will open related content" href="#" data-link="1" data-btn="2" alt=" ">
+<img class="img-fluid" style="width: 6rem; height: 12rem;" alt="Side-by-Side" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=6pA1JW8KAUNvKIxerV5A&portalId=P1"/>
+<span class="lgeai-box-title" role="presentation">
+Bottom Freezer
+</span>
+</a>
+<a class="lgeai-box-hover small xfe_just_info" role="option" aria-selected="false" aria-label="This option will open related content" href="#" data-link="1" data-btn="3" alt=" ">
+<img class="img-fluid" style="width: 6rem; height: 12rem;" alt="Side-by-Side" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=u1cUGovicD5BNwme100Cyw&portalId=P1"/>
+<span class="lgeai-box-title" role="presentation">
+Top-Freezer
+</span>
+</a>
+</span>
+		</li>
+		<li class="step 1 ans0 ans1 ans2 no-question container" aria-expanded="false" aria-hidden="true" style="display: none;">
+			<p class="center">
+				Depending on the model of your unit, your error code may start with
+				one of the following variations.
+			</p>
+			<div class="row justify-content-center">
+				<div class="col-3 m-1">
+					<p class="center">Start or Ends with</p> <img class="border rounded img-fluid" alt="Error" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=lGs5wQv2YKquUNJF52m0g&portalId=P1"/>
+				</div>
+				<div class="col-3 m-1">
+					<p class="center">Start or Ends with</p> <img class="border rounded img-fluid" alt="Error" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=IRPof8ow2OmjQrhHMGtNwQ&portalId=P1"/>
+				</div>
+				<div class="col-3 m-1">
+					<p class="center">Start or Ends with</p> <img class="border rounded img-fluid" alt="Error" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=Aw14eyH9vZAwGiK1bngmcQ&portalId=P1"/>
+				</div>
+			</div>
+			<center>
+				<p><strong>Select the corresponding error code below:</strong></p>            </center>
+			<div class="lgeai-error-code-list justify-content-center row">
+				<!--OFF-->
+				<button title="OFF Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".demo-mode" data-toggle="modal">
+					<img class="img-fluid" alt="OFF" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=9TOgRQTKyu2RKv6oNwQ1w&portalId=P1"/>
+				</button>
+				<!--FS-->
+				<button title="F5 error code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-fs" data-toggle="modal">
+					<img class="img-fluid" alt="FS" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=U6TFjaUsFb1N3Mgq02DO0A&portalId=P1"/>
+				</button>
+				<!--rS-->
+				<button title="r5 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-rs" data-toggle="modal">
+					<img class="img-fluid" alt="rs" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=0pVlWCm0oLBcdJdpoJxmQ&portalId=P1"/>
+				</button>
+				<!--DS-->
+				<button title="d5 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-ds" data-toggle="modal">
+					<img class="img-fluid" alt="DS" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=rEjTR1qKFlbBfjInl4mdZw&portalId=P1"/>
+				</button>
+				<!--rT-->
+				<button title="rt Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-rt" data-toggle="modal">
+					<img class="img-fluid" alt="rt" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=IKoLqPjKNk5Uy4udTIJFYQ&portalId=P1"/>
+				</button>
+				<!--EID-->
+				<button title="EID Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-eid" data-toggle="modal">
+					<img class="img-fluid" alt="EID" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=E7BFpmXAfa5zoBVhEEJug&portalId=P1"/>
+				</button>
+				<!--DH-->
+				<button title="dH error code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-dh" data-toggle="modal">
+					<img class="img-fluid" alt="DH" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=oqS4emoL31hwRGxb7ZRrQA&portalId=P1"/>
+				</button>
+				<!--FF-->
+				<button title="FF Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-ff" data-toggle="modal">
+					<img class="img-fluid" alt="FF" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=pAgVNaWEcmz782o7EekxA&portalId=P1"/>
+				</button>
+				<!--1F-->
+				<button title="1F Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-if" data-toggle="modal">
+					<img class="img-fluid" alt="IF" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=8DPbto7kqVZAksouviPVeA&portalId=P1"/>
+				</button>
+				<!--F1-->
+				<button title="F1 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-if" data-toggle="modal">
+					<img class="img-fluid" alt="F1" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=lvC1ITLooLnIrPNneOYBaw&portalId=P1"/>
+				</button>
+				<!--C1-->
+				<button title="c1 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-c1" data-toggle="modal">
+					<img class="img-fluid" alt="c1" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=L12SeLnRLaojmWdd8tmgQ&portalId=P1"/>
+				</button>
+				<!--CF-->
+				<button title="CF Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-cf" data-toggle="modal">
+					<img class="img-fluid" alt="CF" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=yY3UigtsMUSPJkaREcJmAA&portalId=P1"/>
+				</button>
+				<!--EIU-->
+				<button title="EIU Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-eiu" data-toggle="modal">
+					<img class="img-fluid" alt="EIU" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=7SjNsFpVMO1PEsOsP4cL3w&portalId=P1"/>
+				</button>
+				<!--CO-->
+				<button title="C0 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-co" data-toggle="modal">
+					<img class="img-fluid" alt="CO" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=zrd5mSGKS2F8Q7t1uYSZkw&portalId=P1"/>
+				</button>
+				<!--IS-->
+				<button title="15 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-is" data-toggle="modal">
+					<img class="img-fluid" alt="IS" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=bVFIbE2siYaXzBXRtruGXQ&portalId=P1"/>
+				</button>
+				<!--IT-->
+				<button title="1t Error Code button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target="#error-it" data-toggle="modal">
+					<img class="img-fluid" alt="1IT" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=PCZuZGfW4KomKgk9eI6opA&portalId=P1"/>
+				</button>
+				<!--rF-->
+				<button title="rF error code button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-rf" data-toggle="modal">
+					<img class="img-fluid" alt="rf" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=jSWPaQsnyhJNX4CgfcJzrg&portalId=P1"/>
+				</button>
+				<!--GF-->
+				<button title="9F Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-gf" data-toggle="modal">
+					<img class="img-fluid" alt="GF" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=LGAzLW9wZPvuJt2g2dGRaw&portalId=P1"/>
+				</button>
+				<!--Od-->
+				<button title="0d Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-od" data-toggle="modal">
+					<img class="img-fluid" alt="od" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=XILtoaKXjIA9ONLCiwvQ&portalId=P1"/>
+				</button>
+				<!--HS-->
+				<button title="H5 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-hs" data-toggle="modal">
+					<img class="img-fluid" alt="HS" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=y5fuI6JazMumqgyG6xHKEA&portalId=P1"/>
+				</button>
+				<!--SS-->
+				<button title="55 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-ss" data-toggle="modal">
+					<img class="img-fluid" alt="ss" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=bS6ofukQLPR1U0SfOSDw&portalId=P1"/>
+				</button>
+				<!--AD-->
+				<button title="Ad Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-ad" data-toggle="modal">
+					<img class="img-fluid" alt="ad" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=sLnPL921iy9iDAmtU7LJXg&portalId=P1"/>
+				</button>
+				<!--AS-->
+				<button title="A5 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-as" data-toggle="modal">
+					<img class="img-fluid" alt="as" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=VU67pu7CYVSReaQQIDDrg&portalId=P1"/>
+				</button>
+				<!--sb-->
+				<button title="5b Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-sb" data-toggle="modal">
+					<img class="img-fluid" alt="sb" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=Ek31DzebokWr9lJUdOHeWA&portalId=P1"/>
+				</button>
+				<!--dr-->
+				<button title="dr Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-dr" data-toggle="modal">
+					<img class="img-fluid" alt="dr" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=Y64suv5n9WgvDALh0AtFfw&portalId=P1"/>
+				</button>
+				<!--CL E-->
+				<button title="CL E Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-cl" data-toggle="modal">
+					<img class="img-fluid" alt="CL E" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=uA6dfnG9pfYdUqE5OScRA&portalId=P1"/>
+				</button>
+				<!--E CL-->
+				<button title="E CL Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-cl" data-toggle="modal">
+					<img class="img-fluid" alt="E CL" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=YV0hm5sxsON9asAgU3wQ&portalId=P1"/>
+				</button>
+				<!--CH E-->
+				<button title="CH E Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-ch" data-toggle="modal">
+					<img class="img-fluid" alt="CH E" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=RzgAUIRq85nbgepMaMnbA&portalId=P1"/>
+				</button>
+				<!--E CH-->
+				<button title="E CH Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-ch" data-toggle="modal">
+					<img class="img-fluid" alt="E CH" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=rs3U4Yt9mPncQDI5rkQmQ&portalId=P1"/>
+				</button>
+				<!--67-->
+				<button title="67 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-67" data-toggle="modal">
+					<img class="img-fluid" alt="67" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=GQjMhvOV5ei3PgQk8lFTg&portalId=P1"/>
+				</button>
+				<!--22-->
+				<button title="22 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-22" data-toggle="modal">
+					<img class="img-fluid" alt="22" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=drxrk3S0pYQEDEavIiUw&portalId=P1"/>
+				</button>
+				<!--33-->
+				<button title="33 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-33" data-toggle="modal">
+					<img class="img-fluid" alt="33" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=I4XWO3SIxh03mX7gT14uw&portalId=P1"/>
+				</button>
+				<!--88-->
+				<button title="88 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-88" data-toggle="modal">
+					<img class="img-fluid" alt="88" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=aa3e4VcyGFwHrK31zSKdQ&portalId=P1"/>
+				</button>
+				<!--L AS-->
+				<button title="LA5 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-as" data-toggle="modal">
+					<img class="img-fluid" alt="las" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=ehurU4bkt7x9SBOUSoxdw&portalId=P1"/>
+				</button>
+				<!--r AS-->
+				<button title="rA5 Error Code Button" class="col-5 col-md-2 m-2 border rounded lgeai-error-code-item" type="button" data-min-width="700" data-max-width="850" data-target=".er-as" data-toggle="modal">
+					<img class="img-fluid" alt="ras" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=iyT6UTYTG5R6sAxji6z2Eg&portalId=P1"/>
+				</button>
+			</div>
+		</li>
+		<li class="step 1 ans3" aria-expanded="false" aria-hidden="true" style="display: none;">
+			<h3 class="center">How to Read Your Error Code</h3>
+			<p class="center">
+				You can read your code by looking at the temperature setting panel
+				on your fridge.
+			</p>
+			<div class="center">
+				<img alt="Fridge Control Panel Diagram Showing The Temperature Selectors Numbered 1-7" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=mw21UEAsfgXAbnk89yZzrw&portalId=P1"/>
+			</div>
+			<h4 class="center">
+				Select Your Error Based Off of Which LED's Are Lit Up
+			</h4>
+			<div class="center">
+				<button title="d5 Error Code Button" class="border rounded m-1 p-0 bg-white mx-auto d-block" type="button" data-target=".er-ds" data-toggle="modal">
+					<img class="img-fluid" alt="All numbers except the 3rd are lit = d5 error code" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=gSShh46OvdxZMMqwyKaEjw&portalId=P1"/>
+				</button>
+				<button class="border rounded m-1 p-0 bg-white mx-auto d-block" type="button" data-target=".er-dh" data-toggle="modal">
+					<img alt="Only 5, 6, and 7 are lit = dH error code" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=hEH97qcKzdxzkn6dNy20Q&portalId=P1"/>
+				</button>
+				<button class="border rounded m-1 p-0 bg-white mx-auto d-block" type="button" data-target=".er-fs" data-toggle="modal">
+					<img alt="All numbers except the 1st are lit = F5 error code" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=BAXqeMKE4rWi547NrKcdXA&portalId=P1"/>
+				</button>
+				<button class="border rounded m-1 p-0 bg-white mx-auto d-block" type="button" data-target=".er-ff" data-toggle="modal">
+					<img alt="Only 6, and 7 are lit = FF error code" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=ZZsI08XYuXjP7pZH2K44A&portalId=P1"/>
+				</button>
+				<button class="border rounded m-1 p-0 bg-white mx-auto d-block" type="button" data-target=".er-rs" data-toggle="modal">
+					<img alt="All numbers except the second are lit = r5 error code" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=TG9LAorNlw2LP2Vz1bhN6w&portalId=P1"/>
+				</button>
+			</div>
+		</li>
+	</ol>
+	<!-- Modals -->
+	<div>
+		<div tabindex="-1" class="modal fade demo-mode" role="dialog" aria-hidden="true" aria-labelledby="Demo Mode">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>Demo Mode</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							Your LG refrigerator is equipped with a
+							<strong>DEMO MODE</strong> or <strong>DISPLAY MODE</strong>.
+							This feature disables all cooling in the refrigerator and
+							freezer sections to conserve energy while on display in a
+							retail store. When <strong>DEMO MODE</strong> is activated,
+							<strong>OF F</strong> will appear on the control panel.
+						</p><p style="text-align: center;">
+						<img style="max-width: 400px;" alt="Press and hold refrigerator and ice plus button" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=hKC59tvryZLpSBSQ8lvQ&portalId=P1"/>
+					</p>
+						<ul>
+							<li>
+								<p>
+									To disable <strong>DEMO/DISPLAY MODE</strong>: With either
+									refrigerator door opened, press and hold the
+									<strong>REFRIGERATOR</strong> and
+									<strong>ICE PLUS</strong> buttons at the same time for
+									five seconds.
+								</p>                            </li>
+							<li>
+								<p>
+									After holding the buttons for five seconds, the control
+									panel will beep, and the temperature settings will display
+									to confirm that <strong>DEMO MODE</strong> is deactivated.
+								</p>                            </li>
+						</ul>
+						<div class="container">
+							<div class="row">
+								<div class="embed-responsive col-sm-12 col-md-12 col-lg-12 mx-auto embed-responsive-16by9">
+									<iframe title="How to Disable the Display Mode" class="embed-responsive-item" src="https://youtube.com/embed/FnuAUVZects" allowfullscreen=""></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-eid" role="dialog" aria-hidden="true" aria-labelledby="EID Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>EID Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							An <strong>EID</strong> error code indicates a
+							<strong>freezer compartment ice maker sensor failure</strong>.
+						</p>                       <p>
+						Unfortunately, there are no troubleshooting steps for this
+						error code.
+					</p><p class="pt-3">
+						The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-eiu" role="dialog" aria-hidden="true" aria-labelledby="EIU Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>EIU Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							An <strong>EIU</strong> error code indicates a
+							<strong>freezer compartment ice maker assembly</strong>
+							failure.
+						</p>                       <p>
+						Unfortunately, there are no troubleshooting steps for this
+						error code.
+					</p><p class="pt-3">
+						The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-33" role="dialog" aria-hidden="true" aria-labelledby="33 Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>33 Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>33</strong> error code indicates a problem with the
+							<strong>compressor relay</strong>.
+						</p>                       <p>
+						Unfortunately, there are no troubleshooting steps for this
+						error code.
+					</p><p class="pt-3">
+						The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-88" role="dialog" aria-hidden="true" aria-labelledby="88 Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>88 Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>88 indicates the unit is functioning properly.</p>                       <p>
+						Pressing and holding ICE PLUS and FREEZER for 2 seconds will
+						display this code.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-ch" role="dialog" aria-hidden="true" aria-labelledby="CH E Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>CH E Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							<strong>CH E</strong> or <strong>E CH</strong> error codes
+							indicates that there is a
+							<strong>high side refrigerant</strong> leak.
+						</p>                       <p>
+						<strong>CH</strong> (High side cycle leakage) has a high
+						possibility of being refrigerant leakage from the condenser.
+					</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code.
+					</p><p class="pt-3">
+						The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-cl" role="dialog" aria-hidden="true" aria-labelledby="CL E Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>CL E Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>CL E</strong> or <strong>E CL</strong> error code
+							indicates that there is a
+							<strong>low side refrigerant</strong> leak.
+						</p>                       <p>
+						<strong>CL</strong> (Low side cycle leakage) has a high
+						possibility of being refrigerant leakage from the evaporator.
+					</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code.
+					</p><p class="pt-3">
+						The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-is" role="dialog" aria-hidden="true" aria-labelledby="IS or 1S Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>IS or 1S Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							<strong>IS or 15 </strong> error code indicates a problem with
+							the <strong>ice maker fan motor</strong> or a disconnection of
+							the <strong>icemaker sensor</strong>.
+						</p><p class="pt-3">
+						For this error code, unfortunately there is no troubleshooting
+						that can be performed.
+					</p>                       <p>
+						The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-cf" role="dialog" aria-hidden="true" aria-labelledby="CF Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>CF Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>CF</strong> error code indicates that the
+							<strong>feedback signal is less than 65 seconds</strong>
+							during the fan's operation. This refers to the fan at the
+							back, bottom of the refrigerator that discharges heat from the
+							condenser.
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps to resolve
+						this issue. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-22" role="dialog" aria-hidden="true" aria-labelledby="22 Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>22 Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>22</strong> error code indicates a problem with
+							<strong>compressor relay.</strong>
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps to resolve
+						this issue. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-67" role="dialog" aria-hidden="true" aria-labelledby="67 Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>67 Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>67</strong> error code indicates a problem with a
+							<strong>gap in the door or an object inside the fridge</strong>
+							restricting the door from closing properly.
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps to resolve
+						this issue. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-co" role="dialog" aria-hidden="true" aria-labelledby="CO Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>CO Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>CO</strong> error code on the display of the
+							refrigerator indicates a
+							<strong>communication error</strong> between the control board
+							and the display.
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps to resolve
+						this issue. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-dh" role="dialog" aria-hidden="true" aria-labelledby="dH Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>dH Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p class="center">
+							A <strong>dH</strong> error code can display in three
+							variations depending on the model of your unit.
+						</p>
+						<div class="d-flex flex-wrap justify-content-center">
+							<img class="img-fluid border rounded col-3 m-1" alt="F dH" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=afYXcHd7porQqCw8BDCmBg&portalId=P1"/>
+							<img class="img-fluid border rounded col-3 m-1" alt="r dH" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=OOGSdJZDN7js2qZBH1DXQ&portalId=P1"/>
+							<img class="img-fluid border rounded col-3 m-1" alt="Er dH" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=4IChkHwfL9x9lCxV1a1hw&portalId=P1"/>
+						</div>
+						<p>
+							A <strong>dH</strong> error code indicates that the
+							<strong>unit spent more than 1 hour trying to defrost</strong>. During defrost; the unit
+							will increase the temperature at
+							the evaporator to a preset temperature. If this temperature is
+							not reached within 1 hour, the <strong>dH</strong> error code
+							will display.
+						</p><p class="pt-3"><strong>How to resolve:</strong></p>
+						<ol>
+							<li>
+								<strong>Unplug the refrigerator for 2 minutes</strong> to
+								reset the unit.
+							</li>
+							<li>Allow the system to defrost again.</li>
+						</ol>
+						<p class="pt-3">
+							If the error persists, the unit will require a repair service.
+							Request a repair with our 24/7 Chat Support.
+						</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-ds" role="dialog" aria-hidden="true" aria-labelledby="dS Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>dS Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p class="center">
+							A <strong>dS</strong> error code indicates a short or
+							disconnection of the <strong>defrosting sensor.</strong>
+						</p><p class="center pt-3">
+						This error can display in three variations depending on the
+						model of your unit.
+					</p>
+						<div class="container">
+							<div class="d-flex flex-wrap justify-content-center">
+								<img class="img-fluid border rounded col-3 m-1" alt="ER dS" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=2ROqot2VVgOpyOqgEos5g&portalId=P1"/>
+								<img class="img-fluid border rounded col-3 m-1" alt="F sD" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=nLu78DEbastOvsYu9ezUJQ&portalId=P1"/>
+								<img class="img-fluid border rounded col-3 m-1" alt="r dS" src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=N1o3zkVrcCPCttDay2ji5w&portalId=P1"/>
+							</div>
+						</div>
+						<ol class="pt-3">
+							<li>
+								<strong>F dS</strong> indicates a problem with the freezer
+								defrost sensor.
+							</li>
+							<li class="pt-3">
+								<strong>r dS</strong> indicates a problem with the
+								refrigerator defrost sensor.
+							</li>
+						</ol>
+						<p>
+							For these error codes, unfortunately there is no
+							troubleshooting that can be performed. The unit will require a
+							repair service, request a repair with our 24/7 Chat Support.
+						</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-ff" role="dialog" aria-hidden="true" aria-labelledby="FF Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>FF Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>FF</strong> error code indicates that the unit has
+							detected an issue with the <strong>freezer fan.</strong> This
+							can sometimes be caused by <strong>frost buildup.</strong>
+						</p>
+						<div class="quick-tips card m-md-2 m-1" id="manual-defrost1">
+							<div class="card-header">
+								<h4>How to Manually Defrost Your Refrigerator</h4>
+							</div>
+							<div class="card-body">
+								<ol class="p-3">
+									<li>
+										Unplug the unit and remove all food and ice from the ice
+										bin.
+									</li>
+									<li>
+										Leave the doors open and wait at least
+										<strong>8 HOURS</strong> for the refrigerator to
+										defrost.
+									</li>
+									<li>
+										Make sure to keep towels in and around the unit to soak
+										up any excess water after the frost melts.
+									</li>
+									<li>
+										After 8 hours have passed, use a dry towel to remove any
+										moisture that may be left inside the refrigerator and
+										freezer.
+									</li>
+									<li>
+										Plug the unit back in, wait 24-48 hours for the
+										refrigerator to return to normal operation.
+									</li>
+									<li>
+										Make sure the vents inside the refrigerator are not
+										blocked, the refrigerator and doors are properly
+										leveled, and the refrigerator and freezer doors are
+										closed completely.
+									</li>
+									<li>
+										After the unit has automatically or manually defrosted,
+										follow the steps below to prevent future frost buildup
+										issues.
+									</li>
+								</ol>
+							</div>
+						</div>
+						<p class="center">
+							For French Door units, please check the gasket alongside the
+							door as shown below:
+						</p><p class="center">
+						<img class="img-fluid" alt="gasket along french door" src="https://gscs.lge.com/gscs/support/fileupload/downloadFile.do?portalId=P1&fileId=BD_N-1395306845053"/>
+					</p><p class="pt-3">
+						If you
+						<strong>notice frost buildup along the
+							<strong>walls of the freezer compartment</strong>,</strong>
+						the <strong>leveling and door alignment</strong> of the
+						refrigerator will need to be checked. Please visit our Leveling Instructions for more information.
+					</p><p class="pt-3">
+						If there is no frost along the walls of the freezer
+						compartment, the unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-fs" role="dialog" aria-hidden="true" aria-labelledby="FS Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>FS Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>FS</strong> error code indicates a short or
+							disconnection of the <strong>freezer sensor.</strong>
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-gf" role="dialog" aria-hidden="true" aria-labelledby="gF Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>gF Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>gF</strong> error code indicates a
+							<strong>flow sensor error, or low water pressure.</strong>
+						</p><p class="pt-3">
+						If your ice maker is overfilling with water, the
+						<strong>flow sensor</strong> that determines how much water is
+						flowing to the ice maker
+						<strong>may be malfunctioning</strong>.
+					</p><p class="pt-3">
+						If the <strong>water pressure is low</strong>, partially
+						increase the water pressure. If the error persists, the unit
+						will require a repair service. Request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade" id="error-it" role="dialog" aria-hidden="true" aria-labelledby="iT Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>iT Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							An <strong>It</strong> error code indicates a
+							<strong>defect in the icemaker.</strong>
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-rf" role="dialog" aria-hidden="true" aria-labelledby="rF Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>rF Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>rF</strong> error code indicates an abnormality in
+							the refrigerator's
+							<strong>fan motor. This may be due to frost buildup.</strong>
+						</p>
+						<div class="card mt-3">
+							<div class="card-header">
+								<h4>How to manually defrost your refrigerator</h4>
+							</div>
+							<div class="card-body">
+								<ol>
+									<li>
+										Unplug the unit and remove all food and ice from the ice
+										bin.
+									</li>
+									<li>
+										Leave the doors open and wait at least
+										<strong>8 HOURS</strong> for the refrigerator to
+										defrost.
+									</li>
+									<li>
+										Make sure to keep towels in and around the unit to soak
+										up any excess water after the frost melts.
+									</li>
+									<li>
+										After 8 hours have passed, use a dry towel to remove any
+										moisture that may be left inside the refrigerator and
+										freezer.
+									</li>
+									<li>
+										Plug the unit back in, wait 24-48 hours for the
+										refrigerator to return to normal operation.
+									</li>
+									<li>
+										Make sure the vents inside the refrigerator are not
+										blocked, the refrigerator and doors are properly
+										leveled, and the refrigerator and freezer doors are
+										closed completely.
+									</li>
+									<li>
+										After the unit has automatically or manually defrosted,
+										follow the steps below to prevent future frost buildup
+										issues.
+									</li>
+								</ol>
+							</div>
+						</div>
+						<p>
+							Unfortunately, there are no troubleshooting steps for this
+							error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+						</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-rs" role="dialog" aria-hidden="true" aria-labelledby="rS Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>rS Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>rS</strong> error code indicates a short or
+							disconnection of the <strong>refrigerator sensor.</strong>
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-rt" role="dialog" aria-hidden="true" aria-labelledby="rT Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>rT Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>rt</strong> error code indicates a shortened or open
+							room
+							<strong>temperature sensor.</strong>
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-ss" role="dialog" aria-hidden="true" aria-labelledby="SS Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>SS Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							An <strong>SS</strong> error code indicates a shortened or
+							open<strong> pantry sensor.</strong>
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-ad" role="dialog" aria-hidden="true" aria-labelledby="Ad Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>Ad Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							An <strong>Ad</strong> error code displays when the door motor
+							<strong>does not move to maximum position</strong> or home
+							position within 5 seconds.
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-as" role="dialog" aria-hidden="true" aria-labelledby="AS, L AS, or r AS Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>AS, L AS, or r AS Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							This error code displays when the auto door motor is in
+							operation, and the
+							<strong>reed switch is in open state.</strong>
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-dr" role="dialog" aria-hidden="true" aria-labelledby="dr Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>dr Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>dr</strong> error code displays when the door motor
+							<strong>does not move to maximum position</strong> or home
+							position within 5 seconds.
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-c1" role="dialog" aria-hidden="true" aria-labelledby="C1 Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>C1 Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>C1</strong> error code indicates a<strong>
+							communication error</strong>
+							between the LCD display and the dispenser.
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-od" role="dialog" aria-hidden="true" aria-labelledby="Od Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>Od Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							Od indicates a <strong>WIFI</strong> Modem or
+							<strong>communication error</strong> between the micom of the
+							LCD display and the WiFi modem.
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-sb" role="dialog" aria-hidden="true" aria-labelledby="Sb Error Code (Sabath Mode)">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>Sb Error Code (Sabath Mode)</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							This error code may look like Sb, S6, 5b,or 56 on the screen.
+							<strong>Sb</strong> typically means
+							<strong>Sabath mode</strong> which is used on the Jewish
+							Sabath and holidays.
+						</p><p class="pt-3">
+						<strong>To turn off sabath mode manually, press and hold the
+							Freezer and Wifi buttons for 3 seconds.</strong>
+					</p><p class="pt-3">
+						To turn Sabath mode on, touch the display to activate it, then
+						press and hold the Freezer and Wi-Fi buttons for 3 seconfs
+						until
+						<strong>Sb</strong> appears on the display.
+					</p><p class="pt-3">
+						Sabath mode automatically turns off after 96 hours. Selecting
+						the sabath mode automatically
+						<strong>turns off the alarm functions and the dispenser is also
+							disabled.</strong>
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-hs" role="dialog" aria-hidden="true" aria-labelledby="HS Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>HS Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							A <strong>HS</strong> error code indicates a
+							<strong>short or disconnection of humidity.</strong>
+						</p><p class="pt-3">
+						Unfortunately, there are no troubleshooting steps for this
+						error code. The unit will require a repair service, request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" class="modal fade er-if" role="dialog" aria-hidden="true" aria-labelledby="IF or F1 Error Code">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+				<div class="modal-content">
+					<button class="close modal-close" aria-label="Close" type="button" data-dismiss="modal">
+						Close
+					</button>
+					<div class="modal-header">
+						<h3>IF or F1 Error Code</h3>
+					</div>
+					<div class="modal-body">
+						<p>
+							The <strong>IF or F1</strong> error code indicates that the
+							refrigerator has detected a problem with the refrigerator's
+							<strong>ice maker fan</strong>. This can sometimes occur when
+							frost or ice buildup occurs around the ice maker fan.
+						</p>
+						<div class="card mt-3" id="manual-defrost2">
+							<div class="card-header">
+								<h4>How to manually defrost your refrigerator</h4>
+							</div>
+							<div class="card-body">
+								<ol>
+									<li>
+										Unplug the unit and remove all food and ice from the ice
+										bin.
+									</li>
+									<li>
+										Leave the doors open and wait at least
+										<strong>8 HOURS</strong> for the refrigerator to
+										defrost.
+									</li>
+									<li>
+										Make sure to keep towels in and around the unit to soak
+										up any excess water after the frost melts.
+									</li>
+									<li>
+										After 8 hours have passed, use a dry towel to remove any
+										moisture that may be left inside the refrigerator and
+										freezer.
+									</li>
+									<li>
+										Plug the unit back in, wait 24-48 hours for the
+										refrigerator to return to normal operation.
+									</li>
+									<li>
+										Make sure the vents inside the refrigerator are not
+										blocked, the refrigerator and doors are properly
+										leveled, and the refrigerator and freezer doors are
+										closed completely.
+									</li>
+									<li>
+										After the unit has automatically or manually defrosted,
+										follow the steps below to prevent future frost buildup
+										issues.
+									</li>
+								</ol>
+							</div>
+						</div>
+						<div class="tip-box">
+							<b class="tip-tit">Note</b>
+							<p>
+								For French Door units, please check the gasket along side
+								the door to ensure it is not torn or damaged.
+							</p>                        </div>
+						<p>
+							Frost buildup can occur if the doors on the unit
+							<strong>are not aligned properly</strong>. For more
+							information on door alignment and proper refrigerator
+							leveling, please visit our LG Refrigerator Leveling Instructions article.
+						</p><p class="pt-3">
+						If leveling the refrigerator and aligning the doors do not
+						resolve the issue, the unit will require a repair service,
+						request a repair with our 24/7 Chat Support.
+					</p>                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tip-box">
+		<b class="tip-tit">Note</b>
+		<p>
+			If your unit requires a repair service, request a repair with our 24/7 Chat Support.
+		</p>    </div>
+</div>
+<script src="https://www.lg.com/lg5-common/library/jquery.min.js"></script>
+<script src="https://www.lg.com/lg5-common/library/bootstrap.min.js"></script>
+<script src="https://www.lg.com/us/support/assets/js/help-library.js"></script>
+</body>
+</html>
