@@ -183,9 +183,9 @@ caption{overflow:hidden;width:1px;height:1px;margin:0;padding:0;font-size:1px;te
     .cs-tab-list { margin: 14% auto 0; padding: 0 10px; flex-flow: wrap; line-height: 1.01; letter-spacing: -0.05em; max-width: 100%; }
     .cs-tab-list button {  margin-right: 0; margin-bottom: 30px; align-self: stretch; align-items: flex-start; display: flex; flex-direction: column;}
     .cs-tab-list button .btn-tab-box  .btn-tab-focus { border: 2px solid #aaa; width: 100%;  box-sizing: border-box; }
-    .cs-tab-list button .btn-tab-box  .btn-tab-focus .btn-img-box { padding: 26% 5% 6%; }
+    .cs-tab-list button .btn-tab-box  .btn-tab-focus .btn-img-box { padding: 30% 5% 6%; }
     .cs-tab-list button .btn-tab-box  .btn-tab-focus .btn-img-box img{  width: 45.7%; }
-    .cs-tab-list button .btn-tab-tit .btn-tab-tit-txt{ border-radius:17px; font-size: 3vw; padding: 9px; }
+    .cs-tab-list button .btn-tab-tit .btn-tab-tit-txt{ width: 82%; border-radius:17px; font-size: 3vw; padding: 9px; }
     .cs-tab-list button .btn-tab-tit .btn-tab-tit-txt span{ font-size: 3vw;}
     .cs-tab-list button p{ padding: 4% 8%; color: #aaa; word-break: keep-all; text-align: start; font-size: 16px; font-weight: 400; }
 
