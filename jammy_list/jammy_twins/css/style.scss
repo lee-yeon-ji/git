@@ -144,6 +144,35 @@ $font : 'pretendard';
             padding: 20px 5px;
           }
         }
+
+        .date-wrap{
+          margin-top: 40px;
+          padding-top: 40px;
+          border-top: 1px dashed #CECECE;
+          .date-item{
+            display: flex;
+            align-items: center;
+
+            &+ .date-item{
+              padding-top: 16px;
+            }
+
+            .subject-box{
+              width: 114px;
+              margin-right: 24px;
+
+
+            }
+            .con-box{
+              i.ic-calender{
+                display: inline-flex;
+                background: url("../img/ic_calender.svg")no-repeat center/cover;
+                width: 14px;
+                height: 14px;
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -99,6 +99,23 @@
           justify-content: center;
           width: 360px;
           padding: 20px 5px; }
+      .section-wrap .event-guide-box .event-info-box .inner .date-wrap {
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px dashed #CECECE; }
+        .section-wrap .event-guide-box .event-info-box .inner .date-wrap .date-item {
+          display: flex;
+          align-items: center; }
+          .section-wrap .event-guide-box .event-info-box .inner .date-wrap .date-item + .date-item {
+            padding-top: 16px; }
+          .section-wrap .event-guide-box .event-info-box .inner .date-wrap .date-item .subject-box {
+            width: 114px;
+            margin-right: 24px; }
+          .section-wrap .event-guide-box .event-info-box .inner .date-wrap .date-item .con-box i.ic-calender {
+            display: inline-flex;
+            background: url("../img/ic_calender.svg") no-repeat center/cover;
+            width: 14px;
+            height: 14px; }
 
 article.step-box {
   display: flex;
