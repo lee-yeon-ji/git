@@ -26,17 +26,32 @@ $font : 'pretendard';
   }
 }
 
-*{
+// 모바일
+@mixin m{
+  @media (max-width: 375px) {
+    @content
+  }
+}
+
+
+* {
   box-sizing: border-box;
   margin: 0;
-  padding:0;
+  padding: 0;
   font-family: $font;
+  @include m {
+    width: 100%;
+  }
 }
 
 .inner{
   width: 800px;
   margin: 0 auto;
-
+  @include m{
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .section-wrap{
@@ -49,11 +64,26 @@ $font : 'pretendard';
     .banner-tit-box{
       max-width: 597px;
       margin: 0 auto;
+      @include m{
+          display: none;
+      }
 
       img{
         width: 100%;
       }
     }
+    .m-banner-tit-box{
+      display: none;
+      max-width: 597px;
+      margin: 0 auto;
+      @include m{
+        display: block;
+      }
+      img{
+        width: 100%;
+      }
+    }
+
 
     .banner-img-box{
       padding-top: 45px;
@@ -61,9 +91,27 @@ $font : 'pretendard';
       //
       //text-indent: -29px; //텍스트에만 주는 것
       max-width: 660px;
+      @include m{
+        display: none;
+      }
+
       img{
         width: 100%;
         margin-left: -29px;
+      }
+    }
+
+    .m-banner-img-box{
+      padding-top: 25px;
+      max-width: 376px;
+      display: none;
+      @include m{
+        display: block;
+      }
+
+      img{
+        width: 100%;
+        margin-left: -20px;
       }
     }
 
@@ -96,6 +144,10 @@ $font : 'pretendard';
       .inner {
         padding: 50px 50px 40px;
         background-color: #fff;
+        @include m{
+          padding: 30px 20px 30px;
+
+        }
 
         .event-tit-box {
           max-width: 268px;
@@ -117,6 +169,22 @@ $font : 'pretendard';
           max-width: 655px;
           margin: 0 auto;
           padding-top: 40px;
+          @include m{
+             display: none;
+          }
+          img{
+            width: 100%;
+          }
+        }
+
+        .m-event-img-box{
+          max-width: 655px;
+          margin: 0 auto;
+          padding-top: 40px;
+          display: none;
+          @include m{
+            display: block;
+          }
           img{
             width: 100%;
           }
@@ -149,30 +217,85 @@ $font : 'pretendard';
           margin-top: 40px;
           padding-top: 40px;
           border-top: 1px dashed #CECECE;
-          .date-item{
-            display: flex;
-            align-items: center;
+          .item-list{
+            max-width: 553px;
+            margin: 0 auto;
 
-            &+ .date-item{
-              padding-top: 16px;
+            .date-item{
+              display: flex;
+              align-items: center;
+
+              &+ .date-item{
+                padding-top: 16px;
+              }
+
+              .subject-box{
+                width: 114px;
+                margin-right: 24px;
+
+
+              }
+              .con-box{
+                display: flex;
+                align-items: center;
+                @include m{
+                    align-items: flex-start;
+                }
+                i.ic-calender{
+                  display: inline-flex;
+                  background: url("../img/ic_calender.svg")no-repeat center/cover;
+                  width: 14px;
+                  height: 14px;
+                  @include m{
+                      margin-right: 6px;
+                    height: 16px;
+                    width: 16px;
+
+                  }
+                }
+
+                .con-txt{
+                  @include m{
+                    font-size: 14px;
+                    line-height: 16px;
+                  }
+
+                }
+
+              }
             }
-
-            .subject-box{
-              width: 114px;
-              margin-right: 24px;
-
-
-            }
-            .con-box{
-              i.ic-calender{
-                display: inline-flex;
-                background: url("../img/ic_calender.svg")no-repeat center/cover;
-                width: 14px;
-                height: 14px;
+            .info-desc{
+              padding-top: 20px;
+              color: #854444;
+              letter-spacing: -5%;
+              line-height: 20px;
+              @include m{
+                  font-size: 13px;
+                text-indent: -11px;
+                margin-left: 10px;
               }
             }
           }
+
         }
+      }
+    }
+
+    .view-btn-box{
+      padding-top: 60px;
+      max-width: 360px;
+      margin: 0 auto;
+
+      .view-btn{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: #000000;
+        border-radius: 10px;
+        padding: 20px 5px;
+        width: 100%;
       }
     }
   }
