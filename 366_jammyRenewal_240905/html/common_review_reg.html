@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/ui.css">
+	<title>jammy</title>
+</head>
+<body>
+
+<div class="container">
+
+	<!-- 헤더 -->
+	<header>
+		<div class="header-wrap">
+
+			<h1 class="logo">
+				<a href="#none" class="logo"></a>
+			</h1>
+
+			<nav class="header-nav">
+				<ul>
+					<li>
+						<a href="#none" class="nav-btn">
+							<span class="nav-txt">About Jammy</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#none" class="nav-btn">
+							<i class="ic ic-nav2"></i>
+							<span class="nav-txt">Jammy 굿즈</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#none" class="nav-btn">
+							<i class="ic ic-nav3"></i>
+							<span class="nav-txt">테크 컬처</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#none" class="nav-btn">
+							<i class="ic ic-nav4"></i>
+							<span class="nav-txt">스타일 컬처</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#none" class="nav-btn">
+							<i class="ic ic-nav5"></i>
+							<span class="nav-txt">낭만 컬처</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#none" class="nav-btn">
+							<i class="ic ic-nav6"></i>
+							<span class="nav-txt">이벤트</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#none" class="nav-btn">
+							<span class="nav-txt">LGE.COM</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+
+			<div class="header-menu">
+
+				<div class="menu-box">
+					<a href="#none" class="menu-btn">
+						<i class="ic ic-grade"></i>
+					</a>
+				</div>
+
+				<div class="menu-box">
+					<a href="#none" class="menu-btn">
+						<i class="ic ic-gnb"></i>
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+	</header>
+
+	<!-- contents-home layout -->
+
+	<section class="board-edit">
+
+		<div class="inner wrap">
+
+			<div class="board-head-box">
+
+				<div class="head-box">
+					<div class="head-txt">나의 리뷰 올리기</div>
+				</div>
+
+				<div class="sub-box">
+					<div class="sub-item">* 개인정보가 포함되지 않도록 주의하여 업로드 해주세요.</div>
+					<div class="sub-item">* 사진은 최소 2장 이상 등록해 주세요.</div>
+				</div>
+
+			</div>
+
+
+			<div class="board-body-box">
+
+				<div class="board-form-box space-small">
+
+					<article class="input-form-layout1">
+						<div class="form-group-box">
+
+							<div class="form-box">
+
+								<div class="row">
+									<div class="con-box">
+										<article class="img-upload-layout1">
+
+
+											<div class="upload-body-box">
+
+												<div class="swiper-group-box">
+
+
+													<div class="swiper-button-prev"></div>
+													<div class="swiper-button-next"></div>
+
+													<div class="swiper swiper-upload">
+														<ul class="swiper-wrapper">
+															<li class="swiper-slide">
+																<div class="item-wrap">
+																	<label>
+																		<i class="ic ic-upload"></i>
+																		<input type="file">
+																		<span class="guide-txt">
+																			<span class="txt web">등록할 사진을 끌어오거나 클릭하여<br/>추가해 주세요.</span>
+																			<span class="txt mobile">등록할 사진을 터치하여<br/>추가해 주세요.</span>
+																		</span>
+																		<span class="cnt-txt"><span class="cnt">4</span> / 10</span>
+																	</label>
+																</div>
+															</li>
+
+															<li class="swiper-slide">
+																<div class="item-wrap">
+
+																	<div class="upload-img-box">
+																		<a href="#none" class="remove-btn" onclick="uploadRemove(this)"></a>
+																		<img src="../img/img_review_dummy1.png" alt="이미지">
+
+																		<div class="label-txt">대표 이미지</div>
+																	</div>
+
+																	<label>
+																		<input type="file">
+																	</label>
+																</div>
+															</li>
+
+															<li class="swiper-slide">
+																<div class="item-wrap">
+
+																	<div class="upload-img-box">
+																		<a href="#none" class="remove-btn" onclick="uploadRemove(this)"></a>
+																		<img src="../img/img_review_dummy1.png" alt="이미지">
+
+																	</div>
+
+																	<label>
+																		<input type="file">
+																	</label>
+																</div>
+															</li>
+
+															<li class="swiper-slide">
+																<div class="item-wrap">
+
+																	<div class="upload-img-box">
+																		<a href="#none" class="remove-btn" onclick="uploadRemove(this)"></a>
+																		<img src="../img/img_review_dummy1.png" alt="이미지">
+
+																	</div>
+
+																	<label>
+																		<input type="file">
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+
+
+												</div>
+
+
+
+
+											</div>
+
+										</article>
+
+									</div>
+								</div>
+							</div>
+
+							<div class="form-box">
+
+								<div class="row">
+									<div class="tbox full">
+										<input type="text" placeholder="제목을 입력해주세요.(최대 50글자)" maxlength="100">
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="textbox">
+										<textarea onkeyup="limitTextarea(this,null)" maxlength="1000" placeholder="나의 리뷰를 공유해주세요. (최대 1,000글자)"></textarea>
+
+										<div class="limit-box">
+											<span class="limit-txt">0</span> / 1000
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="sbox normal m-full">
+										<select>
+											<option>분류</option>
+											<option>그램</option>
+											<option>스마트모니터</option>
+											<option>게이밍모니터</option>
+											<option>기타</option>
+										</select>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</article>
+				</div>
+
+
+			</div>
+
+			<div class="board-foot-box">
+
+				<div class="board-btn-list">
+					<div class="board-btn-box">
+						<button type="button" class="board-btn" disabled>공유하기</button>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</div>
+
+	</section>
+
+
+
+	<!-- 푸터 -->
+	<footer>
+		<div class="footer-wrap">
+
+			<div class="footer-info">
+				<div class="footer-logo"></div>
+				<div class="copyright-box">Copyright © 2022 LG Electronics. All Rights Reserved.</div>
+			</div>
+
+			<div class="footer-menu">
+
+				<div class="menu-list">
+					<a href="#none" class="menu-btn">LGE.COM</a>
+					<a href="#none" class="menu-btn">개인정보처리방침</a>
+					<a href="#none" class="menu-btn">이용약관</a>
+				</div>
+
+			</div>
+
+
+
+		</div>
+
+
+	</footer>
+
+</div>
+
+
+
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/swiperjs.js"></script>
+<script src="../js/ui.js"></script>
+<script>
+
+
+	const uploadSwiper = new Swiper('.swiper-upload',{
+
+		slidesPerView : 'auto',
+		spaceBetween : 12,
+
+		navigation : {
+			prevEl : '.img-upload-layout1 .swiper-button-prev',
+			nextEl : '.img-upload-layout1 .swiper-button-next',
+		},
+
+		breakpoints : {
+			768 : {
+				spaceBetween : 16,
+
+			}
+		}
+
+	})
+
+	const uploadRemove = (e) => {
+		const idx = $(e).parents('li').index();
+		uploadSwiper.removeSlide(idx)
+	}
+
+
+
+
+
+
+</script>
+</body>
+
+</html>

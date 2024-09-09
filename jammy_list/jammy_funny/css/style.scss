@@ -1,0 +1,390 @@
+@charset "UTF-8";
+
+$font : 'Pretendard'; // 변수를 지정
+
+@each $font-size in R, M, B, SB{
+
+  @font-face{
+    font-family: $font;
+    src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+
+    @if $font-size == R {
+      font-weight: 400;
+    }
+
+    @else if $font-size == M {
+      font-weight: 500;
+    }
+
+    @else if $font-size == B {
+      font-weight: 700;
+    }
+
+    @else if $font-size == SB {
+      font-weight: 800;
+    }
+
+    font-style:normal;
+  }
+}
+
+
+
+
+// 모바일
+@mixin m{
+  @media (max-width: 375px) {
+    @content
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.web{
+  display: block;
+  @include m{
+      display: none;
+  }
+}
+
+
+.mobile{
+  display: none;
+  @include m{
+      display: block;
+  }
+}
+
+section.funny-main{
+  .main-group{
+    .visual-wrap{
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+
+
+      .visual-box{
+        height: 580px;
+        img{
+          width: 100%;
+
+
+        }
+      }
+    }
+  }
+
+  .visual-swiper-group{
+    padding-top: 40px;
+    .swiper-wrap{
+      .swiper {
+
+        .swiper-wrapper {
+
+          .swiper-slide {
+            background: url("../img/img_board_item1.png")no-repeat center/100% 100%;
+            aspect-ratio: 848/300;
+
+
+
+
+          }
+
+
+
+        }
+        .swiper-button-prev {
+
+          background: url("../img/ic_prev.png")no-repeat center/cover;
+          width: 36px;
+          height: 36px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin-left: -36%;
+          &:after{
+            display: none;
+          }
+        }
+
+
+
+
+        .swiper-button-next {
+          background: url("../img/ic_next.png")no-repeat center/cover;
+          width: 36px;
+          height: 36px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin-left: 36%;
+
+          &:after{
+            display: none;
+          }
+
+
+
+        }
+
+
+
+      }
+    }
+  }
+
+
+  .goods-group{
+    padding: 120px 0;
+    .goods-list-wrap{
+      .goods-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .item-box{
+
+          & + .item-box{
+            margin-left: 30px;
+          }
+          .goods-btn{
+            text-decoration: none;
+
+            &:hover{
+              .con-box{
+                background: #1FB051;
+
+                .txt-box{
+                  .label-box{
+                   background: #FFFFFF;
+                    color: #1FB051;
+                  }
+                }
+              }
+            }
+
+            &.type-stop{
+              pointer-events : none;
+
+              .con-box{ background:  url("../img/img_talk_item5.png")no-repeat center/cover;
+
+              }
+            }
+
+
+            .con-box{
+              display: flex;
+              width: 188px;
+              height: 188px;
+              padding: 0 20px;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              background:  url("../img/img_talk_item4.png")no-repeat center/cover;
+
+
+              .txt-box{
+                text-align: center;
+                .label-box{
+                  border-radius: 2px;
+                  background:  #F25839;
+                  display: inline-flex;
+                  padding: 5px 6px;
+                  justify-content: center;
+                  align-items: center;
+                  color: #FFFFFF;
+
+                }
+                .txt{
+                  padding-top: 4px;
+                  color: #FFF;
+                  text-align: center;
+                  font-size: 15px;
+                  font-weight: 600;
+                  line-height: 21px;
+                  letter-spacing: -0.45px;
+                  text-decoration: none;
+                }
+
+                .txt-coming{
+                  color: rgba(255, 255, 255, 0.80);
+                  text-align: center;
+                  font-size: 20px;
+                  font-weight: 600;
+                  line-height: 20px;
+                  letter-spacing: -0.4px;
+                  text-transform: capitalize;
+
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+.best-review-group{
+  .best-review-wrap{
+    background-color: #F2F2F2;
+    padding: 110px 280px;
+    display: flex;
+    position: relative;
+
+    &:after{
+      content: '';
+      background: url("../img/img_talk_item1.png")no-repeat center/cover;
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      top: 43px;
+      right: 150px;
+      z-index: 1;
+    }
+    .best-tit-box{
+      .tit-txt{
+        padding-top: 55px;
+        color: #0A0A0A;
+        font-size: 28px;
+        letter-spacing: -0.03em;
+        font-weight: 800;
+      }
+    }
+
+    .best-review-swiper-wrap{
+      padding-left: 40px;
+      flex: 1;
+      z-index: 10;
+      .swiper{
+
+        &.best-swiper{
+
+          .swiper-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .swiper-slide{
+              max-width: 245px;
+              &.swiper-slide{
+                padding-left: 16px;
+                a.item-box{
+                  text-decoration: none;
+
+
+                  .review-box{
+                    .img-box{
+                      max-width: 254px;
+                      img{
+                        width: 100%;
+
+                      }
+                    }
+                  }
+                  .con-box{
+                    .label-box{
+                      display: inline-flex;
+                      align-items: center;
+                      .dot-box{
+                        color: #F25839;
+                        letter-spacing: -0.03em;
+                        font-weight: 700;
+
+                      }
+                      .dot-txt{
+                        padding-left: 8px;
+                        color: #666666;
+                        font-size: 14px;
+                        letter-spacing: -0.03em;
+                      }
+                    }
+
+                    .subject-box{
+                      color: #0A0A0A;
+                      font-size: 16px;
+                      letter-spacing: -0.03em;
+                      font-weight: 600;
+                    }
+
+                    .sub-box{
+                      color: #444444;
+                      font-size: 14px;
+                      letter-spacing: -0.03em;
+
+                    }
+
+                    .option-box{
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                      .label-box{
+                        display: inline-flex;
+                        align-items: center;
+
+                        .ic-box{
+                          background: url("../img/ic_lavel.svg")no-repeat center/cover;
+                          width: 20px;
+                          height: 20px;
+                        }
+                        .txt{
+                          padding-left: 4px;
+                          color: #888888;
+                          font-size: 14px;
+                          letter-spacing: -0.03em;
+                        }
+                      }
+
+                      .option-btn-box{
+                        padding-left: 14px;
+                        .btn-box{
+                          display: inline-flex;
+                          align-items: center;
+                          text-decoration: none;
+
+                          i{
+                            display: block;
+                          }
+                          .ic-talk{
+                            background: url("../img/ic_msg.svg")no-repeat center/cover;
+                            width: 16px;
+                            height: 16px;
+
+                          }
+
+                          .ic-like{
+                            background: url("../img/ic_like.svg")no-repeat center/cover;
+                            width: 16px;
+                            height: 16px;
+
+                          }
+
+                          .txt{
+
+                            padding-left: 4px;
+                            color: #888888;
+                            font-size: 14px;
+                            letter-spacing: -0.03em;
+
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+}

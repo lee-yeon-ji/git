@@ -1,0 +1,592 @@
+@charset "UTF-8";
+/*
+AUTH : ssooya
+VERSION : version 2
+*/
+/**********
+펑션
+***********/
+/**********
+텍스트 자간
+***********/
+/**********
+텍스트 말줄임
+***********/
+/**********
+아이콘
+***********/
+section.mypage {
+  padding: 80px 0 140px; }
+  @media (max-width: 1160px) {
+    section.mypage {
+      padding: 20px 0 60px; } }
+  @media (max-width: 1160px) {
+    section.mypage.mypage-home .mypage-layout {
+      width: 100%; } }
+  @media (max-width: 1160px) {
+    section.mypage.mypage-home .mypage-layout .mypage-nav {
+      display: block;
+      width: 100%; } }
+  @media (max-width: 1160px) {
+    section.mypage.mypage-home .mypage-layout .mypage-contents {
+      display: none; } }
+  section.mypage .mypage-layout {
+    max-width: 1064px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    display: flex; }
+    section.mypage .mypage-layout .mypage-nav {
+      width: 360px; }
+      @media (max-width: 1160px) {
+        section.mypage .mypage-layout .mypage-nav {
+          display: none; } }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box {
+        padding-bottom: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box {
+            padding: 0 16px 16px; } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-view-box {
+          display: inline-flex;
+          align-items: center; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-view-box .profile-link-wrap {
+            background: url("../img/ic_snb_profile_link.svg") no-repeat right center;
+            padding-right: 15px; }
+            @media (max-width: 1160px) {
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-view-box .profile-link-wrap {
+                background-size: 7px 14px;
+                padding-right: 11px; } }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-view-box .label-list {
+            margin-left: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px; }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-view-box .label-list .label-item {
+              border-radius: 50px;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0 10px;
+              height: 24px;
+              color: #fff;
+              font-size: 11px;
+              font-weight: 600;
+              letter-spacing: -0.05em; }
+              @media (max-width: 1160px) {
+                section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-view-box .label-list .label-item {
+                  font-size: 10px;
+                  height: 22px;
+                  padding: 0 8px; } }
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-view-box .label-list .label-item.type-gray {
+                background-color: #a2a2a2; }
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-view-box .label-list .label-item.type-pink {
+                background-color: #ed69f8; }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .profile-box .profile-info-box .profile-setting-btn {
+          display: inline-flex;
+          align-items: center;
+          background: url("../img/ic_setting.svg") no-repeat center/cover;
+          width: 23px;
+          height: 23px; }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .quick-menu-box {
+        display: flex;
+        gap: 8px;
+        padding-bottom: 14px; }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .quick-menu-box {
+            padding: 0 16px 12px; } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .quick-menu-box .quick-menu-btn {
+          width: 100%;
+          display: inline-flex;
+          align-items: center;
+          background: #f2f2f2 url("../img/ic_snb_link_arrow.svg") no-repeat center right 20px;
+          height: 50px;
+          border-radius: 12px;
+          padding: 0 20px;
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: -0.04em; }
+          @media (max-width: 1160px) {
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .quick-menu-box .quick-menu-btn {
+              border-radius: 8px;
+              padding: 0 16px;
+              height: 44px;
+              font-size: 14px;
+              background-position: center right 16px; } }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+        border-radius: 12px;
+        height: 70px;
+        padding: 0 20px; }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box {
+            margin: 0 16px 0;
+            padding: 0 16px;
+            border-radius: 8px; } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box .point-head-box {
+          color: #FFFFFF;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: -0.05em; }
+          @media (max-width: 1160px) {
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box .point-head-box {
+              display: inline-flex;
+              flex-direction: column;
+              font-size: 14px;
+              line-height: 16px; }
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box .point-head-box .mobile-txt {
+                font-size: 12px;
+                color: rgba(255, 255, 255, 0.8); } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box .point-body-box {
+          display: inline-flex;
+          align-items: center; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box .point-body-box .ic.ic-point {
+            margin-right: 4px;
+            background: url("../img/ic_snb_point.svg") no-repeat center/cover;
+            width: 22px;
+            height: 22px; }
+            @media (max-width: 1160px) {
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box .point-body-box .ic.ic-point {
+                width: 20px;
+                height: 20px; } }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box .point-body-box .point-txt {
+            color: #fff;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -0.03em; }
+            @media (max-width: 1160px) {
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .point-box .point-body-box .point-txt {
+                font-size: 18px;
+                line-height: 21px; } }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list {
+        padding-top: 36px; }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 24px 16px 0;
+            gap: 28px 0; } }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-box {
+            width: 50%; } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-box + .menu-box {
+          margin-top: 24px; }
+          @media (max-width: 1160px) {
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-box + .menu-box {
+              margin: 0; } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn {
+          width: 100%;
+          display: inline-flex;
+          align-items: center;
+          position: relative; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .ic {
+            margin-right: 11px;
+            width: 28px;
+            height: 28px; }
+            @media (max-width: 1160px) {
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .ic {
+                margin-right: 10px;
+                width: 24px;
+                height: 24px; } }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .ic.ic-cart {
+              background: url("../img/ic_mypage_nav_cart.svg") no-repeat center/cover; }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .ic.ic-search {
+              background: url("../img/ic_mypage_nav_search.svg") no-repeat center/cover; }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .ic.ic-comment {
+              background: url("../img/ic_mypage_nav_comment.svg") no-repeat center/cover; }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .ic.ic-like {
+              background: url("../img/ic_mypage_nav_like.svg") no-repeat center/cover; }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .ic.ic-scrap {
+              background: url("../img/ic_mypage_nav_scrap.svg") no-repeat center/cover; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .menu-txt {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.05em;
+            color: #0a0a0a; }
+            @media (max-width: 1160px) {
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .member-menu-list .menu-btn .menu-txt {
+                font-size: 14px; } }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list {
+        padding: 25px 19px;
+        background-color: #f7f7fa;
+        border-radius: 4px;
+        display: flex;
+        gap: 52px;
+        margin: 26px 0 34px; }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list {
+            margin: 28px 16px 0;
+            border-top: 1px solid #DADCE0;
+            padding: 20px 0 24px;
+            background-color: transparent; } }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list .auth-menu-box {
+            width: 100%; } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list .auth-menu-box .auth-menu-btn {
+          display: inline-flex;
+          align-items: center; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list .auth-menu-box .auth-menu-btn.type-gray .txt {
+            color: #9B9DA3; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list .auth-menu-box .auth-menu-btn .txt {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 600;
+            letter-spacing: -0.05em; }
+            @media (max-width: 1160px) {
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list .auth-menu-box .auth-menu-btn .txt {
+                font-size: 14px; } }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list .auth-menu-box .auth-menu-btn .ic {
+            margin-right: 4px; }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .auth-menu-list .auth-menu-box .auth-menu-btn .ic.ic-goods {
+              background: url("../img/ic_mypage_nav_goods.svg") no-repeat;
+              width: 18px;
+              height: 18px; }
+      @media (max-width: 1160px) {
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-list {
+          padding: 24px 16px 0;
+          border-top: 12px solid #F7F7FA; } }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-list + .menu-list {
+        margin-top: 24px; }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-box + .menu-box {
+        margin-top: 24px; }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        position: relative; }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn {
+            width: 100%;
+            background: url("../img/ic_mypage_link.svg") no-repeat right center; }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn.link-none {
+              background: transparent; } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn .ic {
+          width: 15px;
+          height: 15px;
+          margin-left: 3px; }
+          @media (max-width: 1160px) {
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn .ic {
+              width: 14px;
+              height: 14px; } }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn .ic.ic-link {
+            background: url("../img/ic_mypage_nav_link.svg") no-repeat center/cover; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn .ic.ic-logout {
+            background: url("../img/ic_mypage_nav_logout.svg") no-repeat center/cover; }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn .menu-txt {
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: -0.05em;
+          color: #0a0a0a; }
+          @media (max-width: 1160px) {
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .common-menu-list .menu-btn .menu-txt {
+              font-size: 14px; } }
+      section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list {
+        padding-top: 29px;
+        margin-top: 29px;
+        border-top: 1px solid #ECEDF0; }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list {
+            padding-top: 16px;
+            margin-top: 24px; } }
+        @media (max-width: 1160px) {
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list .menu-box {
+            padding: 0 16px; } }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list .menu-box + .menu-box {
+          margin-top: 24px; }
+        section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list .menu-btn {
+          width: 100%;
+          display: inline-flex;
+          align-items: center;
+          position: relative; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list .menu-btn .ic {
+            width: 15px;
+            height: 15px;
+            margin-left: 2px; }
+            section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list .menu-btn .ic.ic-leave {
+              background: url("../img/ic_mypage_nav_leave.svg") no-repeat center/cover; }
+          section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list .menu-btn .menu-txt {
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            color: #9B9DA3; }
+            @media (max-width: 1160px) {
+              section.mypage .mypage-layout .mypage-nav .mypage-nav-view .etc-menu-list .menu-btn .menu-txt {
+                font-size: 14px; } }
+    section.mypage .mypage-layout .mypage-contents {
+      flex: 1;
+      min-width: 0;
+      margin-left: 104px; }
+      @media (max-width: 1160px) {
+        section.mypage .mypage-layout .mypage-contents {
+          padding: 0; } }
+      section.mypage .mypage-layout .mypage-contents .contents-group-box + .contents-group-box {
+        margin-top: 60px; }
+
+article.contents-mypage-head-layout1 .head-group-box {
+  padding-bottom: 40px; }
+  article.contents-mypage-head-layout1 .head-group-box .head-tit-box .head-box {
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: -0.05em; }
+  article.contents-mypage-head-layout1 .head-group-box .head-desc-box {
+    padding-top: 18px; }
+    article.contents-mypage-head-layout1 .head-group-box .head-desc-box .desc-box {
+      font-size: 16px;
+      letter-spacing: -0.05em;
+      color: #363638; }
+    article.contents-mypage-head-layout1 .head-group-box .head-desc-box .current-box {
+      padding-top: 14px; }
+      article.contents-mypage-head-layout1 .head-group-box .head-desc-box .current-box .current-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #9B9DA3;
+        letter-spacing: -0.05em;
+        padding: 0 8px;
+        border-radius: 4px;
+        height: 27px;
+        background-color: #F7F7FA; }
+        article.contents-mypage-head-layout1 .head-group-box .head-desc-box .current-box .current-item b {
+          margin-left: 4px; }
+
+.mypage-badge-group {
+  padding-top: 50px; }
+  .mypage-badge-group .badge-group-box + .badge-group-box {
+    margin-top: 50px; }
+  .mypage-badge-group .badge-group-box .group-head-box {
+    display: flex;
+    padding-bottom: 20px; }
+    .mypage-badge-group .badge-group-box .group-head-box .head-box {
+      display: inline-flex;
+      align-items: center; }
+      .mypage-badge-group .badge-group-box .group-head-box .head-box .head-txt {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.05em;
+        font-weight: 600; }
+      .mypage-badge-group .badge-group-box .group-head-box .head-box .tooltip-box {
+        position: relative; }
+        .mypage-badge-group .badge-group-box .group-head-box .head-box .tooltip-box .tooltip-btn {
+          margin-left: 4px;
+          background: url("../img/ic_tooltip.svg") no-repeat center/cover;
+          width: 18px;
+          height: 18px; }
+  .mypage-badge-group .badge-group-box .badge-have-box {
+    border-radius: 4px;
+    background-color: #F9F9FA;
+    padding: 34px 30px; }
+    .mypage-badge-group .badge-group-box .badge-have-box .have-group-box + .have-group-box {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid #E4E5E8; }
+    .mypage-badge-group .badge-group-box .badge-have-box .have-head-box {
+      padding-bottom: 20px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      color: #9B9DA3; }
+    .mypage-badge-group .badge-group-box .badge-have-box .badge-label-list {
+      display: flex;
+      gap: 40px 10px;
+      flex-flow: row wrap; }
+      .mypage-badge-group .badge-group-box .badge-have-box .badge-label-list + .badge-label-list {
+        margin-top: 40px; }
+  .mypage-badge-group .badge-group-box .badge-selector-box {
+    border-radius: 4px;
+    background-color: #F9F9FA;
+    padding: 34px; }
+    .mypage-badge-group .badge-group-box .badge-selector-box .selector-guide-box {
+      padding-bottom: 15px;
+      text-align: center;
+      color: #7C7E82;
+      font-size: 16px;
+      letter-spacing: -0.05em;
+      line-height: 19px; }
+    .mypage-badge-group .badge-group-box .badge-selector-box .badge-selector {
+      display: flex;
+      justify-content: center; }
+      .mypage-badge-group .badge-group-box .badge-selector-box .badge-selector .major-badge-box {
+        display: inline-flex;
+        align-items: center; }
+        .mypage-badge-group .badge-group-box .badge-selector-box .badge-selector .major-badge-box .default-badge {
+          background: url("../img/img_badge_default.png") no-repeat center/cover;
+          width: 126px;
+          height: 40px; }
+
+.mypage-attendance-view {
+  background-color: #F9F9FA;
+  border-radius: 4px;
+  padding: 30px 40px; }
+  .mypage-attendance-view .date-selector-box {
+    padding-bottom: 30px; }
+    .mypage-attendance-view .date-selector-box .selector-box {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .mypage-attendance-view .date-selector-box .selector-box .prev-btn,
+      .mypage-attendance-view .date-selector-box .selector-box .next-btn {
+        background: url("../img/ic_attendance_prev.svg") no-repeat center/cover;
+        width: 40px;
+        height: 40px; }
+        .mypage-attendance-view .date-selector-box .selector-box .prev-btn:disabled,
+        .mypage-attendance-view .date-selector-box .selector-box .next-btn:disabled {
+          opacity: 0.3;
+          cursor: default; }
+      .mypage-attendance-view .date-selector-box .selector-box .next-btn {
+        background: url("../img/ic_attendance_next.svg") no-repeat center/cover; }
+      .mypage-attendance-view .date-selector-box .selector-box .date-box {
+        padding: 0 10px;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: -0.03em;
+        font-weight: 600; }
+    .mypage-attendance-view .date-selector-box .range-box {
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: -0.05em;
+      line-height: 18px;
+      color: #9B9DA3; }
+  .mypage-attendance-view .attendance-progress-box {
+    display: flex;
+    align-items: center; }
+    .mypage-attendance-view .attendance-progress-box .label-box {
+      color: #363638;
+      font-size: 15px;
+      letter-spacing: -0.05em;
+      line-height: 18px; }
+    .mypage-attendance-view .attendance-progress-box .per-box {
+      margin: 0 10px;
+      flex: 1;
+      min-width: 0;
+      position: relative;
+      border-radius: 50px;
+      height: 12px;
+      overflow: hidden;
+      background-color: #ececed; }
+      .mypage-attendance-view .attendance-progress-box .per-box .per {
+        background-color: #000000;
+        border-radius: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0; }
+
+.mypage-activity-view .activity-wrap {
+  background-color: #F9F9FA;
+  border-radius: 4px;
+  padding: 30px;
+  display: flex;
+  gap: 100px; }
+  .mypage-activity-view .activity-wrap .activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 46%; }
+    .mypage-activity-view .activity-wrap .activity-list + .activity-list {
+      width: 54%; }
+    .mypage-activity-view .activity-wrap .activity-list .activity-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .mypage-activity-view .activity-wrap .activity-list .activity-item .subject-box {
+        color: #7c7e82;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.05em; }
+      .mypage-activity-view .activity-wrap .activity-list .activity-item .con-box {
+        font-weight: 600;
+        color: #363638;
+        letter-spacing: -0.05em;
+        line-height: 19px; }
+
+.mypage-grade-view {
+  padding-bottom: 64px;
+  border-bottom: 1px solid #ECEDF0; }
+  .mypage-grade-view .grade-info-box .grade-msg-box {
+    padding-bottom: 14px;
+    display: flex;
+    justify-content: center; }
+    .mypage-grade-view .grade-info-box .grade-msg-box .msg-box {
+      color: #9B9DA3;
+      font-size: 15px;
+      letter-spacing: -0.05em; }
+  .mypage-grade-view .grade-level-box .ic-box {
+    display: flex;
+    justify-content: center; }
+    .mypage-grade-view .grade-level-box .ic-box .ic {
+      width: 70px;
+      height: 70px; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-level1 {
+        background: url("../img/ic_level1.png") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-level2 {
+        background: url("../img/ic_level2.png") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-level3 {
+        background: url("../img/ic_level3.png") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-level4 {
+        background: url("../img/ic_level4.png") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-level5 {
+        background: url("../img/ic_level5.png") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num0 {
+        background: url("../img/ic_level_num0.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num1 {
+        background: url("../img/ic_level_num1.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num2 {
+        background: url("../img/ic_level_num2.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num3 {
+        background: url("../img/ic_level_num3.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num4 {
+        background: url("../img/ic_level_num4.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num5 {
+        background: url("../img/ic_level_num5.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num6 {
+        background: url("../img/ic_level_num6.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num7 {
+        background: url("../img/ic_level_num7.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num8 {
+        background: url("../img/ic_level_num8.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num9 {
+        background: url("../img/ic_level_num9.svg") no-repeat center/cover; }
+      .mypage-grade-view .grade-level-box .ic-box .ic.ic-num10 {
+        background: url("../img/ic_level_num10.svg") no-repeat center/cover; }
+  .mypage-grade-view .grade-level-box .level-box {
+    padding-top: 8px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.05em; }
+  .mypage-grade-view .grade-desc-box {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.05em; }
+  .mypage-grade-view .grade-link-box {
+    padding-top: 18px;
+    display: flex;
+    justify-content: center; }
+    .mypage-grade-view .grade-link-box .grade-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      height: 28px;
+      background-color: #F7F7FA;
+      padding: 0 10px; }
+      .mypage-grade-view .grade-link-box .grade-link-btn .txt {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.05em;
+        color: #9B9DA3; }
+      .mypage-grade-view .grade-link-box .grade-link-btn .ic {
+        margin-left: 2px; }
+        .mypage-grade-view .grade-link-box .grade-link-btn .ic.ic-link {
+          background: url("../img/ic_mypage_link.svg") no-repeat center/cover;
+          width: 18px;
+          height: 18px; }
+
+/*# sourceMappingURL=mypage.css.map */

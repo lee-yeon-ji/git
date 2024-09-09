@@ -1,0 +1,28 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden; /* 수평 스크롤 제거 */
+	height: 100%;
+}
+
+.horizontal-scroll-container {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	height: 100vh; /* 화면 높이만큼 세로로 스크롤 제공 */
+}
+
+.horizontal-scroll-content {
+	display: inline-block;
+	white-space: normal;
+}
+
+.section {
+	display: inline-block;
+	width: 100vw; /* 가로로 전체 화면 */
+	height: 100vh; /* 세로로 전체 화면 */
+	padding: 20px;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+}
