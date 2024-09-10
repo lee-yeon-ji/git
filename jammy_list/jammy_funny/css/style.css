@@ -227,5 +227,26 @@ section.funny-main .best-review-group .best-review-wrap {
                     color: #888888;
                     font-size: 14px;
                     letter-spacing: -0.03em; }
+    section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-button-prev {
+      background: url("../img/ic_prev.png") no-repeat center/cover;
+      width: 36px;
+      height: 36px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-left: -1%;
+      z-index: 11; }
+      section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-button-prev:after {
+        display: none; }
+    section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-button-next {
+      background: url("../img/ic_next.png") no-repeat center/cover;
+      width: 36px;
+      height: 36px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-left: 36%; }
+      section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-button-next:after {
+        display: none; }
 
 /*# sourceMappingURL=style.css.map */
