@@ -24,8 +24,9 @@
 
 * {
   padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  max-width: 1920px;
+  margin: 0 auto; }
 
 .web {
   display: block; }
@@ -133,7 +134,7 @@ section.funny-main .goods-group {
 
 section.funny-main .best-review-group .best-review-wrap {
   background-color: #F2F2F2;
-  padding: 110px 280px;
+  padding: 110px 162px;
   display: flex;
   position: relative; }
   section.funny-main .best-review-group .best-review-wrap:after {
@@ -143,110 +144,212 @@ section.funny-main .best-review-group .best-review-wrap {
     height: 180px;
     position: absolute;
     top: 43px;
-    right: 150px;
+    right: 49px;
     z-index: 1; }
-  section.funny-main .best-review-group .best-review-wrap .best-tit-box .tit-txt {
-    padding-top: 55px;
-    color: #0A0A0A;
-    font-size: 28px;
-    letter-spacing: -0.03em;
-    font-weight: 800; }
+  section.funny-main .best-review-group .best-review-wrap .best-tit-box {
+    position: relative;
+    padding-right: 40px; }
+    section.funny-main .best-review-group .best-review-wrap .best-tit-box .tit-txt {
+      padding-top: 55px;
+      color: #0A0A0A;
+      font-size: 28px;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      position: relative; }
+    section.funny-main .best-review-group .best-review-wrap .best-tit-box .option-swiper-btn .swiper-button-prev {
+      position: absolute;
+      background: url("../img/ic_prev.png") no-repeat center/cover;
+      width: 36px;
+      height: 36px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%); }
+      section.funny-main .best-review-group .best-review-wrap .best-tit-box .option-swiper-btn .swiper-button-prev:after {
+        display: none; }
+    section.funny-main .best-review-group .best-review-wrap .best-tit-box .option-swiper-btn .swiper-button-next {
+      background: url("../img/ic_next.png") no-repeat center/cover;
+      width: 36px;
+      height: 36px;
+      top: 50%;
+      left: -8%;
+      transform: translate(-50%, -50%); }
+      section.funny-main .best-review-group .best-review-wrap .best-tit-box .option-swiper-btn .swiper-button-next:after {
+        display: none; }
   section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap {
-    padding-left: 40px;
     flex: 1;
-    z-index: 10; }
+    z-index: 10;
+    width: 1064px; }
     section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper {
       display: flex;
       align-items: center;
       justify-content: center; }
       section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide {
         max-width: 245px; }
-        section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide {
-          padding-left: 16px; }
-          section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box {
-            text-decoration: none; }
-            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .review-box .img-box {
-              max-width: 254px; }
-              section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .review-box .img-box img {
-                width: 100%; }
-            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .label-box {
-              display: inline-flex;
-              align-items: center; }
-              section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .label-box .dot-box {
-                color: #F25839;
-                letter-spacing: -0.03em;
-                font-weight: 700; }
-              section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .label-box .dot-txt {
-                padding-left: 8px;
-                color: #666666;
-                font-size: 14px;
-                letter-spacing: -0.03em; }
-            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .subject-box {
-              color: #0A0A0A;
-              font-size: 16px;
+        section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box {
+          text-decoration: none; }
+          section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .review-box .img-box {
+            max-width: 254px; }
+            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .review-box .img-box img {
+              width: 100%; }
+          section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .label-box {
+            display: inline-flex;
+            align-items: center; }
+            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .label-box .dot-box {
+              color: #F25839;
               letter-spacing: -0.03em;
-              font-weight: 600; }
-            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .sub-box {
-              color: #444444;
+              font-weight: 700; }
+            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .label-box .dot-txt {
+              padding-left: 8px;
+              color: #666666;
               font-size: 14px;
               letter-spacing: -0.03em; }
-            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box {
+          section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .subject-box {
+            color: #0A0A0A;
+            font-size: 16px;
+            letter-spacing: -0.03em;
+            font-weight: 600; }
+          section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .sub-box {
+            color: #444444;
+            font-size: 14px;
+            letter-spacing: -0.03em; }
+          section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center; }
+            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .label-box {
               display: inline-flex;
-              align-items: center;
-              justify-content: center; }
-              section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .label-box {
+              align-items: center; }
+              section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .label-box .ic-box {
+                background: url("../img/ic_lavel.svg") no-repeat center/cover;
+                width: 20px;
+                height: 20px; }
+              section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .label-box .txt {
+                padding-left: 4px;
+                color: #888888;
+                font-size: 14px;
+                letter-spacing: -0.03em; }
+            section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box {
+              padding-left: 14px; }
+              section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box {
                 display: inline-flex;
-                align-items: center; }
-                section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .label-box .ic-box {
-                  background: url("../img/ic_lavel.svg") no-repeat center/cover;
-                  width: 20px;
-                  height: 20px; }
-                section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .label-box .txt {
+                align-items: center;
+                text-decoration: none; }
+                section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box i {
+                  display: block; }
+                section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box .ic-talk {
+                  background: url("../img/ic_msg.svg") no-repeat center/cover;
+                  width: 16px;
+                  height: 16px; }
+                section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box .ic-like {
+                  background: url("../img/ic_like.svg") no-repeat center/cover;
+                  width: 16px;
+                  height: 16px; }
+                section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box .txt {
                   padding-left: 4px;
                   color: #888888;
                   font-size: 14px;
                   letter-spacing: -0.03em; }
-              section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box {
-                padding-left: 14px; }
-                section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box {
-                  display: inline-flex;
-                  align-items: center;
-                  text-decoration: none; }
-                  section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box i {
-                    display: block; }
-                  section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box .ic-talk {
-                    background: url("../img/ic_msg.svg") no-repeat center/cover;
-                    width: 16px;
-                    height: 16px; }
-                  section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box .ic-like {
-                    background: url("../img/ic_like.svg") no-repeat center/cover;
-                    width: 16px;
-                    height: 16px; }
-                  section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-wrapper .swiper-slide.swiper-slide a.item-box .con-box .option-box .option-btn-box .btn-box .txt {
-                    padding-left: 4px;
-                    color: #888888;
-                    font-size: 14px;
-                    letter-spacing: -0.03em; }
-    section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-button-prev {
-      background: url("../img/ic_prev.png") no-repeat center/cover;
-      width: 36px;
-      height: 36px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin-left: -1%;
-      z-index: 11; }
-      section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-button-prev:after {
-        display: none; }
-    section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-button-next {
-      background: url("../img/ic_next.png") no-repeat center/cover;
-      width: 36px;
-      height: 36px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin-left: 36%; }
-      section.funny-main .best-review-group .best-review-wrap .best-review-swiper-wrap .swiper.best-swiper .swiper-button-next:after {
-        display: none; }
+
+section.funny-main .jammy-contents-group {
+  padding: 140px 0; }
+  section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box {
+    padding: 0 162px; }
+    section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .tit-box {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0A0A0A; }
+    section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box {
+      margin-top: 30px;
+      position: relative; }
+      section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option-btn-box ul.btn-list {
+        display: inline-flex;
+        align-items: center; }
+        section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option-btn-box ul.btn-list li {
+          list-style-type: none; }
+          section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option-btn-box ul.btn-list li + li {
+            margin-left: 8px; }
+          section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option-btn-box ul.btn-list li .btn {
+            text-decoration: none; }
+            section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option-btn-box ul.btn-list li .btn .btn-txt {
+              background-color: #F2F2F2;
+              padding: 11px 20px;
+              border-radius: 99px;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: -0.03em;
+              color: #0A0A0A;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center; }
+      section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option2-box .swiper-button-prev {
+        position: absolute;
+        background: url("../img/ic_prev.png") no-repeat center/cover;
+        width: 36px;
+        height: 36px;
+        top: 26px;
+        right: -88%; }
+        section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option2-box .swiper-button-prev:after {
+          display: none; }
+      section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option2-box .swiper-button-next {
+        position: absolute;
+        background: url("../img/ic_next.png") no-repeat center/cover;
+        width: 36px;
+        height: 36px;
+        top: 26px;
+        right: 0; }
+        section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-tit-box .option-box .option2-box .swiper-button-next:after {
+          display: none; }
+  section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap {
+    padding-top: 30px; }
+    section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap .swiper.jammy-contents-swiper .swiper-wrapper .swiper-slide {
+      width: 324px; }
+      section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap .swiper.jammy-contents-swiper .swiper-wrapper .swiper-slide .item-box {
+        text-decoration: none; }
+        section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap .swiper.jammy-contents-swiper .swiper-wrapper .swiper-slide .item-box .review-box .img-box {
+          max-width: 324px; }
+          section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap .swiper.jammy-contents-swiper .swiper-wrapper .swiper-slide .item-box .review-box .img-box img {
+            width: 100%; }
+        section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap .swiper.jammy-contents-swiper .swiper-wrapper .swiper-slide .item-box .con-box .label-box {
+          display: inline-flex;
+          align-items: center; }
+          section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap .swiper.jammy-contents-swiper .swiper-wrapper .swiper-slide .item-box .con-box .label-box .dot-box {
+            color: #F25839;
+            letter-spacing: -0.03em;
+            font-weight: 700; }
+          section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap .swiper.jammy-contents-swiper .swiper-wrapper .swiper-slide .item-box .con-box .label-box .dot-txt {
+            padding-left: 8px;
+            color: #666666;
+            font-size: 14px;
+            letter-spacing: -0.03em; }
+        section.funny-main .jammy-contents-group .jammy-contents-wrap .jammy-contents-swiper-wrap .swiper.jammy-contents-swiper .swiper-wrapper .swiper-slide .item-box .con-box .subject-box {
+          color: #0A0A0A;
+          font-size: 16px;
+          letter-spacing: -0.03em;
+          font-weight: 600;
+          text-decoration: none; }
+
+section.funny-main .footer-swiper-group {
+  max-width: 1064px;
+  margin: 0 auto; }
+  section.funny-main .footer-swiper-group .swiper-wrap .swiper {
+    position: relative; }
+    section.funny-main .footer-swiper-group .swiper-wrap .swiper .swiper-wrapper .swiper-slide {
+      background: url("../img/img_footer1.png") no-repeat center/100% 100%;
+      aspect-ratio: 1064/240; }
+    section.funny-main .footer-swiper-group .swiper-wrap .swiper .swiper-pagination {
+      padding-top: 24px;
+      position: absolute;
+      bottom: 35px;
+      left: -434px; }
+    section.funny-main .footer-swiper-group .swiper-wrap .swiper .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      opacity: 0.5; }
+    section.funny-main .footer-swiper-group .swiper-wrap .swiper .swiper-pagination-bullet-active {
+      background-color: #fff;
+      opacity: 1;
+      width: 20px;
+      border-radius: 999px; }
 
 /*# sourceMappingURL=style.css.map */
