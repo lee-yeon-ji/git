@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+$font : 'Pretendard';
+
+@each $font-size in R, M, B, SB{
+
+	@font-face{
+		font-family: $font;
+		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+
+		@if $font-size == R {
+			font-weight: 400;
+		}
+
+		@else if $font-size == M {
+			font-weight: 500;
+		}
+
+		@else if $font-size == B {
+			font-weight: 700;
+		}
+
+		@else if $font-size == SB {
+			font-weight: 800;
+		}
+
+		font-style:normal;
+	}
+}
+
+html {
+	height: 100%;
+}
+body{
+	height: 100%;
+}
+*{
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+
+}
+
+.wrapper{
+	height: 100%;
+
+	header{
+		.header-wrap{
+			.header-group{
+				background-color: #162955;
+				padding: 10px 25px 1px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				.header-box{
+					display: flex;
+					align-items: center;
+
+					.logo-box{
+						.logo-btn-box{
+							display: block;
+							background: url("../img/img_logo.svg")no-repeat center/cover;
+							width: 213px;
+							height: 44px;
+
+						}
+					}
+
+					.tit-box{
+						padding-left: 104px;
+						display: flex;
+						align-items: center;
+						.icon-box{
+							background: url("../img/ic_panorama.svg")no-repeat center/cover;
+							width: 19px;
+							height: 18px;
+
+						}
+
+						.tit-txt{
+							padding-left: 14px;
+							font-size: 18px;
+							font-weight: 500;
+							color: #FFFFFF;
+
+						}
+					}
+				}
+
+				.menu-box{
+					display: flex;
+					align-items: center;
+					.dropDown{
+						ul{
+							list-style-type: none;
+						}
+						li{
+							text-decoration: none;
+						}
+
+						.lan-box{
+							display: flex;
+							align-items: center;
+							text-decoration: none;
+							cursor: pointer;
+							width: inherit;
+
+							.lan-txt{
+								font-size: 14px;
+								font-weight: 500;
+								letter-spacing: -0.05em;
+								color: #FFFFFF;
+
+							}
+							.icon-box{
+
+								margin-left: 18px;
+
+								&.ic-arrow{
+									background: url("../img/ic_logo_arrow.svg")no-repeat center/cover;
+									width: 8px;
+									height: 4px;
+								}
+							}
+
+
+						}
+
+
+						.sub-btn {
+							display: none; /*처음에 안보이게*/
+							text-decoration: none;
+							color: #FFFFFF;
+							padding: 7px;
+							text-align: center;
+
+
+						}
+					}
+
+
+
+					.login-box{
+						padding-left: 50px;
+						display: flex;
+						align-items: center;
+						text-decoration: none;
+						position: relative;
+							&:after{
+								content: '';
+								background-color: #323F64;
+								height: 17px;
+								width: 1px;
+								position: absolute;
+								top: 4px;
+								left: 12px;
+							}
+
+						.login-txt{
+							font-size: 14px;
+							font-weight: 500;
+							letter-spacing: -0.05em;
+							color: #FFFFFF;
+
+						}
+
+						.icon-box{
+							margin-left: 13px;
+
+							&.ic-login{
+								background: url("../img/ic_login.svg")no-repeat center/cover;
+								width: 24px;
+								height: 24px;
+							}
+
+						}
+
+					}
+
+				}
+			}
+
+			.sub-tit-box{
+				background-color: #162955;
+				border-top: 1px solid #37466F;
+				padding: 12px 33px ;
+				.tit-txt{
+					font-size: 16px;
+					font-weight: 700;
+					letter-spacing: -0.05em;
+					color: #FFFFFF;
+				}
+			}
+
+		}
+	}
+
+	.body-wrap{
+		height: 100%;
+		.body-wrap-inner{
+			background-color: #EBEFF7;
+			padding-top: 153px;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+
+			.login-wrap{
+				display: flex;
+				align-items: center;
+				width: 820px;
+				height: 520px;
+
+				.login-bg-box{
+					width: 416px;
+					height: 520px;
+					.img-box{
+						background: url("../img/login_img.png")no-repeat center/cover;
+						height: 100%;
+
+					}
+				}
+				.login-form-box{
+					background-color: #fff;
+					height: 100%;
+					padding: 48px 41px;
+					flex: 1;
+					position: relative;
+					.subject-box{
+						font-size: 28px;
+						font-weight: 700;
+						color: #1E2431;
+					}
+
+					.login-form-layout{
+						padding-top: 31px;
+
+						.con-box{
+
+							&+.con-box{
+								padding-top: 25px;
+							}
+							.t-item-box{
+								.tbox-txt{
+									font-size: 18px;
+									font-weight: 400;
+									letter-spacing: -0.03em;
+									color: #222222;
+
+								}
+
+								.tbox{
+									input{
+										background-color: #FFFFFF;
+										width: 100%;
+										height: 42px;
+										border-radius: 3px;
+										border: 1px solid #C6C6C6;
+										padding: 0 5px;
+										&:focus {outline: none;}
+
+									}
+								}
+							}
+						}
+					}
+
+					.login-btn-box{
+						margin-top: 52px;
+
+						.login-btn{
+							background-color: #3060EA;
+							border-radius: 5px;
+							width: 100%;
+							height: 54px;
+							font-size: 20px;
+							font-weight: 600;
+							letter-spacing: -0.01em;
+							color: #FFFFFF;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							text-decoration: none;
+
+						}
+					}
+
+					.msg-box{
+						display: flex;
+						align-items: center;
+						position: absolute;
+						bottom: 218px;
+
+						.icon-box{
+							display: block;
+							background: url("../img/ic_warning.svg")no-repeat center/cover;
+							width: 18px;
+							height: 17px;
+
+
+						}
+
+						.msg-txt{
+							padding-left: 4px;
+							color: #FF004D;
+							font-size: 14px;
+							font-weight: 400;
+							letter-spacing: -0.04em;
+
+						}
+					}
+
+					.option-list{
+						padding-top: 24px;
+						display: flex;
+						align-items: center;
+						justify-content: space-around;
+						.option-box{
+							position: relative;
+
+							&+.option-box{
+								&:after{
+									content: '';
+									background-color: #D0D0D0;
+									height: 20px;
+									width: 1px;
+									position: absolute;
+									top: 4px;
+									left: -28px;
+								}
+							}
+
+							.option-btn{
+								text-decoration: none;
+
+								.option-txt{
+									font-size: 16px;
+									font-weight: 400;
+									letter-spacing: -0.3px;
+									color: #888888;
+
+								}
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
