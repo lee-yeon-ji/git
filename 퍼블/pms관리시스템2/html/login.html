@@ -25,31 +25,23 @@
 				</div>
 
 				<div class="menu-box">
-					<div class="dropDown">
+					<nav class="menu">
 						<ul>
-							<li>
+							<li class="dropdown">
 								<a href="#none" class="lan-box">
 									<div class="lan-txt">언어</div>
 									<div class="icon-box ic-arrow"></div>
 								</a>
 
-								<ul>
-									<li class="sub-btn">
-										<a href="#none" >한국어</a>
-									</li>
-									<li class="sub-btn">
-										<a href="#none" >日本語</a>
-									</li>
-									<li class="sub-btn">
-										<a href="#none" >English</a>
-									</li>
-									<li class="sub-btn">
-										<a href="#none" >中文</a>
-									</li>
+								<ul class="dropdown-content">
+									<li><a href="#">한국어</a></li>
+									<li><a href="#none" >日本語</a></li>
+									<li><a href="#none" >English</a></li>
+									<li><a href="#none" >中文</a></li>
 								</ul>
 							</li>
 						</ul>
-					</div>
+					</nav>
 
 
 					<a href="#none" class="login-box">
@@ -120,8 +112,42 @@
 
 
 <script>
-	function
+    // script.js
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdowns = document.querySelectorAll(".dropdown");
+        const lanBox = document.querySelector(".lan-box");
 
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener("click", function(event) {
+                event.stopPropagation();
+                const dropdownContent = this.querySelector(".dropdown-content");
 
+                // 다른 열린 메뉴를 닫기 위해 모든 드롭다운 메뉴 숨기기
+                document.querySelectorAll(".dropdown-content").forEach(content => {
+                    if (content !== dropdownContent) {
+                        content.style.display = "none";
+                    }
+                });
+
+                // 현재 메뉴 토글
+                dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+            });
+        });
+
+        // 드롭다운 항목 클릭 시 lan-box 텍스트 변경
+        document.querySelectorAll(".dropdown-content li a").forEach(item => {
+            item.addEventListener("click", function(event) {
+                event.preventDefault(); // 링크 클릭 시 페이지 이동 방지
+                lanBox.textContent = this.textContent; // lan-box 텍스트 변경
+            });
+        });
+
+        // 메뉴 외부 클릭 시 모든 드롭다운 메뉴 닫기
+        document.addEventListener("click", function() {
+            document.querySelectorAll(".dropdown-content").forEach(content => {
+                content.style.display = "none";
+            });
+        });
+    });
 </script>
 </html>

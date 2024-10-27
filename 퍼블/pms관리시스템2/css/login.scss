@@ -92,53 +92,68 @@ body{
 				.menu-box{
 					display: flex;
 					align-items: center;
-					.dropDown{
-						ul{
+
+					.menu{
+						ul {
 							list-style-type: none;
-						}
-						li{
-							text-decoration: none;
-						}
 
-						.lan-box{
-							display: flex;
-							align-items: center;
-							text-decoration: none;
-							cursor: pointer;
-							width: inherit;
+							li {
+								float: left;
+								position: relative;
 
-							.lan-txt{
-								font-size: 14px;
-								font-weight: 500;
-								letter-spacing: -0.05em;
-								color: #FFFFFF;
+								a{
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									color: white;
+									padding: 16px;
+									text-decoration: none;
+									font-size: 14px;
+									width: 100px;
+								}
 
-							}
-							.icon-box{
+								.lan-box {
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									.lan-txt {
+										font-size: 14px;
+										font-weight: 400;
+										letter-spacing: -0.05em;
+										color: #FFFFff;
+									}
 
-								margin-left: 18px;
+									.icon-box{
+										margin-left: 18px;
+										background: url("../img/ic_logo_arrow.svg")no-repeat center/cover;
+										width: 8px;
+										height: 4px;
 
-								&.ic-arrow{
-									background: url("../img/ic_logo_arrow.svg")no-repeat center/cover;
-									width: 8px;
-									height: 4px;
+									}
+								}
+
+
+								.dropdown-content {
+									display: none;
+									position: absolute;
+									background-color: #162955;
+									z-index: 1;
+
+									li{
+										a{
+											color: white;
+											padding: 12px 16px;
+											text-align: center;
+										}
+									}
 								}
 							}
-
-
-						}
-
-
-						.sub-btn {
-							display: none; /*처음에 안보이게*/
-							text-decoration: none;
-							color: #FFFFFF;
-							padding: 7px;
-							text-align: center;
-
-
 						}
 					}
+
+
+
+
 
 
 
