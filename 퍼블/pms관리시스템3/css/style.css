@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SB.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0; }
+
+.wrapper header .header-wrap .header-box {
+  background-color: #162955;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .wrapper header .header-wrap .header-box .header-logo {
+    display: flex;
+    align-items: center; }
+    .wrapper header .header-wrap .header-box .header-logo .logo-box {
+      width: 213px;
+      height: 44px; }
+      .wrapper header .header-wrap .header-box .header-logo .logo-box img {
+        width: 100%; }
+    .wrapper header .header-wrap .header-box .header-logo .logo-tit {
+      padding-left: 104px;
+      display: flex;
+      align-items: center; }
+      .wrapper header .header-wrap .header-box .header-logo .logo-tit .logo-icon-box {
+        background: url("../img/ic_panorama.svg") no-repeat center/cover;
+        width: 19px;
+        height: 18px; }
+      .wrapper header .header-wrap .header-box .header-logo .logo-tit .logo-tit-txt {
+        padding-left: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #FFFFFF; }
+  .wrapper header .header-wrap .header-box .header-option-box {
+    display: flex;
+    align-items: center; }
+    .wrapper header .header-wrap .header-box .header-option-box .lang-box .lang-tit-box {
+      text-decoration: none;
+      display: flex;
+      align-items: center; }
+      .wrapper header .header-wrap .header-box .header-option-box .lang-box .lang-tit-box .tit-txt {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.05em;
+        color: #FFFFFF; }
+      .wrapper header .header-wrap .header-box .header-option-box .lang-box .lang-tit-box .icon-box {
+        margin-left: 18px;
+        background: url("../img/ic_logo_arrow.svg") no-repeat center/cover;
+        width: 8px;
+        height: 4px; }
+    .wrapper header .header-wrap .header-box .header-option-box .login-btn-box {
+      margin-left: 50px; }
+      .wrapper header .header-wrap .header-box .header-option-box .login-btn-box .login-btn {
+        text-decoration: none;
+        display: flex;
+        align-items: center; }
+        .wrapper header .header-wrap .header-box .header-option-box .login-btn-box .login-btn .txt-box {
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: -0.05em;
+          color: #FFFFFF; }
+        .wrapper header .header-wrap .header-box .header-option-box .login-btn-box .login-btn .icon-box {
+          margin-left: 13px;
+          background: url("../img/ic_login.svg") no-repeat center/cover;
+          width: 24px;
+          height: 24px; }
+
+.wrapper header .header-wrap .header-sub-tit {
+  background-color: #162955;
+  padding: 5px 33px 12px;
+  border-top: 1px solid #37466F; }
+  .wrapper header .header-wrap .header-sub-tit .sub-tit {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #E5EBFF; }
+
+.wrapper .login-contents {
+  background-color: #EBEFF7;
+  min-height: 100vh;
+  height: 100dvh; }
+  .wrapper .login-contents .login-inner-wrap {
+    padding-top: 153px; }
+    .wrapper .login-contents .login-inner-wrap .login-box {
+      width: 820px;
+      height: 520px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center; }
+      .wrapper .login-contents .login-inner-wrap .login-box .login-img-box {
+        width: 416px;
+        height: 520px; }
+        .wrapper .login-contents .login-inner-wrap .login-box .login-img-box img {
+          width: 100%;
+          height: 100%; }
+      .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout {
+        background-color: #fff;
+        flex: 1;
+        height: 100%;
+        padding: 36px 48px 85px; }
+        .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-subject-box .subject-txt {
+          font-size: 28px;
+          font-weight: 700;
+          color: #1E2431; }
+        .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box {
+          padding-top: 31px; }
+          .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .item-box + .item-box {
+            padding-top: 30px; }
+          .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .item-box .t-txt {
+            font-size: 18px;
+            font-weight: 400;
+            color: #222222; }
+          .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .item-box .tbox {
+            margin-top: 10px; }
+            .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .item-box .tbox input {
+              background-color: #fff;
+              border-radius: 3px;
+              border: 1px solid #C6C6C6;
+              width: 100%;
+              height: 42px;
+              padding: 0 5px;
+              color: #000; }
+              .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .item-box .tbox input:focus {
+                outline: none; }
+          .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-btn-box {
+            padding-top: 52px;
+            position: relative; }
+            .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-btn-box .login-btn {
+              background-color: #3060EA;
+              width: 320px;
+              height: 54px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 5px;
+              color: #FFFFFF;
+              font-size: 20px;
+              font-weight: 500;
+              letter-spacing: -0.01em;
+              text-decoration: none; }
+            .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-btn-box .msg-box {
+              display: flex;
+              align-items: center;
+              position: absolute;
+              top: 5px; }
+              .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-btn-box .msg-box .icon-box {
+                background: url("../img/ic_warning.svg") no-repeat center/cover;
+                width: 22px;
+                height: 22px; }
+              .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-btn-box .msg-box .msg-txt {
+                padding-left: 5px;
+                font-size: 14px;
+                font-weight: 400;
+                color: #FF004D;
+                letter-spacing: -0.05em; }
+          .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-option-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 23px; }
+            .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-option-box .option-item + .option-item {
+              margin-left: 60px;
+              position: relative; }
+              .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-option-box .option-item + .option-item:after {
+                content: '';
+                background-color: #D0D0D0;
+                width: 1px;
+                height: 22px;
+                position: absolute;
+                left: -46px;
+                top: 1px; }
+            .wrapper .login-contents .login-inner-wrap .login-box .login-form-layout .form-wrap .login-form-box .login-option-box .option-item .option-btn {
+              text-decoration: none;
+              font-size: 16px;
+              font-weight: 400;
+              letter-spacing: -0.3px;
+              color: #888888; }
+
+/*# sourceMappingURL=style.css.map */
