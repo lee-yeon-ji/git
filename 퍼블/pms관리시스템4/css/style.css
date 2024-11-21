@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SB.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0; }
+
+.wrapper header {
+  background-color: #162955; }
+  .wrapper header .top-box {
+    padding: 10px 33px;
+    display: flex;
+    justify-content: space-between; }
+    .wrapper header .top-box .header-box {
+      display: flex;
+      align-items: center; }
+      .wrapper header .top-box .header-box h1 .logo-box {
+        display: block;
+        width: 213px;
+        height: 44px; }
+        .wrapper header .top-box .header-box h1 .logo-box img {
+          width: 100%; }
+      .wrapper header .top-box .header-box .logo-tit-box {
+        padding-left: 50px;
+        display: flex;
+        align-items: center; }
+        .wrapper header .top-box .header-box .logo-tit-box .icon-box {
+          display: block;
+          background: url("../img/ic_panorama.svg") no-repeat center/cover;
+          width: 19px;
+          height: 18px; }
+        .wrapper header .top-box .header-box .logo-tit-box .txt-box {
+          padding-left: 10px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #FFFFFF; }
+      .wrapper header .top-box .header-box .header-option-box {
+        display: flex;
+        align-items: center; }
+        .wrapper header .top-box .header-box .header-option-box + .header-option-box {
+          position: relative; }
+          .wrapper header .top-box .header-box .header-option-box + .header-option-box:after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 19px;
+            left: 14px;
+            top: 3px;
+            background-color: #FFFFFF; }
+        .wrapper header .top-box .header-box .header-option-box .lang-box {
+          text-decoration: none;
+          display: flex;
+          align-items: center; }
+          .wrapper header .top-box .header-box .header-option-box .lang-box .txt-box {
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFFF;
+            padding-right: 10px; }
+          .wrapper header .top-box .header-box .header-option-box .lang-box .icon-box {
+            display: block;
+            background: url("../img/ic_logo_arrow.svg") no-repeat center/cover;
+            width: 8px;
+            height: 4px; }
+        .wrapper header .top-box .header-box .header-option-box .login-box {
+          padding-left: 30px;
+          text-decoration: none;
+          display: flex;
+          align-items: center; }
+          .wrapper header .top-box .header-box .header-option-box .login-box .txt-box {
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFFF;
+            padding-right: 10px; }
+          .wrapper header .top-box .header-box .header-option-box .login-box .icon-box {
+            display: block;
+            background: url("../img/ic_login.svg") no-repeat center/cover;
+            width: 24px;
+            height: 24px; }
+  .wrapper header .sub-header-box {
+    padding: 10px 33px;
+    border-top: 1px solid #ffff; }
+    .wrapper header .sub-header-box .txt-box {
+      font-size: 18px;
+      font-weight: 400;
+      color: #FFFFFF; }
+
+/*# sourceMappingURL=style.css.map */

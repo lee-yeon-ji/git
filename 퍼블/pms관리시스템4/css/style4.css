@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SB.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0; }
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100dvh; }
+  .wrapper header {
+    background-color: #162955; }
+    .wrapper header .main-box {
+      padding: 10px 33px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .wrapper header .main-box .header-box {
+        display: flex;
+        align-items: center; }
+        .wrapper header .main-box .header-box h1 .logo-box {
+          display: block;
+          width: 213px;
+          height: 44px; }
+          .wrapper header .main-box .header-box h1 .logo-box img {
+            width: 100%; }
+        .wrapper header .main-box .header-box .tit-box {
+          padding-left: 50px;
+          display: flex;
+          align-items: center; }
+          .wrapper header .main-box .header-box .tit-box .icon-box {
+            display: block;
+            background: url("../img/ic_panorama.svg") no-repeat center/cover;
+            width: 19px;
+            height: 18px; }
+          .wrapper header .main-box .header-box .tit-box .txt-box {
+            padding-left: 10px;
+            padding-left: 5px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFFF; }
+        .wrapper header .main-box .header-box .lang-btn-box {
+          text-decoration: none;
+          display: flex;
+          align-items: center; }
+          .wrapper header .main-box .header-box .lang-btn-box .txt-box {
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFFF; }
+          .wrapper header .main-box .header-box .lang-btn-box .icon-box {
+            display: block;
+            margin-left: 10px;
+            background: url("../img/ic_logo_arrow.svg") no-repeat center/cover;
+            width: 8px;
+            height: 4px; }
+        .wrapper header .main-box .header-box .login-btn-box {
+          padding-left: 40px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          position: relative; }
+          .wrapper header .main-box .header-box .login-btn-box:after {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #eeeeee;
+            position: absolute;
+            top: 4px;
+            left: 22px; }
+          .wrapper header .main-box .header-box .login-btn-box .txt-box {
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFFF; }
+          .wrapper header .main-box .header-box .login-btn-box .icon-box {
+            display: block;
+            margin-left: 10px;
+            background: url("../img/ic_login.svg") no-repeat center/cover;
+            width: 24px;
+            height: 24px; }
+    .wrapper header .sub-box {
+      padding: 10px 33px;
+      border-top: 1px solid #dddddd; }
+      .wrapper header .sub-box .txt-box {
+        font-size: 16px;
+        font-weight: 700;
+        color: #FFFFFF; }
+  .wrapper .content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    background-color: #EBEFF7; }
+    .wrapper .content .content-inner {
+      padding-top: 153px;
+      margin: 0 auto; }
+      .wrapper .content .content-inner .login-wrap {
+        display: flex;
+        align-items: center;
+        width: 820px;
+        height: 520px; }
+        .wrapper .content .content-inner .login-wrap .img-box {
+          width: 416px;
+          height: 100%; }
+          .wrapper .content .content-inner .login-wrap .img-box img {
+            width: 100%; }
+        .wrapper .content .content-inner .login-wrap .form-layout-box {
+          padding: 48px 38px 0;
+          flex: 1;
+          background-color: #FFFFFF;
+          height: 100%; }
+          .wrapper .content .content-inner .login-wrap .form-layout-box .subject-box {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000; }
+          .wrapper .content .content-inner .login-wrap .form-layout-box .form-box {
+            padding-top: 30px; }
+            .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .con-box {
+              padding-bottom: 30px;
+              position: relative; }
+              .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .con-box .label-box {
+                font-size: 16px;
+                font-weight: 400;
+                color: #000; }
+              .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .con-box .tbox {
+                padding-top: 5px; }
+                .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .con-box .tbox input {
+                  width: 100%;
+                  height: 42px;
+                  border: 1px solid #dddddd;
+                  border-radius: 5px;
+                  padding: 0 5px; }
+                  .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .con-box .tbox input:focus {
+                    outline: none; }
+              .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .con-box .msg-box {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                bottom: 0;
+                left: 0; }
+                .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .con-box .msg-box .icon-box {
+                  display: block;
+                  background: url("../img/ic_warning.svg") no-repeat center/cover;
+                  width: 22px;
+                  height: 22px; }
+                .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .con-box .msg-box .txt-box {
+                  font-size: 12px;
+                  font-weight: 400;
+                  color: red; }
+            .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .login-btn-box {
+              text-decoration: none;
+              margin-top: 30px;
+              display: block; }
+              .wrapper .content .content-inner .login-wrap .form-layout-box .form-box .login-btn-box .txt-box {
+                font-size: 25px;
+                font-weight: 700;
+                color: #FFFFFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #3060EA;
+                border-radius: 5px;
+                width: 100%;
+                height: 54px; }
+          .wrapper .content .content-inner .login-wrap .form-layout-box .login-option-box {
+            padding-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around; }
+            .wrapper .content .content-inner .login-wrap .form-layout-box .login-option-box .option-btn + .option-btn {
+              position: relative; }
+              .wrapper .content .content-inner .login-wrap .form-layout-box .login-option-box .option-btn + .option-btn:after {
+                content: '';
+                width: 1px;
+                height: 20px;
+                background-color: #eeee;
+                position: absolute;
+                top: 1px;
+                left: -20px; }
+            .wrapper .content .content-inner .login-wrap .form-layout-box .login-option-box .option-btn .btn-box {
+              text-decoration: none;
+              font-size: 16px;
+              font-weight: 400;
+              color: #000; }
+
+/*# sourceMappingURL=style4.css.map */
