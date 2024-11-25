@@ -45,60 +45,124 @@
 
 	<div class="content">
 		<div class="content-inner">
-			<div class="login-wrap">
-				<div class="img-box">
-					<img src="../img/login_img.png">
+			<div class="tit-box">회원정보 수정</div>
+
+			<div class="form-wrap">
+				<div class="item-box">
+					<div class="label-box">
+						<div class="txt-box">아이디</div>
+					</div>
+					<div class="tbox">
+						<input type="text">
+					</div>
+					<div class="msg-box">
+						<i class="icon"></i>
+						<div class="txt">이미 가입된 아이디입니다.</div>
+					</div>
 				</div>
-				<div class="form-layout-box">
-					<div class="subject-box">로그인</div>
-					<div class="form-box">
-						<div class="con-box">
-							<div class="label-box">아이디</div>
+
+				<div class="item-box">
+					<div class="label-box">
+						<div class="txt-box">비밀번호</div>
+						<div class="msg2-box">* 영어+숫자 조합으로 8자리 이상</div>
+					</div>
+					<div class="tbox">
+						<input type="password">
+					</div>
+				</div>
+
+				<div class="item-box">
+					<div class="label-box">
+						<div class="txt-box">비밀번호 확인</div>
+					</div>
+					<div class="tbox">
+						<input type="password">
+					</div>
+					<div class="msg-box">
+						<i class="icon"></i>
+						<div class="txt">비밀번호가 일치하지 않습니다.</div>
+					</div>
+				</div>
+
+				<div class="item-box">
+					<div class="label-box">
+						<div class="txt-box">
+							<div class="item-box">
+								<div class="label-box">
+									<div class="txt-box">이메일</div>
+									<div class="msg2-box">* 아이디/비밀번호찾기 시 이용되오니 정확한 이메일을 입력해 주세요.</div>
+								</div>
+								<div class="tbox-wrap">
+									<div class="tbox">
+										<input type="text">
+									</div>
+									<div class="dot">@</div>
+									<div class="tbox">
+										<input type="text">
+									</div>
+									<div class="sbox">
+										<select>
+											<option>직접입력</option>
+											<option>네이버</option>
+											<option>다음</option>
+										</select>
+									</div>
+								</div>
+								<div class="send-btn-box">
+									<a href="#none" class="send-btn">인증 번호 전송</a>
+								</div>
+								<div class="msg-box">
+									<i class="icon"></i>
+									<div class="txt">인증 번호가 전송되었습니다. 메일을 확인해주세요.</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="item-box">
+						<div class="label-box">
+							<div class="txt-box">인증번호 입력</div>
+						</div>
+						<div class="tbox-wrap">
 							<div class="tbox">
 								<input type="text">
 							</div>
-						</div>
-
-
-						<div class="con-box">
-							<div class="label-box">비밀번호</div>
-							<div class="tbox">
-								<input type="password">
-							</div>
-
-							<div class="msg-box">
-								<i class="icon-box"></i>
-								<div class="txt-box">가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.</div>
+							<div class="send1-btn-box">
+								<a href="#none" class="send1-btn">인증</a>
 							</div>
 						</div>
-
-						<a href="#none" class="login-btn-box">
-							<div class="txt-box">로그인</div>
-						</a>
 					</div>
 
-					<div class="login-option-box">
-						<div class="option-btn">
-							<a href="#none" class="btn-box">
-								아이디 · 비밀번호 찾기
-							</a>
+					<div class="item-box">
+						<div class="label-box">
+							<div class="txt-box">이름</div>
 						</div>
-
-
-						<div class="option-btn">
-							<a href="#none" class="btn-box">
-								회원가입
-							</a>
+						<div class="tbox">
+							<input type="text" placeholder="김형택">
 						</div>
-
 					</div>
 				</div>
+
 			</div>
+
+			<div class="option-btn-box">
+				<div class="btn-box">
+					<a href="#none" class="btn type-close">취소</a>
+				</div>
+				<div class="btn-box">
+					<a href="#none" class="btn">수정 완료</a>
+				</div>
+			</div>
+
 		</div>
+
+
 	</div>
-
-
 </div>
+
+
+
 
 </body>
 </html>

@@ -39,6 +39,11 @@ $font : 'Pretendard';
 
 
 .wrapper{
+	min-height: 100dvh;
+	display: flex;
+	flex-flow: column;
+	background-color: #EBEFF7;
+
 	header{
 		background-color: #162955;
 		.top-box{
@@ -149,10 +154,170 @@ $font : 'Pretendard';
 			padding: 10px 33px;
 			border-top: 1px solid #ffff;
 			.txt-box{
-				font-size: 18px;
+				font-size: 16px;
 				font-weight: 400;
 				color: #FFFFFF;
 			}
 		}
+	}
+
+	.content{
+		flex: 1;
+		padding-top: 50px ;
+
+		.id-group {
+			width: 1024px;
+			margin: 0 auto;
+
+			.id-box{
+				padding: 41px 63px 45px;
+				background-color: #fff;
+
+				&.id-box{
+					margin-top: 30px;
+				}
+
+				.id-tit-box{
+					font-size: 28px;
+					font-weight: 700;
+					color: #1E2431;
+				}
+
+				.con-box{
+					padding: 57px 0 45px;
+
+					width: 472px;
+					margin: 0 auto;
+
+					.subject-box{
+						font-size: 20px;
+						font-weight: 400;
+						line-height: -0.5px;
+						color: #222222;
+						text-align: center;
+
+						& .c-blue{
+							color: #0085FF;
+						}
+
+					}
+					.id-form-box{
+						padding-top: 50px;
+						.label-box{
+							font-size: 16px;
+							font-weight: 400;
+							letter-spacing: -0.3px;
+							color: #222222;
+
+						}
+
+						.tbox-wrap{
+							display: flex;
+							align-items: center;
+							padding-top: 7px;
+
+							.tbox{
+								input{
+									max-width: 160px;
+									height: 42px;
+									padding: 0 5px;
+									font-size: 17px;
+									font-weight: 400;
+									letter-spacing: -0.3px;
+									color: #000;
+									border-radius: 3px;
+									border: 1px solid #C6C6C6;
+
+									&:focus{
+										outline: none;
+									}
+
+
+								}
+
+
+
+							}
+							.sbox{
+								padding-left: 5px;
+								select{
+									width: 160px;
+									height: 42px;
+									padding: 0 5px;
+									font-size: 17px;
+									font-weight: 400;
+									letter-spacing: -0.3px;
+									color: #000;
+									border-radius: 3px;
+									border: 1px solid #C6C6C6;
+									appearance:none;
+									background: url("../img/ic_sbox_arrow.svg")no-repeat right 8px center;
+
+
+
+									&:focus{
+										outline: none;
+									}
+
+
+									option{
+
+									}
+								}
+							}
+
+
+							.idt-box{
+								font-size: 16px;
+								font-weight: 400;
+								letter-spacing: -0.3px;
+								color: #555555;
+								padding: 0 5px;
+							}
+						}
+					}
+				}
+
+				.login-option-box{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding-top: 50px;
+					border-top: 1px solid #D0D0D0;
+
+					.option-btn-box{
+						width: 212px;
+
+						& + .option-btn-box{
+							padding-left: 22px;
+						}
+
+						.option-btn{
+							border-radius: 5px;
+							max-width: 212px;
+
+							height: 54px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							font-size: 20px;
+							font-weight: 500;
+							letter-spacing: -0.01em;
+							color: #FFFFFF;
+							background-color: #3060EA;
+							text-decoration: none;
+
+
+							&.type-close{
+								background-color: #3E4E75;
+
+							}
+						}
+					}
+				}
+			}
+		}
+
+
 	}
 }
