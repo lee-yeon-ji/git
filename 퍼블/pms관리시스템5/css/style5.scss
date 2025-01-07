@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+$font : 'Pretendard';
+
+@each $font-size in R, M, B, SB{
+
+	@font-face{
+		font-family: $font;
+		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+
+		@if $font-size == R {
+			font-weight: 400;
+		}
+
+		@else if $font-size == M {
+			font-weight: 500;
+		}
+
+		@else if $font-size == B {
+			font-weight: 700;
+		}
+
+		@else if $font-size == SB {
+			font-weight: 800;
+		}
+
+		font-style:normal;
+	}
+}
+
+
+*{
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.wrapper{
+	min-height: 100dvh;
+	display: flex;
+	flex-flow: column;
+	background-color: #EBEFF7;
+
+	header{
+		background-color: #162955;
+		.main-box{
+			padding: 10px 33px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.header-box{
+				display: flex;
+				align-items: center;
+				h1{
+					.logo-box{
+						display: block;
+						width: 212px;
+						height: 44px;
+
+						img{
+							width: 100%;
+						}
+					}
+				}
+
+				.main-tit{
+					display: flex;
+					align-items: center;
+					padding-left: 50px;
+					.icon{
+						display: block;
+						background: url("../img/ic_panorama.svg") no-repeat center/cover;
+						width: 19px;
+						height: 18px;
+
+					}
+
+					.txt{
+						padding-left: 10px;
+						font-size: 16px;
+						font-weight: 400;
+						color: #FFFFFF;
+					}
+				}
+
+				.option-box{
+					display: flex;
+					align-items: center;
+
+					& + .option-box{
+						position: relative;
+
+						&:after{
+							content: '';
+							position: absolute;
+							width: 1px;
+							height: 19px;
+							top: 3px;
+							left: 20px;
+							background-color: #eeeeee;
+						}
+
+					}
+					.lang-box{
+						display: flex;
+						align-items: center;
+						text-decoration: none;
+						.txt{
+							font-size: 16px;
+							font-weight: 400;
+							color: #FFFFFF;
+
+						}
+
+						.icon{
+							margin-left: 5px;
+							display: block;
+							background: url("../img/ic_logo_arrow.svg") no-repeat center/cover;
+							width: 8px;
+							height: 4px;
+
+						}
+					}
+
+					.login-box{
+						display: flex;
+						align-items: center;
+						padding-left: 50px;
+						text-decoration: none;
+						.txt{
+							font-size: 16px;
+							font-weight: 400;
+							color: #FFFFFF;
+
+						}
+
+						.icon{
+							margin-left: 5px;
+							display: block;
+							background: url("../img/ic_login.svg") no-repeat center/cover;
+							width: 24px;
+							height: 24px;
+
+						}
+					}
+				}
+			}
+		}
+		.sub-box{
+			padding: 10px 33px;
+			border-top: 1px solid #eeeeee;
+			.txt{
+				font-size: 16px;
+				font-weight: 700;
+				color: #FFFFFF;
+
+			}
+		}
+	}
+
+	.content{
+		min-height: 0;
+		flex: 1;
+		.inner{
+			padding-top: 57px;
+			.member-wrap{
+				background-color: #fff;
+				width: 1024px;
+				height: auto;
+				margin: 0 auto;
+				padding: 41px 45px;
+
+				.tit-box{
+					font-size: 28px;
+					font-weight: 700;
+					color: #1E2431;
+
+				}
+
+				.member-group{
+					padding-top: 46px;
+					width: 472px;
+					height: auto;
+					margin: 0 auto;
+					.form-box{
+						position: relative;
+						padding-bottom: 51px;
+
+
+						.label-box{
+							display: flex;
+							align-items: center;
+							padding-bottom: 7px;
+							.txt{
+								font-size: 16px;
+								font-weight: 400;
+								color: #222222;
+								letter-spacing: -0.3px;
+
+							}
+
+							.desc-box{
+								padding-left: 15px;
+								font-size: 13px;
+								font-weight: 400;
+								letter-spacing: -0.025em;
+								color: #0085FF;
+
+							}
+
+
+						}
+						.tbox{
+							input{
+								width: 100%;
+								height: 42px;
+								border-radius: 3px;
+								border: 1px solid  #C6C6C6;
+								padding: 0 5px;
+
+								&:focus{
+									outline: none;
+									background-color: #EBEFF7;
+								}
+
+
+							}
+						}
+
+						.msg-box{
+							display: flex;
+							align-items: center;
+							position: absolute;
+							bottom: 27px;
+							left: 0;
+							.icon{
+								background: url("../img/ic_warning.svg")no-repeat center/cover;
+								width: 22px;
+								height: 22px;
+								display: block;
+
+							}
+
+							.txt{
+								font-size: 12px;
+								font-weight: 400;
+								color: red;
+
+							}
+						}
+
+						.emile-box{
+							display: flex;
+							align-items: center;
+							padding-bottom: 10px;
+
+							.dot{
+								font-size: 16px;
+								font-weight: 400;
+								color: #555555;
+								padding: 0 5px;
+							}
+
+							.sbox{
+								padding-left: 5px;
+
+								select{
+									padding: 0 5px;
+									border: 1px solid #C6C6C6;
+									border-radius: 3px;
+									height: 42px;
+									width: 140px;
+									appearance: none;
+									background: url("../img/ic_sbox_arrow.svg")no-repeat right 8px center;
+									&:focus{
+										outline: none;
+									}
+									option{
+
+									}
+								}
+							}
+						}
+						.send-box{
+
+
+
+							.send-btn{
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 100%;
+								height: 42px;
+								border: 1px solid #D8D8D8;
+								border-radius: 3px;
+								text-decoration: none;
+								background-color: #F3F3F3;
+								font-size: 16px;
+								font-weight: 400;
+								color: #000000;
+
+								&.type-small{
+									width: 100px;
+
+								}
+							}
+						}
+
+						.con-box{
+							display: flex;
+							align-items: center;
+							.tbox{
+								width: 100%;
+								margin-right: 8px;
+							}
+
+						}
+
+					}
+				}
+
+				.option-box{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding-top: 30px;
+					border-top: 1px solid #eeeeee;
+					.option-btn{
+
+						& + .option-btn{
+							padding-left: 20px;
+						}
+						.btn{
+							font-size: 18px;
+							font-weight: 700;
+							color: #FFFFff;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 212px;
+							height: 54px;
+							border-radius: 5px;
+							background-color: #3060EA;
+							text-decoration: none;
+
+							&.type-close{
+								background-color: #3E4E75;
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

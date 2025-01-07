@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SB.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0; }
+
+.wrapper {
+  min-height: 100dvh;
+  display: flex;
+  flex-flow: column; }
+  .wrapper header {
+    background-color: #162955; }
+    .wrapper header .top-box {
+      padding: 13px 33px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .wrapper header .top-box .header-box {
+        display: flex;
+        align-items: center; }
+        .wrapper header .top-box .header-box .logo-box {
+          display: flex;
+          align-items: center; }
+          .wrapper header .top-box .header-box .logo-box .logo {
+            width: 213px;
+            height: 44px; }
+            .wrapper header .top-box .header-box .logo-box .logo img {
+              width: 100%;
+              height: 100%; }
+        .wrapper header .top-box .header-box .header-tit-box {
+          padding-left: 70px;
+          display: flex;
+          align-items: center; }
+          .wrapper header .top-box .header-box .header-tit-box .icon {
+            background: url("../img/ic_panorama.svg") no-repeat center/cover;
+            width: 19px;
+            height: 18px; }
+          .wrapper header .top-box .header-box .header-tit-box .txt-box {
+            padding-left: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFff; }
+        .wrapper header .top-box .header-box .header-option-box + .header-option-box {
+          padding-left: 50px;
+          position: relative; }
+          .wrapper header .top-box .header-box .header-option-box + .header-option-box:after {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #fff;
+            position: absolute;
+            top: 3px;
+            left: 27px; }
+        .wrapper header .top-box .header-box .header-option-box .btn-box {
+          text-decoration: none;
+          display: flex;
+          align-items: center; }
+          .wrapper header .top-box .header-box .header-option-box .btn-box .txt-box {
+            font-size: 14px;
+            font-weight: 400;
+            color: #ffffff;
+            padding-right: 10px; }
+          .wrapper header .top-box .header-box .header-option-box .btn-box .icon.type-lang {
+            background: url("../img/ic_logo_arrow.svg") no-repeat center/cover;
+            width: 8px;
+            height: 4px; }
+          .wrapper header .top-box .header-box .header-option-box .btn-box .icon.type-login {
+            background: url("../img/ic_login.svg") no-repeat center/cover;
+            width: 24px;
+            height: 24px; }
+    .wrapper header .bottom-box {
+      padding: 13px 30px;
+      border-top: 1px solid #FFFFff; }
+      .wrapper header .bottom-box .txt-box {
+        font-size: 16px;
+        font-weight: 400;
+        color: #FFFFff; }
+  .wrapper .contents {
+    background-color: #EBEFF7;
+    flex: 1;
+    min-height: 0; }
+    .wrapper .contents .inner {
+      padding: 57px 0; }
+      .wrapper .contents .inner .agree-layout-wrap {
+        background-color: #fff;
+        width: 1024px;
+        margin: 0 auto;
+        padding: 41px 45px 63px; }
+        .wrapper .contents .inner .agree-layout-wrap .item-box + .item-box {
+          padding-top: 38px; }
+        .wrapper .contents .inner .agree-layout-wrap .item-box .item-subject-txt-box .subject-txt {
+          font-size: 20px;
+          font-weight: 700;
+          color: #222222; }
+        .wrapper .contents .inner .agree-layout-wrap .item-box .con-box {
+          padding-top: 27px; }
+          .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box {
+            border-bottom: 1px solid #D0D0D0;
+            padding: 20px 0; }
+            .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box .agree-box {
+              display: flex;
+              align-items: center;
+              justify-content: space-between; }
+              .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box .agree-box label {
+                display: flex;
+                align-items: center;
+                cursor: pointer; }
+                .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box .agree-box label input[type="checkbox"] {
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  opacity: 0; }
+                .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box .agree-box label .chkeckicon {
+                  position: relative;
+                  background: url("../img/ic_agree_off.svg") no-repeat center/cover;
+                  width: 22px;
+                  height: 22px;
+                  display: inline-flex; }
+                .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box .agree-box label .txt-box {
+                  font-size: 20px;
+                  font-weight: 400;
+                  color: #222222;
+                  padding-left: 10px; }
+                .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box .agree-box label input[type="checkbox"]:checked + .chkeckicon {
+                  background: url("../img/ic_agree_on.svg") no-repeat center/cover; }
+              .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box .agree-box button {
+                font-size: 16px;
+                font-weight: 400;
+                color: #222222;
+                border-radius: 3px;
+                border: 1px solid #C4C4C4;
+                background-color: #FFFFff;
+                height: 32px;
+                width: 100px;
+                cursor: pointer; }
+            .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .agree-wrap .agree-checkbox-list .agree-chk-box .terms {
+              display: none;
+              margin-top: 20px;
+              background-color: #F3F3F3;
+              padding: 26px 25px 0;
+              overflow-y: auto;
+              height: 280px; }
+          .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap {
+            border-bottom: 1px solid #D0D0D0; }
+            .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner {
+              margin: 0 auto;
+              width: 472px; }
+              .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box {
+                padding-bottom: 23px; }
+                .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .tit-box {
+                  padding-bottom: 7px;
+                  display: flex;
+                  align-items: center; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .tit-box .txt-box {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #222222; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .tit-box .desc-box {
+                    padding-left: 10px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #0085FF; }
+                .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box {
+                  display: flex;
+                  align-items: center; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .tbox {
+                    width: 100%; }
+                    .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .tbox input {
+                      width: 100%;
+                      border-radius: 3px;
+                      border: 1px solid #C6C6C6;
+                      height: 42px;
+                      padding: 0 5px; }
+                      .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .tbox input:focus {
+                        outline: none; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .email-box {
+                    display: flex;
+                    align-items: center; }
+                    .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .email-box .dot-box {
+                      font-size: 16px;
+                      font-weight: 400;
+                      color: #555555;
+                      padding: 0 5px; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .ebox {
+                    padding-left: 8px; }
+                    .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .ebox select {
+                      width: 140px;
+                      border-radius: 3px;
+                      border: 1px solid #C6C6C6;
+                      height: 42px;
+                      padding: 0 5px; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .overlap-btn-box {
+                    padding-left: 8px; }
+                    .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .form-layout-box .overlap-btn-box .overlap-btn {
+                      font-size: 16px;
+                      font-weight: 400;
+                      color: #222222;
+                      width: 100px;
+                      height: 42px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      border-radius: 3px;
+                      background-color: #F3F3F3;
+                      text-decoration: none; }
+                .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .send-btn-box {
+                  padding-top: 11px; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .send-btn-box .send-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 42px;
+                    border-radius: 3px;
+                    background-color: #F3F3F3;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #222222;
+                    text-decoration: none; }
+                .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .msg-box {
+                  height: 24px;
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  top: 0;
+                  left: 0; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .msg-box .icon {
+                    background: url("../img/ic_warning.svg") no-repeat center/cover;
+                    width: 22px;
+                    height: 22px; }
+                  .wrapper .contents .inner .agree-layout-wrap .item-box .con-box .form-wrap .form-inner .form-box .msg-box .txt-box {
+                    color: #FF004D;
+                    font-size: 12px;
+                    font-weight: 400; }
+        .wrapper .contents .inner .agree-layout-wrap .item-box .agree-send-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .wrapper .contents .inner .agree-layout-wrap .item-box .agree-send-wrap .agree-send-box + .agree-send-box {
+            padding-left: 30px; }
+          .wrapper .contents .inner .agree-layout-wrap .item-box .agree-send-wrap .agree-send-box .send-btn {
+            background-color: #3E4E75;
+            font-size: 20px;
+            font-weight: 400;
+            border-radius: 5px;
+            height: 54px;
+            width: 212px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #FFFFff; }
+            .wrapper .contents .inner .agree-layout-wrap .item-box .agree-send-wrap .agree-send-box .send-btn.c-blue {
+              background-color: #3060EA; }
+
+/*# sourceMappingURL=style3.css.map */

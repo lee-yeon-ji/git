@@ -1,0 +1,63 @@
+section.korean-language-test {
+  background: url("../img/korean-language-test/img_korea_language_bg.png") no-repeat center/cover;
+  width: 100%;
+  height: 1149px; }
+  section.korean-language-test .language-inner {
+    padding: 160px 0;
+    margin: 0 auto;
+    width: 1080px; }
+    section.korean-language-test .language-inner .iso-tit-box {
+      font-size: 46px;
+      font-weight: 700;
+      color: #FFFFff;
+      text-align: center; }
+    section.korean-language-test .language-inner .language-con-box {
+      padding-top: 60px; }
+      section.korean-language-test .language-inner .language-con-box .language-table-list table {
+        border: 1px solid #707070;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent; }
+        section.korean-language-test .language-inner .language-con-box .language-table-list table thead tr {
+          background-color: #292929;
+          height: 44px; }
+          section.korean-language-test .language-inner .language-con-box .language-table-list table thead tr th {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -2%;
+            color: #fff;
+            line-height: 24px; }
+        section.korean-language-test .language-inner .language-con-box .language-table-list table tbody tr td {
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: -2%;
+          color: #fff;
+          line-height: 24px;
+          border: 1px solid #555555;
+          border-top: 1px solid transparent;
+          border-left: 1px solid transparent;
+          text-align: center;
+          padding: 12px 20px; }
+          section.korean-language-test .language-inner .language-con-box .language-table-list table tbody tr td.t-start {
+            text-align: start; }
+          section.korean-language-test .language-inner .language-con-box .language-table-list table tbody tr td:nth-last-child(1) {
+            border-right: 1px solid transparent; }
+          section.korean-language-test .language-inner .language-con-box .language-table-list table tbody tr td ul.language-con-list li .dot-box {
+            position: relative; }
+            section.korean-language-test .language-inner .language-con-box .language-table-list table tbody tr td ul.language-con-list li .dot-box:after {
+              content: '';
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: #FFFFff;
+              position: absolute;
+              left: 5px;
+              top: 9px; }
+          section.korean-language-test .language-inner .language-con-box .language-table-list table tbody tr td ul.language-con-list li .txt-box {
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: -2%;
+            color: #fff;
+            line-height: 24px;
+            padding-left: 24px; }
+
+/*# sourceMappingURL=mob_korean-language-test.css.map */

@@ -1,0 +1,319 @@
+section.kpt-language .kpt-inner {
+  background: #000000 url("../img/kpt-language/img_kpt_bg.png") no-repeat center/100% 100%;
+  padding: 80px 20px; }
+  section.kpt-language .kpt-inner .iso-tit-box {
+    font-size: 32px;
+    font-weight: 600;
+    color: #FFFFff;
+    text-align: center; }
+  section.kpt-language .kpt-inner .kpt-con-box {
+    padding-top: 60px; }
+    section.kpt-language .kpt-inner .kpt-con-box .subject-box {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: -0.02em; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .desc-txt-box {
+      padding-top: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 22px; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group {
+      padding-left: 34px;
+      padding-top: 20px;
+      position: relative;
+      background: url("../img/kpt-language/img_kpt_step_bg.png") no-repeat center/100% 100%;
+      height: 526px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group:after {
+        content: '';
+        background: url("../img/kpt-language/img_down_arrow.png") no-repeat center/100% 100%;
+        width: 18px;
+        height: 526px;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box + .row-box {
+        margin-top: 20px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .step-box .label-wrap {
+        border-radius: 20px;
+        width: 86px;
+        height: 28px;
+        background-color: #372989;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .step-box .label-wrap .label-box {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          font-weight: 400;
+          letter-spacing: -0.02em;
+          color: #BCC0C4; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .step-box .label-wrap .label-box .number-box {
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: -0.02em;
+            font-weight: 600;
+            color: #1EC8F5;
+            padding-left: 4px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box {
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        line-height: 20px;
+        letter-spacing: -0.25px;
+        padding-top: 6px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .accent-box {
+          color: #FFDA44;
+          font-weight: 600; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .txt-box ul.step-list {
+          padding-top: 6px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .txt-box ul.step-list li {
+            position: relative; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .txt-box ul.step-list li:after {
+              content: '';
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              background-color: #FFFFff;
+              position: absolute;
+              left: 11px;
+              top: 8px; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .txt-box ul.step-list li .txt-box {
+              font-size: 16px;
+              font-weight: 400;
+              letter-spacing: -0.25px;
+              color: #fff;
+              line-height: 20px;
+              padding-left: 24px; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list {
+      padding-top: 25px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table {
+        table-layout: fixed; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td {
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: -0.25px;
+          color: #fff;
+          line-height: 22px;
+          border: 1px solid #555555;
+          text-align: center;
+          padding: 8px;
+          border-left: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td:nth-last-child(1) {
+            border-right: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td.t-start {
+            text-align: start; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td .level-txt-box {
+            position: relative; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td .level-txt-box:after {
+              content: '';
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              background-color: #FFFFff;
+              position: absolute;
+              left: 11px;
+              top: 8px; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td .level-txt-box .txt-box {
+              font-size: 16px;
+              font-weight: 400;
+              letter-spacing: -0.25px;
+              color: #BCC0C4;
+              line-height: 22px;
+              padding-left: 24px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td.label-box {
+          background-color: #292929;
+          font-size: 16px;
+          font-weight: 600;
+          color: #fff;
+          letter-spacing: -0.02em; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .table-tit-box {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #1EC8F5;
+      letter-spacing: -0.02em;
+      padding-top: 12px; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list {
+      margin: 0 -20px;
+      padding: 12px 20px 0;
+      overflow-x: scroll; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list.type-padding {
+        padding: 8px 20px 0; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table {
+        table-layout: fixed; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table thead tr {
+          border-top: 1px solid #707070;
+          border-left: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table thead tr th {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: -0.02em;
+            background-color: #292929;
+            padding: 6px 0; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr.bg-blue {
+          background-color: #2A245E;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: -0.25px;
+          color: #FFFFff; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td {
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: -0.25px;
+          color: #BCC0C4;
+          line-height: 22px;
+          border: 1px solid #555555;
+          text-align: center;
+          padding: 9px 12px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td:last-child {
+            border-right: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td:first-child {
+            border-left: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td.c-fff {
+            color: #FFFFFF; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td.t-start {
+            text-align: start; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td.c-white {
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: -0.02em; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td .txt-box {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.25px;
+            color: #fff;
+            line-height: 22px;
+            padding-left: 24px; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .kpt-step-wrap {
+      padding-top: 20px; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap {
+      padding-top: 12px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con + .exam-con {
+        padding-top: 20px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .label-box {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.02em;
+        background-color: #2A333C;
+        border-radius: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 17px;
+        height: 30px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box {
+        padding-top: 2px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.25px;
+        color: #fff; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box ul.item-list {
+          padding-top: 8px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box ul.item-list li {
+            position: relative; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box ul.item-list li:after {
+              content: '';
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              background-color: #FFFFff;
+              position: absolute;
+              left: 10px;
+              top: 11px; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box ul.item-list li .txt-box {
+              font-size: 16px;
+              font-weight: 400;
+              letter-spacing: -0.25px;
+              color: #fff;
+              line-height: 22px;
+              padding-left: 24px; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box {
+      padding-top: 27px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box + .item-box {
+        padding-top: 32px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-box {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2A333C;
+        border-radius: 30px;
+        height: 30px;
+        width: 108px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-desc-box {
+        position: relative;
+        padding-top: 2px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-desc-box:after {
+          content: '';
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background-color: #FFFFff;
+          position: absolute;
+          left: 10px;
+          top: 11px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-desc-box .txt-box {
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: -0.25px;
+          color: #fff;
+          line-height: 22px;
+          padding-left: 24px; }
+    section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box {
+      padding-top: 12px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box {
+        border-bottom: 1px solid #707070;
+        padding: 12px 0; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box:first-child {
+          border-top: 1px solid #707070; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box .standard-tit-box {
+          font-size: 16px;
+          font-weight: 600;
+          color: #ffff;
+          letter-spacing: -0.02em;
+          line-height: 24px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box .standard-tit-box.t-size {
+            font-size: 18px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box .standard-desc-box {
+          padding-top: 4px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #ffff;
+          letter-spacing: -0.25px;
+          line-height: 22px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box .standard-info-box {
+          padding-top: 4px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box .standard-info-box ul.info-list li {
+            position: relative; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box .standard-info-box ul.info-list li + li {
+              margin-top: 8px; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box .standard-info-box ul.info-list li:after {
+              content: '';
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              background-color: #FFFFff;
+              position: absolute;
+              left: 9px;
+              top: 8px; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .standard-con-box .item-box .standard-info-box ul.info-list li .txt-box {
+              font-size: 16px;
+              font-weight: 400;
+              letter-spacing: -0.25px;
+              color: #fff;
+              line-height: 20px;
+              padding-left: 24px; }
+
+/*# sourceMappingURL=mob_kpt-language.css.map */

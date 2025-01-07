@@ -1,0 +1,187 @@
+<html lang="ko">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" type="text/css" href="../css/style1.css">
+	<title>스스로 해결 콘텐츠 기획/제작 업무 가이드</title>
+
+</head>
+<body>
+
+<div class="content-service-view">
+	<div class="contents-guide">
+		<header>
+			<div class="header-box">
+				<div class="header-tit-box">
+					스스로 해결 콘텐츠 기획/제작 업무 가이드 - 서비스콘텐츠기획팀_SM용
+				</div>
+			</div>
+		</header>
+		<div class="contents-guide-layout">
+			<div class="inner-wrap">
+				<div class="menu-box">
+					<div class="menu-wrap">
+						<div class="menu-list">
+							<ul class="main-menu">
+								<li>
+									<a href="#none" data-id="1-1" class="focus">홈 <span class="arrow rotate" ></span></a>
+								</li>
+								<li>
+									<a href="#none">콘텐츠 기획/제작 업무(SM) <span class='arrow'></span></a>
+									<ul class="sub-menu">
+										<li><a href="#none" data-id="2-1" data-group="2">콘텐츠 기획/제작 업무 List</a></li>
+									</ul>
+								</li>
+
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content-box">
+					<div class="content-wrap">
+						<div class="content-inner">
+							<div class="bread-crumb">
+								<a href="#none" class="bread-clumb-item" >홈</a>
+							</div>
+
+							<div class="topic active"  data-id="1-1" data-group="1">
+								<h2 class="subject-box">스스로 해결 콘텐츠 기획/제작 업무 가이드 - 서비스콘텐츠기획팀_SM용</h2>
+								<div class="con-box">
+									<div class="con-txt">
+										'스스로 해결 콘텐츠 제작 가이드'는 기획/제작에 필요한 콘텐츠 작성 방법과 양식을 포함하고 있습니다.<br/>
+										※ 콘텐츠 작성에 필요한 규칙 및 변경되는 부분을 항상 업데이트 해주세요.
+									</div>
+									<div class="img-box">
+										<img src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=iaRo4sXjkrasQZMVh5KZg&portalId=P1"
+										     alt="원고기획, 디자인, 디자인 검수, 퍼블싱, 퍼블리싱 검수, 콘텐츠 완성">
+									</div>
+								</div>
+							</div>
+							<div class="topic" data-id="2-1" data-group="2">
+								<h2 class="subject-box">콘텐츠 기획/제작 업무 List</h2>
+								<div class="con-box">
+									<div class="con-txt">콘텐츠 기획/제작 업무 리스트</div>
+
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+
+
+<script>
+    (function(){
+        function menu() {
+            //mainMenus 변수에 메인메뉴 아래 li 아래 a태그를 다 담는다.(노드를 타고 내려가는 이유는 정확하게 어떤 노드를 변수에 담을지 알기 위해서 )
+            const mainMenus = document.querySelectorAll('.main-menu > li > a');
+            //subMenus 변수에 서브메뉴 아래 li 아래 a 태그를 다 담는다.
+            const subMenus = document.querySelectorAll('.sub-menu > li > a');
+            //topics 변수에 topic를 다 담는다.
+            const topics = document.querySelectorAll('.topic');
+            //breadcrumb 변수에 bread-crumd를 변수에 담는다.
+            const breadcrumb = document.querySelector('.bread-crumb');
+
+            // 기본으로 첫 번째 메뉴와 topic 활성화
+            resetBreadcrumb(); // 🆕 기본 bread-crumb 설정
+
+            mainMenus.forEach((menu, index) => {
+                menu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const subMenu = this.nextElementSibling;
+                    const arrow = this.querySelector('.arrow');
+                    const targetId = this.getAttribute('data-id');
+                    const mainMenuText = this.textContent.trim();
+
+                    // 모든 main-menu의 focus 클래스 제거
+                    mainMenus.forEach(menu => {
+                        menu.classList.remove('focus');
+                        const arrow = menu.querySelector('.arrow');
+                        if (arrow) arrow.classList.remove('rotate');
+                    });
+
+                    this.classList.add('focus');
+                    if (arrow) arrow.classList.add('rotate');
+
+                    // 서브메뉴 열고 닫기
+                    document.querySelectorAll('.sub-menu').forEach(menu => menu.classList.remove('active'));
+                    if (subMenu) subMenu.classList.toggle('active');
+
+                    // 모든 topic 숨기고, 클릭한 메뉴의 topic만 보이기
+                    topics.forEach(topic => topic.classList.remove('active'));
+                    if (targetId) {
+                        const targetTopic = document.querySelector(`.topic[data-id='${targetId}']`);
+                        if (targetTopic) {
+                            targetTopic.classList.add('active');
+                        }
+                    }
+
+                    // 🆕 홈 버튼 클릭 시 bread-crumb을 리셋
+                    if (index === 0) {
+                        resetBreadcrumb();
+                    } else {
+                        updateBreadcrumb([mainMenuText]);
+                    }
+                });
+            });
+
+            subMenus.forEach(menu => {
+                menu.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('data-id');
+                    const subMenuText = this.textContent.trim();
+                    const parentMainMenu = this.closest('.sub-menu').previousElementSibling;
+                    const mainMenuText = parentMainMenu ? parentMainMenu.textContent.trim() : '홈';
+
+                    // 모든 sub-menu의 focus 클래스 제거
+                    subMenus.forEach(menu => menu.classList.remove('focus'));
+                    this.classList.add('focus');
+
+                    // 모든 topic 숨기고, 클릭한 메뉴의 topic만 보이기
+                    topics.forEach(topic => topic.classList.remove('active'));
+                    const targetTopic = document.querySelector(`.topic[data-id='${targetId}']`);
+                    if (targetTopic) targetTopic.classList.add('active');
+
+                    // 🆕 bread-crumb 업데이트
+                    updateBreadcrumb([mainMenuText, subMenuText]);
+                });
+            });
+
+            // 🆕 bread-crumb을 기본값으로 설정하는 함수
+            function resetBreadcrumb() {
+                breadcrumb.innerHTML = `<a href="#none" class="bread-clumb-item">홈</a>`;
+            }
+
+            // 🆕 bread-crumb을 업데이트하는 함수
+            function updateBreadcrumb(paths) {
+                breadcrumb.innerHTML = `<a href="#none" class="bread-clumb-item" onclick="location.reload(true);" data="" >홈</a>`;
+                paths.forEach(path => {
+                    breadcrumb.innerHTML += ` &gt; ${path}`;
+                });
+
+
+
+
+
+
+            }
+        }
+
+        menu();
+    })();
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,259 @@
+@import "global";
+
+section.story-visual {
+
+	.visual-wrap {
+		padding: 73px 0 100px;
+		background: url("../img/story/img_story_visual.png") no-repeat center / cover;
+		height: 1234px;
+
+		@include t {
+			height: auto;
+			padding: 45px 14px 45px;
+		}
+
+		.visual-head-box {
+			padding-top: 55px;
+			@include t {
+				padding: 0;
+			}
+
+			.head-box {
+				display: flex;
+				justify-content: center;
+
+				.head-txt {
+					width: 649px;
+					background: url("../img/story/img_story_visual_main.png") no-repeat center / cover;
+					aspect-ratio: 649 / 106;
+
+					@include t {
+						width: 354px;
+					}
+				}
+			}
+
+			.sub-box {
+				padding-top: 15px;
+				display: flex;
+				justify-content: center;
+
+				.sub-txt {
+					width: 973px;
+					background: url("../img/story/img_story_visual_sub.png") no-repeat center / cover;
+					aspect-ratio: 973 / 91;
+
+					@include t {
+						aspect-ratio: 271 / 89;
+						background: url("../img/story/img_story_visual_sub_m.png") no-repeat center / cover;
+						width: 271px;
+
+					}
+
+				}
+			}
+		}
+
+
+		.visual-body-box {
+
+			padding-top: 33px;
+
+			@include t {
+				padding-top: 25px;
+			}
+
+			.view-box {
+
+				max-width: 1320px;
+				margin: 0 auto;
+				background: url("../img/story/img_story_visual_frame.png") no-repeat center / cover;
+				padding: 20px;
+				aspect-ratio: 1320 / 760;
+				display: flex;
+				box-shadow: 0px 0px 42.16px 25.84px rgba(0, 0, 0, 0.68);
+
+				@include t {
+					border-radius: 8px;
+					overflow: hidden;
+					padding: 5px;
+				}
+
+
+				.view-area {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					border: 1px solid #dedede;
+					border-radius: 8px;
+					overflow: hidden;
+
+					&:hover{
+
+						.view-toggle-btn{
+							opacity: 1;
+						}
+
+					}
+
+					.view-layer{
+						display: none;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						z-index: 100;
+					}
+
+					.view-toggle-btn {
+						transition: all 0.2s linear;
+						opacity: 0;
+						//display: none;
+						z-index: 100;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						background: url("../img/story/ic_video_play.png") no-repeat center / cover;
+						width: 146px;
+						height: 146px;
+
+						@include t{
+							width: 56px;
+							height: 56px;
+						}
+
+						&.is-paused {
+							background: rgba(255, 255, 255, 0.3);
+							background: url("../img/story/ic_video_pause.png") no-repeat center / cover;
+
+
+
+						}
+
+					}
+
+					video, img, iframe {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+
+				}
+
+
+			}
+
+		}
+	}
+}
+
+
+section.story-introduce {
+
+	border-bottom: 18px solid #f7f7f7;
+
+
+	.introduce-group-box {
+
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+
+		@include t {
+			flex-direction: column;
+			align-items: start;
+			margin:0 -20px;
+		}
+
+		.view-box {
+			width: 630px;
+			position: relative;
+
+			@include t {
+				border-bottom:4px solid #f7f7f7;
+				width: 100%;
+				//width: auto;
+				//margin:0 -20px;
+			}
+
+			.img-box {
+				position: relative;
+				right: -14px;
+				aspect-ratio: 644 / 689;
+				display: inline-flex;
+				width: 100%;
+
+				@include t{
+					right:0;
+					aspect-ratio: 390 / 271;
+				}
+
+				.introduce-img{
+					background: url("../img/story/img_story_profile.png") no-repeat center / cover;
+					width: 100%;
+					height: 100%;
+
+					@include t{
+						background: url("../img/story/img_story_profile_m.png") no-repeat center / cover;
+
+					}
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+			}
+		}
+
+		.info-box {
+			flex: 1;
+			min-width: 0;
+			padding-bottom: 85px;
+
+			@include t{
+				padding: 35px 20px 50px;
+			}
+
+			.desc-box {
+				position: relative;
+				font-size: 17px;
+				letter-spacing: -0.025em;
+				line-height: 28px;
+
+				@include t{
+					font-size: 16px;
+					line-height: 24px;
+				}
+			}
+
+			.writer-box {
+				padding-top: 50px;
+				text-align: right;
+				font-size: 18px;
+				letter-spacing: -0.025em;
+				font-weight: 500;
+
+
+				@include t{
+					padding-top:36px;
+					font-size: 16px;
+				}
+
+				b {
+					font-weight: 700;
+					margin-right: 14px;
+
+					@include t{
+						margin-right: 12px;
+					}
+
+				}
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,303 @@
+section.kpt-language {
+  background: #000000 url("../img/kpt-language/img_kpt_bg.png") no-repeat center/100% 100%;
+  width: 100%;
+  height: 4678px;
+  padding: 160px 0; }
+  section.kpt-language .kpt-inner {
+    margin: 0 auto;
+    width: 1080px; }
+    section.kpt-language .kpt-inner .iso-tit-box {
+      font-size: 46px;
+      font-weight: 700;
+      color: #FFFFff;
+      text-align: center; }
+    section.kpt-language .kpt-inner .kpt-con-box {
+      padding-top: 120px; }
+      section.kpt-language .kpt-inner .kpt-con-box .subject-box {
+        font-size: 32px;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -2%; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .desc-txt-box {
+        padding-top: 16px;
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+        letter-spacing: -2%;
+        line-height: 26px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group {
+        padding-left: 34px;
+        padding-top: 20px;
+        position: relative;
+        background: url("../img/kpt-language/img_kpt_step_bg.png") no-repeat center/cover;
+        width: 100%;
+        height: 437px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group:after {
+          content: '';
+          background: url("../img/kpt-language/img_down_arrow.png") no-repeat center/100% 100%;
+          width: 18px;
+          height: 437px;
+          position: absolute;
+          left: 0;
+          top: 0; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box {
+          display: flex;
+          align-items: start; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box.center {
+            align-items: center; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box + .row-box {
+            margin-top: 30px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .step-box {
+            margin-right: 26px; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .step-box .label-wrap {
+              border-radius: 20px;
+              width: 100px;
+              height: 36px;
+              background-color: #372989;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center; }
+              section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .step-box .label-wrap .label-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: -2%;
+                color: #BCC0C4;
+                border-radius: 50%; }
+                section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .step-box .label-wrap .label-box .number-box {
+                  font-size: 24px;
+                  font-weight: 600;
+                  color: #1EC8F5;
+                  padding-left: 7px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 24px;
+            letter-spacing: -2%; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .accent-box {
+              color: #FFDA44; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .txt-box {
+              padding-top: 6px; }
+              section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .txt-box ul.step-list li .dot-box {
+                position: relative; }
+                section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .txt-box ul.step-list li .dot-box:after {
+                  content: '';
+                  width: 4px;
+                  height: 4px;
+                  border-radius: 50%;
+                  background-color: #FFFFff;
+                  position: absolute;
+                  left: 9px;
+                  top: 16px; }
+              section.kpt-language .kpt-inner .kpt-con-box .desc-box .step-group .row-box .con-box .txt-box ul.step-list li .txt-box {
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: -2%;
+                color: #fff;
+                line-height: 24px;
+                padding-left: 24px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list {
+        padding-top: 25px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td {
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: -0.25px;
+          color: #fff;
+          line-height: 22px;
+          border: 1px solid #555555;
+          text-align: center;
+          padding: 9px 12px;
+          border-left: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td:nth-last-child(1) {
+            border-right: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td.t-start {
+            text-align: start; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td .level-txt-box .dot-box {
+            position: relative; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td .level-txt-box .dot-box:after {
+              content: '';
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: #FFFFff;
+              position: absolute;
+              left: 5px;
+              top: 9px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td .level-txt-box .txt-box {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.25px;
+            color: #fff;
+            line-height: 22px;
+            padding-left: 24px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .level-con-box .level-table-list table tbody tr td.label-box {
+          background-color: #292929;
+          font-size: 18px;
+          font-weight: 600;
+          color: #fff;
+          letter-spacing: -2%; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .table-tit-box {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1EC8F5;
+        letter-spacing: -2%;
+        padding-top: 24px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list {
+        padding-top: 25px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list.type-padding {
+          padding-top: 12px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table thead tr {
+          border-top: 1px solid #707070;
+          border-left: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table thead tr th {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: -2%;
+            background-color: #292929;
+            padding: 10px 0; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr.bg-blue {
+          background-color: #2A245E;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: -0.25px;
+          color: #FFFFff; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td {
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: -0.25px;
+          color: #BCC0C4;
+          line-height: 22px;
+          border: 1px solid #555555;
+          text-align: center;
+          padding: 9px 12px;
+          border-left: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td:nth-last-child(1) {
+            border-right: 1px solid transparent; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td.font-size {
+            font-size: 18px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td.c-fff {
+            color: #FFFFFF; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td.t-start {
+            text-align: start; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td.c-white {
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 600; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td .dot-box {
+            position: relative; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td .dot-box:after {
+              content: '';
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: #FFFFff;
+              position: absolute;
+              left: 5px;
+              top: 9px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-con-box .nilailevel-table-list table tbody tr td .txt-box {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.25px;
+            color: #fff;
+            line-height: 22px;
+            padding-left: 24px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .kpt-step-wrap {
+        padding-top: 60px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap {
+        padding-top: 28px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list {
+          display: flex;
+          align-items: center;
+          flex-flow: row wrap;
+          gap: 24px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con {
+            display: flex;
+            align-items: center;
+            width: calc(50% - 24px);
+            min-width: 0; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con.column {
+              flex-flow: column;
+              align-items: start; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .label-box {
+              font-size: 18px;
+              font-weight: 600;
+              color: #fff;
+              letter-spacing: -2%;
+              background-color: #2A333C;
+              border-radius: 30px;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              padding: 4px 17px;
+              height: 32px;
+              margin-right: 8px; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box {
+              font-size: 18px;
+              font-weight: 400;
+              color: #fff; }
+              section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box ul.item-list {
+                padding-top: 8px; }
+                section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box ul.item-list li .dot-box {
+                  position: relative; }
+                  section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box ul.item-list li .dot-box:after {
+                    content: '';
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: #FFFFff;
+                    position: absolute;
+                    left: 5px;
+                    top: 9px; }
+                section.kpt-language .kpt-inner .kpt-con-box .desc-box .exam-wrap .exam-list .exam-con .txt-box ul.item-list li .txt-box {
+                  font-size: 16px;
+                  font-weight: 400;
+                  letter-spacing: -0.25px;
+                  color: #fff;
+                  line-height: 22px;
+                  padding-left: 24px; }
+      section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box {
+        padding-top: 24px; }
+        section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box {
+          display: flex;
+          align-items: center; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box + .item-box {
+            padding-top: 32px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-box {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -2%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2A333C;
+            border-radius: 30px;
+            height: 32px;
+            width: 130px; }
+          section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-desc-box {
+            padding-left: 8px;
+            flex: 1; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-desc-box .dot-box {
+              position: relative; }
+              section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-desc-box .dot-box:after {
+                content: '';
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #FFFFff;
+                position: absolute;
+                left: 5px;
+                top: 9px; }
+            section.kpt-language .kpt-inner .kpt-con-box .desc-box .nilailevel-stage-box .item-box .label-desc-box .txt-box {
+              font-size: 16px;
+              font-weight: 400;
+              letter-spacing: -0.25px;
+              color: #fff;
+              line-height: 22px;
+              padding-left: 24px; }
+
+/*# sourceMappingURL=mob_kpt-language.css.map */

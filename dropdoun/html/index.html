@@ -1,0 +1,51 @@
+<html lang="ko">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>스스로 해결 콘텐츠 기획/제작 업무 가이드</title>
+
+</head>
+<body>
+
+<div class="content-service-view">
+	<h1>Breadcrumbs Navigation Guide</h1>
+
+	<nav aria-label="breadcrumb">
+		<ul class="breadcrumb">
+			<li><a href="/">Home</a></li>
+			<li><a href="/products">Products</a></li>
+			<li><a href="/products/electronics">Electronics</a></li>
+			<li><a href="#">Smartphones</a></li>
+		</ul>
+	</nav>
+</div>
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const breadcrumbLinks = document.querySelectorAll('.breadcrumb a');
+
+        breadcrumbLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default navigation
+                const url = event.target.getAttribute('href');
+
+                if (url && url !== '#') {
+                    console.log(`Navigating to: ${url}`);
+                    // Simulate navigation for demonstration purposes
+                    alert(`This would navigate to: ${url}`);
+                    // To implement real navigation, use: window.location.href = url;
+                }
+            });
+        });
+    });
+</script>
+</body>
+
+
+</html>
