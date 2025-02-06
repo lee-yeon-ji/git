@@ -1,0 +1,89 @@
+<html lang="ko">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<div class="content-service-view">
+	<div class="info-subject aria-txt" tabindex="0" role="text">
+		제품 동작 중 이상 증상 또는 알림 기능으로 인하여 표시창에 나타날 수 있습니다.<br/>이상 또는 알림 표시는 모델에 따라 다를 수 있습니다.
+	</div>
+	<p class="aria-txt" tabindex="0" role="text">작동 중 에러표시가 나타난다면 해당하는 에러코드를 입력 하거나 선택해 해결해 보세요.</p>
+	<div class="error-search-box">
+		<label>
+			<input type="text" class="error-search-text" placeholder="워시타워 에러코드를 입력해 보세요." alt="검색창"/>
+		</label>
+	</div>
+	<div class="output-box">
+		<span id="result"></span>
+	</div>
+
+
+	<div class="cs-error-code">
+		<div role="tablist" class="cs-tab-list cs-error-code-list" aria-hidden="false" style="display: flex;">
+			<button class="arr-btn" id="cs-tab-01" role="tab" aria-selected="false" aria-controls="cs-tabpanel-01"
+			        type="button">
+                <span class="btn-focus img-width"><img
+				                src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=ze3xXxCWgABPmlTShqvw&portalId=P1"
+				                alt="LE,CE [회전 문제]"/></span>
+			</button>
+			<button class="arr-btn" id="cs-tab-02" role="tab" aria-selected="false" aria-controls="cs-tabpanel-02"
+			        type="button"
+			        tabindex="-1">
+                <span class="btn-focus img-width"><img
+				                src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=O6bT6DkdYD7Eou9kD8Rwmw&portalId=P1"
+				                alt="IE [급수 문제]"/></span>
+			</button>
+			<button class="arr-btn" id="cs-tab-03" role="tab" aria-selected="false" aria-controls="cs-tabpanel-03"
+			        type="button"
+			        tabindex="-1">
+                <span class="btn-focus img-width"><img
+				                src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=e00VrdjDEyN2Tpph64mkA&portalId=P1"
+				                alt="OE [배수 문제]"/></span>
+			</button>
+			<button class="arr-btn" id="cs-tab-04" role="tab" aria-selected="false" aria-controls="cs-tabpanel-04"
+			        type="button"
+			        tabindex="-1">
+                <span class="btn-focus img-width"><img
+				                src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=5TrDPL6gMS2QP18MaHvLEg&portalId=P1"
+				                alt="UE [불균형 탈수 문제]"/></span>
+			</button>
+		</div>
+		<br/><br/>
+
+
+		<div id="cs-tabpanel-01" role="tabpanel" aria-labelledby="cs-tab-01" class="desc is-hidden">
+			<p class="info-subject aria-txt" tabindex="0" role="text">LE/CE 에러가 떠요.<br/>세탁기가 동작을 멈췄어요.</p>
+			<acc aria-label="이 콘텐츠는 공용으로 제작되어 구입한 제품과 다른 이미지나 내용이 포함되어 있을 수 있습니다." tabindex="0" role="text">
+				<p class="help-txt aria-hidden" aria-hidden="true"> 이 콘텐츠는 공용으로 제작되어 구입한 제품과 다른 이미지나 내용이 포함되어 있을 수 있습니다.</p>
+			</acc>
+		</div>
+		<div id="cs-tabpanel-02" role="tabpanel" aria-labelledby="cs-tab-02" class="desc is-hidden">
+			<p class="aria-txt">워시타워 설치환경에 따라 급수/배수호스 자가 점검이 어려울 수 있습니다.<br/> 무리한 제품이동은 안전사고의 위험이 있으니 전문 서비스매니저의 도움을 받으세요.</p>
+		</div>
+		<div id="cs-tabpanel-03" role="tabpanel"  aria-labelledby="cs-tab-03" class="desc is-hidden">
+			<p class="info-subject aria-txt" tabindex="0" role="text">세탁기가 작동하다가     v표시창에 <b>[OE] (Water Outlet Error)</b>가 나타나면서
+				세탁통에서 밖으로 물이 안 빠지나요? 물이 빠지지만
+				세탁통에서 밖으로 물이 안 빠지나요? 물이 빠지지만
+				세탁통에서 밖으로 물이 안 빠지나요? 물이 빠지지만
+				세탁통에서 밖으로 물이 안 빠지나요? 물이 빠지지만
+				매우 천천히 빠지나요?
+			</p>
+			<div class="img-only">
+				<img class="img-txt"
+				     src="https://gscs.lge.com:/gscs/support/fileupload/downloadFile.do?fileId=TJxcjCXbds4tEm2pdXO87g&portalId=P1"
+				     alt="표시창에 OE 에러 표시가 나타나 있는 모습"/>
+			</div>
+			<h2 class="tit aria-txt" tabindex="0" role="text">이런 원인/증상이 있나요?</h2>
+		</div>
+		<div id="cs-tabpanel-04" role="tabpanel" aria-labelledby="cs-tab-04" class="desc is-hidden">
+			<p class="info-subject aria-txt" tabindex="0" role="text">[UE] 에러가 표시되나요?</p>
+			<h2 class="tit aria-txt" tabindex="0" role="text">이런 원인/증상이 있나요?</h2>
+		</div>
+	</div>
+</div>
+<script src="test.js"></script>
+</body>
+</html>

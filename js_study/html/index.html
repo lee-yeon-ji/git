@@ -7,18 +7,64 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 </head>
+<style>
+    a:link, a:visited {
+        color:black;
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+        width:500px;
+        margin:10px auto;
+        padding:0;
+    }
+    li {
+        display:inline-block;
+        width:120px;
+        border:1px solid #ccc;
+        padding:10px 15px;
+        font-size:16px;
+        text-align:center;
+    }
+    #result {
+        width:500px;
+        height:300px;
+        margin:30px auto;
+        border:2px solid #ccc;
+        border-radius:15px;
+    }
+    p {
+        width:80%;
+        padding:10px;
+        line-height: 2em;
+    }
+
+
+</style>
 <body>
+<ul>
+	<li><a href="#" onclick="changeBg('green')">green</a></li>
+	<li><a href="#" onclick="changeBg('yellow')">yellow</a></li>
+	<li><a href="#" onclick="changeBg('blue')">blue</a></li>
+</ul>
+
+
+
+<div id="result"></div>
 
 
 
 <script>
-		let currentYear = 2024;
-    let birthYear = prompt("태어난 연도를 입력해주세요.(YYYY)","");
-    let age = currentYear - birthYear + 1;
 
-    document.write(currentYear + "년 현재<br>");
-    document.write(birthYear + "년에 태에난 사람의 나이는" + age + "세 입니다.");
+	function changeBg(color){
+        let result = document.querySelector('#result');
+        result.style.backgroundColor = color;
+	}
+
+
+
+
 </script>
 
 </body>
-</html> 
+</html>
