@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link type="text/css" rel="stylesheet" href="../css/style2.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+<div class="map-container">
+	<div class="map-inner">
+		<div class="map-wrap">
+			<div class="map-btn-list">
+				<button class="map-btn active" id="mapBtn1">
+					<img src="../img/img_map_1.png" alt="이미지">
+				</button>
+				<button class="map-btn" id="mapBtn2">
+					<img src="../img/img_map_2.png" alt="이미지">
+				</button>
+			</div>
+			<div class="map-img-box">
+				<div class="map-con" id="mapContent1">
+					<img src="../img/img_map_bg1.jpg" alt="이미지">
+				</div>
+				<div class="map-con is-hidden" id="mapContent2">
+					<img src="../img/img_map_bg2.png" alt="이미지">
+				</div>
+			</div>
+		</div>
+
+
+		<div class="side-slide-container">
+			<button class="toggle-box">
+				<i class="toggle-icon"></i>
+			</button>
+
+
+			<div class="side-slide-wrap">
+
+<!--				<div class="slide-inner">-->
+
+<!--					<div class="tab-btn-wrap">-->
+<!--						<button class="tab-btn-box active" id="tabBtn1">-->
+<!--							<div class="con-box">-->
+<!--								<i class="list-icon"></i>-->
+<!--								<div class="txt-box">공간정보 목록</div>-->
+<!--							</div>-->
+<!--						</button>-->
+
+<!--						<button class="tab-btn-box" id="tabBtn2">-->
+<!--							<div class="con-box">-->
+<!--								<i class="write-icon"></i>-->
+<!--								<div class="txt-box">공간정보 등록</div>-->
+<!--							</div>-->
+<!--						</button>-->
+<!--					</div>-->
+
+<!--				</div>-->
+
+
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+
+    const mapBtns = document.querySelectorAll('.map-btn');
+    const mapImgs = document.querySelectorAll('.map-con');
+
+    // <!--	//index는 현재 요소의 인덱스를 뜻함.-->
+
+    mapBtns.forEach(function (mapBtn, index) {
+        mapBtn.addEventListener('click', function () {
+
+            mapBtns.forEach(function (btn) {
+                btn.classList.remove('active');
+            });
+
+            this.classList.add('active');
+
+
+            mapImgs.forEach(function (mapImg) {
+                mapImg.classList.add('is-hidden');
+            });
+
+            mapImgs[index].classList.remove('is-hidden');
+
+        });
+    });
+
+    function menuBarInit() {
+        const toggleBtn = document.querySelector('.toggle-box');
+        const barBoard = document.querySelector('.side-slide-container');
+        const toggleIcon = document.querySelector('.toggle-icon');
+
+        toggleBtn.addEventListener('click', function () {
+            // barBoard.classList.toggle('is-hide');
+
+            if(barBoard.classList.contains('is-hide')){
+                barBoard.classList.remove('is-hide');
+                toggleIcon.classList.remove('close');
+
+                // toggleIcon.style.backgroundImage = "url('../img/ic_slide_open.svg')";
+            }else{
+                barBoard.classList.add('is-hide');
+                toggleIcon.classList.add('close');
+                // toggleIcon.style.backgroundImage = "url('../img/ic_slide_close.svg')";
+            }
+
+
+        });
+    }
+
+    menuBarInit();
+
+
+</script>
+
+
+</body>
+
+
+</html>

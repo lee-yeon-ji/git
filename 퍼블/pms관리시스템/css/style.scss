@@ -57,20 +57,24 @@ $font : 'Pretendard';
 			height: 100%;
 			padding-top: 153px;
 
-			.login-page-box {
-				width: 820px;
-				height: 520px;
-				margin: 0 auto;
-				display: flex;
+			header{
+				.header-wrap{
+					width: 820px;
+					height: 520px;
+					margin: 0 auto;
+					display: flex;
 
-				.login-bg-box {
-
-					.img-box {
-						max-width: 416px;
-						height: 520px;
-
-						img {
-							width: 100%;
+					.header-top{
+						.con-box{
+							h1.logo{
+								.logo-img{
+									max-width: 416px;
+									height: 520px;
+									img{
+										width: 100%;
+									}
+								}
+							}
 						}
 					}
 				}

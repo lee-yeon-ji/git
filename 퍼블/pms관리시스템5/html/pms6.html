@@ -14,7 +14,7 @@
 		<div class="main-box">
 			<div class="header-box">
 				<h1>
-					<a href="#none" class="logo-box">
+					<a href="#none" class="logo-box" data-name="ssooya" data-age="22">
 						<img src="../img/img_logo.svg">
 					</a>
 				</h1>
@@ -151,6 +151,51 @@
 	</div>
 </div>
 
+
+<script>
+	const img = document.querySelector(".logo-box");
+
+
+	const item = {
+        arry : [1,2,3],
+				length : 3,
+				node : document.querySelector(".logo-box")
+	}
+
+
+    img.addEventListener('click', function(){
+
+        // img.onclick = img.classList.~~
+		    // ==> null
+
+
+        console.log(img.dataset.age)
+        console.log(img.classList)
+        console.log(img.style)
+
+        console.log(img.classList.remove('logo-box'))
+        console.log(img.classList.add('test'))
+
+        // img.style.display="none";
+
+		    img.src ="../img/ic_login.svg"
+		    img.querySelector('img').src ="../img/ic_login.svg"
+
+        // img.src = "../img/ic_login.svg"
+        // console.log(img.setAttribute('class','test'))
+
+
+
+		    // console.log(img.onclick) ==> 'asdf
+
+
+
+        const txt = document.querySelector(".tit-box");
+
+        txt.innerText="바보";
+
+    });
+</script>
 
 </body>
 </html>

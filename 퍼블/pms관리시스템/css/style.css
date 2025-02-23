@@ -38,100 +38,100 @@
     .index-wrapper .bg-contents .inner {
       height: 100%;
       padding-top: 153px; }
-      .index-wrapper .bg-contents .inner .login-page-box {
+      .index-wrapper .bg-contents .inner header .header-wrap {
         width: 820px;
         height: 520px;
         margin: 0 auto;
         display: flex; }
-        .index-wrapper .bg-contents .inner .login-page-box .login-bg-box .img-box {
+        .index-wrapper .bg-contents .inner header .header-wrap .header-top .con-box h1.logo .logo-img {
           max-width: 416px;
           height: 520px; }
-          .index-wrapper .bg-contents .inner .login-page-box .login-bg-box .img-box img {
+          .index-wrapper .bg-contents .inner header .header-wrap .header-top .con-box h1.logo .logo-img img {
             width: 100%; }
-        .index-wrapper .bg-contents .inner .login-page-box .login-form {
-          background: #FFFFFF;
-          flex: 1; }
-          .index-wrapper .bg-contents .inner .login-page-box .login-form .inner {
-            padding: 48px 37px 0; }
-            .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .subject-box {
-              font-size: 28px;
-              font-weight: 700;
-              color: #1E2431; }
-            .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout {
-              padding-top: 31px; }
-              .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box + .form-box {
-                padding-top: 25px; }
-              .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .tbox .txt-box {
-                font-size: 18px;
-                font-weight: 400;
-                letter-spacing: -0.15em;
-                color: #222222;
-                padding-bottom: 7px; }
-              .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .tbox input {
-                background: #FFFFFF;
-                border-radius: 3px;
-                border: 1px solid #C6C6C6;
+      .index-wrapper .bg-contents .inner header .login-form {
+        background: #FFFFFF;
+        flex: 1; }
+        .index-wrapper .bg-contents .inner header .login-form .inner {
+          padding: 48px 37px 0; }
+          .index-wrapper .bg-contents .inner header .login-form .inner .subject-box {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1E2431; }
+          .index-wrapper .bg-contents .inner header .login-form .inner .form-layout {
+            padding-top: 31px; }
+            .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box + .form-box {
+              padding-top: 25px; }
+            .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .tbox .txt-box {
+              font-size: 18px;
+              font-weight: 400;
+              letter-spacing: -0.15em;
+              color: #222222;
+              padding-bottom: 7px; }
+            .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .tbox input {
+              background: #FFFFFF;
+              border-radius: 3px;
+              border: 1px solid #C6C6C6;
+              width: 100%;
+              height: 42px;
+              padding: 0 5px;
+              color: #222222;
+              font-size: 16px; }
+            .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .login-btn-box {
+              padding-top: 47px;
+              position: relative;
+              letter-spacing: -0.03em; }
+              .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .login-btn-box button.button {
+                font-size: 20px;
+                font-weight: 500;
+                color: #FFFFFF;
+                letter-spacing: -0.01em;
+                background-color: #3060EA;
+                border-radius: 5px;
+                border: 3px solid #3060EA;
                 width: 100%;
-                height: 42px;
-                padding: 0 5px;
-                color: #222222;
-                font-size: 16px; }
-              .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .login-btn-box {
-                padding-top: 47px;
-                position: relative;
-                letter-spacing: -0.03em; }
-                .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .login-btn-box button.button {
-                  font-size: 20px;
-                  font-weight: 500;
-                  color: #FFFFFF;
-                  letter-spacing: -0.01em;
-                  background-color: #3060EA;
-                  border-radius: 5px;
-                  border: 3px solid #3060EA;
-                  width: 100%;
-                  height: 54px; }
-                  .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .login-btn-box button.button:hover {
-                    border: 3px solid yellow; }
-                .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .login-btn-box .desc-box {
-                  position: absolute;
-                  top: 0;
-                  padding-top: 5px;
-                  display: flex;
-                  align-items: center; }
-                  .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .login-btn-box .desc-box .icon-box {
-                    display: block;
-                    width: 22px;
-                    height: 22px; }
-                    .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .login-btn-box .desc-box .icon-box.ic-warning {
-                      background: url("../img/ic_warning.svg") no-repeat center/cover; }
-                  .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .form-box .login-btn-box .desc-box .txt-box {
-                    color: #FF004D;
-                    font-size: 14px;
-                    font-weight: 300; }
-              .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .option-list {
+                height: 54px; }
+                .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .login-btn-box button.button:hover {
+                  border: 3px solid yellow; }
+              .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .login-btn-box .desc-box {
+                position: absolute;
+                top: 0;
+                padding-top: 5px;
                 display: flex;
-                align-items: center;
-                padding-top: 24px;
-                position: relative; }
-                .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .option-list:after {
-                  position: absolute;
-                  content: '';
-                  background-color: #D0D0D0;
-                  width: 1px;
-                  height: 1px;
-                  left: 10px; }
-                .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .option-list .option-box {
-                  margin: 0 auto; }
-                  .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .option-list .option-box + .option-box {
-                    border-left: 1px solid #D0D0D0;
-                    padding-left: 30px; }
-                  .index-wrapper .bg-contents .inner .login-page-box .login-form .inner .form-layout .option-list .option-box .option-btn {
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: -0.3em;
-                    color: #222222;
-                    text-decoration: none;
-                    width: 100%; }
+                align-items: center; }
+                .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .login-btn-box .desc-box .icon-box {
+                  display: block;
+                  width: 22px;
+                  height: 22px; }
+                  .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .login-btn-box .desc-box .icon-box.ic-warning {
+                    background: url("../img/ic_warning.svg") no-repeat center/cover; }
+                .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .form-box .login-btn-box .desc-box .txt-box {
+                  color: #FF004D;
+                  font-size: 14px;
+                  font-weight: 300; }
+            .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .option-list {
+              display: flex;
+              align-items: center;
+              padding-top: 24px;
+              position: relative; }
+              .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .option-list:after {
+                position: absolute;
+                content: '';
+                background-color: #D0D0D0;
+                width: 1px;
+                height: 1px;
+                left: 10px; }
+              .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .option-list .option-box {
+                margin: 0 auto; }
+                .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .option-list .option-box + .option-box {
+                  border-left: 1px solid #D0D0D0;
+                  padding-left: 30px; }
+                .index-wrapper .bg-contents .inner header .login-form .inner .form-layout .option-list .option-box .option-btn {
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: -0.3em;
+                  color: #222222;
+                  text-decoration: none;
+                  width: 100%; }
 
 header .header-inner {
   background-color: #162955; }
