@@ -191,7 +191,7 @@ article.info-msg-box{
 										overflow: hidden;
 										display: flex;
 										align-items: center;
-
+										background-color: #fff;
 										.chk-box{
 											width:20%;
 
@@ -233,18 +233,14 @@ article.info-msg-box{
 
 									.chk-con-box{
 										border-top: 1px solid #EF3A81;
-
+										padding: 20px 24px 28px;
 										.chk-inner{
-											padding: 20px 24px 26px;
-											background-color: #fff;
 											display: flex;
 											align-items: center;
-											justify-content: center;
 											flex-flow: wrap;
 
 											.num-btn{
 												width: calc(20% - 12px);
-												gap: 12px;
 												margin: 6px 6px;
 
 												label{
@@ -308,13 +304,59 @@ article.info-msg-box{
 														left: 50%;
 														transform: translateX(-50%);
 													}
-
 												}
 											}
 										}
+										.option-btn-box{
+											padding-top: 21px;
+
+											.option-btn{
+												text-align: right;
+
+												& + .option-btn{
+													padding-top: 8px;
+												}
+
+												label{
+													cursor:pointer;
+													position: relative;
+
+													input[type=radio]{
+														position: absolute;
+														left: -9999px;
+
+														&:checked{
+															& ~ i{
+																background: url("../img/ic_check_on.svg")no-repeat center/cover;
+															}
+														}
+													}
+													.txt{
+														color: #EF3A81;
+														font-size: 13px;
+														font-weight: 600;
+														padding-right: 27px;
+
+
+													}
+
+													i{
+														position: absolute;
+														content: '';
+														background: url("../img/ic_check_off.svg")no-repeat center/cover;
+														width: 16px;
+														height: 16px;
+														top: 2px;
+														right: 0;
+
+
+													}
+
+												}
+											}
+
+										}
 									}
-
-
 
 								}
 
@@ -374,6 +416,37 @@ article.info-msg-box{
 									}
 								}
 
+							}
+
+							.number-list{
+								margin-top: 28px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								visibility: hidden;
+
+
+								.buy-number{
+									& + .buy-number{
+										margin-left: 12px;
+									}
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									border-radius: 50%;
+									background-color: #FBB600;
+									width: 44px;
+									height: 44px;
+
+									.txt{
+										font-size: 20px;
+										font-weight: 600;
+										color: #FFFFff;
+
+
+
+									}
+								}
 							}
 						}
 					}

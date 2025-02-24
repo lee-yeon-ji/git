@@ -202,7 +202,79 @@
 															<span class="txt">20</span>
 														</label>
 													</div>
+
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="21">
+															<span class="txt">21</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="22">
+															<span class="txt">22</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="23">
+															<span class="txt">23</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="24">
+															<span class="txt">24</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="25">
+															<span class="txt">25</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="26">
+															<span class="txt">26</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="27">
+															<span class="txt">27</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="28">
+															<span class="txt">28</span>
+														</label>
+													</div>
 												</div>
+												<div class="option-btn-box">
+													<div class="option-btn">
+														<label>
+															<input type="radio" name="option" value="auto">
+															<span class="txt">자동선택</span><i></i>
+														</label>
+													</div>
+													<div class="option-btn">
+														<label>
+															<input type="radio" name="option" value="cancel">
+															<span class="txt">취소</span><i></i>
+														</label>
+													</div>
+												</div>
+
 											</div>
 										</div>
 										<div class="chk-box">
@@ -353,8 +425,81 @@
 															<span class="txt">20</span>
 														</label>
 													</div>
+
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="21">
+															<span class="txt">21</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="22">
+															<span class="txt">22</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="23">
+															<span class="txt">23</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="24">
+															<span class="txt">24</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="25">
+															<span class="txt">25</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="26">
+															<span class="txt">26</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="27">
+															<span class="txt">27</span>
+														</label>
+													</div>
+
+													<div class="num-btn">
+														<label>
+															<input type="checkbox" name="number" value="28">
+															<span class="txt">28</span>
+														</label>
+													</div>
+												</div>
+
+												<div class="option-btn-box">
+													<div class="option-btn">
+														<label>
+															<input type="radio" name="option" value="auto">
+															<span class="txt">자동선택</span><i></i>
+														</label>
+													</div>
+													<div class="option-btn">
+														<label>
+															<input type="radio" name="option" value="cancel">
+															<span class="txt">취소</span><i></i>
+														</label>
+													</div>
 												</div>
 											</div>
+
 										</div>
 
 									</div>
@@ -380,7 +525,30 @@
 									<div class="info-msg-txt">구매번호 리스트</div>
 								</article>
 
-								<div class="number-list"></div>
+								<div class="number-list-container">
+
+									<div class="number-list">
+										<div class="buy-number">
+											<div class="txt">1</div>
+										</div>
+										<div class="buy-number">
+											<div class="txt">2</div>
+										</div>
+										<div class="buy-number">
+											<div class="txt">3</div>
+										</div>
+										<div class="buy-number">
+											<div class="txt">4</div>
+										</div>
+										<div class="buy-number">
+											<div class="txt">5</div>
+										</div>
+									</div>
+
+
+								</div>
+
+
 							</div>
 
 
@@ -393,40 +561,159 @@
 </div>
 
 
-
 <script>
 
-    let numBtnList = document.querySelectorAll('.num-btn');
+    function chk() {
+        let numBtnList = document.querySelectorAll('.num-btn');
 
-    numBtnList.forEach(function (numBtn) {
-        numBtn.querySelector('input[type=checkbox]').addEventListener('change', function () {
-            let game = this.closest('.chk-inner');
+        numBtnList.forEach(function (numBtn) {
+            numBtn.querySelector('input[type=checkbox]').addEventListener('change', function () {
+                let game = this.closest('.chk-inner');
+
+                let checked = game.querySelectorAll('input[type=checkbox]:checked');
+
+                if (checked.length > 5) {
+                    this.checked = false; //또는 null이 올 수 있다.
+                    alert('5개 까지만 선택할 수 있습니다.');
+                }
 
 
+            });
+        });
+
+    }
+
+
+    // function buy() {
+    //     const buyNumberList = document.querySelector('.number-list');
+    //     const checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
+    //
+    //
+    //
+    //
+    //     buyNumberList.innerHTML = '';
+    //
+    //     const selectedNumbers = Array.from(checkedBoxes).map(checkedbox => checkedbox.value);
+    //
+    //     buyNumberList.textContent = selectedNumbers.join(', ');
+    //     console.log(selectedNumbers.join(', ') );
+    //
+    //
+    //
+    //
+    // }
+
+    function buy() {
+
+        // const buyNumberList = document.querySelector('.number-list');
+        // const checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
+        // // 이전 내용을 지웁니다
+        // buyNumberList.innerHTML = '';
+        //
+        // // 체크된 각 번호마다 새로운 요소를 생성합니다
+        // Array.from(checkedBoxes).forEach(checkbox => {
+        //     const numberSpan = document.createElement('span');
+        //     numberSpan.textContent = checkbox.value;
+        //     numberSpan.classList.add('selected-number');
+        //     buyNumberList.appendChild(numberSpan);
+        // });
+
+		    // 현재 game
+        const game = document.querySelector('.chk-box')
+
+		    // 현재 game에서 체크된 input 리스트 가져오기
+        const selectedList = game.querySelectorAll('input[type=checkbox]:checked')
+
+		    // input 리스트를 html string 만들기
+        const html = numberMaker(selectedList)
+
+		    // html string 삽입 위치
+		    const resultSection = document.querySelector('.number-list-container')
+
+        // string을 노드로 변환하여 삽입
+        resultSection.insertAdjacentHTML('beforeend', html);
+
+    }
+
+
+    // <div class="number-list"></div>>
+
+    const numberMaker = (selectedList) => {
+
+        const container = document.createElement('div');
+        container.className = 'number-list';
+
+        console.log(container)
+
+        let str = "";
+
+		    str += "<div class='number-list'>"
+        selectedList.forEach(selectedItem => {
+            str += `<div class="buy-number">${selectedItem.value}</div>`
+            // str += "<div class=\"buy-number\">" + selectedItem.value + "</div>"
         })
+
+        str += "</div>"
+
+        console.log(str)
+
+		    return str;
+
+
+    }
+
+
+    const lottoBuy = document.querySelector('.buy-btn');
+    lottoBuy.addEventListener('click', function () {
+        buy();
     })
 
-    const buyBtn = document.querySelector('.buy-btn');
+    function lottoMaker() {
+        //math.random() : 0~1 사이의 난수(랜덤한 수)를 반환 하는 함수로 1은 포함하지 않음.
+        //Math.floor() : 주어진 숫자를 소수점 이하를 버린 정수로 내림하는 함수.
+
+        //배열에 5개 번호를 담을 변수
+        var lotto = []; //빈배열
+
+        //배열에 1~28의 숫자 담기
+        var nums = [];
+
+        //1~28의 숫자를 담는 for문
+        for (var i = 1; i <= 28; i++) {
+            nums.push(i);
+        }
+
+        //변수에 원하는 값이 들어갔는지 확인 - 확인 후 주석처리
+        // alert(nums);
+
+        //5개의 숫자를 nums에 빼오는 반복문
+        for (var i = 0; i < 5; i++) {
+            //몇번째 것을 빼올 지 지정하는 랜덤 번째 처리
+            //0~27번째를 선택
+            //반복되면서 숫자 한개 씩 빠짐
+            var num = Math.floor(Math.random() * (28 - i));
+
+            //해당 순번의 숫자를 로또 배열에 담기
+            lotto.push(nums[num]);
 
 
-    buyBtn.addEventListener('click', function () {
-        //
-        //     const msg = buyBtn.closest('.checked-wrap');
-        //     console.log(msg)
-        //
-        // const info = msg.querySelector('.info-msg-box');
-        //     console.log(info)
+            //filter() : 조건에 맞는 배열만 새로운 배열로 반환하는 메서드
+            //nums배열에서 선택된 값이 빠져야 함
+            nums = nums.filter(function (n) {
+                return n != nums[num];
+            });
+        }
 
+        //오름차순 정렬
+        lotto.sort(function (a, b) {
+            return a - b;
+        });
 
-        const lobby = this.closest('.contents');
-        console.log(lobby)
+        //출력
+        console.log('선택한 로또번호 : ' + lotto);
 
-        const info = lobby.querySelector('.lobby-btn');
-
-        console.log(info);
-    })
-
-
+        // document.write('이번 주 로또번호 : ' + lotto);
+    }
 
 
 </script>

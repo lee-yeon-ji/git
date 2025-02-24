@@ -126,7 +126,8 @@ article.info-msg-box {
                   border-radius: 10px;
                   overflow: hidden;
                   display: flex;
-                  align-items: center; }
+                  align-items: center;
+                  background-color: #fff; }
                   .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-wrap .chk-box {
                     width: 20%; }
                     .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-wrap .chk-box + .chk-box {
@@ -154,17 +155,14 @@ article.info-msg-box {
                         color: #FFFFff;
                         width: 100%; }
                 .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box {
-                  border-top: 1px solid #EF3A81; }
+                  border-top: 1px solid #EF3A81;
+                  padding: 20px 24px 28px; }
                   .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .chk-inner {
-                    padding: 20px 24px 26px;
-                    background-color: #fff;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
                     flex-flow: wrap; }
                     .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .chk-inner .num-btn {
                       width: calc(20% - 12px);
-                      gap: 12px;
                       margin: 6px 6px; }
                       .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .chk-inner .num-btn label {
                         cursor: pointer;
@@ -208,6 +206,33 @@ article.info-msg-box {
                           bottom: 0;
                           left: 50%;
                           transform: translateX(-50%); }
+                  .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box {
+                    padding-top: 21px; }
+                    .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn {
+                      text-align: right; }
+                      .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn + .option-btn {
+                        padding-top: 8px; }
+                      .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label {
+                        cursor: pointer;
+                        position: relative; }
+                        .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label input[type=radio] {
+                          position: absolute;
+                          left: -9999px; }
+                          .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label input[type=radio]:checked ~ i {
+                            background: url("../img/ic_check_on.svg") no-repeat center/cover; }
+                        .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label .txt {
+                          color: #EF3A81;
+                          font-size: 13px;
+                          font-weight: 600;
+                          padding-right: 27px; }
+                        .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label i {
+                          position: absolute;
+                          content: '';
+                          background: url("../img/ic_check_off.svg") no-repeat center/cover;
+                          width: 16px;
+                          height: 16px;
+                          top: 2px;
+                          right: 0; }
               .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .buy-wrap {
                 display: flex;
                 align-items: center;
@@ -250,5 +275,25 @@ article.info-msg-box {
                   justify-content: center;
                   cursor: pointer;
                   border: 1px solid transparent; }
+              .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-list {
+                margin-top: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                visibility: hidden; }
+                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-list .buy-number {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                  background-color: #FBB600;
+                  width: 44px;
+                  height: 44px; }
+                  .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-list .buy-number + .buy-number {
+                    margin-left: 12px; }
+                  .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-list .buy-number .txt {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #FFFFff; }
 
 /*# sourceMappingURL=style1.css.map */
