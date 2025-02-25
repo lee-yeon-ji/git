@@ -275,25 +275,31 @@ article.info-msg-box {
                   justify-content: center;
                   cursor: pointer;
                   border: 1px solid transparent; }
-              .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-list {
+              .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list {
                 margin-top: 28px;
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                visibility: hidden; }
-                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-list .buy-number {
+                justify-content: center; }
+                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list .buy-number {
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   border-radius: 50%;
                   background-color: #FBB600;
                   width: 44px;
-                  height: 44px; }
-                  .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-list .buy-number + .buy-number {
+                  height: 44px;
+                  font-size: 20px;
+                  font-weight: 600;
+                  color: #FFFFff; }
+                  .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list .buy-number + .buy-number {
                     margin-left: 12px; }
-                  .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-list .buy-number .txt {
-                    font-size: 20px;
-                    font-weight: 600;
-                    color: #FFFFff; }
+                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list .bg-yellow {
+                  background-color: #ffd700; }
+                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list .bg-blue {
+                  background-color: #4169e1; }
+                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list .bg-red {
+                  background-color: #ff6347; }
+                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list .bg-green {
+                  background-color: #2e8b57; }
 
 /*# sourceMappingURL=style1.css.map */

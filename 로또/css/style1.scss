@@ -418,36 +418,50 @@ article.info-msg-box{
 
 							}
 
-							.number-list{
-								margin-top: 28px;
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								visibility: hidden;
+							.number-buy-wrap{
+								.number-list-container{
 
+									.number-list{
+										margin-top: 28px;
+										display: flex;
+										align-items: center;
+										justify-content: center;
 
-								.buy-number{
-									& + .buy-number{
-										margin-left: 12px;
-									}
-									display: flex;
-									align-items: center;
-									justify-content: center;
-									border-radius: 50%;
-									background-color: #FBB600;
-									width: 44px;
-									height: 44px;
+										.buy-number{
+											& + .buy-number{
+												margin-left: 12px;
+											}
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											border-radius: 50%;
+											background-color: #FBB600;
+											width: 44px;
+											height: 44px;
+											font-size: 20px;
+											font-weight: 600;
+											color: #FFFFff;
+										}
 
-									.txt{
-										font-size: 20px;
-										font-weight: 600;
-										color: #FFFFff;
-
-
-
+										.bg-yellow{
+											background-color: #ffd700;
+										}
+										.bg-blue{
+											background-color: #4169e1;
+										}
+										.bg-red{
+											background-color: #ff6347;
+										}
+										.bg-green{
+											background-color: #2e8b57;
+										}
 									}
 								}
 							}
+
+
+
+
 						}
 					}
 				}

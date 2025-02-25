@@ -527,31 +527,8 @@
 
 								<div class="number-list-container">
 
-									<div class="number-list">
-										<div class="buy-number">
-											<div class="txt">1</div>
-										</div>
-										<div class="buy-number">
-											<div class="txt">2</div>
-										</div>
-										<div class="buy-number">
-											<div class="txt">3</div>
-										</div>
-										<div class="buy-number">
-											<div class="txt">4</div>
-										</div>
-										<div class="buy-number">
-											<div class="txt">5</div>
-										</div>
-									</div>
-
-
 								</div>
-
-
 							</div>
-
-
 						</div>
 					</div>
 				</div>
@@ -562,64 +539,28 @@
 
 
 <script>
+    let numBtnList = document.querySelectorAll('.num-btn');
 
-    function chk() {
-        let numBtnList = document.querySelectorAll('.num-btn');
+    numBtnList.forEach(function (numBtn){
+        numBtn.querySelector('input[type=checkbox]').addEventListener('change',function(){
+            let game = this.closest('.chk-inner');
 
-        numBtnList.forEach(function (numBtn) {
-            numBtn.querySelector('input[type=checkbox]').addEventListener('change', function () {
-                let game = this.closest('.chk-inner');
+            let checked = game.querySelectorAll('input[type=checkbox]:checked');
 
-                let checked = game.querySelectorAll('input[type=checkbox]:checked');
+            if(checked.length > 5){
+                this.checked = false; //또는 null이 올 수 있다.
+                alert('5개 까지만 체크가능 합니다.')
 
-                if (checked.length > 5) {
-                    this.checked = false; //또는 null이 올 수 있다.
-                    alert('5개 까지만 선택할 수 있습니다.');
-                }
-
-
-            });
+            }
         });
 
-    }
+    });
 
-
-    // function buy() {
-    //     const buyNumberList = document.querySelector('.number-list');
-    //     const checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
-    //
-    //
-    //
-    //
-    //     buyNumberList.innerHTML = '';
-    //
-    //     const selectedNumbers = Array.from(checkedBoxes).map(checkedbox => checkedbox.value);
-    //
-    //     buyNumberList.textContent = selectedNumbers.join(', ');
-    //     console.log(selectedNumbers.join(', ') );
-    //
-    //
-    //
-    //
-    // }
 
     function buy() {
-
-        // const buyNumberList = document.querySelector('.number-list');
-        // const checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
-        // // 이전 내용을 지웁니다
-        // buyNumberList.innerHTML = '';
-        //
-        // // 체크된 각 번호마다 새로운 요소를 생성합니다
-        // Array.from(checkedBoxes).forEach(checkbox => {
-        //     const numberSpan = document.createElement('span');
-        //     numberSpan.textContent = checkbox.value;
-        //     numberSpan.classList.add('selected-number');
-        //     buyNumberList.appendChild(numberSpan);
-        // });
-
 		    // 현재 game
         const game = document.querySelector('.chk-box')
+
 
 		    // 현재 game에서 체크된 input 리스트 가져오기
         const selectedList = game.querySelectorAll('input[type=checkbox]:checked')
@@ -630,26 +571,46 @@
 		    // html string 삽입 위치
 		    const resultSection = document.querySelector('.number-list-container')
 
-        // string을 노드로 변환하여 삽입
+
+        // string을 노드로 변환하여 삽입  insertAdjacentHTML 메서드는 대상 요소를 기준으로 특정 위치에 Html 콘텐츠를 삽입 할 수 있음.
         resultSection.insertAdjacentHTML('beforeend', html);
+
+        //beforeend는 요소 내부, 마지막 자식 뒤에 삽입할 위치를 지정
 
     }
 
 
-    // <div class="number-list"></div>>
+    // <div class="number-list"></div>
 
     const numberMaker = (selectedList) => {
 
         const container = document.createElement('div');
         container.className = 'number-list';
 
-        console.log(container)
-
         let str = "";
 
 		    str += "<div class='number-list'>"
+
+		    //parseInt()는 문자열에서 숫자를 추출해서 실제 숫자 값으로 변환하는 것
         selectedList.forEach(selectedItem => {
-            str += `<div class="buy-number">${selectedItem.value}</div>`
+            const num = parseInt(selectedItem.value);
+            let bgColor = '';
+
+            if (num >= 1 && num <= 10){
+                bgColor = 'bg-yellow';
+            } else if(num >= 11 && num <= 20){
+                bgColor = 'bg-blue';
+            } else if(num >= 21 && num <= 30){
+                bgColor = 'bg-red';
+            }else{
+                bgColor = 'bg-green';
+            }
+
+
+
+            //문자열에 변수를 넣어야 함. 넣을 때는 ${}을 사용하지 않고 변수를 넣으면 문자열로 인식해서 변수명이 나옴.
+		        //변수 값을 사용하려면 ${}문법을 사용해 변수 값을 출력함.
+            str += `<div class="buy-number ${bgColor}">${selectedItem.value}</div>`
             // str += "<div class=\"buy-number\">" + selectedItem.value + "</div>"
         })
 
@@ -658,7 +619,6 @@
         console.log(str)
 
 		    return str;
-
 
     }
 
@@ -712,8 +672,11 @@
         //출력
         console.log('선택한 로또번호 : ' + lotto);
 
-        // document.write('이번 주 로또번호 : ' + lotto);
+        document.write('이번 주 로또번호 : ' + lotto);
+
+
     }
+
 
 
 </script>
