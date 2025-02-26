@@ -559,23 +559,33 @@
 
     function buy() {
 		    // 현재 game
-        const game = document.querySelector('.chk-box')
+        let games = document.querySelectorAll('.chk-box')
+        console.log("games")
+        console.log(games)
+
+		    games.forEach(function(game){
+            // 현재 game에서 체크된 input 리스트 가져오기
+            const selectedList = game.querySelectorAll('input[type=checkbox]:checked')
+            console.log("selectedList")
+            console.log(selectedList)
+
+            // input 리스트를 html string 만들기
+            const html = numberMaker(selectedList)
+
+            // html string 삽입 위치
+            const resultSection = document.querySelector('.number-list-container')
 
 
-		    // 현재 game에서 체크된 input 리스트 가져오기
-        const selectedList = game.querySelectorAll('input[type=checkbox]:checked')
+            // string을 노드로 변환하여 삽입  insertAdjacentHTML 메서드는 대상 요소를 기준으로 특정 위치에 Html 콘텐츠를 삽입 할 수 있음.
+            resultSection.insertAdjacentHTML('beforeend', html);
 
-		    // input 리스트를 html string 만들기
-        const html = numberMaker(selectedList)
+            //beforeend는 요소 내부, 마지막 자식 뒤에 삽입할 위치를 지정
 
-		    // html string 삽입 위치
-		    const resultSection = document.querySelector('.number-list-container')
+        })
 
 
-        // string을 노드로 변환하여 삽입  insertAdjacentHTML 메서드는 대상 요소를 기준으로 특정 위치에 Html 콘텐츠를 삽입 할 수 있음.
-        resultSection.insertAdjacentHTML('beforeend', html);
 
-        //beforeend는 요소 내부, 마지막 자식 뒤에 삽입할 위치를 지정
+
 
     }
 
