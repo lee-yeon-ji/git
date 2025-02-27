@@ -547,6 +547,8 @@
 
             let checked = game.querySelectorAll('input[type=checkbox]:checked');
 
+
+
             if(checked.length > 5){
                 this.checked = false; //또는 null이 올 수 있다.
                 alert('5개 까지만 체크가능 합니다.')
@@ -569,17 +571,21 @@
             console.log("selectedList")
             console.log(selectedList)
 
-            // input 리스트를 html string 만들기
-            const html = numberMaker(selectedList)
+            // 5개 이상 선택된 게임만 처리
+				    if(selectedList.length >= 5){
+                // input 리스트를 html string 만들기
+                const html = numberMaker(selectedList)
 
-            // html string 삽입 위치
-            const resultSection = document.querySelector('.number-list-container')
+                // html string 삽입 위치
+                const resultSection = document.querySelector('.number-list-container')
+
+                //beforeend는 요소 내부, 마지막 자식 뒤에 삽입할 위치를 지정
+                //   콘텐츠를 삽입 할 수 있음.
+                resultSection.insertAdjacentHTML('beforeend', html);
+				    }
 
 
-            // string을 노드로 변환하여 삽입  insertAdjacentHTML 메서드는 대상 요소를 기준으로 특정 위치에 Html 콘텐츠를 삽입 할 수 있음.
-            resultSection.insertAdjacentHTML('beforeend', html);
 
-            //beforeend는 요소 내부, 마지막 자식 뒤에 삽입할 위치를 지정
 
         })
 
@@ -632,10 +638,57 @@
 
     }
 
+    const getGameLength = () => {
+
+
+        let errorFlag = false;
+        console.log("errorFlag")
+        console.log(errorFlag)
+
+        document.querySelectorAll('.chk-box').forEach(box => {
+
+            const checked = box.querySelectorAll('input[type=checkbox]:checked').length
+
+
+		        //게임에서 하나라도 5개 이상 선택된 게임이 있으면 리스트에 출력
+		        if(checked >= 5){
+                errorFlag = true;
+		        }
+        })
+
+		    //유효한 게임이 없을 시 true 반환
+		    return !errorFlag;
+
+
+
+
+
+    }
+
+
+
 
     const lottoBuy = document.querySelector('.buy-btn');
     lottoBuy.addEventListener('click', function () {
+
+
+        if(getGameLength()){
+            alert("5개 이상 선택해야 합니다.")
+		        return false;
+        }
+
+
+        // 노드를 숫자로 알고 싶을 떄
+
+		    // for(let i = 0 ; i < [n] ; i ++){
+        //
+		    // }
+		    // 변수에 담은 배열을 숫자로 표현하고 싶을 때
+		    // 배열에 담긴걸 숫자로 알고 싶을때
+		    // 배열에 담긴 스트롱을 숫자로 알고 표현해야할 때
+
         buy();
+
     })
 
     function lottoMaker() {
