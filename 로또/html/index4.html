@@ -316,72 +316,66 @@
 <script>
    let numBtnList = document.querySelectorAll('.num-btn');
 
-   numBtnList.forEach(function (numBtn){
+   numBtnList.forEach(function(numBtn){
        numBtn.querySelector('input[type=checkbox]').addEventListener('change',function (){
-           const game = this.closest('.chk-inner');
+           let game = this.closest('.chk-inner');
+
            let checkedList = game.querySelectorAll('input[type=checkbox]:checked');
 
-
-           if (checkedList.length > 5){
-               this.checked= false;
-               alert('5개만 체크해 주세요');
+           if(checkedList.length > 5){
+               this.checked = false;
+               alert('5개 까지만 체크해 주세요.');
            }
-
        });
    });
 
+
    const buyBtn = document.querySelector('.buy-btn');
-
-   buyBtn.addEventListener('click',function (){
-
-
-       buy();
-
+   buyBtn.addEventListener('click',function(){
+      buy();
    });
 
 
-   function buy(){
+   function buy() {
        const buyBox = document.querySelector('.chk-box');
 
        let checkedList = buyBox.querySelectorAll('input[type=checkbox]:checked');
 
        const buyContainer = document.querySelector('.number-list-container');
 
-       if(checkedList.length !== 5){
+       if(checkedList.length < 5){
            alert('정확하게 5개 까지 체크해주세요.');
-
            return;
-           //5개가 아니면 함수 종료
        }
 
        let str = '';
        let bgColor;
 
-       str +='<div class="number-list">'
 
-       checkedList.forEach(function(chk){
+       str += '<div class="number-list">'
+
+
+       checkedList.forEach(function (chk){
            let chkValue = chk.value;
 
-           if (chkValue >= 1 && chkValue <= 5){
-               bgColor = "bg-yellow"
-           }else if (chkValue >= 6 && chkValue <= 10){
-               bgColor = "bg-blue"
-           }else if (chkValue >= 11 && chkValue <= 15){
-               bgColor = "bg-red"
+           if(chkValue >= 1 && chkValue <= 10){
+               bgColor = "bg-yellow";
+           }else if(chkValue >= 11 && chkValue <= 15){
+               bgColor = "bg-blue";
+           }else if(chkValue >= 16 && chkValue <= 20){
+               bgColor = "bg-red";
            }else{
-               bgColor = "bg-green"
+               bgColor = "bg-green";
            }
 
 
            str +=`<div class="buy-number ${bgColor}">${chkValue}</div>`
-       });
+       })
 
 
-
-       str +='</div>'
+       str += '</div>'
 
        buyContainer.innerHTML = str;
-
    }
 </script>
 
