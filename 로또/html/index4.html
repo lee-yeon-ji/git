@@ -564,20 +564,29 @@
 
    //구매 할 로또번호 함수
    function buy() {
-       const buyBoxes = document.querySelectorAll('.chk-box');
-       const buyContainer = document.querySelector('.number-list-container');
+       //반복문을 돌려 숫자버튼에 체크된 걸 각 게임들에서 찾기위해 리스트에 담음
+       const buyBoxList = document.querySelectorAll('.chk-box');
+       //구매번호가 나타나는 위치를 변수에 담음
+       const buyResult = document.querySelector('.number-list-container');
+
+       //구매번호 리스트에 체크된 숫자버튼들이 보여지는 곳을 빈배열로 만듬
        let selectedNumbers = [];
 
 
-       // 각 게임에서 선택된 로또 번호 가져오기
-       buyBoxes.forEach(function(buyBox) {
+       // 각 게임에서  선택된 로또 번호 가져오기
+       buyBoxList.forEach(function(buyBox) {
+           //각 게임에서 숫자버튼이 눌러져 있는걸 확인하기 위해 리스트로 담음
            let checkedList = buyBox.querySelectorAll('input[type=checkbox]:checked');
-           //정확하게 5개 로또번호를 선택했을 경우에 실행
+           //각 게임에 숫자버튼의 수가 정확하게 5개일 때를 확인하기 위해 if문을 사용해서 조건을 줌
            if (checkedList.length === 5) {
+               //5개의 숫자버튼의 값을 새배열로 생성하기 위해 빈배열로 만듬
                let gameNumbers = [];
+               //숫자버튼이 체크되어 있는 것들을 값으로 받아 gameNumbers에 넣어 새 배열을 생성
                checkedList.forEach(function (chk) {
                    gameNumbers.push(chk.value);
                });
+
+               //gameNumbers에 넣어 새 배열을 생성한 걸 구매번호 리스트에 출력하기 위해 selectedNumbers 빈 배열에 넣음
                selectedNumbers.push(gameNumbers);
            }
        });
@@ -612,7 +621,7 @@
        });
 
        // 구매번호 리스트 출력
-       buyContainer.innerHTML = str;
+       buyResult.innerHTML = str;
    }
 </script>
 
