@@ -83,12 +83,25 @@ $font : 'Pretendard';
 
 
 				.share-btn-box{
+					padding-left: 45px;
 					.share-btn{
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+						text-decoration: none;
+						width: 200px;
+						height: 40px;
+						background-color: #3060EA;
+						border-radius: 30px;
 						i.icon-share{
-
+							background: url("../img/ic_share.svg")no-repeat center/20px 20px;
+							width: 20px;
+							height: 20px;
+							display: inline-flex;
 						}
 
 						.txt-box{
+							padding-left: 10px;
 							font-size: 18px;
 							font-weight: 600;
 							color: #EBEFF7;
