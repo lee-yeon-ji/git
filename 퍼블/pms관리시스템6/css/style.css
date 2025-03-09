@@ -98,6 +98,11 @@
       color: #ffffff;
       padding: 13px 33px;
       border-top: 1px solid #37466F; }
+      .wrapper header .sub-box .sub-tit-box i.icon-sub-tit {
+        background: url("../img/ic_sub_tit.svg") no-repeat center/14px 14px;
+        width: 14px;
+        height: 14px;
+        display: inline-flex; }
   .wrapper .contents {
     margin: 0 auto;
     padding: 57px 0;

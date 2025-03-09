@@ -137,6 +137,14 @@ $font : 'Pretendard';
 				color: #ffffff;
 				padding: 13px 33px;
 				border-top: 1px solid #37466F;
+
+				i.icon-sub-tit{
+					background: url("../img/ic_sub_tit.svg")no-repeat center/14px 14px;
+					width: 14px;
+					height: 14px;
+					display: inline-flex;
+
+				}
 			}
 		}
 	}
