@@ -62,6 +62,10 @@
             font-size: 18px;
             font-weight: 600;
             color: #ffffff; }
+        .wrapper header .main-box .header-box .share-btn-box .share-btn .txt-box {
+          font-size: 18px;
+          font-weight: 600;
+          color: #EBEFF7; }
       .wrapper header .main-box .header-option-box + .header-option-box {
         position: relative;
         padding-left: 50px; }
