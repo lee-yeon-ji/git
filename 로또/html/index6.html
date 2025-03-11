@@ -537,102 +537,25 @@
 
 
 <script>
-		//로또번호 5개 선택 제한
+		//선택할 숫자 버튼들을 알기위해 리스트로 담음
    let numBtnList = document.querySelectorAll('.num-btn');
 
-   numBtnList.forEach(function(numBtn){
-       numBtn.querySelector('input[type=checkbox]').addEventListener('change',function (){
-           let game = this.closest('.chk-inner');
+
+   //
+  numBtnList.forEach(function (numBtn){
+      numBtn.querySelector('input[type=checkbox]').addEventListener('change',function(){
+          const game = this.closest('.chk-inner');
+
+		      let checkedList = game.querySelectorAll('input[type=checkbox]:checked');
 
 
-           let checkedList = game.querySelectorAll('input[type=checkbox]:checked');
+              if(checkedList.length > 5){
+                  this.checked= false;
+                  alert('5개만 체크')
+              }
+      });
+  });
 
-           if(checkedList.length > 5){
-               this.checked = false;
-               alert('5개 까지만 체크해 주세요.');
-           }
-       });
-   });
-
-
-   //구매버튼 클릭 이벤트 바인딩
-   const buyBtn = document.querySelector('.buy-btn');
-   buyBtn.addEventListener('click',function(){
-      buy();
-   });
-
-
-   //구매 할 로또번호 함수
-   function buy() {
-       //반복문을 돌려 숫자버튼에 체크된 걸 각 게임들에서 찾기위해 리스트에 담음
-       const buyBoxList = document.querySelectorAll('.chk-box');
-       //구매번호가 나타나는 위치를 변수에 담음
-       const buyResult = document.querySelector('.number-list-container');
-
-       //구매번호 리스트에 체크된 숫자버튼들이 보여지는 곳을 빈배열로 만듬
-       let selectedNumbers = [];
-
-
-       // 각 게임에서  선택된 로또 번호 가져오기
-       buyBoxList.forEach(function(buyBox) {
-           //각 게임에서 숫자버튼이 눌러져 있는걸 확인하기 위해 리스트로 담음
-           let checkedList = buyBox.querySelectorAll('input[type=checkbox]:checked');
-           //각 게임에 숫자버튼의 수가 정확하게 5개일 때를 확인하기 위해 if문을 사용해서 조건을 줌
-           if (checkedList.length === 5) {
-               //5개의 숫자버튼의 값을 새배열로 생성하기 위해 빈배열로 만듬
-               let gameNumbers = [];
-               //숫자버튼이 체크되어 있는 것들을 값으로 받아 gameNumbers에 넣어 새 배열을 생성
-               checkedList.forEach(function (chk) {
-                   gameNumbers.push(chk.value);
-               });
-
-               //gameNumbers에 넣어 새 배열을 생성한 걸 구매번호 리스트에 출력하기 위해 selectedNumbers 빈 배열에 넣음
-               selectedNumbers.push(gameNumbers);
-
-           }
-       });
-
-       //선택된 번호가 없을 때 경고 알림창 띄우기
-       if (selectedNumbers.length === 0) {
-           alert('A 또는 B 게임에서 정확히 5개의 번호를 선택해주세요.');
-           return;
-       }
-
-       // 구매번호 리스트 생성
-       let str = '';
-       selectedNumbers.forEach(function (gameNumbers) {
-
-           str += `<div class="number-list">`;
-
-           gameNumbers.forEach(function (number) {
-               let bgColor;
-               if (number >= 1 && number <= 10) {
-                   bgColor = "bg-yellow";
-               } else if (number >= 11 && number <= 20) {
-                   bgColor = "bg-blue";
-               } else if (number >= 21 && number <= 30) {
-                   bgColor = "bg-red";
-               } else {
-                   bgColor = "bg-green";
-               }
-
-               str += `<span class="buy-number ${bgColor}">${number}</span>`;
-           });
-           str += '</div>';
-       });
-
-       // 구매번호 리스트 출력
-       buyResult.innerHTML += str;
-
-       // 체크된 항목 초기화
-       buyBoxList.forEach(function(buyBox) {
-           let checkedList = buyBox.querySelectorAll('input[type=checkbox]:checked');
-           checkedList.forEach(function(chk) {
-               chk.checked = false;
-           });
-       });
-
-   }
 </script>
 
 </body>
