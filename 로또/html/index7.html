@@ -538,18 +538,107 @@
 
 <script>
 
-		//숫자번호 5개 갯수 체크 확인
+		// //숫자번호 5개 갯수 체크 확인
+    // const numBtnList = document.querySelectorAll('.num-btn');
+		//
+    // numBtnList.forEach(function (numBtn){
+    //     numBtn.querySelector('input[type=checkbox]').addEventListener('change', function (){
+    //         const gameInner = numBtn.closest('.chk-inner');
+		//
+    //         let checkedList = gameInner.querySelectorAll('input[type=checkbox]:checked');
+		//
+		//
+    //         if(checkedList.length > 5){
+    //             this.checked = false;
+    //             alert('5개만 체크')
+    //         }
+		//
+    //     });
+    // });
+		//
+		//
+    // //로또 구매버튼 클릭 시 클릭 한 번호 실행시키기
+    // const buyBtn = document.querySelector('.buy-btn');
+    // buyBtn.addEventListener('click',function(){
+    //     buy();
+    // });
+		//
+		//
+    // function buy(){
+		//
+    //     const gameList = document.querySelectorAll('.chk-box');
+		//
+    //     const buyResult = document.querySelector('.number-list-container');
+		//
+    //     let selected = [];
+		//
+		//
+    //     //하나의 게임 구조 완성시키기 (5개의 일치 조건과 배열에 번호가 담기도록 구조 설정)
+    //    gameList.forEach(function (game){
+    //        const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
+		//
+    //        if (checkedList.length === 5){
+    //            let numbers = [];
+		//
+		//
+    //            checkedList.forEach(function (chk){
+    //                numbers.push(chk.value)
+    //            });
+		//
+    //            selected.push(numbers);
+    //        }
+    //    });
+		//
+    //    //화면에 html 그리기
+    //    let str ='';
+    //    selected.forEach(function (number){
+    //        str +='<div class="number-list">'
+		//
+		//
+		//        number.forEach(function (num){
+    //            let bgColor;
+    //            if (num >= 1 && num <= 10) {
+    //                bgColor = "bg-yellow";
+    //            } else if (num >= 11 && num <= 20) {
+    //                bgColor = "bg-blue";
+    //            } else if (num >= 21 && num <= 30) {
+    //                bgColor = "bg-red";
+    //            } else {
+    //                bgColor = "bg-green";
+    //            }
+		//
+    //            str +=`<div class="buy-number ${bgColor}">${num}</div>`
+		//
+		//
+		//
+		//        })
+		//
+		//        str +='</div>'
+    //    })
+		//
+		//     buyResult.innerHTML += str;
+		//
+    // };
+		//
+		//
+		//
+		//
+		//
+		//
+		//
+		//
+		//
     const numBtnList = document.querySelectorAll('.num-btn');
 
     numBtnList.forEach(function (numBtn){
-        numBtn.querySelector('input[type=checkbox]').addEventListener('change', function (){
-            const gameInner = numBtn.closest('.chk-inner');
+        numBtn.querySelector('input[type=checkbox]').addEventListener('change',function(){
 
-            let checkedList = gameInner.querySelectorAll('input[type=checkbox]:checked');
+            const chkInner = this.closest('.chk-inner');
+            const checkedList = chkInner.querySelectorAll('input[type=checkbox]:checked');
 
-
-            if(checkedList.length > 5){
+            if (checkedList.length > 5){
                 this.checked = false;
+
                 alert('5개만 체크')
             }
 
@@ -557,64 +646,66 @@
     });
 
 
-    //로또 구매버튼 클릭 시 클릭 한 번호 실행시키기
     const buyBtn = document.querySelector('.buy-btn');
-    buyBtn.addEventListener('click',function(){
+    buyBtn.addEventListener('click', function (){
         buy();
-    });
+    })
 
 
-    function buy(){
-
+    function buy() {
         const gameList = document.querySelectorAll('.chk-box');
-
         const buyResult = document.querySelector('.number-list-container');
-
         let selected = [];
 
 
-        //하나의 게임 구조 완성시키기 (5개의 일치 조건과 배열에 번호가 담기도록 구조 설정)
-       gameList.forEach(function (game){
-           const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
+        gameList.forEach(function (game){
 
-           if (checkedList.length === 5){
-               let numbers = [];
+            const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
 
+            if (checkedList.length === 5){
+                let numbers = [];
 
-               checkedList.forEach(function (chk){
-                   numbers.push(chk.value)
-               });
+                checkedList.forEach(function (chk){
+                    numbers.push(chk.value);
+                })
 
-               selected.push(numbers);
-           }
-       });
+                selected.push(numbers);
 
-       //화면에 html 그리기
-       let str ='';
-       selected.forEach(function (number){
-           str +='<div class="number-list">'
+            }
 
 
-		       number.forEach(function (num){
-               let bgColor;
-               if (num >= 1 && num <= 10) {
-                   bgColor = "bg-yellow";
-               } else if (num >= 11 && num <= 20) {
-                   bgColor = "bg-blue";
-               } else if (num >= 21 && num <= 30) {
-                   bgColor = "bg-red";
-               } else {
-                   bgColor = "bg-green";
-               }
+        });
 
-               str +=`<div class="buy-number ${bgColor}">${num}</div>`
+
+        if(selected.length === 0){
+            alert('5개 번호 체크가 안되어 있음.')
+		        return;
+        }
 
 
 
-		       })
+        let str = '';
 
-		       str +='</div>'
-       })
+        selected.forEach(function (numbers){
+            str +='<div class="number-list">'
+
+		        numbers.forEach(function (number){
+                let bgColor;
+                if (number <= 7) {
+                    bgColor = "bg-yellow";
+                } else if (number <= 14) {
+                    bgColor = "bg-blue";
+                } else if (number <= 21) {
+                    bgColor = "bg-red";
+                } else {
+                    bgColor = "bg-green";
+                }
+
+                str +=`<span class="buy-number ${bgColor}">${number}</span>`
+		        });
+
+            str +='</div>'
+        });
 
 		    buyResult.innerHTML += str;
 
@@ -626,7 +717,12 @@
 
 
 
-    };
+
+
+          
+
+
+    }
 
 
 </script>
