@@ -200,6 +200,82 @@
               height: 16px;
               display: block;
               margin-top: 2px; }
+    .wrapper header .search-wrap {
+      background-color: #1B2333;
+      padding: 12px 29px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .wrapper header .search-wrap .item-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px; }
+        .wrapper header .search-wrap .item-box + .item-box {
+          padding-left: 35px; }
+        .wrapper header .search-wrap .item-box .txt-box {
+          font-size: 15px;
+          font-weight: 300;
+          color: #E5EBFF;
+          line-height: 36px;
+          letter-spacing: -0.02em;
+          margin-right: 12px; }
+        .wrapper header .search-wrap .item-box .url-txt {
+          padding-right: 5px;
+          font-size: 15px;
+          font-weight: 500;
+          color: #ffffff; }
+        .wrapper header .search-wrap .item-box .tbox label input {
+          border: 1px solid #374971;
+          background-color: #1E2431;
+          height: 36px;
+          width: 241px;
+          border-radius: 3px;
+          outline: none;
+          color: #ffffff;
+          padding: 6px 12px; }
+          .wrapper header .search-wrap .item-box .tbox label input::placeholder {
+            color: #FFFFff; }
+        .wrapper header .search-wrap .item-box .tbox.short label input {
+          width: 121px; }
+        .wrapper header .search-wrap .item-box .pbox label input {
+          border: 1px solid #374971;
+          background-color: #1E2431;
+          height: 36px;
+          width: 130px;
+          border-radius: 3px;
+          outline: none;
+          color: #ffffff;
+          padding: 6px 12px; }
+          .wrapper header .search-wrap .item-box .pbox label input::placeholder {
+            color: #FFFFff; }
+        .wrapper header .search-wrap .item-box .rbox label .chk-txt {
+          font-size: 15px;
+          font-weight: 500;
+          color: #FFFFFF;
+          letter-spacing: -0.025em; }
+    .wrapper header .save-btn-box {
+      padding-left: 36px; }
+      .wrapper header .save-btn-box .save-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background-color: #204F7A;
+        border-radius: 3px;
+        width: 90px;
+        height: 36px; }
+        .wrapper header .save-btn-box .save-btn i.icon-save {
+          background: url("../img/ic_save.svg") no-repeat center;
+          width: 16px;
+          height: 16px; }
+        .wrapper header .save-btn-box .save-btn .txt-box {
+          color: #FFFFFF;
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: -0.025em;
+          line-height: 16px;
+          padding-left: 10px; }
   .wrapper .contents {
     margin: 0 auto;
     padding: 57px 0;

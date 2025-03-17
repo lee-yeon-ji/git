@@ -237,9 +237,6 @@ $font : 'Pretendard';
 
 					}
 
-					.btn-prev{
-
-					}
 				}
 
 				.sub-tit-box{
@@ -290,6 +287,138 @@ $font : 'Pretendard';
 
 						}
 					}
+				}
+			}
+		}
+
+		.search-wrap{
+			background-color: #1B2333;
+			padding: 12px 29px 14px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.item-box{
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				height: 36px;
+
+				&+.item-box{
+					padding-left: 35px;
+				}
+
+				.txt-box{
+					font-size: 15px;
+					font-weight: 300;
+					color: #E5EBFF;
+					line-height: 36px;
+					letter-spacing: -0.02em;
+					margin-right: 12px;
+				}
+
+				.url-txt{
+					padding-right: 5px;
+					font-size: 15px;
+					font-weight: 500;
+					color: #ffffff;
+				}
+
+				.tbox{
+					label{
+						input {
+							border: 1px solid #374971;
+							background-color: #1E2431;
+							height: 36px;
+							width: 241px;
+							border-radius: 3px;
+							outline: none;
+							color: #ffffff;
+							padding: 6px 12px;
+
+							&::placeholder {
+								color: #FFFFff;
+							}
+
+						}
+
+					}
+
+
+					&.short{
+						label{
+							input{
+								width: 121px;
+							}
+						}
+					}
+				}
+
+				.pbox{
+					label{
+						input {
+							border: 1px solid #374971;
+							background-color: #1E2431;
+							height: 36px;
+							width: 130px;
+							border-radius: 3px;
+							outline: none;
+							color: #ffffff;
+							padding: 6px 12px;
+
+							&::placeholder {
+								color: #FFFFff;
+							}
+
+						}
+
+					}
+				}
+
+				.rbox{
+					label{
+						.chk-txt{
+							font-size: 15px;
+							font-weight: 500;
+							color: #FFFFFF;
+							letter-spacing: -0.025em;
+
+						}
+
+						input{
+
+						}
+					}
+				}
+			}
+		}
+
+
+		.save-btn-box{
+			padding-left: 36px;
+			.save-btn{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				background-color: #204F7A;
+				border-radius: 3px;
+				width: 90px;
+				height: 36px;
+				i.icon-save{
+					background: url("../img/ic_save.svg")no-repeat center;
+					width: 16px;
+					height: 16px;
+				}
+
+				.txt-box{
+					color: #FFFFFF;
+					font-size: 15px;
+					font-weight: 500;
+					letter-spacing: -0.025em;
+					line-height: 16px;
+					padding-left: 10px;
+
+
 				}
 			}
 		}
