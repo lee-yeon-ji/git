@@ -31,7 +31,7 @@
   min-height: 100dvh;
   display: flex;
   flex-flow: column;
-  background-color: #EBEFF7; }
+  background-color: #1B2333; }
   .wrapper header {
     background-color: #162955; }
     .wrapper header .main-box {
@@ -205,7 +205,8 @@
       padding: 12px 29px 14px;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      border-bottom: 1px solid #59606B; }
       .wrapper header .search-wrap .item-box {
         display: inline-flex;
         align-items: center;
@@ -249,6 +250,8 @@
           padding: 6px 12px; }
           .wrapper header .search-wrap .item-box .pbox input::placeholder {
             color: #FFFFff; }
+        .wrapper header .search-wrap .item-box .rbox + .rbox {
+          padding-left: 20px; }
         .wrapper header .search-wrap .item-box .rbox label {
           display: flex;
           align-items: center;
@@ -263,7 +266,9 @@
           .wrapper header .search-wrap .item-box .rbox label .chk-txt {
             font-size: 15px;
             font-weight: 500;
-            color: #ffffff; }
+            color: #ffffff;
+            line-height: 24px;
+            margin-right: 8px; }
           .wrapper header .search-wrap .item-box .rbox label i {
             background: url("../img/ic_radio_off.svg") no-repeat center/cover;
             width: 24px;
@@ -292,207 +297,27 @@
           line-height: 16px;
           padding-left: 10px; }
   .wrapper .contents {
-    margin: 0 auto;
-    padding: 57px 0;
-    background-color: #EBEFF7; }
+    margin: 0 auto; }
     .wrapper .contents .inner {
-      width: 1024px;
-      background-color: #fff;
-      padding: 41px 49px 63px; }
-      .wrapper .contents .inner .agree-wrap {
-        border-bottom: 1px solid #D0D0D0; }
-        .wrapper .contents .inner .agree-wrap .checkbox-wrap {
-          padding-top: 27px; }
-          .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group {
-            padding: 20px 0; }
-            .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group + .checkbox-group {
-              border-top: 1px solid #DEDEDE; }
-            .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group .checkbox-item {
-              display: flex;
-              align-items: center;
-              justify-content: space-between; }
-            .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group label {
-              cursor: pointer;
-              display: inline-flex;
-              align-items: center; }
-              .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group label input[type="checkbox"] {
-                opacity: 0;
-                position: absolute;
-                width: 0;
-                height: 0;
-                font-size: 20px;
-                font-weight: 400;
-                color: #222222; }
-              .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group label .checkmark {
-                position: relative;
-                background: url("../img/ic_agree_off.svg") no-repeat center/cover;
-                width: 22px;
-                height: 22px;
-                display: inline-flex; }
-              .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group label .txt-box {
-                padding-left: 10px; }
-              .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group label input[type="checkbox"]:checked + .checkmark {
-                background: url("../img/ic_agree_on.svg") no-repeat center/cover; }
-            .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group .checkbox-group {
-              margin-bottom: 15px;
-              display: flex;
-              align-items: center; }
-            .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group button {
-              padding: 5px 10px;
-              font-size: 0.9em;
-              background-color: #007bff;
-              color: white;
-              border: none;
-              border-radius: 3px;
-              cursor: pointer; }
-            .wrapper .contents .inner .agree-wrap .checkbox-wrap .checkbox-group button:hover {
-              background-color: #0056b3; }
-          .wrapper .contents .inner .agree-wrap .checkbox-wrap .terms {
-            display: none;
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-top: 10px;
-            overflow-y: auto;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            font-size: 0.9em;
-            height: 280px; }
-            .wrapper .contents .inner .agree-wrap .checkbox-wrap .terms .txt-box {
-              color: #222222; }
-              .wrapper .contents .inner .agree-wrap .checkbox-wrap .terms .txt-box .subject-box {
-                font-size: 28px;
-                font-weight: 700; }
-              .wrapper .contents .inner .agree-wrap .checkbox-wrap .terms .txt-box .sub-box {
-                padding-top: 15px;
-                font-size: 18px;
-                font-weight: 600; }
-              .wrapper .contents .inner .agree-wrap .checkbox-wrap .terms .txt-box .desc-box {
-                padding-top: 15px;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 30px; }
-      .wrapper .contents .inner .join-info-wrap {
-        padding-top: 38px;
-        border-bottom: 1px solid #D0D0D0; }
-        .wrapper .contents .inner .join-info-wrap .inner {
-          width: 472px;
-          margin: 0 auto; }
-        .wrapper .contents .inner .join-info-wrap .form-box {
-          padding: 30px 0;
-          position: relative; }
-          .wrapper .contents .inner .join-info-wrap .form-box .form-txt-box {
-            display: flex;
-            align-items: center;
-            padding-bottom: 7px; }
-            .wrapper .contents .inner .join-info-wrap .form-box .form-txt-box .form-txt {
-              font-size: 16px;
-              font-weight: 400;
-              color: #222222;
-              line-height: -0.3px; }
-            .wrapper .contents .inner .join-info-wrap .form-box .form-txt-box .desc-box {
-              padding-left: 10px;
-              font-size: 13px;
-              font-weight: 400;
-              color: #0085FF;
-              line-height: -0.025em; }
-          .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .tbox-con {
-            display: flex;
-            align-items: center; }
-            .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .tbox-con .tbox {
-              width: 100%;
-              padding-right: 8px; }
-              .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .tbox-con .tbox input {
-                width: 100%;
-                height: 42px;
-                border-radius: 3px;
-                background-color: #fff;
-                padding: 0 5px;
-                border: 1px solid #C6C6C6; }
-                .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .tbox-con .tbox input:focus {
-                  outline: none; }
-            .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .tbox-con .dot-box {
-              padding-right: 8px; }
-            .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .tbox-con .ebox select {
-              height: 42px;
-              width: 140px;
-              border-radius: 3px;
-              background-color: #fff;
-              padding: 0 5px;
-              border: 1px solid #C6C6C6; }
-              .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .tbox-con .ebox select:focus {
-                outline: none; }
-          .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .overlap-btn-box {
-            width: 100px; }
-            .wrapper .contents .inner .join-info-wrap .form-box .form-con-box .overlap-btn-box .overlap-btn {
-              border: 1px solid #D8D8D8;
-              background-color: #F3F3F3;
-              border-radius: 3px;
-              font-size: 16px;
-              font-weight: 400;
-              color: #222222;
-              line-height: -0.2px;
-              text-decoration: none;
-              height: 42px;
-              display: flex;
-              align-items: center;
-              justify-content: center; }
-          .wrapper .contents .inner .join-info-wrap .form-box .send-btn-box {
-            padding-top: 10px;
-            width: 100%; }
-            .wrapper .contents .inner .join-info-wrap .form-box .send-btn-box .send-btn {
-              border: 1px solid #D8D8D8;
-              background-color: #F3F3F3;
-              border-radius: 3px;
-              font-size: 16px;
-              font-weight: 400;
-              color: #222222;
-              line-height: -0.2px;
-              text-decoration: none;
-              height: 42px;
-              display: flex;
-              align-items: center;
-              justify-content: center; }
-          .wrapper .contents .inner .join-info-wrap .form-box .msg-box {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            display: flex;
-            align-items: center; }
-            .wrapper .contents .inner .join-info-wrap .form-box .msg-box .icon {
-              background: url("../img/ic_warning.svg") no-repeat center/cover;
-              width: 22px;
-              height: 22px; }
-            .wrapper .contents .inner .join-info-wrap .form-box .msg-box .txt-box {
-              font-size: 15px;
-              font-weight: 400;
-              color: #FF004D;
-              line-height: -0.025em; }
-      .wrapper .contents .inner .join-option-box {
+      padding-top: 195px; }
+      .wrapper .contents .inner .choice-wrap .choice-btn {
+        text-decoration: none;
+        background-color: #2193E5;
+        width: 298px;
+        height: 300px;
+        border-radius: 12px;
         display: flex;
+        flex-flow: column;
         align-items: center;
         justify-content: center; }
-        .wrapper .contents .inner .join-option-box .option-btn-box {
-          padding-top: 35px; }
-          .wrapper .contents .inner .join-option-box .option-btn-box + .option-btn-box {
-            padding-left: 26px; }
-          .wrapper .contents .inner .join-option-box .option-btn-box .option-btn {
-            background-color: #3060EA;
-            height: 54px;
-            width: 212px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: #FFFFff;
-            font-size: 20px;
-            font-weight: 500; }
-            .wrapper .contents .inner .join-option-box .option-btn-box .option-btn.c-blue {
-              background-color: #3E4E75; }
-
-article.subject-txt-box {
-  font-size: 28px;
-  font-weight: 800;
-  color: #1E2431; }
+        .wrapper .contents .inner .choice-wrap .choice-btn .img-box {
+          background: url("../img/img_choice_panorama.svg") no-repeat center/cover;
+          width: 120px;
+          height: 120px; }
+        .wrapper .contents .inner .choice-wrap .choice-btn .txt-box {
+          font-size: 28px;
+          font-weight: 500;
+          letter-spacing: -0.025em;
+          color: #FFFFff; }
 
 /*# sourceMappingURL=style.css.map */

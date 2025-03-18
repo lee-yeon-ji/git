@@ -41,39 +41,46 @@ $font : 'Pretendard';
 	min-height: 100dvh;
 	display: flex;
 	flex-flow: column;
-	background-color: #EBEFF7;
+	background-color: #1B2333;
 
-	header{
+	header {
 		background-color: #162955;
-		.main-box{
+
+		.main-box {
 			padding: 13px 33px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			.header-box{
+
+			.header-box {
 				display: flex;
 				align-items: center;
-				.logo-box{
-					.logo{
+
+				.logo-box {
+					.logo {
 						width: 213px;
 						height: 44px;
 						display: block;
-						img{
+
+						img {
 							width: 100%;
 						}
 					}
 				}
-				.header-tit-box{
+
+				.header-tit-box {
 					padding-left: 70px;
 					display: flex;
 					align-items: center;
-					.icon{
-						background: url("../img/ic_panorama.svg")no-repeat center/cover;
+
+					.icon {
+						background: url("../img/ic_panorama.svg") no-repeat center/cover;
 						width: 19px;
 						height: 18px;
 						display: block;
 					}
-					.txt-box{
+
+					.txt-box {
 						padding-left: 10px;
 						font-size: 18px;
 						font-weight: 600;
@@ -82,9 +89,10 @@ $font : 'Pretendard';
 				}
 
 
-				.share-btn-box{
+				.share-btn-box {
 					padding-left: 45px;
-					.share-btn{
+
+					.share-btn {
 						display: inline-flex;
 						align-items: center;
 						justify-content: center;
@@ -93,14 +101,15 @@ $font : 'Pretendard';
 						height: 40px;
 						background-color: #3060EA;
 						border-radius: 30px;
-						i.icon-share{
-							background: url("../img/ic_share.svg")no-repeat center/20px 20px;
+
+						i.icon-share {
+							background: url("../img/ic_share.svg") no-repeat center/20px 20px;
 							width: 20px;
 							height: 20px;
 							display: inline-flex;
 						}
 
-						.txt-box{
+						.txt-box {
 							padding-left: 10px;
 							font-size: 18px;
 							font-weight: 600;
@@ -111,22 +120,23 @@ $font : 'Pretendard';
 				}
 
 
-				.setting-btn-box{
+				.setting-btn-box {
 					padding-left: 45px;
-					.setting-btn{
+
+					.setting-btn {
 						display: inline-flex;
 						align-items: center;
 						justify-content: center;
 						text-decoration: none;
 
-						i.icon-setting{
-							background: url("../img/ic_setting.svg")no-repeat center/19px 19px;
+						i.icon-setting {
+							background: url("../img/ic_setting.svg") no-repeat center/19px 19px;
 							width: 19px;
 							height: 19px;
 							display: inline-flex;
 						}
 
-						.txt-box{
+						.txt-box {
 							padding-left: 10px;
 							font-size: 18px;
 							font-weight: 600;
@@ -137,13 +147,13 @@ $font : 'Pretendard';
 				}
 			}
 
-			.header-option-box{
+			.header-option-box {
 
-				&+ .header-option-box{
+				& + .header-option-box {
 					position: relative;
 					padding-left: 50px;
 
-					&:after{
+					&:after {
 						content: '';
 						width: 1px;
 						height: 20px;
@@ -154,36 +164,36 @@ $font : 'Pretendard';
 					}
 				}
 
-				.option-box{
+				.option-box {
 					text-decoration: none;
 					display: flex;
 					align-items: center;
 					height: 24px;
 
-					.txt-box{
+					.txt-box {
 						font-size: 14px;
 						font-weight: 400;
 						color: #FFFFff;
 						padding-right: 10px;
 					}
 
-					.icon{
-						&.type-user{
-							background: url("../img/ic_user.svg")no-repeat center/cover;
+					.icon {
+						&.type-user {
+							background: url("../img/ic_user.svg") no-repeat center/cover;
 							width: 24px;
 							height: 24px;
 							display: block;
 						}
 
-						&.type-lang{
-							background: url("../img/ic_logo_arrow.svg")no-repeat center/cover;
+						&.type-lang {
+							background: url("../img/ic_logo_arrow.svg") no-repeat center/cover;
 							width: 8px;
 							height: 4px;
 							display: block;
 						}
 
-						&.type-login{
-							background: url("../img/ic_login.svg")no-repeat center/cover;
+						&.type-login {
+							background: url("../img/ic_login.svg") no-repeat center/cover;
 							width: 24px;
 							height: 24px;
 							display: block;
@@ -193,24 +203,24 @@ $font : 'Pretendard';
 			}
 		}
 
-		.sub-box{
+		.sub-box {
 			border-top: 1px solid #37466F;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			padding: 13px 33px;
 
-			.con-box{
+			.con-box {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 
-				.btn-wrap{
+				.btn-wrap {
 					display: inline-flex;
 					align-items: center;
 					justify-content: center;
 
-					.btn-nav{
+					.btn-nav {
 						background-color: #6393EF;
 						border-radius: 3px;
 						width: 42px;
@@ -220,17 +230,19 @@ $font : 'Pretendard';
 						justify-content: center;
 
 
-						&+ .btn-nav{
+						& + .btn-nav {
 							margin-left: 10px;
 
 						}
-						i.icon-forward{
-							background:  url("../img/ic_forward.svg")no-repeat center/cover;
+
+						i.icon-forward {
+							background: url("../img/ic_forward.svg") no-repeat center/cover;
 							width: 18px;
 							height: 9px;
 						}
-						i.icon-prev{
-							background: #6393EF url("../img/ic_prev.svg")no-repeat center/cover;
+
+						i.icon-prev {
+							background: #6393EF url("../img/ic_prev.svg") no-repeat center/cover;
 							width: 16px;
 							height: 16px;
 						}
@@ -239,14 +251,14 @@ $font : 'Pretendard';
 
 				}
 
-				.sub-tit-box{
+				.sub-tit-box {
 					font-size: 18px;
 					font-weight: 600;
 					color: #ffffff;
 
 
-					i.icon-sub-tit{
-						background: url("../img/ic_sub_tit.svg")no-repeat center/14px 14px;
+					i.icon-sub-tit {
+						background: url("../img/ic_sub_tit.svg") no-repeat center/14px 14px;
 						width: 14px;
 						height: 14px;
 						display: inline-flex;
@@ -255,31 +267,32 @@ $font : 'Pretendard';
 				}
 
 
-				.nav-wrap{
+				.nav-wrap {
 					margin-left: 10px;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					.txt-box{
+
+					.txt-box {
 						font-size: 15px;
 						font-weight: 300;
 						color: #D2D2D2;
 						letter-spacing: -0.025em;
 						height: 20px;
 
-						&.type-bold{
+						&.type-bold {
 							color: #FFFFFF;
 							font-weight: 600;
 						}
 
 					}
 
-					.next-dot{
+					.next-dot {
 						height: 20px;
 						padding: 0 8px;
 
-						i.icon-next-dot{
-							background: url("../img/ic_sub_tit.svg")no-repeat center/cover;
+						i.icon-next-dot {
+							background: url("../img/ic_sub_tit.svg") no-repeat center/cover;
 							width: 16px;
 							height: 16px;
 							display: block;
@@ -291,23 +304,25 @@ $font : 'Pretendard';
 			}
 		}
 
-		.search-wrap{
+		.search-wrap {
 			background-color: #1B2333;
 			padding: 12px 29px 14px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			.item-box{
+			border-bottom: 1px solid #59606B;
+
+			.item-box {
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
 				height: 36px;
 
-				&+.item-box{
+				& + .item-box {
 					padding-left: 35px;
 				}
 
-				.txt-box{
+				.txt-box {
 					font-size: 15px;
 					font-weight: 300;
 					color: #E5EBFF;
@@ -316,14 +331,14 @@ $font : 'Pretendard';
 					margin-right: 12px;
 				}
 
-				.url-txt{
+				.url-txt {
 					padding-right: 5px;
 					font-size: 15px;
 					font-weight: 500;
 					color: #ffffff;
 				}
 
-				.tbox{
+				.tbox {
 					input {
 						border: 1px solid #374971;
 						background-color: #1E2431;
@@ -341,14 +356,14 @@ $font : 'Pretendard';
 					}
 
 
-					&.short{
-						input{
+					&.short {
+						input {
 							width: 121px;
 						}
 					}
 				}
 
-				.pbox{
+				.pbox {
 					input {
 						border: 1px solid #374971;
 						background-color: #1E2431;
@@ -366,75 +381,82 @@ $font : 'Pretendard';
 					}
 				}
 
-			.rbox{
+				.rbox {
 
-				label{
-					display: flex;
-					align-items: center;
-					justify-content: center;
+					& + .rbox {
+						padding-left: 20px;
+					}
 
-					input{
+					label {
+						display: flex;
+						align-items: center;
+						justify-content: center;
 
-						&[type=radio]{
+						input {
 
-							// input[type=radio]
+							&[type=radio] {
 
-							&:checked{
+								// input[type=radio]
 
-								// input[type=radio]:checked
+								&:checked {
 
+									// input[type=radio]:checked
+
+									& ~ i {
+
+										// input[type=radio]:checked ~ i{
+
+
+									}
+
+								}
+							}
+						}
+
+
+						input[type=radio] {
+							position: absolute;
+							left: -9999px;
+
+							&:checked {
 								& ~ i {
+									background: url("../img/ic_radio_on.svg") no-repeat center/cover;
+								}
 
-									// input[type=radio]:checked ~ i{
-
-
+								& ~ .chk-txt {
+									color: red;
 								}
 
 							}
-						}
-					}
-
-
-					input[type=radio]{
-						position: absolute;
-						left: -9999px;
-
-						&:checked {
-							&~i{
-								background: url("../img/ic_radio_on.svg")no-repeat center/cover;
-							}
-
-							& ~ .chk-txt{
-								color: red;
-							}
 
 						}
 
-					}
+						.chk-txt {
+							font-size: 15px;
+							font-weight: 500;
+							color: #ffffff;
+							line-height: 24px;
+							margin-right: 8px;
 
-					.chk-txt{
-						font-size: 15px;
-						font-weight: 500;
-						color: #ffffff;
+						}
 
-					}
+						i {
+							background: url("../img/ic_radio_off.svg") no-repeat center/cover;
+							width: 24px;
+							height: 24px;
+							display: block;
 
-					i{
-						background: url("../img/ic_radio_off.svg")no-repeat center/cover;
-						width: 24px;
-						height: 24px;
-						display: block;
-
+						}
 					}
 				}
-			}
 			}
 		}
 
 
-		.save-btn-box{
+		.save-btn-box {
 			padding-left: 36px;
-			.save-btn{
+
+			.save-btn {
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -443,13 +465,14 @@ $font : 'Pretendard';
 				border-radius: 3px;
 				width: 90px;
 				height: 36px;
-				i.icon-save{
-					background: url("../img/ic_save.svg")no-repeat center;
+
+				i.icon-save {
+					background: url("../img/ic_save.svg") no-repeat center;
 					width: 16px;
 					height: 16px;
 				}
 
-				.txt-box{
+				.txt-box {
 					color: #FFFFFF;
 					font-size: 15px;
 					font-weight: 500;
@@ -462,309 +485,44 @@ $font : 'Pretendard';
 			}
 		}
 	}
-	.contents{
+
+	.contents {
 		margin: 0 auto;
-		padding: 57px 0;
-		background-color: #EBEFF7;
-		.inner{
-			width: 1024px;
 
-			background-color: #fff;
-			padding: 41px 49px 63px;
+		.inner {
+			padding-top: 195px;
 
-			.agree-wrap{
-				border-bottom: 1px solid #D0D0D0;
-				.checkbox-wrap{
-					padding-top: 27px;
+			.choice-wrap{
 
-					.checkbox-group{
-						padding: 20px 0;
-
-						& + .checkbox-group{
-							border-top:  1px solid #DEDEDE;
-						}
-
-						.checkbox-item{
-							display: flex;
-							align-items: center;
-							justify-content: space-between;
-						}
-
-						label{
-							cursor: pointer;
-							display: inline-flex;
-							align-items: center;
-
-							input[type="checkbox"] {
-								opacity: 0;
-								position: absolute;
-								width: 0;
-								height: 0;
-								font-size: 20px;
-								font-weight: 400;
-								color: #222222;
-							}
-
-							.checkmark{
-								position: relative;
-								background: url("../img/ic_agree_off.svg")no-repeat center/cover;
-								width: 22px;
-								height: 22px;
-								display: inline-flex;
-
-							}
-
-							.txt-box{
-								padding-left: 10px;
-							}
-							//상태에 따라 checkmark의 배경 이미지를 변경
-							input[type="checkbox"]:checked + .checkmark {
-								background: url("../img/ic_agree_on.svg") no-repeat center / cover;
-							}
-						}
-
-						.checkbox-group {
-							margin-bottom: 15px;
-							display: flex;
-							align-items: center;
-						}
+				.choice-btn{
+					text-decoration: none;
+					background-color: #2193E5;
+					width: 298px;
+					height: 300px;
+					border-radius: 12px;
+					display: flex;
+					flex-flow: column;
+					align-items: center;
+					justify-content: center;
 
 
 
-
-						button {
-							padding: 5px 10px;
-							font-size: 0.9em;
-							background-color: #007bff;
-							color: white;
-							border: none;
-							border-radius: 3px;
-							cursor: pointer;
-						}
-
-						button:hover {
-							background-color: #0056b3;
-						}
-					}
-					.terms {
-						display: none;
-						border: 1px solid #ccc;
-						padding: 15px;
-						margin-top: 10px;
-						overflow-y: auto;
-						background-color: #f9f9f9;
-						border-radius: 5px;
-						font-size: 0.9em;
-						height: 280px;
-
-
-
-
-
-						.txt-box{
-							color: #222222;
-							.subject-box{
-								font-size: 28px;
-								font-weight: 700;
-							}
-
-							.sub-box{
-								padding-top: 15px;
-								font-size: 18px;
-								font-weight: 600;
-
-							}
-
-							.desc-box{
-								padding-top: 15px;
-								font-size: 16px;
-								font-weight: 400;
-								line-height: 30px;
-
-							}
-						}
+					.img-box{
+						background: url("../img/img_choice_panorama.svg")no-repeat center/cover;
+						width: 120px;
+						height: 120px;
 					}
 
-				}
-			}
-
-			.join-info-wrap{
-				padding-top: 38px;
-
-				border-bottom: 1px solid #D0D0D0;
-
-				.inner{
-					width: 472px;
-					margin: 0 auto;
-				}
-
-				.form-box{
-					padding : 30px 0;
-					position: relative;
-
-					.form-txt-box{
-						display: flex;
-						align-items: center;
-						padding-bottom: 7px;
-						.form-txt{
-							font-size: 16px;
-							font-weight: 400;
-							color: #222222;
-							line-height: -0.3px;
-
-						}
-						.desc-box{
-							padding-left: 10px;
-							font-size: 13px;
-							font-weight: 400;
-							color: #0085FF;
-							line-height: -0.025em;
-						}
-					}
-
-					.form-con-box{
-
-						.tbox-con{
-							display: flex;
-							align-items: center;
-
-							.tbox{
-								width: 100%;
-								padding-right: 8px;
-								input{
-									width: 100%;
-									height: 42px;
-									border-radius: 3px;
-									background-color: #fff;
-									padding: 0 5px;
-									border: 1px solid #C6C6C6;
-
-									&:focus{
-										outline: none;
-									}
-								}
-							}
-
-
-							.dot-box{
-								padding-right: 8px;
-							}
-
-							.ebox{
-
-								select{
-									height: 42px;
-									width: 140px;
-									border-radius: 3px;
-									background-color: #fff;
-									padding: 0 5px;
-									border: 1px solid #C6C6C6;
-									&:focus{
-										outline: none;
-									}
-								}
-							}
-						}
-
-						.overlap-btn-box{
-							width: 100px;
-							.overlap-btn{
-								border: 1px solid #D8D8D8;
-								background-color: #F3F3F3;
-								border-radius: 3px;
-								font-size: 16px;
-								font-weight: 400;
-								color: #222222;
-								line-height: -0.2px;
-								text-decoration: none;
-								height: 42px;
-								display: flex;
-								align-items: center;
-								justify-content: center;
-							}
-						}
-					}
-
-					.send-btn-box{
-						padding-top: 10px;
-						width: 100%;
-						.send-btn{
-							border: 1px solid #D8D8D8;
-							background-color: #F3F3F3;
-							border-radius: 3px;
-							font-size: 16px;
-							font-weight: 400;
-							color: #222222;
-							line-height: -0.2px;
-							text-decoration: none;
-							height: 42px;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-						}
-					}
-
-					.msg-box{
-						position: absolute;
-						left: 0;
-						bottom: 0;
-						display: flex;
-						align-items: center;
-
-						.icon{
-							background: url("../img/ic_warning.svg")no-repeat center/cover;
-							width: 22px;
-							height: 22px;
-						}
-
-						.txt-box{
-							font-size: 15px;
-							font-weight: 400;
-							color: #FF004D;
-							line-height: -0.025em;
-						}
-					}
-				}
-			}
-
-			.join-option-box{
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				.option-btn-box{
-					padding-top: 35px;
-
-					& + .option-btn-box{
-						padding-left: 26px;
-
-					}
-					.option-btn{
-						background-color: #3060EA;
-						height: 54px;
-						width: 212px;
-						border-radius: 5px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						text-decoration: none;
-						color: #FFFFff;
-						font-size: 20px;
+					.txt-box{
+						font-size: 28px;
 						font-weight: 500;
+						letter-spacing: -0.025em;
+						color: #FFFFff;
 
-
-						&.c-blue{
-							background-color: #3E4E75;
-
-						}
 					}
 				}
 			}
+
 		}
 	}
-}
-
-article.subject-txt-box {
-	font-size: 28px;
-	font-weight: 800;
-	color: #1E2431;
 }
