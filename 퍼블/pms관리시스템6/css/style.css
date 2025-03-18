@@ -225,7 +225,7 @@
           font-size: 15px;
           font-weight: 500;
           color: #ffffff; }
-        .wrapper header .search-wrap .item-box .tbox label input {
+        .wrapper header .search-wrap .item-box .tbox input {
           border: 1px solid #374971;
           background-color: #1E2431;
           height: 36px;
@@ -234,11 +234,11 @@
           outline: none;
           color: #ffffff;
           padding: 6px 12px; }
-          .wrapper header .search-wrap .item-box .tbox label input::placeholder {
+          .wrapper header .search-wrap .item-box .tbox input::placeholder {
             color: #FFFFff; }
-        .wrapper header .search-wrap .item-box .tbox.short label input {
+        .wrapper header .search-wrap .item-box .tbox.short input {
           width: 121px; }
-        .wrapper header .search-wrap .item-box .pbox label input {
+        .wrapper header .search-wrap .item-box .pbox input {
           border: 1px solid #374971;
           background-color: #1E2431;
           height: 36px;
@@ -247,13 +247,28 @@
           outline: none;
           color: #ffffff;
           padding: 6px 12px; }
-          .wrapper header .search-wrap .item-box .pbox label input::placeholder {
+          .wrapper header .search-wrap .item-box .pbox input::placeholder {
             color: #FFFFff; }
-        .wrapper header .search-wrap .item-box .rbox label .chk-txt {
-          font-size: 15px;
-          font-weight: 500;
-          color: #FFFFFF;
-          letter-spacing: -0.025em; }
+        .wrapper header .search-wrap .item-box .rbox label {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .wrapper header .search-wrap .item-box .rbox label input[type=radio] {
+            position: absolute;
+            left: -9999px; }
+            .wrapper header .search-wrap .item-box .rbox label input[type=radio]:checked ~ i {
+              background: url("../img/ic_radio_on.svg") no-repeat center/cover; }
+            .wrapper header .search-wrap .item-box .rbox label input[type=radio]:checked ~ .chk-txt {
+              color: red; }
+          .wrapper header .search-wrap .item-box .rbox label .chk-txt {
+            font-size: 15px;
+            font-weight: 500;
+            color: #ffffff; }
+          .wrapper header .search-wrap .item-box .rbox label i {
+            background: url("../img/ic_radio_off.svg") no-repeat center/cover;
+            width: 24px;
+            height: 24px;
+            display: block; }
     .wrapper header .save-btn-box {
       padding-left: 36px; }
       .wrapper header .save-btn-box .save-btn {
