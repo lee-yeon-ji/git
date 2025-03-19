@@ -538,93 +538,84 @@
 
 <script>
 
-    const numBtnList = document.querySelectorAll('.num-btn');
+ const numbtnList = document.querySelectorAll('.num-btn');
 
-    numBtnList.forEach(function (numBtn) {
-        numBtn.querySelector('input[type=checkbox]').addEventListener('change', function () {
+ numbtnList.forEach(function (numbtn){
+     numbtn.querySelector('input[type=checkbox]').addEventListener('change',function (){
+         const chkInner = numbtn.closest('.chk-inner');
+         const checkedList = chkInner.querySelectorAll('input[type=checkbox]:checked');
 
-            const chkInner = numBtn.closest('.chk-inner');
-            const checkedList = chkInner.querySelectorAll('input[type=checkbox]:checked');
-
-
-            if (checkedList.length > 5) {
-                this.checked = false;
-                alert('5개 체크')
-            }
-
-        });
-    });
-
-
-  const buyBtn = document.querySelector('.buy-btn');
-  buyBtn.addEventListener('click', function () {
-      buy();
-  })
-
-  function buy() {
-
-      const gameList = document.querySelectorAll('.chk-box');
-      const buyResult = document.querySelector('.number-list-container');
-
-      let selected = [];
-
-
-      gameList.forEach(function (game) {
-          const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
-
-          if (checkedList.length === 5) {
-              let numbers = [];
-
-              checkedList.forEach(function (chk) {
-                  numbers.push(chk.value)
-              });
-
-              selected.push(numbers);
-          }
-      });
+         if (checkedList.length > 5){
+             this.checked = false;
+             alert('5개만 클릭')
+         };
+     });
+ });
 
 
 
-      if (selected.length === 0){
-          alert('정확하게 5개 체크')
-		      return;
-      };
+ const buyBtn = document.querySelector('.buy-btn');
+ buyBtn.addEventListener('click',function (){
+     buy();
+ });
+
+ function buy(){
+
+     const gameList = document.querySelectorAll('.chk-box');
+     const buyResult = document.querySelector('.number-list-container');
+
+     let selector = [];
+
+     gameList.forEach(function (game){
+         const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
 
 
-      let str ='';
+         if (checkedList.length === 5){
+             let numbers = [];
+
+             checkedList.forEach(function (chk){
+
+                 numbers.push(chk.value);
+             })
+
+		         selector.push(numbers);
+         }
 
 
-      selected.forEach(function (numbers){
-          let bgColor;
+     });
 
-          str +='<div class="number-list">'
-
-		      numbers.forEach(function (number){
-             if (number < 7){
-                 bgColor = 'bg-yellow';
-             }else if(number < 14){
-                 bgColor = 'bg-blue';
-				      } else if(number < 21) {
-                 bgColor = 'bg-red';
-             } else{
-                 bgColor = 'bg-green';
-             }
-              str +=`<div class="buy-number ${bgColor}">${number}</div>`
-		      });
+     if (selector === 0){
+         alert('정확하게 5개 체크')
+		     return;
+     }
 
 
+     str = '';
 
-          str +='</div>'
-      });
+     selector.forEach(function (numbers){
+         str +='<div class="number-list">'
 
-      buyResult.innerHTML += str;
+		     numbers.forEach(function (number){
+                 let bgColor;
 
+                 if (number < 7){
+                     bgColor = 'bg-yellow';
+                 }else if (number < 14){
+                     bgColor = 'bg-blue';
+                 }else if (number < 21){
+                     bgColor = 'bg-red';
+                 }else{
+                     bgColor = 'bg-green';
+                 }
 
+                 str +=`<div class="buy-number ${bgColor}">${number}</div>`
+		     })
+         str +='</div>'
+     })
 
+		 buyResult.innerHTML += str;
 
-
-
-  }
+ }
 
 </script>
 </body>
