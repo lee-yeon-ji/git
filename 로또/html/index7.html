@@ -560,62 +560,30 @@
  });
 
  function buy(){
-
      const gameList = document.querySelectorAll('.chk-box');
      const buyResult = document.querySelector('.number-list-container');
-
-     let selector = [];
+     let selected =[];
 
      gameList.forEach(function (game){
          const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
 
-
          if (checkedList.length === 5){
-             let numbers = [];
+           let numbers = [];
 
-             checkedList.forEach(function (chk){
+           checkedList.forEach(function (num){
+               numbers.push(num.value)
+           })
 
-                 numbers.push(chk.value);
-             })
-
-		         selector.push(numbers);
+		         selected.push(numbers)
+             console.log(selected)
          }
-
-
-     });
-
-     if (selector === 0){
-         alert('정확하게 5개 체크')
-		     return;
-     }
-
-
-     str = '';
-
-     selector.forEach(function (numbers){
-         str +='<div class="number-list">'
-
-		     numbers.forEach(function (number){
-                 let bgColor;
-
-                 if (number < 7){
-                     bgColor = 'bg-yellow';
-                 }else if (number < 14){
-                     bgColor = 'bg-blue';
-                 }else if (number < 21){
-                     bgColor = 'bg-red';
-                 }else{
-                     bgColor = 'bg-green';
-                 }
-
-                 str +=`<div class="buy-number ${bgColor}">${number}</div>`
-		     })
-         str +='</div>'
      })
-
-		 buyResult.innerHTML += str;
-
  }
+
+
+
+
+
 
 </script>
 </body>
