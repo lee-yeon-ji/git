@@ -233,6 +233,18 @@ article.info-msg-box {
                           height: 16px;
                           top: 2px;
                           right: 0; }
+                      .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label {
+                        position: relative; }
+                        .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label input [type=radio] {
+                          position: absolute;
+                          left: -9999px; }
+                          .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label input [type=radio]:checked ~ i {
+                            background: url("../img/ic_check_on.svg") no-repeat center/cover; }
+                      .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label {
+                        position: relative; }
+                        .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .checked-board .chk-con-box .option-btn-box .option-btn label input[type=radio] {
+                          position: absolute;
+                          left: -9999px; }
               .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .buy-wrap {
                 display: flex;
                 align-items: center;
