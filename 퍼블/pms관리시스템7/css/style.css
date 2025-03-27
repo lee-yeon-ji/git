@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-R.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-M.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-B.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/Pretendard-SB.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0; }
+
+.wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group {
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  bottom: 0; }
+  .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group button.toggle-btn {
+    background-color: #0F1825;
+    width: 24px;
+    height: 82px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 155px;
+    right: -24px; }
+    .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group button.toggle-btn i.icon-box {
+      background: url("../img/ic_sub_tit.svg") no-repeat center/cover;
+      width: 5px;
+      height: 10px; }
+  .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap {
+    width: 508px;
+    overflow: hidden; }
+    .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap.is-hidden {
+      width: 0; }
+    .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner {
+      background-color: #0F1825;
+      height: 100vh; }
+
+/*# sourceMappingURL=style.css.map */

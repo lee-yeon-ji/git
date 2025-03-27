@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Document</title>
+</head>
+<body>
+
+<div class="wrapper">
+
+	<div class="map">
+		<div class="map-inner">
+			<div class="map-wrap">
+				<div class="side-tab-panel-container">
+
+
+
+					<div class="side-tab-panel-group" >
+
+						<button class="toggle-btn">
+							<i class="icon-box"></i>
+						</button>
+
+
+						<div class="side-tab-panel-wrap" id="side-content">
+							<div class="side-tab-panel-inner">
+								<div class="tab-btn-wrap">
+									<button class="tab-btn" data-target="tab-01">
+										<i class="icon-box ic-list"></i>
+										<span class="txt">공간정보 목록</span>
+									</button>
+
+									<button class="tab-btn" data-target="tab-02">
+										<i class="icon-box ic-signup"></i>
+										<span class="txt">공간정보 등록</span>
+									</button>
+								</div>
+
+
+								<div class="tab-index-list">
+									<div class="tab-index" id="tab-01">
+										<div class="desc-box">
+											<div class="all-check-box">
+												<div class="cbox">
+													<label>
+														<span class="check-txt">전체 선택</span>
+														<input type="checkbox" value="all" id="checkAll">
+													</label>
+												</div>
+											</div>
+											<div class="check-wrap">
+												<div class="check-box">
+													<div class="cbox">
+														<label>
+															<span class="check-txt">Html</span>
+															<input type="checkbox" value="Html" name="chk-info" class="chk">
+														</label>
+													</div>
+												</div>
+
+												<div class="check-box">
+													<div class="cbox">
+														<label>
+															<span class="check-txt">CSS</span>
+															<input type="checkbox" value="CSS" name="chk-info" class="chk">
+														</label>
+													</div>
+												</div>
+
+												<div class="check-box">
+													<div class="cbox">
+														<label>
+															<span class="check-txt">Python</span>
+															<input type="checkbox" value="Python" name="chk-info" class="chk">
+														</label>
+													</div>
+												</div>
+
+												<div class="check-box">
+													<div class="cbox">
+														<label>
+															<span class="check-txt">Javascript</span>
+															<input type="checkbox" value="Javascript" name="chk-info" class="chk">
+														</label>
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<script>
+	const toggleBtn = document.querySelector('.toggle-btn');
+    const tabBg = document.querySelector('.side-tab-panel-wrap');
+
+	toggleBtn.addEventListener('click', function(){
+      tabBg.classList.toggle('is-hidden');
+     // if(){
+     //
+     //     toggleBtn.classList.add('is-hidden');
+     // }else {
+     //     tabBg.classList.remove('is-hidden');
+     //     toggleBtn.classList.remove('is-hidden');
+     // }
+	})
+</script>
+
+</body>
+</html>

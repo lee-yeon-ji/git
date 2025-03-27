@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+$font : 'Pretendard';
+
+@each $font-size in R, M, B, SB{
+
+	@font-face{
+		font-family: $font;
+		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+
+		@if $font-size == R {
+			font-weight: 400;
+		}
+
+		@else if $font-size == M {
+			font-weight: 500;
+		}
+
+		@else if $font-size == B {
+			font-weight: 700;
+		}
+
+		@else if $font-size == SB {
+			font-weight: 800;
+		}
+
+		font-style:normal;
+	}
+}
+
+
+*{
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+
+}
+
+
+.wrapper {
+	.map {
+		.map-inner {
+			.map-wrap {
+				.side-tab-panel-container {
+
+
+					.side-tab-panel-group {
+						position: absolute;
+						height: 100vh;
+						left:0;
+						top:0;
+						bottom:0;
+
+
+						button.toggle-btn {
+							background-color: #0F1825;
+							width: 24px;
+							height: 82px;
+							border-radius: 0 5px 5px 0;
+							cursor: pointer;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							position: absolute;
+							top: 155px;
+							right: -24px;
+
+							i.icon-box {
+								background: url("../img/ic_sub_tit.svg") no-repeat center/cover;
+								width: 5px;
+								height: 10px;
+							}
+						}
+
+
+						.side-tab-panel-wrap {
+							width: 508px;
+							overflow: hidden;
+
+
+							&.is-hidden {
+								width: 0;
+
+
+							}
+
+							.side-tab-panel-inner {
+								background-color: #0F1825;
+								height: 100vh;
+
+								.tab-btn-wrap {
+									button.tab-btn {
+										i.icon-box {
+											&.ic-list {
+											}
+
+											&.ic-signup {
+
+											}
+										}
+
+										.txt {
+
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
