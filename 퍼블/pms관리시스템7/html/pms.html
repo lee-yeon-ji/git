@@ -18,8 +18,7 @@
 				<div class="side-tab-panel-container">
 
 
-
-					<div class="side-tab-panel-group" >
+					<div class="side-tab-panel-group">
 
 						<button class="toggle-btn">
 							<i class="icon-box"></i>
@@ -29,7 +28,7 @@
 						<div class="side-tab-panel-wrap" id="side-content">
 							<div class="side-tab-panel-inner">
 								<div class="tab-btn-wrap">
-									<button class="tab-btn" data-target="tab-01">
+									<button class="tab-btn active" data-target="tab-01">
 										<i class="icon-box ic-list"></i>
 										<span class="txt">공간정보 목록</span>
 									</button>
@@ -44,58 +43,113 @@
 								<div class="tab-index-list">
 									<div class="tab-index" id="tab-01">
 										<div class="desc-box">
-											<div class="all-check-box">
-												<div class="cbox">
-													<label>
-														<span class="check-txt">전체 선택</span>
-														<input type="checkbox" value="all" id="checkAll">
-													</label>
+
+											<div class="input-wrap">
+												<div class="all-check-box">
+													<div class="cbox">
+														<label>
+															<input type="checkbox" value="all" id="checkAll">
+															<i></i>
+															<span class="check-txt">전체 선택</span>
+														</label>
+													</div>
+												</div>
+												<div class="check-wrap">
+													<div class="check-box">
+														<div class="cbox">
+															<label>
+																<input type="checkbox" value="Html" name="chk-info" class="chk">
+																<i></i>
+																<span class="check-txt">Html</span>
+
+															</label>
+														</div>
+													</div>
+
+													<div class="check-box">
+														<div class="cbox">
+															<label>
+																<input type="checkbox" value="CSS" name="chk-info" class="chk">
+
+																<i></i>
+																<span class="check-txt">CSS</span>
+															</label>
+														</div>
+													</div>
+
+													<div class="check-box">
+														<div class="cbox">
+															<label>
+																<input type="checkbox" value="Python" name="chk-info" class="chk">
+
+																<i></i>
+																<span class="check-txt">Python</span>
+															</label>
+														</div>
+													</div>
+
+													<div class="check-box">
+														<div class="cbox">
+															<label>
+																<input type="checkbox" value="Javascript" name="chk-info" class="chk">
+
+																<i></i>
+																<span class="check-txt">Javascript</span>
+															</label>
+														</div>
+													</div>
 												</div>
 											</div>
-											<div class="check-wrap">
-												<div class="check-box">
-													<div class="cbox">
-														<label>
-															<span class="check-txt">Html</span>
-															<input type="checkbox" value="Html" name="chk-info" class="chk">
-														</label>
+
+											<div class="search-wrap">
+												<div class="con-box">
+													<div class="select-box">
+														<select>
+															<option>이름</option>
+															<option>파일명 </option>
+															<option>No</option>
+														</select>
+
+													</div>
+												</div>
+												<div class="con-box">
+													<div class="sbox">
+														<input type="text" placeholder="검색어를 입력하세요"/>
+													</div>
+
+												</div>
+
+												<div class="con-box">
+													<div class="search-btn-box">
+														<button class="search-btn">
+															<i class="ic-search"></i>
+															<span class="txt">검색</span>
+														</button>
 													</div>
 												</div>
 
-												<div class="check-box">
-													<div class="cbox">
-														<label>
-															<span class="check-txt">CSS</span>
-															<input type="checkbox" value="CSS" name="chk-info" class="chk">
-														</label>
+
+
+											</div>
+
+											<div class="list-wrap">
+												<div class="total-box">
+													<div class="txt">
+														총 <span class="number">00</span>건
 													</div>
 												</div>
 
-												<div class="check-box">
-													<div class="cbox">
-														<label>
-															<span class="check-txt">Python</span>
-															<input type="checkbox" value="Python" name="chk-info" class="chk">
-														</label>
-													</div>
-												</div>
-
-												<div class="check-box">
-													<div class="cbox">
-														<label>
-															<span class="check-txt">Javascript</span>
-															<input type="checkbox" value="Javascript" name="chk-info" class="chk">
-														</label>
-													</div>
+												<div class="list-layout">
+													<div class=""></div>
 												</div>
 											</div>
+
 
 
 										</div>
 									</div>
 								</div>
 							</div>
-
 
 
 						</div>
@@ -110,19 +164,54 @@
 </div>
 
 <script>
-	const toggleBtn = document.querySelector('.toggle-btn');
+
+    const checkBtnList = document.querySelectorAll('.chk');
+    const allBtn = document.querySelector('#checkAll');
+
+	//전체 선택 클릭 시 하위 버튼들 전체 선택하기
+    allBtn.addEventListener('change', function () {
+        checkBtnList.forEach(function (checkbox) {
+            checkbox.checked = allBtn.checked;
+        });
+    });
+
+    checkBtnList.forEach(function (checkbox) {
+        // change 이벤트로 체크박스의 상태(체크됨/체크되지 않음)가 변경될 때 실행
+        checkbox.addEventListener('change', function () {
+            //every 를 사용하기 우해 노드 리스트를 배열로 변환
+
+            //erery는 배열 메서드로 배열의 모든 요소가 조건에 따라 true, false로 반환함. 콜백함수가 하나라도 false일 때 즉시 반복을 중단하고 false를 반환함.
+            allBtn.checked = Array.from(checkBtnList).every(function (cb) {
+                return cb.checked;
+            });
+        });
+    });
+
+
+    const toggleBtn = document.querySelector('.toggle-btn');
     const tabBg = document.querySelector('.side-tab-panel-wrap');
 
-	toggleBtn.addEventListener('click', function(){
-      tabBg.classList.toggle('is-hidden');
-     // if(){
-     //
-     //     toggleBtn.classList.add('is-hidden');
-     // }else {
-     //     tabBg.classList.remove('is-hidden');
-     //     toggleBtn.classList.remove('is-hidden');
-     // }
-	})
+    toggleBtn.addEventListener('click', function () {
+        tabBg.classList.toggle('is-hidden');
+
+    });
+
+
+    const tabBtnList = document.querySelectorAll('.tab-btn');
+
+    tabBtnList.forEach(function (tabBtn) {
+
+        tabBtn.addEventListener('click', function () {
+
+            tabBtnList.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+
+            this.classList.add('active');
+
+        });
+
+    });
 </script>
 
 </body>
