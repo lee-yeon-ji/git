@@ -238,6 +238,46 @@ $font : 'Pretendard';
 													}
 
 
+													.check-box{
+														.cbox{
+
+															label{
+																position: relative;
+																cursor: pointer;
+
+
+																input[type='checkbox']{
+																	position: absolute;
+																	left: -9999px;
+
+																	&:checked {
+
+																		& ~ i{
+																			background: url("../img/ic_agree_on.svg")no-repeat center/cover;
+																		}
+
+
+
+																	}
+
+																	i{
+																		position: absolute;
+																		background: url("../img/ic_agree_off.svg")no-repeat center/cover;
+																		width: 22px;
+																		height: 22px;
+
+																	}
+
+
+																}
+
+
+
+															}
+														}
+													}
+
+
 												}
 											}
 
