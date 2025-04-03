@@ -131,19 +131,6 @@
               font-weight: 400;
               color: #FFFFff;
               line-height: 22px; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label {
-            position: relative;
-            cursor: pointer; }
-            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label input[type='checkbox'] {
-              position: absolute;
-              left: -9999px; }
-              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label input[type='checkbox']:checked ~ i {
-                background: url("../img/ic_agree_on.svg") no-repeat center/cover; }
-              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label input[type='checkbox'] i {
-                position: absolute;
-                background: url("../img/ic_agree_off.svg") no-repeat center/cover;
-                width: 22px;
-                height: 22px; }
         .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap {
           display: flex;
           align-items: center;

@@ -43,7 +43,6 @@
 								<div class="tab-index-list">
 									<div class="tab-index" id="tab-01">
 										<div class="desc-box">
-
 											<div class="input-wrap">
 												<div class="all-check-box">
 													<div class="cbox">
@@ -165,27 +164,49 @@
 
 <script>
 
+  //   const checkBtnList = document.querySelectorAll('.chk');
+  //   const allBtn = document.querySelector('#checkAll');
+	//
+	// //전체 선택 클릭 시 하위 버튼들 전체 선택하기
+  //   allBtn.addEventListener('change', function () {
+  //       checkBtnList.forEach(function (checkbox) {
+  //           checkbox.checked = allBtn.checked;
+  //       });
+  //   });
+	//
+  //   checkBtnList.forEach(function (checkbox) {
+  //       // change 이벤트로 체크박스의 상태(체크됨/체크되지 않음)가 변경될 때 실행
+  //       checkbox.addEventListener('change', function () {
+  //           //every 를 사용하기 우해 노드 리스트를 배열로 변환
+	//
+  //           //erery는 배열 메서드로 배열의 모든 요소가 조건에 따라 true, false로 반환함. 콜백함수가 하나라도 false일 때 즉시 반복을 중단하고 false를 반환함.
+  //           allBtn.checked = Array.from(checkBtnList).every(function (cb) {
+  //               return cb.checked;
+  //           });
+  //       });
+  //   });
+
     const checkBtnList = document.querySelectorAll('.chk');
     const allBtn = document.querySelector('#checkAll');
 
-	//전체 선택 클릭 시 하위 버튼들 전체 선택하기
-    allBtn.addEventListener('change', function () {
-        checkBtnList.forEach(function (checkbox) {
-            checkbox.checked = allBtn.checked;
+    allBtn.addEventListener('change', function (){
+        checkBtnList.forEach(function (check){
+            check.checked = allBtn.checked;
         });
+
+
     });
 
-    checkBtnList.forEach(function (checkbox) {
-        // change 이벤트로 체크박스의 상태(체크됨/체크되지 않음)가 변경될 때 실행
-        checkbox.addEventListener('change', function () {
-            //every 를 사용하기 우해 노드 리스트를 배열로 변환
 
-            //erery는 배열 메서드로 배열의 모든 요소가 조건에 따라 true, false로 반환함. 콜백함수가 하나라도 false일 때 즉시 반복을 중단하고 false를 반환함.
-            allBtn.checked = Array.from(checkBtnList).every(function (cb) {
-                return cb.checked;
+	checkBtnList.forEach(function (check){
+        check.addEventListener('change', function (){
+            allBtn.checked = Array.from(checkBtnList).every(function (cd){
+                return cd.checked;
+
             });
         });
-    });
+
+	});
 
 
     const toggleBtn = document.querySelector('.toggle-btn');
@@ -208,6 +229,17 @@
             });
 
             this.classList.add('active');
+
+            tabIndexList.forEach(function (tabContent){
+                tabContent.style.display = 'none';
+            })
+
+
+		        const targetTab = document.querySelector(`#${targetId}`);
+
+            if(targetTab){
+                targetTab.style.display = 'block';
+            }
 
         });
 

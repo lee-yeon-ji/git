@@ -52,6 +52,7 @@ $font : 'Pretendard';
 						top:0;
 						bottom:0;
 
+						//토글 버튼과 index가 같이 있어야 하는 이유는? 버튼이 사라지지 않게 하고, 고정한 자리에 그대로 있지 않게 하기위해서
 
 						button.toggle-btn {
 							background-color: #0F1825;
@@ -78,7 +79,7 @@ $font : 'Pretendard';
 							overflow: hidden;
 							width: 508px;
 
-
+						//width:0 으로 줘야지 index 화면만 안보이게 할 수 있기 때문에
 							&.is-hidden {
 								width: 0;
 							}
@@ -236,47 +237,6 @@ $font : 'Pretendard';
 														}
 
 													}
-
-
-													.check-box{
-														.cbox{
-
-															label{
-																position: relative;
-																cursor: pointer;
-
-
-																input[type='checkbox']{
-																	position: absolute;
-																	left: -9999px;
-
-																	&:checked {
-
-																		& ~ i{
-																			background: url("../img/ic_agree_on.svg")no-repeat center/cover;
-																		}
-
-
-
-																	}
-
-																	i{
-																		position: absolute;
-																		background: url("../img/ic_agree_off.svg")no-repeat center/cover;
-																		width: 22px;
-																		height: 22px;
-
-																	}
-
-
-																}
-
-
-
-															}
-														}
-													}
-
 
 												}
 											}
