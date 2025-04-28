@@ -4,54 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport"
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 </head>
-<style>
-	.check-box{
-			.cbox{
-					label{
-							position: relative;
-							cursor: pointer;
-							display: flex;
-							align-items: center;
-							justify-content: center;
 
-							input[type="checkbox"]{
-									position: absolute;
-									left: -9999px;
-
-									&:checked{
-											 & ~ i{
-                           background-color: red;
-											 }
-									}
-							}
-
-
-
-							i{
-                  background-color: #eeeeee;
-									width: 25px;
-									height: 25px;
-							}
-					}
-			}
-	}
-
-
-</style>
 <body>
 
 <div>
-	<div class="check-box">
-		<div class="cbox">
-			<label>
-				<input type="checkbox"/>
-				<i></i>
-				<span class="txt">확인</span>
-			</label>
-		</div>
+	<div class="container">
+		<header class="header-box">header</header>
+		<main class="main-box">main</main>
+		<aside class="side-box">side</aside>
+
+		<footer class="footer-box">footer</footer>
+
 	</div>
 
 </div>

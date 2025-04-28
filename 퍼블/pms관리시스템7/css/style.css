@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard";
   src: url("../fonts/Pretendard-R.woff") format("woff");
@@ -87,102 +88,186 @@
             color: #FFFFff; }
       .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list {
         padding-top: 20px; }
-        .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label {
-          position: relative;
-          cursor: pointer; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label input[type=checkbox] {
-            position: absolute;
-            left: -9999px; }
-            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label input[type=checkbox]:checked ~ i {
-              background: url("../img/ic_agree_on.svg") no-repeat center/cover; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label i {
-            position: absolute;
-            background: url("../img/ic_agree_off.svg") no-repeat center/cover;
-            width: 22px;
-            height: 22px; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label .check-txt {
-            padding-left: 30px;
-            font-size: 18px;
-            font-weight: 400;
-            color: #FFFFff;
-            line-height: 22px; }
-        .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap {
-          display: flex;
-          align-items: center;
-          padding-top: 8px; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box + .check-box {
-            padding-left: 15px; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label {
+        .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index {
+          display: none; }
+          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index.is-show {
+            display: block; }
+          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label {
             position: relative;
             cursor: pointer; }
-            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label input[type=checkbox] {
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label input[type=checkbox] {
               position: absolute;
               left: -9999px; }
-              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label input[type=checkbox]:checked ~ i {
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label input[type=checkbox]:checked ~ i {
                 background: url("../img/ic_agree_on.svg") no-repeat center/cover; }
-            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label i {
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label i {
               position: absolute;
               background: url("../img/ic_agree_off.svg") no-repeat center/cover;
               width: 22px;
               height: 22px; }
-            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label .check-txt {
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .all-check-box .cbox label .check-txt {
               padding-left: 30px;
               font-size: 18px;
               font-weight: 400;
               color: #FFFFff;
               line-height: 22px; }
-        .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap {
-          display: flex;
-          align-items: center;
-          padding-top: 20px; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box + .con-box {
-            padding-left: 9px; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .select-box select {
-            font-size: 15px;
-            font-weight: 400;
-            color: #E5E5E5;
-            padding: 5px;
-            height: 36px;
-            width: 95px;
-            border-radius: 3px;
-            border: 1px solid #374971;
-            outline: none;
-            box-sizing: border-box;
-            appearance: none;
-            background: #0F1825 url("../img/ic_sbox_arrow.svg") no-repeat right 5px top 15px/10px 5px; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .select-box option {
-            color: #E5E5E5; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .sbox {
-            width: 270px; }
-            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .sbox input {
+          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap {
+            display: flex;
+            align-items: center;
+            padding-top: 8px; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box + .check-box {
+              padding-left: 15px; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label {
+              position: relative;
+              cursor: pointer; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label input[type=checkbox] {
+                position: absolute;
+                left: -9999px; }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label input[type=checkbox]:checked ~ i {
+                  background: url("../img/ic_agree_on.svg") no-repeat center/cover; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label i {
+                position: absolute;
+                background: url("../img/ic_agree_off.svg") no-repeat center/cover;
+                width: 22px;
+                height: 22px; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .check-wrap .check-box .cbox label .check-txt {
+                padding-left: 30px;
+                font-size: 18px;
+                font-weight: 400;
+                color: #FFFFff;
+                line-height: 22px; }
+          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap {
+            display: flex;
+            align-items: center;
+            padding-top: 20px; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box + .con-box {
+              padding-left: 9px; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .select-box select {
               font-size: 15px;
               font-weight: 400;
               color: #E5E5E5;
               padding: 5px;
               height: 36px;
-              width: 100%;
-              outline: none;
-              background-color: #0F1825;
+              width: 95px;
               border-radius: 3px;
-              border: 1px solid #374971; }
-          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .search-btn-box .search-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #204F7A;
-            height: 36px;
-            width: 86px;
-            padding: 8px;
-            border-style: none;
-            cursor: pointer;
-            border-radius: 3px; }
-            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .search-btn-box .search-btn i.ic-search {
-              background: url("../img/ic_search.svg") no-repeat center/cover;
-              width: 16px;
-              height: 16px; }
-            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .search-btn-box .search-btn .txt {
-              font-size: 15px;
-              font-weight: 500;
+              border: 1px solid #374971;
+              outline: none;
+              box-sizing: border-box;
+              appearance: none;
+              background: #0F1825 url("../img/ic_sbox_arrow.svg") no-repeat right 5px top 15px/10px 5px; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .select-box option {
+              color: #E5E5E5; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .sbox {
+              width: 270px; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .sbox input {
+                font-size: 15px;
+                font-weight: 400;
+                color: #E5E5E5;
+                padding: 5px;
+                height: 36px;
+                width: 100%;
+                outline: none;
+                background-color: #0F1825;
+                border-radius: 3px;
+                border: 1px solid #374971; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .search-btn-box .search-btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #204F7A;
+              height: 36px;
+              width: 86px;
+              padding: 8px;
+              border-style: none;
+              cursor: pointer;
+              border-radius: 3px; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .search-btn-box .search-btn i.ic-search {
+                background: url("../img/ic_search.svg") no-repeat center/cover;
+                width: 16px;
+                height: 16px; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .search-wrap .con-box .search-btn-box .search-btn .txt {
+                font-size: 15px;
+                font-weight: 500;
+                color: #FFFFff; }
+          .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap {
+            padding-top: 11px; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .total-box .txt {
               color: #FFFFff; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .total-box .txt .number {
+                color: #11D4FF; }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout {
+              padding-top: 7px; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout .table-box table {
+                color: #E6ECF8;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: -0.05em;
+                width: 100%;
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+                border-collapse: separate;
+                /* border-radius가 먹으려면 separate여야 함 */
+                border-spacing: 0;
+                border-bottom: 1px solid rgba(41, 54, 82, 0.5); }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout .table-box table thead th {
+                  background-color: #23304B;
+                  border: 1px solid #23304B;
+                  padding: 7px; }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout .table-box table tbody td {
+                  padding: 8px; }
+                  .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout .table-box table tbody td.txt {
+                    text-align: center; }
+                    .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout .table-box table tbody td.txt.ellipsis {
+                      white-space: nowrap;
+                      text-overflow: ellipsis;
+                      display: block;
+                      overflow: hidden;
+                      width: 166px; }
+                  .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout .table-box table tbody td.option-list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between; }
+                    .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout .table-box table tbody td.option-list .option-btn.ic-zoom {
+                      display: block;
+                      background: url("../img/ic_zone.svg") no-repeat center/cover;
+                      width: 16px;
+                      height: 16px; }
+                  .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .list-layout .table-box table tbody td.bg-item {
+                    background-color: rgba(41, 54, 82, 0.5); }
+            .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list {
+              padding-top: 15px; }
+              .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list .paging-box {
+                display: flex;
+                align-items: center;
+                justify-content: center; }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list .paging-box .page {
+                  margin: 7px 12px;
+                  display: block; }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list .paging-box .first-btn {
+                  background: url("../img/ic_frist.svg") no-repeat center/cover;
+                  width: 11px;
+                  height: 9px; }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list .paging-box .prev-btn {
+                  background: url("../img/ic_prev2.svg") no-repeat center/cover;
+                  width: 5px;
+                  height: 9px; }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list .paging-box .num-btn {
+                  font-size: 15px;
+                  font-weight: 400;
+                  color: #9CA3AF;
+                  text-decoration: none; }
+                  .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list .paging-box .num-btn.active {
+                    background-color: #3E4E75;
+                    color: #FFFFff;
+                    border-radius: 3px;
+                    padding: 3px 12px; }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list .paging-box .next-btn {
+                  background: url("../img/ic_next.svg") no-repeat center/cover;
+                  width: 5px;
+                  height: 9px; }
+                .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group .side-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .list-wrap .paging-list .paging-box .last-btn {
+                  background: url("../img/ic_last.svg") no-repeat center/cover;
+                  width: 11px;
+                  height: 9px; }
 
 /*# sourceMappingURL=style.css.map */

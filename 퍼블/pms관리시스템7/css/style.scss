@@ -137,6 +137,13 @@ $font : 'Pretendard';
 								.tab-index-list{
 									padding-top: 20px;
 									.tab-index{
+
+										display: none;
+
+										&.is-show{
+											display: block;
+										}
+
 										.desc-box{
 
 											.input-wrap{
@@ -332,7 +339,157 @@ $font : 'Pretendard';
 											}
 
 
+											.list-wrap{
+												padding-top: 11px;
+												.total-box{
+													.txt{
+														color: #FFFFff;
+														.number{
+															color: #11D4FF;
 
+														}
+													}
+												}
+												.list-layout{
+													padding-top: 7px;
+													.table-box{
+														table{
+															color: #E6ECF8;
+															font-size: 14px;
+															font-weight: 400;
+															letter-spacing: -0.05em;
+															width: 100%;
+															border-radius: 5px 5px 0 0 ;
+															overflow: hidden;
+															border-collapse: separate; /* border-radius가 먹으려면 separate여야 함 */
+															border-spacing: 0;
+															border-bottom: 1px solid rgba(41, 54, 82, 0.5);
+															thead{
+
+																tr{
+
+
+
+																}
+																th{
+
+																	background-color: #23304B;
+																	border: 1px solid #23304B;
+																	padding: 7px;
+
+																}
+															}
+
+															tbody{
+
+
+																tr{
+
+
+
+
+																}
+
+																td{
+																	padding: 8px;
+
+																	&.txt{
+																		text-align: center;
+
+
+																		&.ellipsis{
+																			white-space: nowrap;
+																			text-overflow: ellipsis;
+																			display: block;
+																			overflow: hidden;
+																			width: 166px;
+
+																		}
+																	}
+
+																	&.option-list{
+																		display: flex;
+																		align-items: center;
+																		justify-content: space-between;
+																		.option-btn{
+																			&.ic-zoom{
+																				display: block;
+																				background: url("../img/ic_zone.svg")no-repeat center/cover;
+																				width: 16px;
+																				height: 16px;
+																			}
+																		}
+																	}
+
+																	&.bg-item{
+																		background-color: rgba(41, 54, 82, 0.5);
+
+																	}
+
+																}
+
+
+															}
+
+
+
+
+														}
+													}
+												}
+
+
+												.paging-list{
+													padding-top: 15px;
+													.paging-box{
+														display: flex;
+														align-items: center;
+														justify-content: center;
+
+														.page{
+															margin: 7px 12px;
+															display: block;
+														}
+														.first-btn{
+															background: url("../img/ic_frist.svg")no-repeat center/cover;
+															width: 11px;
+															height: 9px;
+														}
+														.prev-btn{
+															background: url("../img/ic_prev2.svg")no-repeat center/cover;
+															width: 5px;
+															height: 9px;
+														}
+
+														.num-btn{
+															font-size: 15px;
+															font-weight: 400;
+															color: #9CA3AF;
+															text-decoration: none;
+
+
+															&.active {
+																background-color: #3E4E75;
+																color: #FFFFff;
+																border-radius: 3px;
+																padding: 3px 12px;
+															}
+														}
+
+														.next-btn{
+															background: url("../img/ic_next.svg")no-repeat center/cover;
+															width: 5px;
+															height: 9px;
+														}
+
+														.last-btn{
+															background: url("../img/ic_last.svg")no-repeat center/cover;
+															width: 11px;
+															height: 9px;
+														}
+													}
+												}
+											}
 
 										}
 									}
