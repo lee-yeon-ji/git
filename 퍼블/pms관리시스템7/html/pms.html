@@ -16,8 +16,6 @@
 		<div class="map-inner">
 			<div class="map-wrap">
 				<div class="side-tab-panel-container">
-
-
 					<div class="side-tab-panel-group">
 
 						<button class="toggle-btn">
@@ -284,15 +282,146 @@
 												</div>
 											</div>
 
-
 										</div>
 									</div>
 
 									<div class="tab-index" id="tab-02">
 										<div class="desc-box">
+											<div class="input-wrap">
+												<div class="tbox-wrap">
+													<div class="con-box">
+														<div class="tbox">
+															<div class="txt-box">이름</div>
+															<input type="text" placeholder="공간정보 이름을 입력하세요"/>
+														</div>
+													</div>
+
+													<div class="con-box">
+														<div class="datebox">
+															<div class="txt-box">업로드 날짜</div>
+															<input type="date" value="2024-02-14">
+														</div>
+													</div>
+
+													<div class="con-box">
+														<div class="file-box">
+															<div class="fhead-box">
+																<div class="con-box">
+																	<div class="txt-box">파일</div>
+																	<div class="total-byte-box">총 <span class="point">123</span>kb</div>
+																</div>
+																<div class="con-box">
+																	<div class="fbox">
+																		<label>
+																			<input type="file"/>
+																			<i></i>
+																			<span class="file-upload">파일선택</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+
+															<div class="file-table-box">
+																<div class="file-table-wrap">
+																	<div class="table-box">
+																		<table>
+																			<colgroup>
+																				<col style="width: 15%">
+																				<col style="width: 40%">
+																				<col style="width: 30%">
+																				<col style="width: 15%">
+																			</colgroup>
+
+																			<thead>
+																			<tr>
+																				<th>No.</th>
+																				<th>파일 명</th>
+																				<th>용량</th>
+																				<th>삭제</th>
+																			</tr>
+																			</thead>
+																			<tbody>
+																			<tr>
+																				<td>01</td>
+																				<td class="ellipsis">파일명이 들어갑니다. 파일명이 들어갑니다.</td>
+																				<td>123kb</td>
+																				<td class="del-box">
+																					<a href="#none" class="ic-del"></a>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>02</td>
+																				<td class="ellipsis">파일명이 들어갑니다. 파일명이 들어갑니다.</td>
+																				<td>123kb</td>
+																				<td class="del-box">
+																					<a href="#none" class="ic-del"></a>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>03</td>
+																				<td class="ellipsis">파일명이 들어갑니다. 파일명이 들어갑니다.</td>
+																				<td>123kb</td>
+																				<td class="del-box">
+																					<a href="#none" class="ic-del"></a>
+																				</td>
+																			</tr>
+
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div>
+
+														</div>
+													</div>
+
+													<div class="con-box">
+														<div class="select-box">
+															<div class="txt-box">좌표계</div>
+															<select>
+																<option>좌표계 선택</option>
+																<option>좌표계 선택</option>
+																<option>좌표계 선택</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="con-box">
+														<div class="select-box">
+															<div class="txt-box">좌표계</div>
+															<select>
+																<option>좌표계 선택</option>
+																<option>좌표계 선택</option>
+																<option>좌표계 선택</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="con-box">
+														<div class="tbox">
+															<div class="txt-box">설명</div>
+															<textarea>	</textarea>
 
 
-											asasdsad
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+
+											<div class="agree-option-box">
+												<div class="option-btn-box">
+													<a href="#none" class="option-btn type-close">취소</a>
+												</div>
+												<div class="option-btn-box">
+													<a href="#none" class="option-btn">등록</a>
+												</div>
+											</div>
+
+
+
 										</div>
 									</div>
 								</div>
@@ -303,6 +432,23 @@
 					</div>
 				</div>
 
+				<div class="map-container">
+					<div class="map-list">
+						<div class="map-item type-img1"></div>
+						<div class="map-item type-img2"></div>
+					</div>
+
+					<div class="map-btn-wrap">
+						<a href="#none" class="map-btn active">
+							<img src="../img/img_map_btn1.png">
+						</a>
+						<a href="#none" class="map-btn">
+							<img src="../img/img_map_btn2.png">
+						</a>
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 	</div>
@@ -311,6 +457,24 @@
 </div>
 
 <script>
+
+		const mapBtns = document.querySelectorAll('.map-btn');
+
+    console.log(mapBtns)
+
+		mapBtns.forEach(function (mapBtn){
+            mapBtn.addEventListener('click',function (){
+
+
+                mapBtns.forEach(function (btn){
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                console.log(mapBtn)
+
+            });
+		});
 
     //   const checkBtnList = document.querySelectorAll('.chk');
     //   const allBtn = document.querySelector('#checkAll');
@@ -400,6 +564,9 @@
         });
 
     });
+
+
+
 </script>
 
 </body>
