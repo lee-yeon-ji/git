@@ -434,21 +434,50 @@
 
 				<div class="map-container">
 					<div class="map-list">
-						<div class="map-item type-img1"></div>
-						<div class="map-item type-img2"></div>
+						<div class="map-item type-img1" id="mapItem1"></div>
+						<div class="map-item type-img2 hidden" id="mapItem2"></div>
 					</div>
 
 					<div class="map-btn-wrap">
-						<a href="#none" class="map-btn active">
+						<button class="map-btn active " data-target="mapItem1">
 							<img src="../img/img_map_btn1.png">
-						</a>
-						<a href="#none" class="map-btn">
+						</button>
+						<button class="map-btn" data-target="mapItem2">
 							<img src="../img/img_map_btn2.png">
-						</a>
+						</button>
+					</div>
+
+					<div class="map-info-wrap">
+						<div class="info-box">
+							<div class="row-box">
+								<div class="item-box">
+									<div class="subject-box">이름</div>
+									<div class="desc-box"><b>하중도 영역</b></div>
+								</div>
+								<div class="item-box">
+									<div class="subject-box">업로드 날짜</div>
+									<div class="desc-box">2021.08.19</div>
+								</div>
+								<div class="item-box">
+									<div class="subject-box">업로드 날짜</div>
+									<div class="desc-box">2021.08.19</div>
+								</div>
+							</div>
+							<div class="row-box">
+								<div class="item-box">
+									<div class="subject-box">설명</div>
+									<div class="desc-box">
+										하중도에서 작업<br/>
+										작업 시간<br/>
+										2021.08.19 13시 45분
+									</div>
+								</div>
+							</div>
+
+
+						</div>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 	</div>
@@ -459,22 +488,35 @@
 <script>
 
 		const mapBtns = document.querySelectorAll('.map-btn');
-
-    console.log(mapBtns)
+		const mapItems = document.querySelectorAll('.map-item');
 
 		mapBtns.forEach(function (mapBtn){
             mapBtn.addEventListener('click',function (){
-
 
                 mapBtns.forEach(function (btn){
                     btn.classList.remove('active');
                 });
                 this.classList.add('active');
 
-                console.log(mapBtn)
+
+                mapItems.forEach(function (item){
+                    item.classList.add('hidden');
+                });
+
+		            const targetId = mapBtn.getAttribute('data-target');
+                console.log(targetId)
+		            const targetItem = document.getElementById(targetId);
+                console.log(targetItem)
+
+                if(targetItem){
+                    targetItem.classList.remove('hidden');
+                }
 
             });
 		});
+
+
+
 
     //   const checkBtnList = document.querySelectorAll('.chk');
     //   const allBtn = document.querySelector('#checkAll');

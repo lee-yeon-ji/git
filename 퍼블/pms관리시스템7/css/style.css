@@ -33,7 +33,8 @@
   height: 100vh;
   left: 0;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 2; }
   .wrapper .map .map-inner .map-wrap .side-tab-panel-container .side-tab-panel-group button.toggle-btn {
     background-color: #0F1825;
     width: 24px;
@@ -481,14 +482,17 @@
 
 .wrapper .map .map-inner .map-wrap .map-container {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   .wrapper .map .map-inner .map-wrap .map-container .map-list .map-item {
     width: 100%;
-    height: 100%; }
+    height: 100vh; }
     .wrapper .map .map-inner .map-wrap .map-container .map-list .map-item.type-img1 {
-      background: url("../img/img_map1.png") no-repeat center/cover;
-      width: 100%;
-      height: 100%; }
+      background: url("../img/img_map1.png") no-repeat center/cover; }
+    .wrapper .map .map-inner .map-wrap .map-container .map-list .map-item.type-img2 {
+      background: url("../img/img_map2.png") no-repeat center/cover; }
+    .wrapper .map .map-inner .map-wrap .map-container .map-list .map-item.hidden {
+      display: none; }
   .wrapper .map .map-inner .map-wrap .map-container .map-btn-wrap {
     display: flex;
     flex-direction: column;
@@ -507,5 +511,192 @@
         overflow: hidden; }
       .wrapper .map .map-inner .map-wrap .map-container .map-btn-wrap .map-btn img {
         max-width: 100%; }
+  .wrapper .map .map-inner .map-wrap .map-container .map-info-wrap {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    left: 50%; }
+    .wrapper .map .map-inner .map-wrap .map-container .map-info-wrap .info-box {
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 13px 25px; }
+      .wrapper .map .map-inner .map-wrap .map-container .map-info-wrap .info-box .row-box {
+        display: flex;
+        flex-direction: column; }
+        .wrapper .map .map-inner .map-wrap .map-container .map-info-wrap .info-box .row-box + .row-box {
+          padding-left: 100px; }
+        .wrapper .map .map-inner .map-wrap .map-container .map-info-wrap .info-box .row-box .item-box {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .wrapper .map .map-inner .map-wrap .map-container .map-info-wrap .info-box .row-box .item-box .subject-box {
+            font-size: 13px;
+            font-weight: 400;
+            color: #6C6F76;
+            letter-spacing: -0.01em;
+            min-width: 68px; }
+          .wrapper .map .map-inner .map-wrap .map-container .map-info-wrap .info-box .row-box .item-box .desc-box {
+            padding-left: 13px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #0F1825;
+            line-height: 24px; }
+
+.wrapper2 {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B2333; }
+  .wrapper2 .password-container {
+    background-color: #242A38;
+    margin: 0 auto;
+    width: 520px; }
+    .wrapper2 .password-container .inner {
+      padding: 53px 60px 35px; }
+      .wrapper2 .password-container .inner .img-box .img {
+        background: url("../img/img_password.png") no-repeat center/cover;
+        width: 180px;
+        height: 139px;
+        margin: 0 auto; }
+      .wrapper2 .password-container .inner .img-box .subject-txt {
+        padding-top: 28px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #FFFFff; }
+      .wrapper2 .password-container .inner .input-box {
+        padding: 30px 0; }
+        .wrapper2 .password-container .inner .input-box .ptxt {
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: -0.03em;
+          color: #9FA8B8; }
+        .wrapper2 .password-container .inner .input-box .pbox {
+          padding-top: 8px; }
+          .wrapper2 .password-container .inner .input-box .pbox input {
+            outline: none;
+            padding: 8px 17px;
+            width: 100%;
+            height: 40px;
+            border-radius: 3px;
+            border: 1px solid #374971;
+            color: #FFFFff;
+            background-color: #00091C; }
+        .wrapper2 .password-container .inner .input-box .warning-txt {
+          display: flex;
+          align-items: center;
+          margin-top: 12px; }
+          .wrapper2 .password-container .inner .input-box .warning-txt i.icon-warning {
+            background: url("../img/ic_warning.svg") no-repeat center/cover;
+            width: 22px;
+            height: 22px; }
+          .wrapper2 .password-container .inner .input-box .warning-txt .txt-box {
+            padding-left: 4px;
+            color: #FF2869;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: -0.025em; }
+      .wrapper2 .password-container .inner .option-box {
+        border-top: 1px solid #59606B;
+        padding-top: 19px;
+        display: flex;
+        align-items: center; }
+        .wrapper2 .password-container .inner .option-box .option-btn {
+          width: 100%; }
+          .wrapper2 .password-container .inner .option-box .option-btn + .option-btn {
+            padding-left: 15px; }
+          .wrapper2 .password-container .inner .option-box .option-btn .btn {
+            background-color: #8230EA;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+            color: #FFFFff;
+            letter-spacing: -0.01em;
+            text-decoration: none;
+            height: 54px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .wrapper2 .password-container .inner .option-box .option-btn .btn.t-cancel {
+              background-color: #3E4E75; }
+
+.wrapper3 {
+  min-height: 100dvh;
+  background-color: #1B2333; }
+  .wrapper3 .password-container {
+    background-color: #242A38;
+    margin: 0 auto;
+    width: 520px; }
+    .wrapper3 .password-container .inner {
+      padding: 53px 60px 35px; }
+      .wrapper3 .password-container .inner .img-box .img {
+        background: url("../img/img_password.png") no-repeat center/cover;
+        width: 180px;
+        height: 139px;
+        margin: 0 auto; }
+      .wrapper3 .password-container .inner .img-box .subject-txt {
+        padding-top: 28px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #FFFFff; }
+      .wrapper3 .password-container .inner .input-box {
+        padding: 30px 0; }
+        .wrapper3 .password-container .inner .input-box .ptxt {
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: -0.03em;
+          color: #9FA8B8; }
+        .wrapper3 .password-container .inner .input-box .pbox {
+          padding-top: 8px; }
+          .wrapper3 .password-container .inner .input-box .pbox input {
+            outline: none;
+            padding: 8px 17px;
+            width: 100%;
+            height: 40px;
+            border-radius: 3px;
+            border: 1px solid #374971;
+            color: #FFFFff;
+            background-color: #00091C; }
+        .wrapper3 .password-container .inner .input-box .warning-txt {
+          display: flex;
+          align-items: center;
+          margin-top: 12px; }
+          .wrapper3 .password-container .inner .input-box .warning-txt i.icon-warning {
+            background: url("../img/ic_warning.svg") no-repeat center/cover;
+            width: 22px;
+            height: 22px; }
+          .wrapper3 .password-container .inner .input-box .warning-txt .txt-box {
+            padding-left: 4px;
+            color: #FF2869;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: -0.025em; }
+      .wrapper3 .password-container .inner .option-box {
+        border-top: 1px solid #59606B;
+        padding-top: 19px;
+        display: flex;
+        align-items: center; }
+        .wrapper3 .password-container .inner .option-box .option-btn {
+          width: 100%; }
+          .wrapper3 .password-container .inner .option-box .option-btn + .option-btn {
+            padding-left: 15px; }
+          .wrapper3 .password-container .inner .option-box .option-btn .btn {
+            background-color: #8230EA;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+            color: #FFFFff;
+            letter-spacing: -0.01em;
+            text-decoration: none;
+            height: 54px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .wrapper3 .password-container .inner .option-box .option-btn .btn.t-cancel {
+              background-color: #3E4E75; }
 
 /*# sourceMappingURL=style.css.map */
