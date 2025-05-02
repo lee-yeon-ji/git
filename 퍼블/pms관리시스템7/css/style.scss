@@ -1,36 +1,30 @@
 @charset "UTF-8";
 
-$font : 'Pretendard';
+$font: 'Pretendard';
 
-@each $font-size in R, M, B, SB{
+@each $font-size in R, M, B, SB {
 
-	@font-face{
+	@font-face {
 		font-family: $font;
 		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
 
 
 		@if $font-size == R {
 			font-weight: 400;
-		}
-
-		@else if $font-size == M {
+		} @else if $font-size == M {
 			font-weight: 500;
-		}
-
-		@else if $font-size == B {
+		} @else if $font-size == B {
 			font-weight: 700;
-		}
-
-		@else if $font-size == SB {
+		} @else if $font-size == SB {
 			font-weight: 800;
 		}
 
-		font-style:normal;
+		font-style: normal;
 	}
 }
 
 
-*{
+* {
 	padding: 0;
 	box-sizing: border-box;
 	margin: 0;
@@ -48,9 +42,9 @@ $font : 'Pretendard';
 					.side-tab-panel-group {
 						position: absolute;
 						height: 100vh;
-						left:0;
-						top:0;
-						bottom:0;
+						left: 0;
+						top: 0;
+						bottom: 0;
 						z-index: 2;
 
 						//토글 버튼과 index가 같이 있어야 하는 이유는? 버튼이 사라지지 않게 하고, 고정한 자리에 그대로 있지 않게 하기위해서
@@ -80,7 +74,7 @@ $font : 'Pretendard';
 							overflow: hidden;
 							width: 508px;
 
-						//width:0 으로 줘야지 index 화면만 안보이게 할 수 있기 때문에
+							//width:0 으로 줘야지 index 화면만 안보이게 할 수 있기 때문에
 							&.is-hidden {
 								width: 0;
 							}
@@ -94,18 +88,19 @@ $font : 'Pretendard';
 									display: flex;
 									align-items: center;
 									justify-content: center;
+
 									button.tab-btn {
 										background-color: #1D2942;
 										width: 50%;
 										display: flex;
 										align-items: center;
 										justify-content: center;
-										padding: 9px ;
+										padding: 9px;
 										border-style: none;
 
-										&.active{
+										&.active {
 											background-color: #3060EA;
-											
+
 										}
 
 
@@ -135,51 +130,51 @@ $font : 'Pretendard';
 									}
 								}
 
-								.tab-index-list{
+								.tab-index-list {
 									padding-top: 20px;
-									.tab-index{
+
+									.tab-index {
 
 										display: none;
 
-										&.is-show{
+										&.is-show {
 											display: block;
 										}
 
-										.desc-box{
+										.desc-box {
 
-											.input-wrap{
-												.all-check-box{
-													.cbox{
-														label{
+											.input-wrap {
+												.all-check-box {
+													.cbox {
+														label {
 															position: relative;
 															cursor: pointer;
 
 
-
-															input[type=checkbox]{
+															input[type=checkbox] {
 																position: absolute;
 																left: -9999px;
 
-																&:checked{
+																&:checked {
 
-																	& ~ i{
-																		background: url("../img/ic_agree_on.svg")no-repeat center/ cover;
+																	& ~ i {
+																		background: url("../img/ic_agree_on.svg") no-repeat center/ cover;
 
 																	}
 																}
 
 
-
 															}
 
-															i{
+															i {
 																position: absolute;
-																background: url("../img/ic_agree_off.svg")no-repeat center/ cover;
+																background: url("../img/ic_agree_off.svg") no-repeat center/ cover;
 																width: 22px;
 																height: 22px;
 
 															}
-															.check-txt{
+
+															.check-txt {
 																padding-left: 30px;
 																font-size: 18px;
 																font-weight: 400;
@@ -191,49 +186,48 @@ $font : 'Pretendard';
 													}
 												}
 
-												.check-wrap{
+												.check-wrap {
 													display: flex;
 													align-items: center;
 													padding-top: 8px;
 
-													.check-box{
-														& + .check-box{
+													.check-box {
+														& + .check-box {
 															padding-left: 15px;
 														}
 
-														.cbox{
+														.cbox {
 
 
-
-															label{
+															label {
 																position: relative;
 																cursor: pointer;
 
-																input[type=checkbox]{
+																input[type=checkbox] {
 																	position: absolute;
 																	left: -9999px;
 
-																	&:checked{
+																	&:checked {
 
 
-																		& ~ i{
-																			background: url("../img/ic_agree_on.svg")no-repeat center/ cover;
+																		& ~ i {
+																			background: url("../img/ic_agree_on.svg") no-repeat center/ cover;
 
 																		}
 																	}
 
 
-
 																}
 
-																i{
+																i {
 																	position: absolute;
-																	background: url("../img/ic_agree_off.svg")no-repeat center/ cover;
+																	background: url("../img/ic_agree_off.svg") no-repeat center/ cover;
 																	width: 22px;
 																	height: 22px;
 
 																}
-																.check-txt{
+
+																.check-txt {
 																	padding-left: 30px;
 																	font-size: 18px;
 																	font-weight: 400;
@@ -248,15 +242,16 @@ $font : 'Pretendard';
 
 												}
 
-												.tbox-wrap{
+												.tbox-wrap {
 
-													.con-box{
+													.con-box {
 
-														& + .con-box{
+														& + .con-box {
 															margin-top: 10px;
 														}
-														.tbox{
-															.txt-box{
+
+														.tbox {
+															.txt-box {
 																font-size: 14px;
 																font-weight: 500;
 																color: #9FA8B8;
@@ -264,7 +259,7 @@ $font : 'Pretendard';
 																padding-bottom: 7px;
 															}
 
-															input{
+															input {
 																padding: 8px 12px;
 																border-radius: 3px;
 																border: 1px solid #374971;
@@ -272,7 +267,7 @@ $font : 'Pretendard';
 																width: 100%;
 																height: 40px;
 
-																&::placeholder{
+																&::placeholder {
 																	font-size: 15px;
 																	font-weight: 400;
 																	color: #E5E5E5;
@@ -280,6 +275,7 @@ $font : 'Pretendard';
 																}
 															}
 														}
+
 														.tbox textarea {
 															/* 기존 스타일 유지 */
 															resize: none;
@@ -300,16 +296,17 @@ $font : 'Pretendard';
 																width: 8px;
 																background: #181f29;
 															}
+
 															&::-webkit-scrollbar-thumb {
 																background: #444e6e;
 																border-radius: 8px;
 															}
+
 															&::-webkit-scrollbar-track {
 																background: #181f29;
 																border-radius: 8px;
 															}
 														}
-
 
 
 														.datebox {
@@ -336,12 +333,10 @@ $font : 'Pretendard';
 															}
 
 
-
-
 														}
 
-														.select-box{
-															.txt-box{
+														.select-box {
+															.txt-box {
 																font-size: 14px;
 																font-weight: 500;
 																color: #9FA8B8;
@@ -349,7 +344,7 @@ $font : 'Pretendard';
 																padding-bottom: 7px;
 															}
 
-															select{
+															select {
 																font-size: 15px;
 																font-weight: 400;
 																color: #E5E5E5;
@@ -366,16 +361,18 @@ $font : 'Pretendard';
 														}
 
 
-														.file-box{
-															.fhead-box{
+														.file-box {
+															.fhead-box {
 																display: flex;
 																align-items: center;
 																justify-content: space-between;
 																padding-bottom: 7px;
-																.con-box{
+
+																.con-box {
 																	display: flex;
 																	align-items: center;
 																	justify-content: center;
+
 																	.txt-box {
 																		font-size: 14px;
 																		font-weight: 500;
@@ -384,7 +381,7 @@ $font : 'Pretendard';
 
 																	}
 
-																	.total-byte-box{
+																	.total-byte-box {
 																		padding-left: 14px;
 																		color: #E5E5E5;
 																		font-size: 13px;
@@ -392,7 +389,7 @@ $font : 'Pretendard';
 																		letter-spacing: -0.01em;
 
 
-																		.point{
+																		.point {
 																			color: #11D4FF;
 
 																		}
@@ -402,24 +399,25 @@ $font : 'Pretendard';
 															}
 														}
 
-														.file-table-box{
-															.file-table-wrap{
+														.file-table-box {
+															.file-table-wrap {
 																background-color: #1B2333;
 																padding: 11px 10px;
-																.table-box{
 
-																	max-height: 110px;   // 원하는 높이로 설정 (예시)
-																	overflow-y: auto;    // 세로 스크롤 활성화
+																.table-box {
+
+																	max-height: 110px; // 원하는 높이로 설정 (예시)
+																	overflow-y: auto; // 세로 스크롤 활성화
 																	overflow-x: auto;
 
 
-																	table{
+																	table {
 																		color: #E6ECF8;
 																		font-size: 14px;
 																		font-weight: 400;
 																		letter-spacing: -0.05em;
 																		width: 100%;
-																		border-radius: 5px 5px 0 0 ;
+																		border-radius: 5px 5px 0 0;
 																		border-collapse: separate;
 																		border-spacing: 0;
 																		border-bottom: 1px solid rgba(41, 54, 82, 0.5);
@@ -427,22 +425,20 @@ $font : 'Pretendard';
 																		height: 93px;
 
 
+																		thead {
 
-
-																		thead{
-
-																			tr{
+																			tr {
 
 																			}
 
-																			th{
+																			th {
 																				background-color: #23304B;
 																				padding: 7px;
 																				position: sticky;
 																				top: 0;
 																				z-index: 1;
 
-																				&.ellipsis{
+																				&.ellipsis {
 																					white-space: nowrap;
 																					text-overflow: ellipsis;
 																					display: block;
@@ -454,21 +450,20 @@ $font : 'Pretendard';
 																			}
 																		}
 
-																		tbody{
+																		tbody {
 
 
-
-																			tr{
+																			tr {
 
 																			}
 
-																			td{
+																			td {
 																				background-color: #1B2333;
 																				padding: 7px;
 																				border-bottom: 1px solid rgba(41, 54, 82, 0.5);
 
 
-																				&.ellipsis{
+																				&.ellipsis {
 																					white-space: nowrap;
 																					text-overflow: ellipsis;
 																					display: block;
@@ -480,14 +475,14 @@ $font : 'Pretendard';
 
 																			}
 
-																			.del-box{
+																			.del-box {
 																				display: flex;
 																				align-items: center;
 																				justify-content: center;
 
-																				.ic-del{
-																					display:block;
-																					background: url("../img/ic_del.svg")no-repeat center/cover;
+																				.ic-del {
+																					display: block;
+																					background: url("../img/ic_del.svg") no-repeat center/cover;
 																					width: 16px;
 																					height: 16px;
 																				}
@@ -497,13 +492,12 @@ $font : 'Pretendard';
 																}
 
 
-
 															}
 														}
 
-														.fbox{
+														.fbox {
 
-															label{
+															label {
 																position: relative;
 																cursor: pointer;
 																background-color: #204F7A;
@@ -515,14 +509,14 @@ $font : 'Pretendard';
 																width: 95px;
 																height: 30px;
 
-																input[type=file]{
+																input[type=file] {
 																	position: absolute;
 																	left: -9999px;
 																}
 
-																i{
+																i {
 																	position: absolute;
-																	background: url("../img/ic_file.svg")no-repeat center/ cover;
+																	background: url("../img/ic_file.svg") no-repeat center/ cover;
 																	width: 16px;
 																	height: 16px;
 																	left: 12px;
@@ -530,7 +524,7 @@ $font : 'Pretendard';
 
 																}
 
-																.file-upload{
+																.file-upload {
 																	padding-left: 24px;
 																	font-size: 13px;
 																	font-weight: 500;
@@ -541,7 +535,6 @@ $font : 'Pretendard';
 																	border: 1px solid #204F7A;
 
 
-
 																}
 															}
 														}
@@ -549,23 +542,24 @@ $font : 'Pretendard';
 												}
 											}
 
-											.agree-option-box{
+											.agree-option-box {
 												border-top: 1px solid rgba(62, 78, 117, 0.5);
-												padding: 15px 20px ;
+												padding: 15px 20px;
 
 												margin-top: 15px;
 												display: flex;
 												align-items: center;
 												justify-content: space-around;
-												.option-btn-box{
+
+												.option-btn-box {
 													height: 54px;
 													width: 100%;
 
-													& + .option-btn-box{
+													& + .option-btn-box {
 														padding-left: 20px;
 													}
 
-													.option-btn{
+													.option-btn {
 														display: flex;
 														align-items: center;
 														justify-content: center;
@@ -578,7 +572,7 @@ $font : 'Pretendard';
 														background-color: #274FC1;
 														text-decoration: none;
 
-														&.type-close{
+														&.type-close {
 															background-color: #3E4E75;
 														}
 
@@ -587,16 +581,17 @@ $font : 'Pretendard';
 												}
 											}
 
-											.search-wrap{
+											.search-wrap {
 												display: flex;
 												align-items: center;
 												padding-top: 20px;
 
-												.con-box{
+												.con-box {
 
-													& + .con-box{
+													& + .con-box {
 														padding-left: 9px;
 													}
+
 													.select-box {
 														select {
 															font-size: 15px;
@@ -610,7 +605,7 @@ $font : 'Pretendard';
 															outline: none;
 															box-sizing: border-box;
 															appearance: none;
-															background: #0F1825  url("../img/ic_sbox_arrow.svg")no-repeat right 5px top 15px / 10px 5px ;
+															background: #0F1825 url("../img/ic_sbox_arrow.svg") no-repeat right 5px top 15px / 10px 5px;
 														}
 
 														option {
@@ -620,9 +615,10 @@ $font : 'Pretendard';
 													}
 
 
-													.sbox{
+													.sbox {
 														width: 270px;
-														input{
+
+														input {
 															font-size: 15px;
 															font-weight: 400;
 															color: #E5E5E5;
@@ -635,7 +631,7 @@ $font : 'Pretendard';
 															border: 1px solid #374971;
 
 
-															&::placeholder{
+															&::placeholder {
 
 
 															}
@@ -643,9 +639,9 @@ $font : 'Pretendard';
 													}
 
 
-													.search-btn-box{
+													.search-btn-box {
 
-														.search-btn{
+														.search-btn {
 															display: flex;
 															align-items: center;
 															justify-content: center;
@@ -657,14 +653,14 @@ $font : 'Pretendard';
 															cursor: pointer;
 															border-radius: 3px;
 
-															i.ic-search{
-																background: url("../img/ic_search.svg")no-repeat center/cover;
+															i.ic-search {
+																background: url("../img/ic_search.svg") no-repeat center/cover;
 																width: 16px;
 																height: 16px;
 
 															}
 
-															.txt{
+															.txt {
 																font-size: 15px;
 																font-weight: 500;
 																color: #FFFFff;
@@ -677,39 +673,44 @@ $font : 'Pretendard';
 												}
 											}
 
-											.list-wrap{
+											.list-wrap {
 												padding-top: 11px;
-												.total-box{
-													.txt{
+
+												.total-box {
+													.txt {
 														color: #FFFFff;
-														.number{
+
+														.number {
 															color: #11D4FF;
 
 														}
 													}
 												}
-												.list-layout{
+
+												.list-layout {
 													padding-top: 7px;
-													.table-box{
-														table{
+
+													.table-box {
+														table {
 															color: #E6ECF8;
 															font-size: 14px;
 															font-weight: 400;
 															letter-spacing: -0.05em;
 															width: 100%;
-															border-radius: 5px 5px 0 0 ;
+															border-radius: 5px 5px 0 0;
 															overflow: hidden;
 															border-collapse: separate; /* border-radius가 먹으려면 separate여야 함 */
 															border-spacing: 0;
 															border-bottom: 1px solid rgba(41, 54, 82, 0.5);
-															thead{
 
-																tr{
+															thead {
 
+																tr {
 
 
 																}
-																th{
+
+																th {
 
 																	background-color: #23304B;
 																	border: 1px solid #23304B;
@@ -718,24 +719,22 @@ $font : 'Pretendard';
 																}
 															}
 
-															tbody{
+															tbody {
 
 
-																tr{
-
-
+																tr {
 
 
 																}
 
-																td{
+																td {
 																	padding: 8px;
 
-																	&.txt{
+																	&.txt {
 																		text-align: center;
 
 
-																		&.ellipsis{
+																		&.ellipsis {
 																			white-space: nowrap;
 																			text-overflow: ellipsis;
 																			display: block;
@@ -745,21 +744,22 @@ $font : 'Pretendard';
 																		}
 																	}
 
-																	&.option-list{
+																	&.option-list {
 																		display: flex;
 																		align-items: center;
 																		justify-content: space-between;
-																		.option-btn{
-																			&.ic-zoom{
+
+																		.option-btn {
+																			&.ic-zoom {
 																				display: block;
-																				background: url("../img/ic_zone.svg")no-repeat center/cover;
+																				background: url("../img/ic_zone.svg") no-repeat center/cover;
 																				width: 16px;
 																				height: 16px;
 																			}
 																		}
 																	}
 
-																	&.bg-item{
+																	&.bg-item {
 																		background-color: rgba(41, 54, 82, 0.5);
 
 																	}
@@ -770,36 +770,37 @@ $font : 'Pretendard';
 															}
 
 
-
-
 														}
 													}
 												}
 
 
-												.paging-list{
+												.paging-list {
 													padding-top: 15px;
-													.paging-box{
+
+													.paging-box {
 														display: flex;
 														align-items: center;
 														justify-content: center;
 
-														.page{
+														.page {
 															margin: 7px 12px;
 															display: block;
 														}
-														.first-btn{
-															background: url("../img/ic_frist.svg")no-repeat center/cover;
+
+														.first-btn {
+															background: url("../img/ic_frist.svg") no-repeat center/cover;
 															width: 11px;
 															height: 9px;
 														}
-														.prev-btn{
-															background: url("../img/ic_prev2.svg")no-repeat center/cover;
+
+														.prev-btn {
+															background: url("../img/ic_prev2.svg") no-repeat center/cover;
 															width: 5px;
 															height: 9px;
 														}
 
-														.num-btn{
+														.num-btn {
 															font-size: 15px;
 															font-weight: 400;
 															color: #9CA3AF;
@@ -814,14 +815,14 @@ $font : 'Pretendard';
 															}
 														}
 
-														.next-btn{
-															background: url("../img/ic_next.svg")no-repeat center/cover;
+														.next-btn {
+															background: url("../img/ic_next.svg") no-repeat center/cover;
 															width: 5px;
 															height: 9px;
 														}
 
-														.last-btn{
-															background: url("../img/ic_last.svg")no-repeat center/cover;
+														.last-btn {
+															background: url("../img/ic_last.svg") no-repeat center/cover;
 															width: 11px;
 															height: 9px;
 														}
@@ -837,30 +838,31 @@ $font : 'Pretendard';
 					}
 				}
 
-				.map-container{
+				.map-container {
 					width: 100%;
 					height: 100%;
 					position: relative;
 
-					.map-list{
-						.map-item{
+					.map-list {
+						.map-item {
 							width: 100%;
 							height: 100vh;
+
 							&.type-img1 {
 								background: url("../img/img_map1.png") no-repeat center/ cover;
 							}
 
-							&.type-img2{
-								background: url("../img/img_map2.png")no-repeat center/ cover;
+							&.type-img2 {
+								background: url("../img/img_map2.png") no-repeat center/ cover;
 							}
 
-							&.hidden{
+							&.hidden {
 								display: none;
 							}
 						}
 					}
 
-					.map-btn-wrap{
+					.map-btn-wrap {
 						display: flex;
 						flex-direction: column;
 						align-items: flex-end;
@@ -870,54 +872,52 @@ $font : 'Pretendard';
 						right: 18px;
 						gap: 10px;
 
-						.map-btn{
+						.map-btn {
 							width: 40px;
 							height: 40px;
 							border-radius: 3px;
 
-							&.active{
+							&.active {
 								border: 3px solid #3060EA;
 								overflow: hidden;
 							}
 
 
-
-
-							img{
+							img {
 								max-width: 100%;
 
 							}
 						}
 					}
 
-					.map-info-wrap{
-						position:absolute;
+					.map-info-wrap {
+						position: absolute;
 						z-index: 1;
 						bottom: 20px;
 						left: 50%;
 
-						.info-box{
+						.info-box {
 							display: flex;
 							background-color: rgba(255, 255, 255, 0.8);
 							border-radius: 5px;
 							border: 1px solid rgba(0, 0, 0, 0.2);
 							padding: 13px 25px;
 
-							.row-box{
+							.row-box {
 								display: flex;
 								flex-direction: column;
 
 
-								& + .row-box{
+								& + .row-box {
 									padding-left: 100px;
 								}
 
-								.item-box{
+								.item-box {
 									display: flex;
 									align-items: center;
 									justify-content: center;
 
-									.subject-box{
+									.subject-box {
 										font-size: 13px;
 										font-weight: 400;
 										color: #6C6F76;
@@ -925,7 +925,7 @@ $font : 'Pretendard';
 										min-width: 68px;
 									}
 
-									.desc-box{
+									.desc-box {
 										padding-left: 13px;
 										font-size: 14px;
 										font-weight: 400;
@@ -943,37 +943,35 @@ $font : 'Pretendard';
 	}
 
 
-
-
 }
 
 
-.wrapper2{
+.wrapper2 {
 	min-height: 100dvh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: #1B2333;
 
-	.password-container{
+	.password-container {
 		background-color: #242A38;
 		margin: 0 auto;
 		width: 520px;
 
 
-		.inner{
+		.inner {
 			padding: 53px 60px 35px;
 
-			.img-box{
+			.img-box {
 
-				.img{
-					background: url("../img/img_password.png")no-repeat center/cover;
+				.img {
+					background: url("../img/img_password.png") no-repeat center/cover;
 					width: 180px;
 					height: 139px;
 					margin: 0 auto;
 				}
 
-				.subject-txt{
+				.subject-txt {
 					padding-top: 28px;
 					font-size: 20px;
 					font-weight: 500;
@@ -982,19 +980,20 @@ $font : 'Pretendard';
 				}
 			}
 
-			.input-box{
+			.input-box {
 				padding: 30px 0;
 
-				.ptxt{
+				.ptxt {
 					font-size: 14px;
 					font-weight: 500;
 					letter-spacing: -0.03em;
 					color: #9FA8B8;
 				}
 
-				.pbox{
+				.pbox {
 					padding-top: 8px;
-					input{
+
+					input {
 						outline: none;
 						padding: 8px 17px;
 						width: 100%;
@@ -1006,19 +1005,20 @@ $font : 'Pretendard';
 					}
 				}
 
-				.warning-txt{
+				.warning-txt {
 					display: flex;
 					align-items: center;
 					margin-top: 12px;
-					i.icon-warning{
-						background: url("../img/ic_warning.svg")no-repeat center/cover;
+
+					i.icon-warning {
+						background: url("../img/ic_warning.svg") no-repeat center/cover;
 						width: 22px;
 						height: 22px;
 
 
 					}
 
-					.txt-box{
+					.txt-box {
 						padding-left: 4px;
 						color: #FF2869;
 						font-size: 14px;
@@ -1030,20 +1030,21 @@ $font : 'Pretendard';
 			}
 
 
-			.option-box{
+			.option-box {
 				border-top: 1px solid #59606B;
 				padding-top: 19px;
 				display: flex;
 				align-items: center;
-				.option-btn{
+
+				.option-btn {
 					width: 100%;
 
-					& + .option-btn{
+					& + .option-btn {
 						padding-left: 15px;
 					}
 
 
-					.btn{
+					.btn {
 						background-color: #8230EA;
 						width: 100%;
 						font-size: 20px;
@@ -1058,8 +1059,7 @@ $font : 'Pretendard';
 						justify-content: center;
 
 
-
-						&.t-cancel{
+						&.t-cancel {
 							background-color: #3E4E75;
 
 						}
@@ -1068,35 +1068,34 @@ $font : 'Pretendard';
 			}
 		}
 	}
-
 
 
 }
 
 
-.wrapper3{
+.wrapper3 {
 	min-height: 100dvh;
 	background-color: #1B2333;
 
-	.password-container{
+	.password-container {
 		background-color: #242A38;
 		margin: 0 auto;
 		width: 520px;
 
 
-		.inner{
+		.inner {
 			padding: 53px 60px 35px;
 
-			.img-box{
+			.img-box {
 
-				.img{
-					background: url("../img/img_password.png")no-repeat center/cover;
+				.img {
+					background: url("../img/img_password.png") no-repeat center/cover;
 					width: 180px;
 					height: 139px;
 					margin: 0 auto;
 				}
 
-				.subject-txt{
+				.subject-txt {
 					padding-top: 28px;
 					font-size: 20px;
 					font-weight: 500;
@@ -1105,19 +1104,20 @@ $font : 'Pretendard';
 				}
 			}
 
-			.input-box{
+			.input-box {
 				padding: 30px 0;
 
-				.ptxt{
+				.ptxt {
 					font-size: 14px;
 					font-weight: 500;
 					letter-spacing: -0.03em;
 					color: #9FA8B8;
 				}
 
-				.pbox{
+				.pbox {
 					padding-top: 8px;
-					input{
+
+					input {
 						outline: none;
 						padding: 8px 17px;
 						width: 100%;
@@ -1129,19 +1129,20 @@ $font : 'Pretendard';
 					}
 				}
 
-				.warning-txt{
+				.warning-txt {
 					display: flex;
 					align-items: center;
 					margin-top: 12px;
-					i.icon-warning{
-						background: url("../img/ic_warning.svg")no-repeat center/cover;
+
+					i.icon-warning {
+						background: url("../img/ic_warning.svg") no-repeat center/cover;
 						width: 22px;
 						height: 22px;
 
 
 					}
 
-					.txt-box{
+					.txt-box {
 						padding-left: 4px;
 						color: #FF2869;
 						font-size: 14px;
@@ -1153,20 +1154,21 @@ $font : 'Pretendard';
 			}
 
 
-			.option-box{
+			.option-box {
 				border-top: 1px solid #59606B;
 				padding-top: 19px;
 				display: flex;
 				align-items: center;
-				.option-btn{
+
+				.option-btn {
 					width: 100%;
 
-					& + .option-btn{
+					& + .option-btn {
 						padding-left: 15px;
 					}
 
 
-					.btn{
+					.btn {
 						background-color: #8230EA;
 						width: 100%;
 						font-size: 20px;
@@ -1181,8 +1183,7 @@ $font : 'Pretendard';
 						justify-content: center;
 
 
-
-						&.t-cancel{
+						&.t-cancel {
 							background-color: #3E4E75;
 
 						}
@@ -1193,12 +1194,111 @@ $font : 'Pretendard';
 	}
 
 
-	.sing-up-container{
-		.inner{
+	.sing-up-container {
+		.inner {
+			header {
+				.head-box {
+					.row-box {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
 
+						.con-box {
+							display: flex;
+							align-items: center;
+							&:nth-child(2){
+								padding-left: 104px;
+							}
+
+							& + .con-box{
+								padding-left: 58px;
+							}
+							h1.logo-box {
+								width: 213px;
+								height: 44px;
+
+								.logo-btn {
+									img {
+										width: 100%;
+									}
+								}
+							}
+
+							.tit-box {
+								display: inline-flex;
+								align-items: center;
+
+								.icon-box {
+									&.ic-panorama {
+										background: url("../img/ic_panorama.svg") no-repeat center/cover;
+										width: 19px;
+										height: 18px;
+									}
+								}
+
+								.txt-box {
+									padding-left: 14px;
+									font-size: 18px;
+									font-weight: 500;
+									color: #FFFFff;
+								}
+							}
+
+
+							.sing-up-btn {
+								display: inline-flex;
+								align-items: center;
+								justify-content: center;
+								width: 200px;
+								height: 40px;
+								border-radius: 30px;
+								background: #3060EA;
+								cursor: pointer;
+
+								.icon-box {
+									&.ic_share {
+										background: url("../img/ic_share.svg") no-repeat center/cover;
+										width: 20px;
+										height: 20px;
+
+									}
+								}
+
+								.txt-box {
+									padding-left: 14px;
+									font-size: 18px;
+									font-weight: 500;
+									color: #FFFFff;
+								}
+							}
+
+							.setting-btn{
+								display: inline-flex;
+								align-items: center;
+								justify-content: center;
+								text-decoration: none;
+								.icon-box{
+									&.ic-set{
+										background: url("../img/ic_setting.svg")no-repeat center/cover;
+										width: 18px;
+										height: 19px;
+
+									}
+								}
+
+
+								.txt-box{
+									padding-left: 14px;
+									font-size: 18px;
+									font-weight: 500;
+									color: #FFFFff;
+
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
-
-
-
 }

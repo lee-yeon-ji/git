@@ -698,5 +698,65 @@
             justify-content: center; }
             .wrapper3 .password-container .inner .option-box .option-btn .btn.t-cancel {
               background-color: #3E4E75; }
+  .wrapper3 .sing-up-container .inner header .head-box .row-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box {
+      display: flex;
+      align-items: center; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box:nth-child(2) {
+        padding-left: 104px; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box + .con-box {
+        padding-left: 58px; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box h1.logo-box {
+        width: 213px;
+        height: 44px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box h1.logo-box .logo-btn img {
+          width: 100%; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box {
+        display: inline-flex;
+        align-items: center; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box .icon-box.ic-panorama {
+          background: url("../img/ic_panorama.svg") no-repeat center/cover;
+          width: 19px;
+          height: 18px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box .txt-box {
+          padding-left: 14px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #FFFFff; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 40px;
+        border-radius: 30px;
+        background: #3060EA;
+        cursor: pointer; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn .icon-box.ic_share {
+          background: url("../img/ic_share.svg") no-repeat center/cover;
+          width: 20px;
+          height: 20px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn .txt-box {
+          padding-left: 14px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #FFFFff; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn .icon-box.ic-set {
+          background: url("../img/ic_setting.svg") no-repeat center/cover;
+          width: 18px;
+          height: 19px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn .txt-box {
+          padding-left: 14px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #FFFFff; }
 
 /*# sourceMappingURL=style.css.map */
