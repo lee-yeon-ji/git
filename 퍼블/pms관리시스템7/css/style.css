@@ -698,65 +698,187 @@
             justify-content: center; }
             .wrapper3 .password-container .inner .option-box .option-btn .btn.t-cancel {
               background-color: #3E4E75; }
-  .wrapper3 .sing-up-container .inner header .head-box .row-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box {
+  .wrapper3 .sing-up-container .inner header {
+    background-color: #162955; }
+    .wrapper3 .sing-up-container .inner header .head-box .row-box {
       display: flex;
-      align-items: center; }
-      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box:nth-child(2) {
-        padding-left: 104px; }
-      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box + .con-box {
-        padding-left: 58px; }
-      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box h1.logo-box {
-        width: 213px;
-        height: 44px; }
-        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box h1.logo-box .logo-btn img {
-          width: 100%; }
-      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box {
-        display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box + .row-box {
+        border-top: 1px solid #37466F; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box.bg-none {
+        background-color: #1B2333; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box {
+        display: flex;
         align-items: center; }
-        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box .icon-box.ic-panorama {
-          background: url("../img/ic_panorama.svg") no-repeat center/cover;
-          width: 19px;
-          height: 18px; }
-        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box .txt-box {
-          padding-left: 14px;
-          font-size: 18px;
-          font-weight: 500;
-          color: #FFFFff; }
-      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 200px;
-        height: 40px;
-        border-radius: 30px;
-        background: #3060EA;
-        cursor: pointer; }
-        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn .icon-box.ic_share {
-          background: url("../img/ic_share.svg") no-repeat center/cover;
-          width: 20px;
-          height: 20px; }
-        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn .txt-box {
-          padding-left: 14px;
-          font-size: 18px;
-          font-weight: 500;
-          color: #FFFFff; }
-      .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none; }
-        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn .icon-box.ic-set {
-          background: url("../img/ic_setting.svg") no-repeat center/cover;
-          width: 18px;
-          height: 19px; }
-        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn .txt-box {
-          padding-left: 14px;
-          font-size: 18px;
-          font-weight: 500;
-          color: #FFFFff; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box:nth-child(2) {
+          padding-left: 104px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box + .con-box {
+          padding-left: 58px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box h1.logo-box {
+          width: 213px;
+          height: 44px; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box h1.logo-box .logo-btn img {
+            width: 100%; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box {
+          display: inline-flex;
+          align-items: center; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box .icon-box.ic-panorama {
+            background: url("../img/ic_panorama.svg") no-repeat center/cover;
+            width: 19px;
+            height: 18px; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .tit-box .txt-box {
+            padding-left: 14px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #FFFFff; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 200px;
+          height: 40px;
+          border-radius: 30px;
+          background: #3060EA;
+          cursor: pointer; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn .icon-box.ic_share {
+            background: url("../img/ic_share.svg") no-repeat center/cover;
+            width: 20px;
+            height: 20px; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .sing-up-btn .txt-box {
+            padding-left: 14px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #FFFFff; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn .icon-box.ic-set {
+            background: url("../img/ic_setting.svg") no-repeat center/cover;
+            width: 18px;
+            height: 19px; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .con-box .setting-btn .txt-box {
+            padding-left: 14px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #FFFFff; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap {
+        display: flex;
+        align-items: center; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box + .option-box {
+          padding-left: 50px;
+          position: relative; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box + .option-box::after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 17px;
+            background-color: #323F64;
+            top: 4px;
+            left: 20px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box .user-box {
+          display: flex;
+          align-items: center; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box .user-box .txt-box {
+            font-size: 14px;
+            font-weight: 400;
+            color: #FFFFFF;
+            letter-spacing: -0.05em;
+            padding-right: 13px; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box .user-box .icon-box.ic-user {
+            background: url("../img/ic_user.svg") no-repeat center/cover;
+            width: 24px;
+            height: 24px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box .select-box {
+          width: 100px;
+          position: relative; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box .select-box select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: #162955 url("../img/ic_logo_arrow.svg") no-repeat right 12px center/12px 8px;
+            color: #ffffff;
+            border: none;
+            padding: 0 36px 0 12px;
+            height: 24px;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 400;
+            outline: none;
+            box-sizing: border-box;
+            cursor: pointer; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box .login-box {
+          display: flex;
+          align-items: center; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box .login-box .txt-box {
+            font-size: 14px;
+            font-weight: 400;
+            color: #FFFFFF;
+            letter-spacing: -0.05em;
+            padding-right: 13px; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .option-wrap .option-box .login-box .icon-box.ic-login {
+            background: url("../img/ic_login.svg") no-repeat center/cover;
+            width: 24px;
+            height: 24px; }
+      .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box {
+        display: flex;
+        align-items: center; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .sub-tit-box {
+          display: flex;
+          align-items: center; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .sub-tit-box .txt-box {
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffffff;
+            letter-spacing: -0.05em; }
+            .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .sub-tit-box .txt-box + .txt-box {
+              position: relative;
+              padding-left: 20px; }
+              .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .sub-tit-box .txt-box + .txt-box::after {
+                position: absolute;
+                content: url("../img/ic_sub_tit_on.svg");
+                top: 0;
+                left: 4px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box + .con-box {
+          padding-left: 10px; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .location-btn-box {
+          display: flex;
+          align-items: center; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .location-btn-box .btn {
+            display: flex;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer; }
+            .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .location-btn-box .btn + .btn {
+              margin-left: 5px; }
+            .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .location-btn-box .btn .icon-box {
+              width: 42px;
+              height: 26px; }
+              .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .location-btn-box .btn .icon-box.ic-location1 {
+                background: url("../img/ic_location1.png") no-repeat center/cover; }
+              .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .location-btn-box .btn .icon-box.ic-location2 {
+                background: url("../img/ic_location2.png") no-repeat center/cover; }
+        .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .txt-box {
+          font-size: 15px;
+          font-weight: 400;
+          color: #D2D2D2;
+          letter-spacing: -0.05em; }
+          .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .txt-box + .txt-box {
+            position: relative;
+            padding-left: 32px; }
+            .wrapper3 .sing-up-container .inner header .head-box .row-box .sub-row-box .con-box .txt-box + .txt-box::after {
+              position: absolute;
+              content: url("../img/ic_sub_tit_on.svg");
+              width: 16px;
+              height: 16px;
+              top: 1px;
+              left: 10px; }
 
 /*# sourceMappingURL=style.css.map */

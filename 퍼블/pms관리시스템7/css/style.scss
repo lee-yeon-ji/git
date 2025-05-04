@@ -1197,11 +1197,23 @@ $font: 'Pretendard';
 	.sing-up-container {
 		.inner {
 			header {
+				background-color: #162955;
 				.head-box {
+
 					.row-box {
 						display: flex;
 						align-items: center;
 						justify-content: space-between;
+						padding: 10px 30px;
+
+						& + .row-box{
+							border-top: 1px solid #37466F;
+
+						}
+
+						&.bg-none{
+							background-color: #1B2333;
+						}
 
 						.con-box {
 							display: flex;
@@ -1296,6 +1308,186 @@ $font: 'Pretendard';
 								}
 							}
 						}
+
+						.option-wrap{
+							display: flex;
+							align-items: center;
+							.option-box{
+								& + .option-box{
+									padding-left: 50px;
+									position: relative;
+
+									&::after{
+										position: absolute;
+										content: '';
+										width: 1px;
+										height: 17px;
+										background-color: #323F64;
+										top: 4px;
+										left: 20px;
+
+									}
+								}
+
+								.user-box{
+									display: flex;
+									align-items: center;
+
+									.txt-box{
+										font-size: 14px;
+										font-weight: 400;
+										color: #FFFFFF;
+										letter-spacing: -0.05em;
+										padding-right: 13px;
+									}
+
+									.icon-box{
+										&.ic-user{
+											background: url("../img/ic_user.svg")no-repeat center/cover;
+											width: 24px;
+											height: 24px;
+
+										}
+									}
+								}
+
+								.select-box{
+									width: 100px;
+									position: relative;
+									select{
+										appearance: none;
+										-webkit-appearance: none;
+										-moz-appearance: none;
+										background: #162955 url('../img/ic_logo_arrow.svg') no-repeat right 12px center/12px 8px;
+										color: #ffffff;
+										border: none;
+										padding: 0 36px 0 12px;
+										height: 24px;
+										width: 100%;
+										font-size: 14px;
+										font-weight: 400;
+										outline: none;
+										box-sizing: border-box;
+										cursor: pointer;
+									}
+
+									option{
+									}
+								}
+
+								.login-box{
+									display: flex;
+									align-items: center;
+
+									.txt-box{
+										font-size: 14px;
+										font-weight: 400;
+										color: #FFFFFF;
+										letter-spacing: -0.05em;
+										padding-right: 13px;
+									}
+
+									.icon-box{
+										&.ic-login{
+											background: url("../img/ic_login.svg")no-repeat center/cover;
+											width: 24px;
+											height: 24px;
+										}
+									}
+								}
+							}
+						}
+
+						.sub-row-box{
+							display: flex;
+							align-items: center;
+
+							.sub-tit-box{
+								display: flex;
+								align-items: center;
+								.txt-box{
+									font-size: 16px;
+									font-weight: 500;
+									color: #ffffff;
+									letter-spacing: -0.05em;
+
+
+									& + .txt-box {
+										position: relative;
+										padding-left: 20px;
+
+										&::after{
+											position: absolute;
+											content: url("../img/ic_sub_tit_on.svg");
+											top: 0;
+											left: 4px;
+										}
+									}
+								}
+							}
+
+							.con-box{
+								& + .con-box{
+									padding-left: 10px;
+								}
+								.location-btn-box{
+									display: flex;
+									align-items: center;
+									.btn{
+										display: flex;
+										appearance: none;
+										-webkit-appearance: none;
+										-moz-appearance: none;
+										background: none;
+										border: none;
+										padding: 0;
+										cursor: pointer;
+										& + .btn{
+											margin-left: 5px;
+										}
+										.icon-box{
+											width: 42px;
+											height: 26px;
+											&.ic-location1{
+												background: url("../img/ic_location1.png")no-repeat center/cover;
+											}
+
+											&.ic-location2{
+												background: url("../img/ic_location2.png")no-repeat center/cover;
+
+
+											}
+										}
+									}
+								}
+
+
+								.txt-box{
+									font-size: 15px;
+									font-weight: 400;
+									color: #D2D2D2;
+									letter-spacing: -0.05em;
+
+									& + .txt-box{
+										position: relative;
+										padding-left: 32px;
+
+
+										&::after{
+											position: absolute;
+											content: url("../img/ic_sub_tit_on.svg");
+											width: 16px;
+											height: 16px;
+											top: 1px;
+											left: 10px;
+
+										}
+									}
+								}
+							}
+						}
+
+
 					}
 				}
 			}
