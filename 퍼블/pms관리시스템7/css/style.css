@@ -1033,9 +1033,15 @@
       .wrapper3 .sing-up-container .inner .list-container .list-head-box .row-box .choice-option-wrap .choice-btn {
         background-color: transparent;
         border: none;
-        cursor: pointer; }
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center; }
         .wrapper3 .sing-up-container .inner .list-container .list-head-box .row-box .choice-option-wrap .choice-btn.checked .txt-box {
           color: #11D4FF; }
+        .wrapper3 .sing-up-container .inner .list-container .list-head-box .row-box .choice-option-wrap .choice-btn.checked .icon-box.ic-allchk {
+          background: url("../img/ic_allchk_on.svg") no-repeat center/cover;
+          width: 16px;
+          height: 16px; }
         .wrapper3 .sing-up-container .inner .list-container .list-head-box .row-box .choice-option-wrap .choice-btn + .choice-btn {
           margin-left: 50px;
           position: relative; }
@@ -1047,6 +1053,16 @@
             position: absolute;
             top: 3px;
             left: -31px; }
+        .wrapper3 .sing-up-container .inner .list-container .list-head-box .row-box .choice-option-wrap .choice-btn .icon-box {
+          margin-right: 5px; }
+          .wrapper3 .sing-up-container .inner .list-container .list-head-box .row-box .choice-option-wrap .choice-btn .icon-box.ic-allchk {
+            background: url("../img/ic_allchk.svg") no-repeat center/cover;
+            width: 16px;
+            height: 16px; }
+          .wrapper3 .sing-up-container .inner .list-container .list-head-box .row-box .choice-option-wrap .choice-btn .icon-box.ic-alldel {
+            background: url("../img/ic_alldel.svg") no-repeat center/cover;
+            width: 16px;
+            height: 16px; }
         .wrapper3 .sing-up-container .inner .list-container .list-head-box .row-box .choice-option-wrap .choice-btn .txt-box {
           font-size: 13px;
           font-weight: 400;
@@ -1056,65 +1072,136 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px; }
-  .wrapper3 .sing-up-container .inner .card {
-    background: #222733;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-    position: relative;
-    transition: box-shadow 0.2s; }
-    .wrapper3 .sing-up-container .inner .card.selected {
-      border: 2px solid #3e7bfa;
-      box-shadow: 0 4px 16px rgba(62, 123, 250, 0.15); }
-    .wrapper3 .sing-up-container .inner .card .card-image {
-      position: relative;
-      width: 100%;
-      height: 140px;
-      overflow: hidden; }
-      .wrapper3 .sing-up-container .inner .card .card-image img {
+    .wrapper3 .sing-up-container .inner .grid .card {
+      background: #222733;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative; }
+      .wrapper3 .sing-up-container .inner .grid .card:hover {
+        border: 2px solid #3e7bfa; }
+        .wrapper3 .sing-up-container .inner .grid .card:hover .overlay-wrap {
+          display: block; }
+      .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-color: rgba(0, 9, 28, 0.8); }
+        .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel {
+          padding: 8px; }
+          .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px; }
+            .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-header .header-btn {
+              border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+              margin-bottom: 16px;
+              height: 38px;
+              width: 50%;
+              text-align: center; }
+              .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-header .header-btn + .header-btn {
+                margin-left: 15px; }
+              .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-header .header-btn .btn {
+                font-size: 15px;
+                font-weight: 500;
+                color: #FFFFff;
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+                width: 100%;
+                height: 100%; }
+              .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-header .header-btn:hover {
+                background-color: #3060EA;
+                border-radius: 3px; }
+          .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px; }
+            .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-actions .action-btn {
+              height: 38px;
+              width: 50%;
+              text-align: center; }
+              .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-actions .action-btn + .action-btn {
+                margin-left: 15px; }
+              .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-actions .action-btn .btn {
+                font-size: 15px;
+                font-weight: 500;
+                color: #FFFFff;
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+                width: 100%;
+                height: 100%; }
+              .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-actions .action-btn:hover {
+                background-color: #3060EA;
+                border-radius: 3px; }
+          .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 87px;
+            margin-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15); }
+            .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-toggle .txt-box {
+              font-size: 16px;
+              font-weight: 500;
+              color: #E5EBFF;
+              letter-spacing: -0.01em;
+              margin-right: 15px; }
+            .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-toggle label {
+              display: flex; }
+              .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-toggle label input[type=checkbox] {
+                position: absolute;
+                left: -9999px; }
+                .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-toggle label input[type=checkbox]:checked ~ .ic-toggle {
+                  background: url("../img/ic_toggle_on.svg") no-repeat center/cover; }
+              .wrapper3 .sing-up-container .inner .grid .card .overlay-wrap .option-panel .option-toggle label .ic-toggle {
+                background: url("../img/ic_toggle_off.svg") no-repeat center/cover;
+                width: 48px;
+                height: 22px; }
+      .wrapper3 .sing-up-container .inner .grid .card .card-image {
+        position: relative;
         width: 100%;
-        height: 100%;
-        object-fit: cover; }
-      .wrapper3 .sing-up-container .inner .card .card-image .badge {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        padding: 4px 12px;
-        border-radius: 12px;
-        font-size: 13px;
-        font-weight: 500; }
-        .wrapper3 .sing-up-container .inner .card .card-image .badge.published {
-          background: #3e7bfa;
-          color: #fff; }
-        .wrapper3 .sing-up-container .inner .card .card-image .badge.unpublished {
-          background: #3d4150;
-          color: #b0b3bb; }
-      .wrapper3 .sing-up-container .inner .card .card-image .checkbox {
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        width: 22px;
-        height: 22px;
-        border: 2px solid #3e7bfa;
-        border-radius: 6px;
-        background: #222733; }
-    .wrapper3 .sing-up-container .inner .card.selected .checkbox {
-      background: #3e7bfa; }
-      .wrapper3 .sing-up-container .inner .card.selected .checkbox:after {
-        content: "";
-        display: block;
-        width: 12px;
-        height: 12px;
-        margin: 4px auto;
-        border-radius: 3px;
-        background: #fff; }
-    .wrapper3 .sing-up-container .inner .card .card-content {
-      padding: 16px; }
-      .wrapper3 .sing-up-container .inner .card .card-content .title {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 6px; }
-      .wrapper3 .sing-up-container .inner .card .card-content .location, .wrapper3 .sing-up-container .inner .card .card-content .author, .wrapper3 .sing-up-container .inner .card .card-content .date {
-        font-size: 14px; }
+        overflow: hidden; }
+        .wrapper3 .sing-up-container .inner .grid .card .card-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+        .wrapper3 .sing-up-container .inner .grid .card .card-image .badge {
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          padding: 4px 12px;
+          border-radius: 12px;
+          font-size: 13px;
+          font-weight: 500; }
+          .wrapper3 .sing-up-container .inner .grid .card .card-image .badge.published {
+            background: #3e7bfa;
+            color: #fff; }
+          .wrapper3 .sing-up-container .inner .grid .card .card-image .badge.unpublished {
+            background: #3d4150;
+            color: #b0b3bb; }
+      .wrapper3 .sing-up-container .inner .grid .card .card-content {
+        padding: 16px; }
+        .wrapper3 .sing-up-container .inner .grid .card .card-content .title {
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 6px;
+          letter-spacing: -0.05em;
+          color: #FFFFff; }
+        .wrapper3 .sing-up-container .inner .grid .card .card-content .location, .wrapper3 .sing-up-container .inner .grid .card .card-content .author, .wrapper3 .sing-up-container .inner .grid .card .card-content .date {
+          font-size: 13px;
+          font-weight: 400;
+          color: #E5E5E5;
+          letter-spacing: -0.05em; }
+        .wrapper3 .sing-up-container .inner .grid .card .card-content .con-box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
 
 /*# sourceMappingURL=style.css.map */

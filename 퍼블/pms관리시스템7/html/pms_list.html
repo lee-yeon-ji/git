@@ -144,33 +144,79 @@
 
 				</div>
 				<div class="grid">
-					<!-- 카드 9개 예시 -->
 					<div class="card selected">
-						<div class="card-image">
-							<img src="../img/img_group.png" alt="파노라마 명"/>
-							<span class="badge published">발행</span>
-							<span class="checkbox"></span>
-						</div>
-						<div class="card-content">
-							<div class="title">파노라마 명</div>
-							<div class="location">대구 북구 구암로</div>
-							<div class="author">김형택</div>
-							<div class="date">2021. 08.00</div>
+						<div class="card">
+							<div class="overlay-wrap">
+								<div class="option-panel">
+									<div class="option-header">
+										<div class="header-btn">
+											<button class="btn">URL복사</button>
+										</div>
+										<div class="header-btn">
+											<button class="btn">부여</button>
+										</div>
+									</div>
+									<div class="option-actions">
+										<div class="action-btn">
+											<button class="btn">수정</button>
+										</div>
+										<div class="action-btn">
+											<button class="btn">삭제</button>
+										</div>
+									</div>
+									<div class="option-toggle">
+										<span class="txt-box">발행</span>
+										<label class="switch">
+											<input type="checkbox" checked>
+											<i class="ic-toggle"></i>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="card-image">
+								<img src="../img/img_group.png" alt="파노라마 명"/>
+								<span class="badge published">발행</span>
+								<span class="checkbox"></span>
+							</div>
+							<div class="card-content">
+								<div class="title">파노라마 명</div>
+								<div class="location">대구 북구 구암로</div>
+								<div class="con-box">
+									<div class="author">김형택</div>
+									<div class="date">2021. 08.00</div>
+								</div>
+							</div>
 						</div>
 					</div>
+
 					<div class="card">
-						<div class="card-image">
-							<img src="../img/img_group.png" alt="파노라마 명"/>
-							<span class="badge published">발행</span>
+						<div class="overlay-wrap">
+							<div class="option-panel">
+								<div class="option-header">
+									<div class="header-btn">
+										<button class="btn">URL복사</button>
+									</div>
+									<div class="header-btn">
+										<button class="btn">부여</button>
+									</div>
+								</div>
+								<div class="option-actions">
+									<div class="action-btn">
+										<button class="btn">수정</button>
+									</div>
+									<div class="action-btn">
+										<button class="btn">삭제</button>
+									</div>
+								</div>
+								<div class="option-toggle">
+									<span class="txt-box">발행</span>
+									<label class="switch">
+										<input type="checkbox" >
+										<i class="ic-toggle"></i>
+									</label>
+								</div>
+							</div>
 						</div>
-						<div class="card-content">
-							<div class="title">파노라마 명</div>
-							<div class="location">대구 북구 구암로</div>
-							<div class="author">김형택</div>
-							<div class="date">2021. 08.00</div>
-						</div>
-					</div>
-					<div class="card">
 						<div class="card-image">
 							<img src="../img/img_group.png" alt="파노라마 명"/>
 							<span class="badge unpublished">미발행</span>
@@ -178,35 +224,15 @@
 						<div class="card-content">
 							<div class="title">파노라마 명</div>
 							<div class="location">대구 북구 구암로</div>
-							<div class="author">김형택</div>
-							<div class="date">2021. 08.00</div>
+							<div class="con-box">
+								<div class="author">김형택</div>
+								<div class="date">2021. 08.00</div>
+							</div>
 						</div>
-					</div>
-					<!-- ... 같은 구조로 6개 더 -->
-				</div>
-				<!-- 우측 상단 옵션 패널 예시 -->
-				<div class="option-panel">
-					<div class="option-header">
-						<span>URL복사</span>
-						<span>부여</span>
-					</div>
-					<div class="option-actions">
-						<span>수정</span>
-						<span>삭제</span>
-					</div>
-					<div class="option-toggle">
-						<span>발행</span>
-						<label class="switch">
-							<input type="checkbox" checked>
-							<span class="slider"></span>
-						</label>
 					</div>
 				</div>
 			</div>
-
-
 		</div>
-
 	</div>
 </div>
 
@@ -226,6 +252,33 @@
         });
 
     });
+
+
+
+    const publishBtns = document.querySelectorAll('.switch');
+
+    publishBtns.forEach(function (btn) {
+
+        const checkbox = btn.querySelector('input[type="checkbox"]');
+        const card = btn.closest('.card');
+        const badge = card.querySelector('.badge');
+
+        checkbox.addEventListener('change', function () {
+            //checkbox가 checked 됐을 때
+            if (checkbox.checked) {
+                badge.classList.remove('unpublished');
+                badge.classList.add('published');
+                badge.textContent = '발행';
+            } else {
+                badge.classList.remove('published');
+                badge.classList.add('unpublished');
+                badge.textContent = '미발행';
+            }
+        });
+    });
+
+
+
 
 
 </script>
