@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Document</title>
+</head>
+<body>
+
+<div class="wrapper3">
+
+	<div class="sing-up-container">
+		<div class="inner wrap">
+
+			<header>
+				<div class="head-box">
+					<div class="row-box">
+						<div class="con-box">
+							<h1 class="logo-box">
+								<a href="#none" class="logo-btn">
+									<img src="../img/img_logo.svg" alt="logo-img">
+								</a>
+
+							</h1>
+
+							<div class="con-box">
+								<div class="tit-box">
+									<i class="icon-box ic-panorama"></i>
+									<div class="txt-box">공개파노라마</div>
+								</div>
+							</div>
+							<div class="con-box">
+								<button class="sing-up-btn">
+									<i class="icon-box ic_share"></i>
+									<span class="txt-box">배포</span>
+								</button>
+							</div>
+							<div class="con-box">
+								<a href="#none" class="setting-btn">
+									<i class="icon-box ic-set"></i>
+									<span class="txt-box">관리</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="row-box">
+							<div class="option-wrap">
+								<div class="option-box">
+									<div class="user-box">
+										<span class="txt-box">계정이름</span>
+										<i class="icon-box ic-user"></i>
+									</div>
+								</div>
+								<div class="option-box">
+									<div class="select-box">
+										<select>
+											<option>한국어</option>
+											<option>영어</option>
+											<option>일본어</option>
+										</select>
+									</div>
+								</div>
+								<div class="option-box">
+									<div class="login-box">
+										<span class="txt-box">로그아웃</span>
+										<i class="icon-box ic-login"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row-box">
+						<div class="sub-row-box">
+							<div class="sub-tit-box">
+								<span class="txt-box">배포</span>
+								<span class="txt-box">등록</span>
+							</div>
+						</div>
+						<div class="sub-row-box">
+							<div class="con-box">
+								<div class="location-btn-box">
+									<button class="btn">
+										<i class="icon-box ic-location1"></i>
+									</button>
+									<button href="#none" class="btn">
+										<i class="icon-box ic-location2"></i>
+									</button>
+								</div>
+							</div>
+							<div class="con-box">
+								<span class="txt-box">파노라마  이름</span>
+								<span class="txt-box">링크 파노라마 이름</span>
+								<span class="txt-box">...</span>
+								<span class="txt-box">마지막 직전 파노라마 이름</span>
+								<span class="txt-box">마지막 파노라마 이름</span>
+							</div>
+						</div>
+					</div>
+					<div class="row-box bg-none">
+						<div class="save-option-wrap">
+							<div class="item-box">
+								<div class="txt-box">이름</div>
+								<div class="sbox">
+									<input type="text" placeholder="..."/>
+								</div>
+							</div>
+
+							<div class="item-box">
+								<div class="txt-box">URL</div>
+								<div class="sbox">
+									<span class="address-box"> https://panorama.igis.co.kr/110/</span>
+									<input type="text" placeholder="..."/>
+								</div>
+							</div>
+
+							<div class="item-box">
+								<div class="txt-box">공개여부</div>
+								<div class="input-box">
+									<div class="rbox">
+										<label>
+											<span class="txt-box">공개</span>
+											<input type="radio" name="public" value="public" checked>
+											<i></i>
+										</label>
+
+									</div>
+								</div>
+
+								<div class="input-box">
+									<div class="rbox">
+										<label>
+											<span class="txt-box">비공개</span>
+											<input type="radio" name="public" value="private">
+											<i></i>
+										</label>
+
+									</div>
+								</div>
+
+							</div>
+
+							<div class="item-box">
+								<div class="txt-box">비밀번호</div>
+								<div class="pbox">
+									<input type="password"/>
+								</div>
+							</div>
+
+							<div class="item-box">
+								<div class="save-btn-box">
+									<button class="save-btn">
+										<i class="icon-box ic-save"></i>
+										<span class="save-txt-box">저장</span>
+									</button>
+								</div>
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="style-wrap">
+				<div class="inner wrap">
+					<div class="side-tab-panel-group">
+						<button class="toggle-btn">
+							<i class="icon-box"></i>
+						</button>
+
+						<div class="side-tab-panel-wrap" id="side-content">
+							<div class="side-tab-panel-inner">
+								<div class="tab-btn-wrap">
+									<button class="tab-btn " data-target="tab-01">
+										<div class="txt">공간정보</div>
+									</button>
+									<button class="tab-btn active" data-target="tab-02">
+										<div class="txt">심볼</div>
+									</button>
+								</div>
+
+								<div class="tab-index-list">
+									<div class="tab-index " id="tab-01">
+										<div class="desc-box">
+											<div class="input-wrap">
+												<div class="boll-wrap">
+													<div class="subject-box">
+														<div class="txt-box">공간정보</div>
+													</div>
+
+													<div class="boll-list">
+														<div class="table-box">
+															<table>
+																<colgroup>
+																	<col style="width: 10%">
+																	<col style="width: 20%">
+																	<col style="width: 20%">
+																	<col style="width: 30%">
+																	<col style="width: 20%">
+																</colgroup>
+
+																<thead>
+																<tr>
+																	<th class="all-check-box">
+																		<div class="cbox">
+																			<label>
+																				<input type="checkbox" value="all" id="checkAll"/>
+																				<i></i>
+																			</label>
+																		</div>
+																	</th>
+																	<th>표시</th>
+																	<th>아이콘</th>
+																	<th>이름</th>
+																	<th>관리</th>
+																</tr>
+																</thead>
+
+																<tbody>
+																<tr>
+																	<td class="check-box">
+																		<div class="cbox">
+																			<label>
+																				<input type="checkbox" name="chk-info" class="chk">
+																				<i></i>
+																			</label>
+																		</div>
+																	</td>
+																	<td class="icon-box">
+																		<div class="ic-star"></div>
+																	</td>
+																	<td class="icon-box">
+																		<div class="ic-triangle"></div>
+																	</td>
+																	<td class="txt">심볼이름</td>
+																	<td class="icon-box">
+																		<a href="#none" class="ic-del"></a>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="check-box">
+																		<div class="cbox">
+																			<label>
+																				<input type="checkbox" name="chk-info" class="chk">
+																				<i></i>
+																			</label>
+																		</div>
+																	</td>
+																	<td class="icon-box">
+																		<div class="ic-star"></div>
+																	</td>
+																	<td class="icon-box">
+																		<div class="ic-triangle"></div>
+																	</td>
+																	<td class="txt">심볼이름</td>
+																	<td class="icon-box">
+																		<a href="#none" class="ic-del"></a>
+																	</td>
+																</tr>
+
+
+																</tbody>
+															</table>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-index is-show" id="tab-02">
+										<div class="desc-box">
+											<div class="input-wrap">
+												<div class="boll-wrap">
+													<div class="subject-box">
+														<div class="txt-box">심볼</div>
+													</div>
+
+													<div class="boll-list">
+														<div class="table-box">
+															<table>
+																<colgroup>
+																	<col style="width: 10%">
+																	<col style="width: 20%">
+																	<col style="width: 20%">
+																	<col style="width: 30%">
+																	<col style="width: 20%">
+																</colgroup>
+
+																<thead>
+																<tr>
+																	<th>No.</th>
+																	<th>표시</th>
+																	<th>아이콘</th>
+																	<th>이름</th>
+																	<th>관리</th>
+																</tr>
+																</thead>
+
+																<tbody>
+																<tr>
+																	<td class="txt">01</td>
+																	<td class="icon-box">
+																		<div class="ic-star"></div>
+																	</td>
+																	<td class="icon-box">
+																		<div class="ic-triangle"></div>
+																	</td>
+																	<td class="txt">심볼이름</td>
+																	<td class="icon-box">
+																		<a href="#none" class="ic-del"></a>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="txt">02</td>
+																	<td class="icon-box">
+																		<div class="ic-star"></div>
+																	</td>
+																	<td class="icon-box">
+																		<div class="ic-triangle"></div>
+																	</td>
+																	<td class="txt">심볼이름</td>
+																	<td class="icon-box">
+																		<a href="#none" class="ic-del"></a>
+																	</td>
+																</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="side-set-tab-panel-group">
+						<button class="set-toggle-btn">
+							<i class="icon-box"></i>
+						</button>
+
+						<div class="side-set-tab-panel-wrap" id="set-content">
+							<div class="side-tab-panel-inner">
+								<div class="tit-box">심볼 설정</div>
+								<div class="tab-btn-wrap">
+									<button class="tab-btn " data-target="tab-03">
+										<div class="txt">기본정보</div>
+									</button>
+									<button class="tab-btn active" data-target="tab-04">
+										<div class="txt">스타일</div>
+									</button>
+								</div>
+
+								<div class="tab-index-list">
+									<div class="tab-index " id="tab-03">
+										<div class="desc-box">
+											<div class="input-wrap">
+												<div class="accordion">
+													<div class="accordion-item">
+														<button class="accordion-btn">
+															<div class="txt-box">아이콘</div>
+														</button>
+														<div class="accordion-content">
+															<div class="item-box">
+																<article class="sub-tit-box">이미지만 표시</article>
+																<div class=""></div>
+															</div>
+															<div class="item-box">
+																<article class="sub-tit-box">아이콘</article>
+																<div class="con-box">
+																	<div class="input-file">
+																		<a href="#none" class="file-btn">
+																			<i class="icon-box ic-file"></i>
+																			<span class="txt-box">파일선택</span>
+																		</a>
+																	</div>
+
+																</div>
+															</div>
+
+
+														</div>
+													</div>
+													<div class="accordion-item">
+														<button class="accordion-btn">
+															<div class="txt-box">스타일</div>
+														</button>
+														<div class="accordion-content">
+
+														</div>
+													</div>
+													<div class="accordion-item">
+														<button class="accordion-btn">
+															<div class="txt-box">도형 스타일</div>
+														</button>
+														<div class="accordion-content">
+
+														</div>
+													</div>
+													<div class="accordion-item">
+														<button class="accordion-btn">
+															<div class="txt-box">폰트 스타일</div>
+														</button>
+														<div class="accordion-content"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-index is-show" id="tab-04">
+										<div class="desc-box">
+											<div class="input-wrap">
+												<div class="boll-wrap">
+													<div class="subject-box">
+														<div class="txt-box">심볼</div>
+													</div>
+													<div class="boll-list">
+														<div class="table-box">
+															<table>
+																<colgroup>
+																	<col style="width: 10%">
+																	<col style="width: 20%">
+																	<col style="width: 20%">
+																	<col style="width: 30%">
+																	<col style="width: 20%">
+																</colgroup>
+
+																<thead>
+																<tr>
+																	<th>No.</th>
+																	<th>표시</th>
+																	<th>아이콘</th>
+																	<th>이름</th>
+																	<th>관리</th>
+																</tr>
+																</thead>
+
+																<tbody>
+																<tr>
+																	<td class="txt">01</td>
+																	<td class="icon-box">
+																		<div class="ic-star"></div>
+																	</td>
+																	<td class="icon-box">
+																		<div class="ic-triangle"></div>
+																	</td>
+																	<td class="txt">심볼이름</td>
+																	<td class="icon-box">
+																		<a href="#none" class="ic-del"></a>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="txt">02</td>
+																	<td class="icon-box">
+																		<div class="ic-star"></div>
+																	</td>
+																	<td class="icon-box">
+																		<div class="ic-triangle"></div>
+																	</td>
+																	<td class="txt">심볼이름</td>
+																	<td class="icon-box">
+																		<a href="#none" class="ic-del"></a>
+																	</td>
+																</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="option-box">
+										<a href="#none" class="option-btn type-close"></a>
+										<a href="#none" class="option-btn"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="style-container">
+
+
+						<div class="bg-map">
+							<img src="../img/img_map3.png">
+						</div>
+
+						<!-- 레이어 1 -->
+						<article class="icon-layer" style="top:200px; left:600px;">
+
+							<div class="icon-wrap">
+
+								<div class="icon-btn">
+									<i class="ic ic-blue"></i>
+								</div>
+
+								<div class="icon-menu">
+									<div class="menu-list">
+										<div class="menu-item"><a href="#none" class="menu-btn">메뉴명1</a></div>
+										<div class="menu-item"><a href="#none" class="menu-btn">메뉴명2</a></div>
+										<div class="menu-item"><a href="#none" class="menu-btn">메뉴명3</a></div>
+									</div>
+
+
+								</div>
+
+							</div>
+
+
+						</article>
+
+						<!-- 레이어 2 -->
+						<article class="icon-layer" style="top:400px; left:900px;">
+
+							<div class="icon-wrap">
+
+								<div class="icon-btn">
+									<i class="ic ic-blue"></i>
+								</div>
+
+								<div class="icon-menu">
+									<div class="menu-list">
+										<div class="menu-item"><a href="#none" class="menu-btn">메뉴명1</a></div>
+										<div class="menu-item"><a href="#none" class="menu-btn">메뉴명2</a></div>
+										<div class="menu-item"><a href="#none" class="menu-btn">메뉴명3</a></div>
+									</div>
+
+
+								</div>
+
+							</div>
+
+
+						</article>
+
+						<!-- 레이어 3 -->
+						<article class="icon-layer" style="top:500px; left:1200px;">
+
+							<div class="icon-wrap">
+
+								<div class="icon-btn">
+									<i class="ic ic-red"></i>
+								</div>
+
+								<div class="icon-menu">
+									<div class="menu-list">
+										<div class="menu-item"><a href="#none" class="menu-btn">심볼 추가</a></div>
+										<div class="menu-item"><a href="#none" class="menu-btn">스트림 추가</a></div>
+										<div class="menu-item"><a href="#none" class="menu-btn">현재 파노라마 추가</a></div>
+										<div class="menu-item"><a href="#none" class="menu-btn">일반 파노라마 추가</a></div>
+									</div>
+
+
+								</div>
+
+							</div>
+
+
+						</article>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+
+
+      const toggleBtn = document.querySelector('.toggle-btn');
+      const tabBg = document.querySelector('.side-tab-panel-wrap');
+
+      toggleBtn.addEventListener('click', function () {
+          tabBg.classList.toggle('is-hidden');
+
+      });
+
+
+      const tabBtnList = document.querySelectorAll('.tab-btn');
+      const tabIndexList = document.querySelectorAll('.tab-index');
+
+      tabBtnList.forEach(function (tabBtn) {
+
+          tabBtn.addEventListener('click', function () {
+
+              tabBtnList.forEach(function (tab) {
+                  tab.classList.remove('active');
+              });
+
+              this.classList.add('active');
+
+              tabIndexList.forEach(function (tabContent) {
+                  tabContent.classList.remove('is-show');
+              });
+
+
+              const targetId = this.getAttribute('data-target');
+
+              const targetTab = document.querySelector(`#${targetId}`);
+              if (targetTab) {
+                  targetTab.classList.add('is-show');
+                  console.log(targetTab)
+
+              }
+
+          });
+
+      });
+
+      const setToggleBtn = document.querySelector('.set-toggle-btn');
+      const setTabBg = document.querySelector('.side-set-tab-panel-wrap');
+
+      setToggleBtn.addEventListener('click', function () {
+          setTabBg.classList.toggle('is-hidden');
+
+      });
+
+
+      const switchBtns = document.querySelectorAll('.btn');
+
+      switchBtns.forEach(function (switchBtn) {
+
+          switchBtn.addEventListener('click', function () {
+
+              switchBtns.forEach(function (btn) {
+                  btn.classList.remove('active');
+              })
+
+              this.classList.add('active');
+
+          });
+
+      });
+
+
+      const checkBtnList = document.querySelectorAll('.chk');
+      const allBtn = document.querySelector('#checkAll');
+
+      allBtn.addEventListener('click', function () {
+          checkBtnList.forEach(function (check) {
+              check.checked = allBtn.checked;
+          });
+      });
+
+
+      checkBtnList.forEach(function (check) {
+          check.addEventListener('change', function () {
+              allBtn.checked = Array.from(checkBtnList).every(function (cd) {
+                  return cd.checked;
+              });
+          });
+      });
+
+
+      const accordion = document.querySelectorAll('.accordion-btn');
+
+      accordion.forEach(function (btn){
+          btn.addEventListener('click', function() {
+              const item = this.parentElement;
+              item.classList.toggle('active');
+          });
+
+      });
+
+
+
+
+	</script>
+
+</body>
+</html>
