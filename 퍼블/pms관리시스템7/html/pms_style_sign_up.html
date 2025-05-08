@@ -369,20 +369,54 @@
 														</button>
 														<div class="accordion-content">
 															<div class="item-box">
-																<article class="sub-tit-box">이미지만 표시</article>
-																<div class=""></div>
+																<div class="top-box">
+																	<article class="sub-tit-box">이미지만 표시</article>
+																	<div class=""></div>
+																</div>
+
 															</div>
 															<div class="item-box">
-																<article class="sub-tit-box">아이콘</article>
-																<div class="con-box">
-																	<div class="input-file">
-																		<a href="#none" class="file-btn">
-																			<i class="icon-box ic-file"></i>
-																			<span class="txt-box">파일선택</span>
-																		</a>
+																<div class="top-box">
+																	<article class="sub-tit-box">아이콘</article>
+																	<div class="con-box">
+																		<div class="input-file">
+																			<a href="#none" class="file-btn">
+																				<i class="icon-box ic-file"></i>
+																				<span class="txt-box">파일선택</span>
+																			</a>
+																		</div>
 																	</div>
-
 																</div>
+
+																<div class="icon-list">
+																	<div class="icon-box">
+																		<div class="subject-box">범용1</div>
+																		<div class="con-box">
+																			<div class="row">
+																				<a href="#none"  class="icon">
+																					<img src="../img/ic_money.svg">
+																				</a>
+																				<a href="#none" class="icon">
+																					<img src="../img/ic_money.svg">
+																				</a>
+																				<a href="#none" class="icon">
+																					<img src="../img/ic_money.svg">
+																				</a>
+																				<a href="#none" class="icon">
+																					<img src="../img/ic_money.svg">
+																				</a>
+																				<a href="#none" class="icon">
+																					<img src="../img/ic_money.svg">
+																				</a>
+																				<a href="#none" class="icon">
+																					<img src="../img/ic_money.svg">
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+
 															</div>
 
 
@@ -417,60 +451,35 @@
 									<div class="tab-index is-show" id="tab-04">
 										<div class="desc-box">
 											<div class="input-wrap">
-												<div class="boll-wrap">
-													<div class="subject-box">
-														<div class="txt-box">심볼</div>
+
+
+												<div class="input-item-box">
+													<div class="subject-box">이름</div>
+													<div class="con-box">
+														<div class="tbox">
+															<input type="text" placeholder="스마트 드론 기술센터">
+														</div>
 													</div>
-													<div class="boll-list">
-														<div class="table-box">
-															<table>
-																<colgroup>
-																	<col style="width: 10%">
-																	<col style="width: 20%">
-																	<col style="width: 20%">
-																	<col style="width: 30%">
-																	<col style="width: 20%">
-																</colgroup>
+												</div>
 
-																<thead>
-																<tr>
-																	<th>No.</th>
-																	<th>표시</th>
-																	<th>아이콘</th>
-																	<th>이름</th>
-																	<th>관리</th>
-																</tr>
-																</thead>
+												<div class="input-item-box">
+													<div class="subject-box">URL</div>
+													<div class="con-box">
+														<div class="tbox">
+															<input type="text" placeholder="https://www.igis.co.kr">
+														</div>
+													</div>
+												</div>
 
-																<tbody>
-																<tr>
-																	<td class="txt">01</td>
-																	<td class="icon-box">
-																		<div class="ic-star"></div>
-																	</td>
-																	<td class="icon-box">
-																		<div class="ic-triangle"></div>
-																	</td>
-																	<td class="txt">심볼이름</td>
-																	<td class="icon-box">
-																		<a href="#none" class="ic-del"></a>
-																	</td>
-																</tr>
-																<tr>
-																	<td class="txt">02</td>
-																	<td class="icon-box">
-																		<div class="ic-star"></div>
-																	</td>
-																	<td class="icon-box">
-																		<div class="ic-triangle"></div>
-																	</td>
-																	<td class="txt">심볼이름</td>
-																	<td class="icon-box">
-																		<a href="#none" class="ic-del"></a>
-																	</td>
-																</tr>
-																</tbody>
-															</table>
+
+												<div class="input-item-box">
+													<div class="subject-box">설명</div>
+													<div class="con-box">
+														<div class="textarea-box">
+															<textarea>
+																설명이 들어갑니다
+															</textarea>
+
 														</div>
 													</div>
 												</div>
@@ -479,8 +488,8 @@
 									</div>
 
 									<div class="option-box">
-										<a href="#none" class="option-btn type-close"></a>
-										<a href="#none" class="option-btn"></a>
+										<a href="#none" class="option-btn type-close">취소</a>
+										<a href="#none" class="option-btn">저장</a>
 									</div>
 								</div>
 							</div>
@@ -663,15 +672,13 @@
 
       const accordion = document.querySelectorAll('.accordion-btn');
 
-      accordion.forEach(function (btn){
-          btn.addEventListener('click', function() {
+      accordion.forEach(function (btn) {
+          btn.addEventListener('click', function () {
               const item = this.parentElement;
               item.classList.toggle('active');
           });
 
       });
-
-
 
 
 	</script>

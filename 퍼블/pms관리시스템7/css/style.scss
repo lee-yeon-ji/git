@@ -2278,7 +2278,7 @@ $font: 'Pretendard';
 
 						.side-set-tab-panel-wrap {
 							overflow: hidden;
-							width: 360px;
+							width: 285px;
 
 							&.is-hidden {
 								width: 0;
@@ -2481,47 +2481,88 @@ $font: 'Pretendard';
 														background-color: #282D38;
 
 														.item-box{
-															display: flex;
-															justify-content: space-between;
-															align-items: center;
-															.con-box{
-																.input-file{
-																	.file-btn{
-																		display: flex;
-																		align-items: center;
-																		justify-content: center;
-																		background-color: #204F7A;
-																		width: 95px;
-																		height: 30px;
-																		border-radius: 3px;
-																		text-decoration: none;
-
-																		.icon-box{
 
 
-																			&.ic-file{
-																				background: url("../img/ic_file.svg")no-repeat center/cover;
-																				width: 16px;
-																				height: 16px;
+															.top-box{
+																display: flex;
+																justify-content: space-between;
+																align-items: center;
+																.con-box{
+																	.input-file{
+																		.file-btn{
+																			display: flex;
+																			align-items: center;
+																			justify-content: center;
+																			background-color: #204F7A;
+																			width: 95px;
+																			height: 30px;
+																			border-radius: 3px;
+																			text-decoration: none;
+
+																			.icon-box{
+
+
+																				&.ic-file{
+																					background: url("../img/ic_file.svg")no-repeat center/cover;
+																					width: 16px;
+																					height: 16px;
+
+																				}
 
 																			}
 
-																		}
+																			.txt-box{
+																				padding-left: 10px;
+																				font-size: 13px;
+																				font-weight: 500;
+																				color: #FFFFFF;
+																				letter-spacing: -0.01em;
+																			}
 
-																		.txt-box{
-																			padding-left: 10px;
-																			font-size: 13px;
-																			font-weight: 500;
-																			color: #FFFFFF;
-																			letter-spacing: -0.01em;
 																		}
 
 																	}
 
 																}
-
 															}
+
+															.icon-list{
+																.icon-box{
+																	.subject-box{
+																		font-size: 14px;
+																		font-weight: 500;
+																		color: #9FA8B8;
+																		letter-spacing: -0.03em;
+
+
+																	}
+																	.con-box{
+
+
+																		.row{
+																   			display: grid;
+																			grid-template-columns: repeat(5, 1fr);
+																			gap: 4px;
+																			.icon{
+																				width: 36px;
+																				height: 36px;
+																				background-color: #1B2333;
+																				align-items: center;
+																				justify-content: center;
+																				display: flex;
+
+																				img{
+																					width: 24px;
+																					height: 24px;
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+
 														}
+
 
 													}
 
@@ -2529,6 +2570,11 @@ $font: 'Pretendard';
 												}
 
 												.accordion-item.active .accordion-content {
+
+
+													&.active{
+
+													}
 													display: block;
 												}
 
@@ -2539,11 +2585,31 @@ $font: 'Pretendard';
 									}
 
 									.option-box{
+										display: flex;
+										align-items: center;
+										justify-content: space-between;
+
+
 										.option-btn{
+											background-color: #274FC1;
+											color: #FFFFFF;
+											font-size: 20px;
+											font-weight: 500;
+											letter-spacing: -0.01em;
+											width: 50%;
+											height: 54px;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											text-decoration: none;
+											border-radius: 5px;
+
+											& +.option-btn{
+												margin-left: 10px;
+											}
 
 											&.type-close{
 												background-color: #3E4E75;
-												
 											}
 										}
 									}

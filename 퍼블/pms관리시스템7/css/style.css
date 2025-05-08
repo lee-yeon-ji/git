@@ -1339,7 +1339,7 @@
         height: 10px; }
     .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap {
       overflow: hidden;
-      width: 360px; }
+      width: 285px; }
       .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap.is-hidden {
         width: 0; }
       .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner {
@@ -1459,11 +1459,11 @@
               display: none;
               padding: 10px;
               background-color: #282D38; }
-              .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box {
+              .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .top-box {
                 display: flex;
                 justify-content: space-between;
                 align-items: center; }
-                .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .con-box .input-file .file-btn {
+                .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .top-box .con-box .input-file .file-btn {
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -1472,20 +1472,58 @@
                   height: 30px;
                   border-radius: 3px;
                   text-decoration: none; }
-                  .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .con-box .input-file .file-btn .icon-box.ic-file {
+                  .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .top-box .con-box .input-file .file-btn .icon-box.ic-file {
                     background: url("../img/ic_file.svg") no-repeat center/cover;
                     width: 16px;
                     height: 16px; }
-                  .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .con-box .input-file .file-btn .txt-box {
+                  .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .top-box .con-box .input-file .file-btn .txt-box {
                     padding-left: 10px;
                     font-size: 13px;
                     font-weight: 500;
                     color: #FFFFFF;
                     letter-spacing: -0.01em; }
+              .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .icon-list .icon-box .subject-box {
+                font-size: 14px;
+                font-weight: 500;
+                color: #9FA8B8;
+                letter-spacing: -0.03em; }
+              .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .icon-list .icon-box .con-box .row {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 4px; }
+                .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .icon-list .icon-box .con-box .row .icon {
+                  width: 36px;
+                  height: 36px;
+                  background-color: #1B2333;
+                  align-items: center;
+                  justify-content: center;
+                  display: flex; }
+                  .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item .accordion-content .item-box .icon-list .icon-box .con-box .row .icon img {
+                    width: 24px;
+                    height: 24px; }
           .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .tab-index .desc-box .input-wrap .accordion-item.active .accordion-content {
             display: block; }
-        .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .option-box .option-btn.type-close {
-          background-color: #3E4E75; }
+        .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .option-box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .option-box .option-btn {
+            background-color: #274FC1;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            width: 50%;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 5px; }
+            .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .option-box .option-btn + .option-btn {
+              margin-left: 10px; }
+            .wrapper3 .sing-up-container .inner .style-wrap .inner .side-set-tab-panel-group .side-set-tab-panel-wrap .side-tab-panel-inner .tab-index-list .option-box .option-btn.type-close {
+              background-color: #3E4E75; }
   .wrapper3 .sing-up-container .inner .style-wrap .inner .style-container {
     position: relative; }
     .wrapper3 .sing-up-container .inner .style-wrap .inner .style-container .bg-map {
