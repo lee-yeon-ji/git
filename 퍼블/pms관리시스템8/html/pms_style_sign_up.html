@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="../css/style.css">
+	<title>PMS관리시스템유지보수</title>
+</head>
+<body>
+
+<div class="contents">
+	<div class="header-box">
+		<div class="top-box">
+			<div class="row-box">
+
+				<div class="item-box">
+					<h1 class="logo-box">
+						<a href="#none" class="logo-btn">
+							<img src="../img/img_logo.svg">
+						</a>
+					</h1>
+				</div>
+
+				<div class="item-box">
+					<div class="set-menu-wrap">
+						<div class="set-menu">
+							<div class="con-box">
+								<i class="ic-panorama"></i>
+								<span class="txt">공개파노라마</span>
+							</div>
+						</div>
+
+						<div class="set-menu">
+							<div class="con-box">
+								<a href="#none" class="out-btn">
+									<i class="ic-out"></i>
+									<span class="txt">배포</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="set-menu">
+							<div class="con-box">
+								<a href="#none" class="set-btn">
+									<i class="ic-set"></i>
+									<span class="txt">관리</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="row-box">
+				<div class="login-option-wrap">
+					<div class="login-option">
+						<a href="#none" class="con-box">
+							<span class="txt">계정이름</span>
+							<i class="icon-box ic-user"></i>
+						</a>
+					</div>
+
+					<div class="login-option">
+						<div class="select-box">
+							<select>
+								<option>한국어</option>
+								<option>영어</option>
+							</select>
+						</div>
+					</div>
+
+
+					<div class="login-option">
+						<a href="#none" class="con-box">
+							<span class="txt">로그아웃</span>
+							<i class="icon-box ic-login"></i>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-box">
+			<div class="row-box">
+				<div class="con-box">
+					<div class="sub-tit">
+						<span class="txt">배포</span>
+						<span class="tit-arrow"></span>
+						<span class="txt">등록</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-box">
+				<div class="con-box">
+					<div class="nav-btn-wrap">
+						<!--button에 type 적어주기 개발할 때 어떤 타입인지 명확해야 함.-->
+						<button type="button" class="nav-btn">
+							<div class="btn-icon ic-first">
+
+							</div>
+						</button>
+
+						<button type="button" class="nav-btn">
+							<div class="btn-icon ic-prev"></div>
+						</button>
+
+					</div>
+
+					<div class="nav-page-list">
+						<div class="page-item">파노라마 이름</div>
+						<div class="page-arrow"></div>
+						<div class="page-item">링크 파노라마 이름</div>
+						<div class="page-arrow"></div>
+						<div class="page-item">...</div>
+						<div class="page-arrow"></div>
+						<div class="page-item">마지막 직전 파노라마 이름</div>
+						<div class="page-arrow"></div>
+						<div class="page-item last-active">마지막 파노라마 이름</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="save-contents">
+		<div class="save-wrap">
+			<div class="save-box">
+				<div class="input-item">
+					<div class="txt-box">이름</div>
+					<div class="sbox">
+						<input type="text" placeholder="수성알파시티-210815"/>
+					</div>
+				</div>
+
+				<div class="input-item">
+					<div class="txt-box"> URL</div>
+					<div class="address-box"> https://panorama.igis.co.kr/110/</div>
+					<div class="sbox">
+						<input type="text" />
+					</div>
+				</div>
+
+				<div class="input-item">
+					<div class="txt-box">공개여부</div>
+					<div class="check-box">
+						<div class="cbox">
+							<label>
+								<input type="checkbox" name="공개여부" value="public"/>
+								<span class="txt-box">공개</span>
+								<i></i>
+							</label>
+						</div>
+
+						<div class="cbox">
+							<label>
+								<input type="checkbox" name="공개여부" value="private"/>
+								<span class="txt-box">비공개</span>
+								<i></i>
+							</label>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="input-item">
+					<div class="txt-box">비밀번호</div>
+					<div class="pbox">
+						<input type="password"/>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="save-box">
+				<button type="button" class="save-btn">
+					<i class="ic-save"></i>
+					<span class="txt-box">저장</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
