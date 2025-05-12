@@ -140,24 +140,24 @@
 					<div class="txt-box"> URL</div>
 					<div class="address-box"> https://panorama.igis.co.kr/110/</div>
 					<div class="sbox">
-						<input type="text" />
+						<input type="text"/>
 					</div>
 				</div>
 
 				<div class="input-item">
 					<div class="txt-box">공개여부</div>
-					<div class="check-box">
-						<div class="cbox">
+					<div class="radio-box">
+						<div class="rbox">
 							<label>
-								<input type="checkbox" name="공개여부" value="public"/>
+								<input type="radio" name="public" value="public"/>
 								<span class="txt-box">공개</span>
 								<i></i>
 							</label>
 						</div>
 
-						<div class="cbox">
+						<div class="rbox">
 							<label>
-								<input type="checkbox" name="공개여부" value="private"/>
+								<input type="radio" name="public" value="private"/>
 								<span class="txt-box">비공개</span>
 								<i></i>
 							</label>
@@ -185,7 +185,289 @@
 		</div>
 	</div>
 
+	<div class="view-contents">
+		<div class="inner wrap">
+			<div class="view-box">
+				<div class="view-img">
+					<img src="../img/img_map3.png">
+				</div>
+			</div>
+
+
+			<!-- icon pick list-->
+			<div class="icon-list">
+				<!-- icon1 -->
+				<div class="icon-pick" style="right: 50%; top:10%;">
+					<div class="icon-wrap">
+						<div class="icon-btn">
+							<i class="ic ic-blue"></i>
+						</div>
+
+						<div class="icon-menu">
+							<div class="menu-list">
+								<div class="menu-item">
+									<a href="#none" class="menu-btn">전체</a>
+								</div>
+								<div class="menu-item">
+									<a href="#none" class="menu-btn">발행중</a>
+								</div>
+								<div class="menu-item">
+									<a href="#none" class="menu-btn">미발행</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- icon2 -->
+				<div class="icon-pick" style="right: 60%; top:40%;">
+					<div class="icon-wrap">
+						<div class="icon-btn">
+							<i class="ic ic-red"></i>
+						</div>
+
+						<div class="icon-menu">
+							<div class="menu-list">
+								<div class="menu-item">
+									<a href="#none" class="menu-btn">심볼 추가</a>
+								</div>
+								<div class="menu-item">
+									<a href="#none" class="menu-btn"> 스트림 추가</a>
+								</div>
+								<div class="menu-item">
+									<a href="#none" class="menu-btn"> 현재 파노라마 추가</a>
+								</div>
+								<div class="menu-item">
+									<a href="#none" class="menu-btn">일반 파노라마 추가</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="left-side-tab">
+				<div class="side-btn-box">
+					<a href="#none" class="side-btn"></a>
+				</div>
+
+
+				<div class="side-tab-contents">
+					<div class="tab-btn-wrap">
+						<button type="button" class="btn active" data-target="content1">공간정보</button>
+						<button type="button" class="btn" data-target="content2">심볼</button>
+					</div>
+
+
+					<div class="tab-contents">
+						<div class="tab-content show" id="content1">
+							<div class="inner wrap">
+								<div class="table-wrap">
+									<table>
+										<colgroup>
+											<col style="width: 10%">
+											<col style="width: 20%">
+											<col style="width: 20%">
+											<col style="width: 30%">
+											<col style="width: 20%">
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th>
+													<div>
+														<div class="cbox">
+															<label>
+																<input type="checkbox" value="all" class="all-chk"/>
+															</label>
+														</div>
+													</div>
+												</th>
+												<th>표시</th>
+												<th>아이콘</th>
+												<th>이름</th>
+												<th>관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="chk-box">
+														<div class="cbox">
+															<label>
+																<input type="checkbox" name="chk-info" class="chk"/>
+
+															</label>
+														</div>
+													</div>
+
+												</td>
+												<td>
+													<div class="icon-box">
+														<div class="ic-star"></div>
+													</div>
+												</td>
+												<td>
+													<div class="icon-box">
+														<div class="ic-triangle"></div>
+													</div>
+												</td>
+												<td>
+													<div class="txt">심볼이름</div>
+												</td>
+												<td>
+													<div class="icon-box">
+														<a href="#none" class="del-btn"></a>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<div class="chk-box">
+														<div class="cbox">
+															<label>
+																<input type="checkbox" name="chk-info" class="chk"/>
+
+															</label>
+														</div>
+													</div>
+
+												</td>
+												<td>
+													<div class="icon-box">
+														<div class="ic-star"></div>
+													</div>
+												</td>
+												<td>
+													<div class="icon-box">
+														<div class="ic-triangle"></div>
+													</div>
+												</td>
+												<td>
+													<div class="txt">심볼이름</div>
+												</td>
+												<td>
+													<div class="icon-box">
+														<a href="#none" class="del-btn"></a>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<div class="chk-box">
+														<div class="cbox">
+															<label>
+																<input type="checkbox" name="chk-info" class="chk"/>
+
+															</label>
+														</div>
+													</div>
+
+												</td>
+												<td>
+													<div class="icon-box">
+														<div class="ic-star"></div>
+													</div>
+												</td>
+												<td>
+													<div class="icon-box">
+														<div class="ic-triangle"></div>
+													</div>
+												</td>
+												<td>
+													<div class="txt">심볼이름</div>
+												</td>
+												<td>
+													<div class="icon-box">
+														<a href="#none" class="del-btn"></a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-content" id="content2">
+							<div class="inner wrap">
+								<div class=""> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+		</div>
+	</div>
+
 </div>
 
+
+<script>
+
+    const leftTab = document.querySelector('.side-btn-box');
+    const tabContents = document.querySelector('.side-tab-contents');
+
+    leftTab.addEventListener('click', function () {
+        tabContents.classList.toggle('hidden');
+
+    });
+
+
+    const tabBtns = document.querySelectorAll('.btn');
+    const tabIndexs = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(function (tabBtn) {
+        tabBtn.addEventListener('click', function () {
+            tabBtns.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+
+            this.classList.add('active');
+
+            tabIndexs.forEach(function (content) {
+                content.classList.remove('show')
+            });
+
+            const targetId = this.getAttribute('data-target');
+            const targetBox = document.querySelector(`#${targetId}`);
+
+            if (targetBox) {
+                targetBox.classList.add('show')
+            }
+
+
+        });
+
+    });
+
+    const allChk = document.querySelector('.all-chk');
+    const chkBtns = document.querySelectorAll('.chk');
+
+    allChk.addEventListener('click', function (){
+        chkBtns.forEach(function (check){
+            check.checked = allChk.checked;
+        });
+    });
+
+		chkBtns.forEach(function (check){
+            check.addEventListener('change' , function (){
+                allChk.checked = Array.from(chkBtns).every(function (cd){
+                    return cd.checked;
+                })
+            })
+		})
+
+
+
+
+</script>
 </body>
 </html>

@@ -28,8 +28,10 @@
   margin: 0; }
 
 .contents {
-  min-height: 100dvh;
-  background-color: #1B2333; }
+  height: 100dvh;
+  background-color: #1B2333;
+  display: flex;
+  flex-direction: column; }
   .contents .header-box {
     background-color: #162955; }
     .contents .header-box .top-box {
@@ -204,7 +206,8 @@
   .contents .save-contents .save-wrap {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    padding: 12px 31px; }
     .contents .save-contents .save-wrap .save-box {
       display: flex;
       align-items: center;
@@ -216,24 +219,60 @@
         align-items: center;
         justify-content: center; }
         .contents .save-contents .save-wrap .save-box .input-item + .input-item {
-          padding-left: 35px; }
+          padding-left: 20px; }
         .contents .save-contents .save-wrap .save-box .input-item .txt-box {
           font-size: 15px;
           font-weight: 400;
           color: #FFFFff;
-          padding-right: 20px; }
+          padding-right: 15px;
+          flex-shrink: 0; }
         .contents .save-contents .save-wrap .save-box .input-item .address-box {
           font-size: 15px;
           font-weight: 400;
           color: #FFFFff;
           padding-right: 20px; }
-        .contents .save-contents .save-wrap .save-box .input-item .sbox input::placeholder {
-          font-size: 15px;
-          font-weight: 300;
+        .contents .save-contents .save-wrap .save-box .input-item .sbox input {
+          height: 36px;
+          border-radius: 3px;
+          border: 1px solid #374971;
+          background-color: #1E2431;
+          padding: 0 10px;
+          width: 100%;
           color: #FFFFff; }
-        .contents .save-contents .save-wrap .save-box .input-item .check-box .cbox .txt-box {
-          font-size: 15px;
-          font-weight: 300;
+          .contents .save-contents .save-wrap .save-box .input-item .sbox input::placeholder {
+            font-size: 15px;
+            font-weight: 300;
+            color: #FFFFff; }
+        .contents .save-contents .save-wrap .save-box .input-item .radio-box {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .contents .save-contents .save-wrap .save-box .input-item .radio-box .rbox + .rbox {
+            padding-left: 10px; }
+          .contents .save-contents .save-wrap .save-box .input-item .radio-box .rbox label {
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+          .contents .save-contents .save-wrap .save-box .input-item .radio-box .rbox input[type=radio] {
+            position: absolute;
+            left: -9999px; }
+            .contents .save-contents .save-wrap .save-box .input-item .radio-box .rbox input[type=radio]:checked ~ i {
+              background: url("../img/ic_radio_on.svg") no-repeat center/cover; }
+          .contents .save-contents .save-wrap .save-box .input-item .radio-box .rbox .txt-box {
+            font-size: 15px;
+            font-weight: 300;
+            color: #FFFFff; }
+          .contents .save-contents .save-wrap .save-box .input-item .radio-box .rbox i {
+            background: url("../img/ic_radio_off.svg") no-repeat center/cover;
+            width: 24px;
+            height: 24px; }
+        .contents .save-contents .save-wrap .save-box .input-item .pbox input {
+          height: 36px;
+          border-radius: 3px;
+          border: 1px solid #374971;
+          background-color: #1E2431;
+          padding: 0 10px;
+          width: 100%;
           color: #FFFFff; }
       .contents .save-contents .save-wrap .save-box .save-btn {
         display: flex;
@@ -253,5 +292,142 @@
           font-size: 16px;
           font-weight: 500;
           color: #FFFFff; }
+  .contents .view-contents {
+    flex: 1; }
+    .contents .view-contents .inner {
+      position: relative;
+      height: 100%; }
+      .contents .view-contents .inner .view-box {
+        height: 100%; }
+        .contents .view-contents .inner .view-box .view-img {
+          max-width: 1440px;
+          height: 100%;
+          display: flex; }
+          .contents .view-contents .inner .view-box .view-img img {
+            width: 100%;
+            height: 100%; }
+      .contents .view-contents .inner .icon-list .icon-pick {
+        position: absolute;
+        transform: translate(-50%, -50%); }
+        .contents .view-contents .inner .icon-list .icon-pick .icon-wrap {
+          position: relative;
+          display: flex; }
+          .contents .view-contents .inner .icon-list .icon-pick .icon-wrap:hover {
+            cursor: pointer; }
+            .contents .view-contents .inner .icon-list .icon-pick .icon-wrap:hover .icon-menu {
+              display: block; }
+          .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-btn .ic {
+            display: block; }
+            .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-btn .ic.ic-blue {
+              background: url("../img/ic_blue.svg") no-repeat center/cover;
+              width: 32px;
+              height: 32px; }
+            .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-btn .ic.ic-red {
+              background: url("../img/ic_red.svg") no-repeat center/cover;
+              width: 32px;
+              height: 32px; }
+          .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-menu {
+            display: none;
+            padding-right: 15px;
+            z-index: 100;
+            position: absolute;
+            right: 30px;
+            top: 0; }
+            .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-menu .menu-list {
+              background-color: rgba(255, 255, 255, 0.8);
+              border: 1px solid rgba(0, 0, 0, 0.2);
+              border-radius: 5px;
+              padding: 3px 0; }
+              .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-menu .menu-list .menu-item {
+                padding: 5px; }
+                .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-menu .menu-list .menu-item:hover {
+                  background-color: #3060EA; }
+                  .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-menu .menu-list .menu-item:hover .menu-btn {
+                    color: #fff; }
+                .contents .view-contents .inner .icon-list .icon-pick .icon-wrap .icon-menu .menu-list .menu-item .menu-btn {
+                  font-size: 15px;
+                  font-weight: 500;
+                  letter-spacing: -0.03em;
+                  color: #1E2431;
+                  text-decoration: none;
+                  white-space: nowrap; }
+      .contents .view-contents .inner .left-side-tab {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #1C2026; }
+        .contents .view-contents .inner .left-side-tab .side-btn-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #1C2026;
+          width: 24px;
+          height: 82px;
+          border-radius: 0 3px 3px 0;
+          position: absolute;
+          right: -24px;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer; }
+          .contents .view-contents .inner .left-side-tab .side-btn-box .side-btn {
+            background: url("../img/ic_sub_tit_off.svg") no-repeat center/cover;
+            width: 5px;
+            height: 10px; }
+        .contents .view-contents .inner .left-side-tab .side-tab-contents {
+          width: 360px; }
+          .contents .view-contents .inner .left-side-tab .side-tab-contents.hidden {
+            width: 0;
+            overflow: hidden; }
+          .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-btn-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-btn-wrap .btn {
+              font-size: 18px;
+              font-weight: 500;
+              color: #FFFFFF;
+              background-color: #1D2942;
+              border: none;
+              width: 50%;
+              height: 42px;
+              cursor: pointer; }
+              .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-btn-wrap .btn.active {
+                background-color: #3060EA; }
+          .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content {
+            display: none; }
+            .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content.show {
+              display: block; }
+            .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner {
+              color: #ffffff; }
+              .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap {
+                padding: 5px; }
+                .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap table {
+                  width: 100%;
+                  border-spacing: 0; }
+                  .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap table thead {
+                    background-color: #23304B; }
+                  .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap table tbody .chk-box {
+                    text-align: center; }
+                  .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap table tbody .icon-box {
+                    display: flex;
+                    justify-content: center; }
+                    .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap table tbody .icon-box .ic-star {
+                      background: url("../img/ic_star.svg") no-repeat center/cover;
+                      width: 21px;
+                      height: 21px; }
+                    .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap table tbody .icon-box .ic-triangle {
+                      background: url("../img/ic_triangle.svg") no-repeat center/cover;
+                      width: 21px;
+                      height: 21px; }
+                    .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap table tbody .icon-box .del-btn {
+                      background: url("../img/ic_del.svg") no-repeat center/cover;
+                      width: 21px;
+                      height: 21px; }
+                  .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .table-wrap table tbody .txt {
+                    font-size: 14px;
+                    color: #fff;
+                    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
