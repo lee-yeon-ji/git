@@ -655,15 +655,12 @@ $font: 'Pretendard';
 											background-color: #23304B;
 
 											tr {
-
 											}
 
 
 											th {
 
-
 											}
-
 
 										}
 
@@ -674,8 +671,6 @@ $font: 'Pretendard';
 											}
 
 											td {
-
-
 
 
 											}
@@ -718,8 +713,176 @@ $font: 'Pretendard';
 										}
 									}
 								}
-							}
 
+								.panorama-list-wrap{
+									align-items: center;
+									justify-content: center;
+									flex-flow: column;
+									padding: 5px;
+									display: flex;
+									gap: 20px;
+
+
+
+									.list-item-box{
+										border-radius: 3px;
+										position: relative;
+										overflow: hidden;
+
+										&:hover{
+											border: 2px solid #3e7bfa;
+
+											.overlay-wrap{
+												display: block;
+											}
+
+
+
+										}
+
+
+
+										.list-view-box{
+											.img-box{
+												max-width: 260px;
+												height: 162px;
+												img{
+													width: 100%;
+												}
+
+												.badge {
+													position: absolute;
+													top: 12px;
+													right: 12px;
+													padding: 4px 12px;
+													border-radius: 12px;
+													font-size: 13px;
+													font-weight: 500;
+
+
+													&.published {
+														border: 1px solid #fff;
+														background: #3e7bfa;
+														color: #fff;
+													}
+
+													&.unpublished {
+														border: 1px solid #9EA6BA;
+														background: #3d4150;
+														color: #b0b3bb;
+													}
+												}
+											}
+											.con-box{
+												background-color: #232837;
+												font-weight: 400;
+												font-size: 13px;
+												padding: 10px;
+												.subject-box{
+													font-weight: 500;
+													font-size: 16px;
+												}
+
+												.address-box{
+												}
+
+												.desc-box{
+													display: flex;
+													justify-content: space-between;
+
+													.name-box{
+													}
+
+													.date-box{
+													}
+												}
+											}
+
+										}
+
+										.overlay-wrap{
+											display: none;
+											position: absolute;
+											top: 0;
+											left: 0;
+											right: 0;
+											bottom: 0;
+											z-index: 10;
+											background-color: rgba(0, 9, 28, 0.8);
+
+											.inner{
+												.option-wrap{
+													display: flex;
+													align-items: center;
+													justify-content: center;
+													flex-flow: row wrap;
+													height: 144px;
+
+													.option-btn-box{
+														width: 50%;
+
+														&:hover{
+															background-color: #3060EA;
+
+														}
+														.option-btn{
+															font-size: 15px;
+															font-weight: 500;
+															color: #fff;
+															text-decoration: none;
+															height: 38px;
+															display: flex;
+															align-items: center;
+															justify-content: center;
+														}
+													}
+												}
+
+												.option-toggle{
+													display: flex;
+													align-items: center;
+													justify-content: center;
+													min-height: 87px;
+													margin-top: 18px;
+													border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+													.txt-box{
+														font-size: 16px;
+														font-weight: 500;
+														color: #E5EBFF;
+														letter-spacing: -0.01em;
+														padding-right: 10px;
+
+													}
+													label{
+														display: flex;
+
+														input[type=checkbox]{
+															position: absolute;
+															left: -9999px;
+
+															&:checked{
+																& ~ .ic-toggle{
+																	background: url("../img/ic_toggle_on.svg")no-repeat center/cover;
+																}
+															}
+														}
+													}
+													.ic-toggle{
+														background: url("../img/ic_toggle_off.svg")no-repeat center/cover;
+														width: 48px;
+														height: 22px;
+														cursor: pointer;
+													}
+												}
+											}
+										}
+
+									}
+
+
+								}
+							}
 						}
 					}
 				}
