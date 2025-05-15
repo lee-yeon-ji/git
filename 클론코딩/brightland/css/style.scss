@@ -20,7 +20,7 @@
 		margin: 0 auto;
 
 		.visual-content{
-			margin-top: 100px;
+			margin-top: 111px;
 			.inner{
 				position: relative;
 				.visual-btn{
@@ -112,6 +112,7 @@ header{
 	z-index: 2;
 	width: 100%;
 
+
 	.free-shipping-box{
 		position: relative;
 		display: flex;
@@ -149,7 +150,15 @@ header{
 	}
 
 	.header-wrap{
+		height: 74px;
+		background-color: #fff;
+		padding: 10px;
+		position: relative;
 		.header-box{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 100%;
 			.logo-box{
 				.logo{
 					width: 193px;
@@ -164,40 +173,100 @@ header{
 
 			.navigation{
 				ul.header-nav{
+					display: flex;
+					align-items: center;
+					list-style-type: none;
+
 					li.nav-link{
+						margin: 0 10px;
 
 						.nav-shield{
 
 						}
 
 						.link-btn{
-
-						}
-
-
-						.nav-down{
-
-						}
-
-						.megamenu{
-							.megamenu-menu{
-
-							}
-
-							.megamenu-content{
-								
-							}
-
-
+							font-size: 16px;
+							font-weight: 500;
+							color: #000;
+							text-decoration: none;
 
 						}
 
 					}
 				}
 			}
+
+
+
+			.option-box{
+				display: flex;
+				align-items: center;
+
+				.option-btn{
+					display: flex;
+
+					& + .option-btn{
+						padding-left: 15px;
+					}
+
+					.products-btn{
+						color: #fff;
+						background-color: #000;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						padding: 3px 10px;
+						text-decoration: none;
+					}
+
+					.user-btn{
+						background: url("../img/ic_user.png")no-repeat center/cover;
+						width: 20px;
+						height: 25px;
+
+
+					}
+
+					.buy-shopping-btn{
+						background: url("../img/ic_topshopping.png")no-repeat center/cover;
+						width: 20px;
+						height: 20px;
+
+
+					}
+				}
+			}
+		}
+
+		.nav-down{
+			position: absolute;
+			background-color: #fff;
+			width: 1000px;
+			padding: 100px;
+			top: 74px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 2;
+
+
 		}
 	}
 
+
+
+
+}
+
+
+
+.megamenu{
+	.megamenu-menu{
+
+	}
+
+	.megamenu-content{
+
+	}
 
 
 

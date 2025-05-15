@@ -439,7 +439,8 @@
                 .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .panorama-list-wrap .list-item-box {
                   border-radius: 3px;
                   position: relative;
-                  overflow: hidden; }
+                  overflow: hidden;
+                  border: 2px solid transparent; }
                   .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .panorama-list-wrap .list-item-box:hover {
                     border: 2px solid #3e7bfa; }
                     .contents .view-contents .inner .left-side-tab .side-tab-contents .tab-contents .tab-content .inner .panorama-list-wrap .list-item-box:hover .overlay-wrap {
