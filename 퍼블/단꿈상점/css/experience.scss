@@ -1678,10 +1678,72 @@ section.experience-detail {
 		.detail-contents {
 			border-radius: 20px;
 			background-color: #3a2465;
+			margin-top: 40px;
 		}
 	}
 
 }
+
+article.line-layout1{
+	.line-group-box{
+		display: flex;
+		justify-content: center;
+		position: relative;
+		align-items: center;
+		padding: 20px 0;
+
+		&.space-zero{
+			padding: 0;
+		}
+
+		.ic{
+			background: url(../img/ic_line_mark.svg) no-repeat center / cover;
+			width: 42px;
+			height: 12px;
+			&.ic-mark{
+				width: 56px;
+				height: 14px;
+
+			}
+		}
+	}
+}
+
+article.page-navigation{
+	.nav-list{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 9px;
+
+		.nav-box{
+
+			.nav-btn{
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				font-weight: 500;
+				color: #fff;
+				letter-spacing: -0.04em;
+
+				height: 54px;
+				padding: 0 35px;
+				border-radius: 500px;
+				border: 1px solid ;
+				border-radius: 500px;
+				border: 1px solid var(--rental-air, #81B9FF);
+				background-color: #6F4ABE;
+				&.active{
+					color: #573F8C;
+					background-color: #fff;
+				}
+
+			}
+		}
+	}
+}
+
 
 article.experience-detail-visual {
 	position: relative;
@@ -1702,30 +1764,13 @@ article.experience-detail-visual {
 		content: '';
 		position: absolute;
 		right: -42px;
-		top: 247px;
+		top: 327px;
 		background: url("../img/img_experience_detail_lamp_right.svg") no-repeat center / cover;
 		width: 43px;
 		height: 49px;
 	}
 
-	&:before {
-		content: '';
-		position: absolute;
-		left: 55px;
-		bottom: 98px;
-		background: url("../img/img_experience_detail_visual_bottom.svg") no-repeat center / cover;
-		width: 393px;
-		height: 361px;
-		z-index: 2;
 
-		@include m {
-			background: url("../img/img_experience_detail_visual_bottom_m.svg") no-repeat center / cover;
-			width: 100px;
-			height: 91px;
-
-		}
-
-	}
 
 	.article-wrap {
 
@@ -1905,6 +1950,26 @@ article.experience-detail-visual {
 			.view-group-box {
 				display: flex;
 				justify-content: center;
+				margin-bottom: 90px;
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 55px;
+					bottom: 19px;
+					background: url("../img/img_experience_detail_visual_bottom.svg") no-repeat center / cover;
+					width: 393px;
+					height: 361px;
+					z-index: 2;
+
+					@include m {
+						background: url("../img/img_experience_detail_visual_bottom_m.svg") no-repeat center / cover;
+						width: 100px;
+						height: 91px;
+
+					}
+
+				}
 
 
 				@include m {
@@ -1928,39 +1993,162 @@ article.experience-detail-visual {
 						margin: 0 auto;
 					}
 				}
+			}
 
+			.view-contents-box {
+				background: url("../img/img_experience_detail_content.png") no-repeat center / cover;
+				aspect-ratio: 898 / 564;
+				max-width: 898px;
+				margin: 0 auto;
 
-
-				.view-contents-box {
-					border-radius: 10px;
-					aspect-ratio: 900 / 460;
-					max-width: 900px;
-					margin: 0 auto;
-					width: calc(100% - 40px);
-					z-index: 100;
-					position: relative;
-					overflow: hidden;
-
-					@include m {
-						border-radius: 8px;
-						aspect-ratio: 312 / 160;
-					}
-
-
-					img, video, iframe {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-
-					}
-
-
+				@include m {
+					border-radius: 8px;
+					aspect-ratio: 312 / 160;
 				}
+
+
 			}
 
 		}
 	}
 
+}
+
+article.head-badge-box{
+	display: flex;
+	justify-content: center;
+	.badge-box{
+		border-radius: 50px;
+		padding: 0 24px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: #493179;
+		position: relative;
+		font-size: 20px;
+		font-weight: 600;
+		letter-spacing: -0.03em;
+		height: 38px;
+		background: linear-gradient(116deg, #FFCFCC 22.65%, #9ECBFF 81.59%), #694FA1;
+	}
+
+}
+
+article.experience-detail-benefit{
+	background-color: #432C70;
+	padding: 40px 0 80px;
+	.article-wrap{
+		max-width: 896px;
+		margin: 0 auto;
+		width: calc(100% - 40px);
+		.mark-box{
+
+		}
+
+		.head-tit-box{
+			padding-top: 44px;
+
+			.label-box{
+
+			}
+			.tit-box{
+				display: flex;
+				justify-content: center;
+				padding-top: 26px;
+				.txt{
+					background: url("../img/img_experience_detail_benefit_title.svg")no-repeat center/cover;
+					max-width: 408px;
+					aspect-ratio: 408 / 98;
+					width: 100%;
+				}
+
+			}
+		}
+
+		.benefit-view-box{
+			padding-top: 44px;
+			.benefit-list-box{
+				.benefit-list{
+					max-width: 880px;
+					margin: 0 auto;
+					display: flex;
+					gap: 65px;
+					position: relative;
+
+					@include m{
+						gap: 10px;
+					}
+					.benefit-item{
+						.img-box{
+							position: relative;
+							aspect-ratio: 1 / 1;
+							border-radius: 16px;
+							overflow: hidden;
+
+							img{
+								width: 100%;
+								height: 100%;
+							}
+
+
+
+							.step-box{
+								position: absolute;
+								top: 0;
+								left: 0;
+								content: '혜택 1';
+								border-radius: 0px 0px 10px 0px;
+								background: linear-gradient(143deg, #815BE9 15.94%, #7E8DFF 94.15%), #815BE9;
+								display: inline-flex;
+								padding: 10px 15px;
+								justify-content: center;
+								align-items: center;
+								gap: 5px;
+								font-size: 18px;
+								font-weight: 500;
+								letter-spacing: -0.03em;
+								color: #fff;
+							}
+						}
+
+						.info-box{
+							padding-top: 20px;
+							text-align: center;
+							.subject-box{
+								color: rgba(255, 255, 255, 0.7);
+								letter-spacing: -0.03em;
+								line-height: 160%;
+							}
+
+							.con-box{
+								padding-top: 8px;
+								font-size: 18px;
+								font-weight: 600;
+								color: #fff;
+								letter-spacing: -0.04em;
+								line-height: 150%;
+								b{
+									background: linear-gradient(to right, #ffcfcc 0%,#9ecbff 100%);
+									-webkit-background-clip: text; /* 크롬, 사파리 */
+									-webkit-text-fill-color: transparent; /* 크롬, 사파리 */
+									background-clip: text; /* 최신 브라우저 */
+
+								}
+							}
+
+							.desc-box{
+								padding-top: 7px;
+								font-size: 13px;
+								letter-spacing: -0.03em;
+								color: rgba(255, 255, 255, 0.6);
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
 }
 
 article.experience-detail-schedule {
@@ -2016,37 +2204,13 @@ article.experience-detail-schedule {
 			}
 		}
 
-		&:after {
-			content: '';
-			position: absolute;
-			right: -66px;
-			bottom: -72px;
-			background: url("../img/img_experience_detail_schedule_mask.png") no-repeat center / cover;
-			width: 556px;
-			z-index: 9;
-			aspect-ratio: 556 / 316;
-
-			@include m {
-				background: url("../img/img_experience_detail_schedule_mask_m.png") no-repeat center / cover;
-				width: 340px;
-				bottom: 0;
-				left: 50%;
-				transform: translateX(-50%);
-				right: auto;
-
-			}
-		}
-
 		.head-sub-box {
 			padding-bottom: 10px;
 			position: relative;
-			z-index: 10;
 			display: flex;
 			align-items: center;
+			justify-content: center;
 
-			@include m {
-				justify-content: center;
-			}
 
 			.sub-box {
 				color: rgba(207, 197, 229, 0.7);
@@ -2081,17 +2245,17 @@ article.experience-detail-schedule {
 				.label-item {
 					margin-left: 5px;
 					border-radius: 50px;
-					padding: 0 10px;
+					padding: 0 15px;
 					display: inline-flex;
 					align-items: center;
 					justify-content: center;
-					color: #493179;
+					color: #fff;
 					position: relative;
-					font-size: 14px;
+					font-size: 15px;
 					font-weight: 600;
 					letter-spacing: -0.03em;
-					height: 24px;
-					background: linear-gradient(116deg, #FFCFCC 22.65%, #9ECBFF 81.59%), #694FA1;
+					height: 27px;
+					background: linear-gradient(131deg, #81B9FF 19.39%, #FF967F 89.36%);
 
 					&.bg-other {
 						background: var(--rental-purple, linear-gradient(97deg, #93A4FF 17.56%, rgba(211, 172, 243, 0.72) 100%));
@@ -2108,6 +2272,7 @@ article.experience-detail-schedule {
 			position: relative;
 			z-index: 10;
 			display: flex;
+			justify-content: center;
 
 			.main-txt {
 				background: url("../img/img_experience_detail_schedule_title.svg") no-repeat center / cover;
@@ -2161,7 +2326,6 @@ article.experience-detail-schedule {
 			padding: 60px 0 30px;
 			display: flex;
 			justify-content: center;
-			align-items: center;
 
 			@include m {
 				padding: 60px 0 24px;
@@ -2172,7 +2336,7 @@ article.experience-detail-schedule {
 				color: #573f8c;
 				font-size: 28px;
 				letter-spacing: -0.04em;
-				line-height: 33px;
+				line-height: 32px;
 				font-weight: 700;
 
 				@include m {
@@ -2268,90 +2432,162 @@ article.experience-detail-schedule {
 		}
 
 		.view-body-box {
+			.schedule-list{
+				@include m{
+					padding: 0 30px 30px 30px;
 
-			.schedule-info {
-				max-width: 298px;
-				margin: 0 auto;
-				padding: 0 17px 30px;
-				width: 100%;
-				border-bottom: 1px solid #cfc5e5;
-
-				@include m {
-					padding: 0 30px 28px;
-					//width: auto;
 				}
+				.schedule-info {
+					max-width: 437px;
+					margin: 0 auto;
+					padding-bottom: 30px;
+					width: 100%;
 
+					& + .schedule-info{
+						border-top: 1px solid #cfc5e5;
+						padding-top: 20px;
+					}
 
-				.info-item {
-					display: flex;
 
 					@include m {
-						justify-content: center;
+						padding-bottom: 28px;
 					}
 
-					& + .info-item {
-						margin-top: 14px;
-					}
 
-					.subject-box {
-						width: 106px;
-						color: #826aa7;
-						font-size: 18px;
-						font-weight: 600;
-						line-height: 160%;
-						letter-spacing: -0.04em;
+					.info-item {
+						display: flex;
 
 						@include m {
-							width: 86px;
-							font-size: 14px;
+							justify-content: center;
+						}
+
+						& + .info-item {
+							margin-top: 14px;
+						}
+
+						.subject-box {
+							width: 162px;
+							color: #826aa7;
+							font-size: 18px;
+							font-weight: 600;
+							line-height: 160%;
+							letter-spacing: -0.04em;
+
+							@include m {
+								width: 86px;
+								font-size: 14px;
+							}
+						}
+
+						.con-box {
+							flex: 1;
+							min-width: 0;
+							font-size: 18px;
+							line-height: 160%;
+							font-weight: 600;
+							color: #573f8c;
+							letter-spacing: -0.04em;
+
+							@include m {
+								font-size: 14px;
+							}
+
 						}
 					}
 
-					.con-box {
-						flex: 1;
-						min-width: 0;
-						font-size: 18px;
-						line-height: 160%;
-						font-weight: 600;
-						color: #573f8c;
-						letter-spacing: -0.04em;
+				}
+			}
 
-						@include m {
-							font-size: 14px;
+
+		}
+
+	}
+
+	.schedule-mission-view-box{
+		background-color: #F0EAFF;
+		border-radius: 16px;
+		margin-top: 14px;
+
+		.view-head-box{
+			padding: 43px 0 30px;
+			display: flex;
+			justify-content: center;
+			.head-txt{
+				font-size: 22px;
+				font-weight: 600;
+				color: #573f8c;
+				letter-spacing: -0.04em;
+
+			}
+
+		}
+
+		.mission-view-box{
+			.mission-list-box{
+				.mission-list{
+					max-width: 734px;
+					margin: 0 auto;
+					display: flex;
+					gap: 10px;
+					position: relative;
+
+					.mission-item{
+						.img-wrap{
+							.label-box{
+								font-size: 15px;
+								letter-spacing: -0.03em;
+								line-height: 150%;
+
+
+								b{
+
+								}
+							}
+							.img-box{
+
+								aspect-ratio: 1 / 1;
+								border-radius: 16px;
+								overflow: hidden;
+
+								img{
+									width: 100%;
+									height: 100%;
+								}
+							}
 						}
 
 					}
 				}
+			}
+		}
+
+		.view-desc-box{
+			max-width: 437px;
+			margin: 0 auto;
+			padding-bottom: 30px;
+			width: 100%;
+			.desc-txt{
 
 			}
 		}
 
-		.view-foot-box {
-			padding-top: 30px;
-
-			@include m {
-				padding: 30px 20px 40px;
-			}
-
-			.foot-note-box {
-				max-width: 540px;
-				margin: 0 auto;
-
-				@include m {
-					max-width: 298px;
-					margin: 0 auto;
-
-				}
-
-				.note-item {
-					color: $colPrimary;
-					font-size: 16px;
-					line-height: 180%;
-					font-weight: 500;
-					letter-spacing: -0.04em;
-
-					@include m {
-						font-size: 12px;
+		.view-btn-box{
+			.view-btn{
+				.label-box{
+					.label-txt{
+						margin-left: 5px;
+						border-radius: 50px;
+						padding: 0 15px;
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+						color: #fff;
+						position: relative;
+						font-size: 15px;
+						font-weight: 600;
+						letter-spacing: -0.03em;
+						height: 27px;
+						background: linear-gradient(131deg, #81B9FF 19.39%, #FF967F 89.36%);
 					}
 				}
 			}
