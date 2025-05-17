@@ -1685,17 +1685,39 @@ article.experience-detail-schedule {
       display: flex;
       gap: 10px;
       position: relative; }
-      article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap .label-box {
-        font-size: 15px;
-        letter-spacing: -0.03em;
-        line-height: 150%; }
-      article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap .img-box {
-        aspect-ratio: 1 / 1;
-        border-radius: 16px;
-        overflow: hidden; }
-        article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap .img-box img {
-          width: 100%;
-          height: 100%; }
+      article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px; }
+        article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap .label-box {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 15px;
+          letter-spacing: -0.03em;
+          line-height: 150%;
+          color: #fff;
+          background-color: #7456C0;
+          height: 43px;
+          padding: 0 15px;
+          display: inline-flex;
+          align-items: center;
+          border-radius: 16px 0 16px 0; }
+          article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap .label-box.all {
+            background-color: #9E8AD2; }
+          article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap .label-box.only {
+            background: linear-gradient(114deg, #8E62FF 23.54%, #7A6CFF 88.01%); }
+        article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap .img-box {
+          aspect-ratio: 1 / 1; }
+          article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .img-wrap .img-box img {
+            width: 100%;
+            height: 100%; }
+      article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .info-box {
+        text-align: center; }
+        article.experience-detail-schedule .schedule-mission-view-box .mission-view-box .mission-list-box .mission-list .mission-item .info-box .info-txt {
+          color: #53398B;
+          letter-spacing: -0.03em;
+          line-height: 140%; }
     article.experience-detail-schedule .schedule-mission-view-box .view-desc-box {
       max-width: 437px;
       margin: 0 auto;

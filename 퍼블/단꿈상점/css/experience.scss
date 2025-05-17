@@ -2533,10 +2533,35 @@ article.experience-detail-schedule {
 
 					.mission-item{
 						.img-wrap{
+							position: relative;
+							overflow: hidden;
+							border-radius: 16px;
+
+
 							.label-box{
+								position: absolute;
+								top: 0;
+								left: 0;
 								font-size: 15px;
 								letter-spacing: -0.03em;
 								line-height: 150%;
+								color: #fff;
+								background-color: #7456C0;
+								height: 43px;
+								padding: 0 15px;
+								display: inline-flex;
+								align-items: center;
+								border-radius: 16px 0 16px 0;
+
+								&.all{
+									background-color: #9E8AD2;
+								}
+
+								&.only{
+									background: linear-gradient(114deg, #8E62FF 23.54%, #7A6CFF 88.01%);
+								}
+
+
 
 
 								b{
@@ -2544,10 +2569,7 @@ article.experience-detail-schedule {
 								}
 							}
 							.img-box{
-
 								aspect-ratio: 1 / 1;
-								border-radius: 16px;
-								overflow: hidden;
 
 								img{
 									width: 100%;
@@ -2556,6 +2578,15 @@ article.experience-detail-schedule {
 							}
 						}
 
+						.info-box{
+							text-align: center;
+							.info-txt{
+								color: #53398B;
+								letter-spacing: -0.03em;
+								line-height: 140%;
+
+							}
+						}
 					}
 				}
 			}
