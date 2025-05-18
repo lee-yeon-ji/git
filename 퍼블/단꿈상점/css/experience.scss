@@ -2603,10 +2603,32 @@ article.experience-detail-schedule {
 		}
 
 		.view-btn-box{
+			display: flex;
+			align-items: center;
+			justify-content:center;
+			padding: 50px 0 18px;
+
 			.view-btn{
+				background-color: #573F8C;
+				border-radius: 12px;
+				padding: 0 12px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				height: 66px;
+				max-width: 280px;
+				width: 100%;
+
+				& + .view-btn{
+					margin-left: 20px;
+				}
+
+
+
 				.label-box{
+
 					.label-txt{
-						margin-left: 5px;
+						margin-left:5px;
 						border-radius: 50px;
 						padding: 0 15px;
 						display: inline-flex;
@@ -2621,6 +2643,25 @@ article.experience-detail-schedule {
 						background: linear-gradient(131deg, #81B9FF 19.39%, #FF967F 89.36%);
 					}
 				}
+
+				.txt{
+					padding-left: 10px;
+					font-size: 20px;
+					font-weight: 600;
+					color: #fff;
+					letter-spacing: -0.04em;
+				}
+			}
+		}
+
+		.note-box{
+			.note-item{
+				font-weight: 500;
+				letter-spacing: -0.04em;
+				line-height: 180%;
+				text-align: center;
+				color: #53398B;
+
 			}
 		}
 	}

@@ -1723,20 +1723,49 @@ article.experience-detail-schedule {
       margin: 0 auto;
       padding-bottom: 30px;
       width: 100%; }
-    article.experience-detail-schedule .schedule-mission-view-box .view-btn-box .view-btn .label-box .label-txt {
-      margin-left: 5px;
-      border-radius: 50px;
-      padding: 0 15px;
-      display: inline-flex;
+    article.experience-detail-schedule .schedule-mission-view-box .view-btn-box {
+      display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      position: relative;
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      height: 27px;
-      background: linear-gradient(131deg, #81B9FF 19.39%, #FF967F 89.36%); }
+      padding: 50px 0 18px; }
+      article.experience-detail-schedule .schedule-mission-view-box .view-btn-box .view-btn {
+        background-color: #573F8C;
+        border-radius: 12px;
+        padding: 0 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 66px;
+        max-width: 280px;
+        width: 100%; }
+        article.experience-detail-schedule .schedule-mission-view-box .view-btn-box .view-btn + .view-btn {
+          margin-left: 20px; }
+        article.experience-detail-schedule .schedule-mission-view-box .view-btn-box .view-btn .label-box .label-txt {
+          margin-left: 5px;
+          border-radius: 50px;
+          padding: 0 15px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          position: relative;
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: -0.03em;
+          height: 27px;
+          background: linear-gradient(131deg, #81B9FF 19.39%, #FF967F 89.36%); }
+        article.experience-detail-schedule .schedule-mission-view-box .view-btn-box .view-btn .txt {
+          padding-left: 10px;
+          font-size: 20px;
+          font-weight: 600;
+          color: #fff;
+          letter-spacing: -0.04em; }
+    article.experience-detail-schedule .schedule-mission-view-box .note-box .note-item {
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 180%;
+      text-align: center;
+      color: #53398B; }
 
 article.experience-detail-apply {
   background-color: #432c70;
