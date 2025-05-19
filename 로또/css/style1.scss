@@ -355,38 +355,6 @@ article.info-msg-box{
 
 												}
 
-
-												label{
-													position: relative;
-													input [type=radio]{
-														position: absolute;
-														left: -9999px;
-
-														&:checked{
-															& ~ i{
-																background: url("../img/ic_check_on.svg")no-repeat center/cover;
-															}
-														}
-
-													}
-												}
-
-												label{
-													position: relative;
-
-													input[type=radio]{
-														position: absolute;
-														left: -9999px;
-
-														&:checked{
-															& ~ i{
-
-															}
-														}
-													}
-
-
-												}
 											}
 
 										}
