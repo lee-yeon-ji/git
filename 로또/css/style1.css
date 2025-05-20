@@ -41,18 +41,19 @@ article.info-msg-box {
     font-weight: 400;
     color: #FFFFff; }
 
+header .header-group .logo-wrap .logo-box {
+  display: block;
+  width: 213px;
+  height: 96px; }
+  header .header-group .logo-wrap .logo-box img {
+    max-width: 100%; }
+
 .lotto-container {
   margin: 0 auto;
   width: 1024px; }
   .lotto-container .inner {
     background: #1c1d4a url("../img/img_logo_bg.png") no-repeat top right/880px 170px;
     padding: 18px 26px 108px; }
-    .lotto-container .inner header .header-group .logo-wrap .logo-box {
-      display: block;
-      width: 213px;
-      height: 96px; }
-      .lotto-container .inner header .header-group .logo-wrap .logo-box img {
-        max-width: 100%; }
     .lotto-container .inner .contents {
       padding-top: 80px;
       width: 928px;
@@ -262,19 +263,39 @@ article.info-msg-box {
                     align-items: center;
                     justify-content: center;
                     width: 100%; }
-                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .buy-wrap .buy-btn-box .buy-btn {
-                  background-color: #34B5F7;
-                  font-size: 20px;
-                  font-weight: 600;
-                  color: #FFFFff;
-                  border-radius: 50px;
-                  width: 260px;
-                  height: 60px;
+                .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .buy-wrap .option-box {
                   display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                  border: 1px solid transparent; }
+                  align-items: center; }
+                  .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .buy-wrap .option-box .buy-btn-box .buy-btn {
+                    background-color: #34B5F7;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #FFFFff;
+                    border-radius: 50px;
+                    max-width: 150px;
+                    height: 60px;
+                    padding: 0 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    border: 1px solid transparent; }
+                  .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .buy-wrap .option-box .current-lotto-info {
+                    padding-left: 10px; }
+                    .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .checked-wrap .buy-wrap .option-box .current-lotto-info .current-btn {
+                      background-color: #34B5F7;
+                      font-size: 20px;
+                      font-weight: 600;
+                      color: #FFFFff;
+                      border-radius: 50px;
+                      max-width: 150px;
+                      height: 60px;
+                      padding: 0 20px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      cursor: pointer;
+                      border: 1px solid transparent; }
               .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list {
                 margin-top: 28px;
                 display: flex;
@@ -301,5 +322,43 @@ article.info-msg-box {
                   background-color: #ff6347; }
                 .lotto-container .inner .contents .logo-layout-wrap .lotto-check-group .check-inner .item-box .number-buy-wrap .number-list-container .number-list .bg-green {
                   background-color: #2e8b57; }
+    .lotto-container .inner .popup-overlay {
+      z-index: 2;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center; }
+      .lotto-container .inner .popup-overlay .popup-inner {
+        margin: 0 auto; }
+        .lotto-container .inner .popup-overlay .popup-inner .popup-wrap .popup-box {
+          max-width: 600px;
+          width: 100%;
+          height: 60vh;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+          .lotto-container .inner .popup-overlay .popup-inner .popup-wrap .popup-box .popup-head-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; }
+            .lotto-container .inner .popup-overlay .popup-inner .popup-wrap .popup-box .popup-head-box .title-box {
+              font-size: 20px;
+              font-weight: 700; }
+            .lotto-container .inner .popup-overlay .popup-inner .popup-wrap .popup-box .popup-head-box .close-box .btn {
+              background: url("../img/ic_close.svg") no-repeat center/cover;
+              width: 24px;
+              height: 24px;
+              border: none;
+              cursor: pointer; }
 
 /*# sourceMappingURL=style1.css.map */

@@ -56,6 +56,25 @@ article.info-msg-box{
 	}
 }
 
+header{
+
+
+	.header-group{
+		.logo-wrap{
+
+			.logo-box{
+				display: block;
+				width: 213px;
+				height: 96px;
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+
+
+	}
+}
 
 .lotto-container{
 	margin: 0 auto;
@@ -64,25 +83,7 @@ article.info-msg-box{
 	.inner{
 		background: #1c1d4a url("../img/img_logo_bg.png")no-repeat top right/ 880px 170px;
 		padding: 18px 26px 108px;
-		header{
 
-
-			.header-group{
-				.logo-wrap{
-
-					.logo-box{
-						display: block;
-						width: 213px;
-						height: 96px;
-						img{
-							max-width: 100%;
-						}
-					}
-				}
-
-
-			}
-		}
 
 		.contents{
 			padding-top: 80px;
@@ -401,26 +402,50 @@ article.info-msg-box{
 										}
 									}
 
-									.buy-btn-box {
-										.buy-btn {
-											background-color: #34B5F7;
-											font-size: 20px;
-											font-weight: 600;
-											color: #FFFFff;
-											border-radius: 50px;
-											width: 260px;
-											height: 60px;
-											display: flex;
-											align-items: center;
-											justify-content: center;
-											cursor: pointer;
-											border: 1px solid transparent;
+									.option-box{
+										display: flex;
+										align-items: center;
 
+										.buy-btn-box {
+
+											.buy-btn {
+												background-color: #34B5F7;
+												font-size: 20px;
+												font-weight: 600;
+												color: #FFFFff;
+												border-radius: 50px;
+												max-width: 150px;
+												height: 60px;
+												padding: 0 20px;
+												display: flex;
+												align-items: center;
+												justify-content: center;
+												cursor: pointer;
+												border: 1px solid transparent;
+											}
+										}
+
+										.current-lotto-info{
+											padding-left: 10px;
+											.current-btn{
+												background-color: #34B5F7;
+												font-size: 20px;
+												font-weight: 600;
+												color: #FFFFff;
+												border-radius: 50px;
+												max-width: 150px;
+												height: 60px;
+												padding: 0 20px;
+												display: flex;
+												align-items: center;
+												justify-content: center;
+												cursor: pointer;
+												border: 1px solid transparent;
+											}
 
 										}
 									}
 								}
-
 							}
 
 							.number-buy-wrap{
@@ -471,6 +496,73 @@ article.info-msg-box{
 					}
 				}
 			}
+		}
+
+
+		.popup-overlay{
+			z-index: 2;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			height: 100vh;
+			display: none;
+			align-items: center;
+			justify-content: center;
+
+
+
+
+			.popup-inner{
+				margin: 0 auto;
+
+				.popup-wrap{
+
+					.popup-box{
+						max-width: 600px;
+						width: 100%;
+						height: 60vh;
+						padding: 20px;
+						background-color: #fff;
+						border-radius: 10px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+
+
+						.popup-head-box{
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+
+							.title-box{
+								font-size: 20px;
+								font-weight: 700;
+							}
+							.close-box{
+								.btn{
+									background: url("../img/ic_close.svg")no-repeat center/cover;
+									width:24px;
+									height:24px;
+									border: none;
+									cursor: pointer;
+								}
+							}
+						}
+
+						.con-box{
+
+							.popup-list-container{
+
+							}
+						}
+					}
+				}
+			}
+
 		}
 	}
 }

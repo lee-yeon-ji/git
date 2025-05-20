@@ -1177,8 +1177,15 @@
 										<div class="total-num-box">1</div>
 									</div>
 
-									<div class="buy-btn-box">
-										<button class="buy-btn">로또 구매</button>
+
+									<div class="option-box">
+										<div class="buy-btn-box">
+											<button type="button" class="buy-btn">번호 생성</button>
+										</div>
+
+										<div class="current-lotto-info">
+											<button type="button" class="current-btn" id="openPopupBtn">당첨 결과</button>
+										</div>
 									</div>
 								</div>
 
@@ -1189,7 +1196,7 @@
 							<div class="number-buy-wrap">
 								<article class="info-msg-box">
 									<i class="ic-msg"></i>
-									<div class="info-msg-txt">구매번호 리스트</div>
+									<div class="info-msg-txt">로또번호 생성 리스트</div>
 								</article>
 
 								<div class="number-list-container">
@@ -1201,11 +1208,108 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div class="popup-overlay" id="popup">
+			<div class="popup-inner">
+				<div class="popup-wrap">
+					<div class="popup-box">
+
+						<div class="popup-head-box">
+							<div class="title-box">이번 주 당청 번호</div>
+							<div class="close-box">
+								<button type="button" class="btn" id="closePopupBtn"></button>
+							</div>
+
+						</div>
+
+						<div class="con-box">
+							<div class="popup-list-container">
+								<div id="lottoResult">로딩 중...</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
 	</div>
 </div>
 
 
 <script>
+    const openBtn = document.getElementById('openPopupBtn');
+    const closeBtn = document.getElementById('closePopupBtn');
+    const popup = document.getElementById('popup');
+    const lottoResult = document.getElementById('lottoResult');
+
+    // 팝업 열기
+    openBtn.addEventListener('click', function (){
+        popup.style.display = 'block';
+        lottoResult.innerHTML = '불러오는 중...';
+        fetchLatestLottoNumber();
+    });
+
+    // 팝업 닫기
+    closeBtn.addEventListener('click', function (){
+        popup.style.display = 'none';
+    });
+
+    // 오버레이 클릭 시 닫기
+	   popup.addEventListener('click', function (e){
+
+	   })
+
+    // 최신 회차 번호 추출 및 당첨번호 표시
+    function fetchLatestLottoNumber() {
+        // 동행복권 메인 페이지에서 최신 회차 번호 추출
+		    // fetch 웹사이트에서 다른 서버의 데이터를 실시간으로 가지고 올 때 요청하고 요청받아오는 함수
+        fetch('https://cors-anywhere.herokuapp.com/https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=100')
+		        //then은 비동기 작업이 끝난 후 그 결과롤 다음 작업을 이어서 실행할 때 쓰는 메서드
+		        //응답을 텍스트로 변환
+            .then(response => response.text())
+		        //
+            .then(html => {
+                // 최신 회차 번호 파싱
+                const match = html.match(/<strong id="lottoDrwNo">(\d+)<\/strong>/);
+                if (match && match[1]) {
+                    const latestRound = match[1];
+                    fetchLottoNumber(latestRound);
+                } else {
+                    lottoResult.innerHTML = '최신 회차 정보를 찾을 수 없습니다.';
+                }
+            })
+            .catch(() => {
+                lottoResult.innerHTML = '최신 회차 정보를 불러오지 못했습니다.';
+            });
+    }
+
+    // 해당 회차의 로또 번호 불러오기
+    function fetchLottoNumber(round) {
+        fetch(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${round}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.returnValue === "success") {
+                    const nums = [
+                        data.drwtNo1, data.drwtNo2, data.drwtNo3,
+                        data.drwtNo4, data.drwtNo5, data.drwtNo6
+                    ];
+                    const bonus = data.bnusNo;
+                    lottoResult.innerHTML = `
+          <strong>${data.drwNo}회 (${data.drwNoDate})</strong><br>
+          <span style="color:#1976d2;font-size:1.2em;">${nums.join(', ')}</span><br>
+          <span style="color:#888;">보너스: <span style="color:#ff5252;">${bonus}</span></span>
+        `;
+                } else {
+                    lottoResult.innerHTML = '아직 발표되지 않은 회차입니다.';
+                }
+            })
+            .catch(() => {
+                lottoResult.innerHTML = '로또 번호를 불러오지 못했습니다.';
+            });
+    }
 
  const numbtnList = document.querySelectorAll('.num-btn');
 

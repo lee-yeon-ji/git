@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>홈페이지 팝업창 예시</title>
+	<link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+<!-- 팝업 열기 버튼 -->
+<button id="openPopupBtn">로또 당첨번호 보기</button>
+
+<div id="popup" class="popup-overlay">
+	<div class="popup-content">
+		<span class="close-btn" id="closePopupBtn">&times;</span>
+		<h2>로또 실시간 당첨번호</h2>
+		<div id="lottoResult">불러오는 중...</div>
+	</div>
+</div>
+
+
+
+<script>
+    const openBtn = document.getElementById('openPopupBtn');
+    const closeBtn = document.getElementById('closePopupBtn');
+    const popup = document.getElementById('popup');
+    const lottoResult = document.getElementById('lottoResult');
+
+    // 팝업 열기
+    openBtn.addEventListener('click', () => {
+        popup.style.display = 'block';
+        lottoResult.innerHTML = '불러오는 중...';
+        fetchLatestLottoNumber();
+    });
+
+    // 팝업 닫기
+    closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    // 오버레이 클릭 시 닫기
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+
+    // 최신 회차 번호 추출 및 당첨번호 표시
+    function fetchLatestLottoNumber() {
+        // 동행복권 메인 페이지에서 최신 회차 번호 추출
+        fetch('https://www.dhlottery.co.kr/common.do?method=main')
+            .then(response => response.text())
+            .then(html => {
+                // 최신 회차 번호 파싱
+                const match = html.match(/<strong id="lottoDrwNo">(\d+)<\/strong>/);
+                if (match && match[1]) {
+                    const latestRound = match[1];
+                    fetchLottoNumber(latestRound);
+                } else {
+                    lottoResult.innerHTML = '최신 회차 정보를 찾을 수 없습니다.';
+                }
+            })
+            .catch(() => {
+                lottoResult.innerHTML = '최신 회차 정보를 불러오지 못했습니다.';
+            });
+    }
+
+    // 해당 회차의 로또 번호 불러오기
+    function fetchLottoNumber(round) {
+        fetch(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${round}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.returnValue === "success") {
+                    const nums = [
+                        data.drwtNo1, data.drwtNo2, data.drwtNo3,
+                        data.drwtNo4, data.drwtNo5, data.drwtNo6
+                    ];
+                    const bonus = data.bnusNo;
+                    lottoResult.innerHTML = `
+          <strong>${data.drwNo}회 (${data.drwNoDate})</strong><br>
+          <span style="color:#1976d2;font-size:1.2em;">${nums.join(', ')}</span><br>
+          <span style="color:#888;">보너스: <span style="color:#ff5252;">${bonus}</span></span>
+        `;
+                } else {
+                    lottoResult.innerHTML = '아직 발표되지 않은 회차입니다.';
+                }
+            })
+            .catch(() => {
+                lottoResult.innerHTML = '로또 번호를 불러오지 못했습니다.';
+            });
+    }
+</script>
+</body>
+
+</html>
