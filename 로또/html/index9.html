@@ -1,93 +1,497 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>홈페이지 팝업창 예시</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../css/style2.css">
+	<title>로또</title>
 </head>
-<body>
-<!-- 팝업 열기 버튼 -->
-<button id="openPopupBtn">로또 당첨번호 보기</button>
 
-<div id="popup" class="popup-overlay">
-	<div class="popup-content">
-		<span class="close-btn" id="closePopupBtn">&times;</span>
-		<h2>로또 실시간 당첨번호</h2>
-		<div id="lottoResult">불러오는 중...</div>
+<body>
+
+<div class="container" id="main">
+	<div class="lotto">
+		<div class="lotto-wrap">
+
+			<header>
+				<h1 class="logo">
+					<a href="#main" target="_blank" class="logo-btn">
+						<img src="../img/img_logo.png" alt="로고 이미지">
+					</a>
+				</h1>
+			</header>
+
+
+			<div class="contents">
+				<div class="contents-wrap">
+					<div class="user">
+						<div class="user-wrap">
+							<div class="user-mane-box">Test1님</div>
+							<div class="option-box">
+								<div class="point">
+									<div class="txt">43,000P</div>
+								</div>
+								<div class="lobby-move">
+									<a href="#none" class="btn">로비 이동 </a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="lotto-layout-detail">
+						<div class="detail-wrap">
+							<nav class="navigation">
+								<ul>
+									<li><button type="button" class="btn" id="lottoTab1">로또</button> </li>
+									<li><button type="button" class="btn active" id="lottoTab2">구매 하기</button> </li>
+									<li><button type="button" class="btn" id="lottoTab3">구매 내역</button> </li>
+									<li><button type="button" class="btn" id="lottoTab4">배분 방식</button> </li>
+								</ul>
+							</nav>
+
+							<div class="detail-info">
+								<div class="info-wrap">
+									<div class="item-box">
+										<article class="desc">
+											<i class="icon-box"></i>
+											<div class="txt-box">5개의 번호를 선택하세요.</div>
+										</article>
+
+
+										<div class="lotto-ticket">
+											<div class="ticket-wrap">
+												<div class="ticket-wrap">
+													<div class="card-box">
+														<div class="head-box">
+															<div class="badge-box">A</div>
+															<div class="price-box">1,000</div>
+														</div>
+														<div class="body-box">
+															<div class="body-wrap">
+																<div class="num-list">
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="1">
+																			<span class="txt">1</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="2">
+																			<span class="txt">2</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="3">
+																			<span class="txt">3</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="4">
+																			<span class="txt">4</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="5">
+																			<span class="txt">5</span>
+																		</label>
+																	</div>
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="6">
+																			<span class="txt">6</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="7">
+																			<span class="txt">7</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="8">
+																			<span class="txt">8</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="9">
+																			<span class="txt">9</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="10">
+																			<span class="txt">10</span>
+																		</label>
+																	</div>
+
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="1">
+																			<span class="txt">1</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="2">
+																			<span class="txt">2</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="3">
+																			<span class="txt">3</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="4">
+																			<span class="txt">4</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="5">
+																			<span class="txt">5</span>
+																		</label>
+																	</div>
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="6">
+																			<span class="txt">6</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="7">
+																			<span class="txt">7</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="8">
+																			<span class="txt">8</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="9">
+																			<span class="txt">9</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="10">
+																			<span class="txt">10</span>
+																		</label>
+																	</div>
+
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="11">
+																			<span class="txt">11</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="12">
+																			<span class="txt">12</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="13">
+																			<span class="txt">13</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="14">
+																			<span class="txt">14</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="15">
+																			<span class="txt">15</span>
+																		</label>
+																	</div>
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="16">
+																			<span class="txt">16</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="17">
+																			<span class="txt">17</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="18">
+																			<span class="txt">18</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="19">
+																			<span class="txt">19</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="20">
+																			<span class="txt">20</span>
+																		</label>
+																	</div>
+
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="21">
+																			<span class="txt">21</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="22">
+																			<span class="txt">22</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="23">
+																			<span class="txt">23</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="24">
+																			<span class="txt">24</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="25">
+																			<span class="txt">25</span>
+																		</label>
+																	</div>
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="26">
+																			<span class="txt">26</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="27">
+																			<span class="txt">27</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="28">
+																			<span class="txt">28</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="29">
+																			<span class="txt">29</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="30">
+																			<span class="txt">30</span>
+																		</label>
+																	</div>
+
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="31">
+																			<span class="txt">31</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="32">
+																			<span class="txt">32</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="33">
+																			<span class="txt">3</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="34">
+																			<span class="txt">34</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="35">
+																			<span class="txt">35</span>
+																		</label>
+																	</div>
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="36">
+																			<span class="txt">36</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="37">
+																			<span class="txt">37</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="38">
+																			<span class="txt">38</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="39">
+																			<span class="txt">39</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="40">
+																			<span class="txt">40</span>
+																		</label>
+																	</div>
+
+
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="41">
+																			<span class="txt">41</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="42">
+																			<span class="txt">42</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="43">
+																			<span class="txt">43</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="44">
+																			<span class="txt">44</span>
+																		</label>
+																	</div>
+																	<div class="num-btn">
+																		<label>
+																			<input type="checkbox" name="number" value="45">
+																			<span class="txt">45</span>
+																		</label>
+																	</div>
+
+																</div>
+
+																<div class="num-option">
+																	<div class="option-box">
+																		<label>
+																			<input type="radio" name="option" value="autocheck">
+																			<span class="txt">자동선택</span>
+																			<i></i>
+																		</label>
+																	</div>
+																	<div class="option-box">
+																		<label>
+																			<input type="radio" name="option" value="cancel">
+																			<span class="txt">취소</span>
+																			<i></i>
+																		</label>
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="lotto-option">
+											<div class="option-box">
+												<button type="button" class="btn">번호 생성</button>
+											</div>
+
+											<div class="option-box">
+												<button type="button" class="btn">당첨 결과</button>
+											</div>
+										</div>
+									</div>
+									<div class="item-box">
+										<article class="desc">
+											<i class="icon-box"></i>
+											<div class="txt-box">로또번호 생성 리스트</div>
+										</article>
+
+
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 
 
+
+
 <script>
-    const openBtn = document.getElementById('openPopupBtn');
-    const closeBtn = document.getElementById('closePopupBtn');
-    const popup = document.getElementById('popup');
-    const lottoResult = document.getElementById('lottoResult');
 
-    // 팝업 열기
-    openBtn.addEventListener('click', () => {
-        popup.style.display = 'block';
-        lottoResult.innerHTML = '불러오는 중...';
-        fetchLatestLottoNumber();
-    });
+	const lottoTabs = document.querySelectorAll('.btn');
+  console.log(lottoTabs)
 
-    // 팝업 닫기
-    closeBtn.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
+	lottoTabs.forEach(function (lottoTab){
+        lottoTab.addEventListener('click', function(){
 
-    // 오버레이 클릭 시 닫기
-    popup.addEventListener('click', (e) => {
-        if (e.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
-
-    // 최신 회차 번호 추출 및 당첨번호 표시
-    function fetchLatestLottoNumber() {
-        // 동행복권 메인 페이지에서 최신 회차 번호 추출
-        fetch('https://www.dhlottery.co.kr/common.do?method=main')
-            .then(response => response.text())
-            .then(html => {
-                // 최신 회차 번호 파싱
-                const match = html.match(/<strong id="lottoDrwNo">(\d+)<\/strong>/);
-                if (match && match[1]) {
-                    const latestRound = match[1];
-                    fetchLottoNumber(latestRound);
-                } else {
-                    lottoResult.innerHTML = '최신 회차 정보를 찾을 수 없습니다.';
-                }
+            lottoTabs.forEach(function (tabBtn){
+                tabBtn.classList.remove('active');
             })
-            .catch(() => {
-                lottoResult.innerHTML = '최신 회차 정보를 불러오지 못했습니다.';
-            });
-    }
 
-    // 해당 회차의 로또 번호 불러오기
-    function fetchLottoNumber(round) {
-        fetch(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${round}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.returnValue === "success") {
-                    const nums = [
-                        data.drwtNo1, data.drwtNo2, data.drwtNo3,
-                        data.drwtNo4, data.drwtNo5, data.drwtNo6
-                    ];
-                    const bonus = data.bnusNo;
-                    lottoResult.innerHTML = `
-          <strong>${data.drwNo}회 (${data.drwNoDate})</strong><br>
-          <span style="color:#1976d2;font-size:1.2em;">${nums.join(', ')}</span><br>
-          <span style="color:#888;">보너스: <span style="color:#ff5252;">${bonus}</span></span>
-        `;
-                } else {
-                    lottoResult.innerHTML = '아직 발표되지 않은 회차입니다.';
-                }
-            })
-            .catch(() => {
-                lottoResult.innerHTML = '로또 번호를 불러오지 못했습니다.';
-            });
-    }
+            this.classList.add('active');
+
+        });
+	});
+
 </script>
 </body>
 

@@ -1,33 +1,395 @@
-.popup-overlay {
-	display: none;
-	position: fixed;
-	top: 0; left: 0;
-	width: 100vw; height: 100vh;
-	background: rgba(0,0,0,0.5);
-	z-index: 1000;
+@charset "UTF-8";
+
+$font: 'pretendard';
+
+@each $font-size in R, M, B, SB{
+
+	@font-face{
+		font-family:  $font;
+		src: url("../fonts/#{$font}-#{$font-size}.woff") format('woff');
+
+		@if $font-size == R {
+			font-weight: 400;
+		}
+
+		@else if $font-size == M {
+			font-weight: 500;
+		}
+
+		@else if $font-size == B {
+			font-weight: 700;
+		}
+
+		@else if $font-size == SB {
+			font-weight: 800;
+		}
+
+		font-style:normal;
+	}
+
 }
 
-.popup-content {
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-	background: #fff;
-	padding: 40px 30px 30px 30px;
-	border-radius: 10px;
-	min-width: 320px;
-	max-width: 90vw;
-	box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-	text-align: center;
+*{
+	padding: 0;
+	margin: 0;
+	font-family:'pretendard';
+
 }
 
-.close-btn {
-	position: absolute;
-	top: 12px; right: 18px;
-	font-size: 28px;
-	color: #888;
-	cursor: pointer;
-	font-weight: bold;
+
+header{
+	.logo{
+		.logo-btn{
+			display: block;
+			width: 213px;
+			height: 96px;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
 }
-.close-btn:hover {
-	color: #333;
+
+
+article.desc{
+	display: inline-flex;
+	.icon-box{
+		background: url(../img/ic_msg.svg) no-repeat center / cover;
+		width: 18px;
+		height: 18px;
+	}
+
+	.txt-box{
+		padding-left: 10px;
+		font-size: 16px;
+		font-weight: 400;
+		color: #FFF;
+	}
+}
+
+.container{
+	.lotto{
+		margin: 0 auto;
+		width: 1024px;
+		.lotto-wrap{
+			max-width: 100%;
+			background: #1c1d4a url(../img/img_logo_bg.png) no-repeat top right / 880px 170px;
+			padding: 18px 26px 108px;
+
+
+		}
+
+		.contents{
+			padding-top: 80px;
+
+			.contents-wrap{
+				max-width: 928px;
+				margin: 0 auto;
+
+				.user{
+					.user-wrap{
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						.user-mane-box{
+							font-size: 20px;
+							font-weight: 400;
+							color: #ffffff;
+						}
+
+						.option-box{
+							display: flex;
+							align-items: center;
+
+							.point{
+								.txt{
+									font-size: 20px;
+									font-weight: 400;
+									color: #ffffff;
+								}
+							}
+							.lobby-move{
+								margin-left: 24px;
+								.btn{
+									color: #5899FA;
+									font-size: 16px;
+									font-weight: 600;
+									border-radius: 100px;
+									height: 42px;
+									padding: 0 15px;
+									display: inline-flex;
+									align-items: center;
+									justify-content: center;
+									border: 1px solid #5899FA;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+				}
+
+				.lotto-layout-detail{
+					padding-top: 40px;
+					.detail-wrap{
+						.navigation{
+							ul{
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								gap: 4px;
+
+								li{
+									width: 25%;
+									list-style: none;
+									.btn{
+										background-color: #2B2D5D;
+										border-radius: 10px 10px 0 0;
+										font-size: 16px;
+										font-weight: 400;
+										color: #888888;
+										width: 100%;
+										padding: 15px 5px;
+										cursor: pointer;
+										border: 1px solid transparent;
+
+										&.active{
+											background: #34B5F7;
+											color: #FFFFff;
+											font-weight: 600;
+										}
+									}
+								}
+
+
+							}
+
+
+						}
+
+
+						.detail-info{
+							background: url(../img/img_check_bg.png) no-repeat center / 102% 100%;
+							.info-wrap{
+								padding: 41px 24px 37px;
+
+								.item-box{
+
+									border-bottom: 1px solid #41427a;
+									padding: 24px 0;
+
+									&:first-child{
+										border-bottom: 1px solid #6E6F9D;
+									}
+
+									.lotto-ticket{
+										padding-top: 32px;
+
+										.ticket-wrap{
+											background-color: #fff;
+											border: 1px solid #EF3A81;
+											border-radius: 10px;
+											overflow: hidden;
+											display: flex;
+											align-items: center;
+											width: 100%;
+
+											.card-box{
+												width: 20%;
+												.head-box{
+													display: flex;
+													align-items: center;
+
+													.badge-box{
+														color: #EF3A81;
+														min-width: 40px;
+														display: inline-flex;
+														justify-content: center;
+														flex-shrink: 0;
+													}
+
+													.price-box{
+														display: inline-flex;
+														justify-content: center;
+														align-items: center;
+														flex: 1;
+														height: 40px;
+														background-color: #EF3A81;
+														color: #FFF;
+														width: 100%;
+													}
+												}
+
+												.body-box{
+													border-top: 1px solid #EF3A81;
+													padding: 20px 24px 28px;
+													.body-wrap{
+
+														.num-list{
+															display: flex;
+															align-items: center;
+															flex-flow: wrap;
+															.num-btn{
+																width: calc(20% - 12px);
+																margin: 6px 6px;
+
+																label{
+																	cursor: pointer;
+																	width: 100%;
+																	display: block;
+
+																	input[type=checkbox]{
+																		position: absolute;
+																		left: -9999px;
+
+
+																		&:checked{
+																			& ~ .txt{
+																				background-color: #000;
+																				color: #fff;
+
+																				&:after{
+																					display: none;
+																				}
+
+																				&:before{
+																					display: none;
+																				}
+																			}
+																		}
+																	}
+																}
+
+																.txt{
+																	position: relative;
+																	color: #EF3A81;
+																	font-size: 12px;
+																	font-weight: 600;
+																	display: flex;
+																	align-items: center;
+																	justify-content: center;
+																	height: 21px;
+
+																	&:after{
+																		content: '';
+																		background: url(../img/ic_click_front.svg) no-repeat center / cover;
+																		width: 16px;
+																		height: 2px;
+																		position: absolute;
+																		top: 0;
+																		left: 50%;
+																		transform: translateX(-50%);
+																	}
+
+
+																	&:before{
+																		content: '';
+																		background: url(../img/ic_click_back.svg) no-repeat center / cover;
+																		width: 16px;
+																		height: 2px;
+																		position: absolute;
+																		bottom: 0;
+																		left: 50%;
+																		transform: translateX(-50%);
+																	}
+																}
+															}
+														}
+
+														.num-option{
+															padding-top: 15px;
+															text-align: right;
+
+															.option-box{
+																& + .option-box{
+																	padding-top: 10px;
+																}
+
+																label{
+																	cursor: pointer;
+																	position: relative;
+
+																	input[type=radio]{
+																		position: absolute;
+																		left: -9999px;
+
+																		&:checked{
+
+																			& ~ i{
+																				background: url("../img/ic_check_on.svg")no-repeat center/ cover;
+																			}
+																		}
+
+
+
+
+																	}
+
+																	.txt{
+																		color: #EF3A81;
+																		font-size: 13px;
+																		font-weight: 600;
+																		padding-right: 27px;
+																	}
+
+
+																	i{
+																		position: absolute;
+																		content: '';
+																		background: url("../img/ic_check_off.svg")no-repeat center/ cover;
+																		width: 16px;
+																		height: 16px;
+																		top: 2px;
+																		right: 0;
+
+																	}
+																}
+
+															}
+														}
+
+
+													}
+												}
+
+											}
+										}
+									}
+
+									.lotto-option{
+										display: flex;
+										justify-content: right;
+										padding-top: 30px;
+										.option-box{
+
+											& + .option-box{
+												padding-left: 20px;
+											}
+											.btn{
+												background-color: #34B5F7;
+												font-size: 20px;
+												font-weight: 600;
+												color: #FFFFff;
+												border-radius: 50px;
+												height: 60px;
+												padding: 0 20px;
+												display: flex;
+												align-items: center;
+												justify-content: center;
+												cursor: pointer;
+												border: 1px solid transparent;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
 }
