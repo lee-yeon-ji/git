@@ -1955,10 +1955,21 @@
 											</div>
 
 											<div class="option-box">
-												<button type="button" class="btn result ">당첨 결과</button>
+												<button type="button" class="btn result " id="resultBtn">당첨 결과</button>
+											</div>
+										</div>
+
+										<div class="modal" id="resultModal">
+											<div class="modal-box" >
+												<div class="subject">당첨 결과</div>
+												<div class="txt">여기에 당첨 결과가 표시됩니다.</div>
+												<button type="button" class="btn" id="closeModalBtn">닫기</button>
 											</div>
 										</div>
 									</div>
+
+
+
 									<div class="item-box">
 										<article class="desc">
 											<i class="icon-box"></i>
@@ -1966,8 +1977,6 @@
 										</article>
 
 										<div class="create-container"></div>
-
-
 									</div>
 								</div>
 							</div>
@@ -1984,6 +1993,25 @@
 
 
 <script>
+
+    const resultBtn = document.getElementById('resultBtn');
+    const resultModal = document.getElementById('resultModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    resultBtn.addEventListener('click', function() {
+        resultModal.style.display = 'block';
+    });
+
+    closeModalBtn.addEventListener('click', function() {
+        resultModal.style.display = 'none';
+    });
+
+    // 모달 바깥 클릭 시 닫기
+    resultModal.addEventListener('click', function(e) {
+        if (e.target === resultModal) {
+            resultModal.style.display = 'none';
+        }
+    });
 
 	const lottoTabs = document.querySelectorAll('.nav-btn');
   console.log(lottoTabs)
@@ -2029,38 +2057,48 @@
 
 	});
 
-//create 함수 선언
-  function  create(){
-
+  function create(){
       const gameList = document.querySelectorAll('.num-list');
-      const createResult = document.querySelector('.create-container');
-
+      const chkResult = document.querySelector('.create-container');
       let selected = [];
 
       gameList.forEach(function (game){
           const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
-
-          if(checkedList.length == 5) {
-              const numbers = [];
-
-              checkedList.forEach(function (num) {
-                  //push 배열의 끝에 하나 이상의 요소를 추가해 배열의 새로운 길이를 반환
-                  numbers.push(num.value)
+          if (checkedList.length == 5){
+              let numbers = [];
+              checkedList.forEach(function (chk){
+                  numbers.push(chk.value);
               });
-
               selected.push(numbers);
-              console.log(selected)
           }
       });
 
-
       if(selected.length === 0){
-          alert('번호를 선택해 해주세요.');
+          alert('번호를 선택해 주세요.');
           return;
-      };
+      }
 
+      let str = '';
+      selected.forEach(function (numbers){
+          str += `<div class="number-list">`;
+          numbers.forEach(function (number){
+              let bgColor;
+              if (number >= 1 && number <= 10) {
+                  bgColor = "bg-yellow";
+              } else if (number >= 11 && number <= 20){
+                  bgColor = "bg-blue";
+              } else if (number >= 21 && number <= 30){
+                  bgColor = "bg-red";
+              } else {
+                  bgColor = "bg-green";
+              }
+              str += `<span class="number ${bgColor}">${number}</span>`;
+          });
+          str += '</div>';
+      });
+
+      chkResult.innerHTML = str;
   }
-
 
 
 </script>
