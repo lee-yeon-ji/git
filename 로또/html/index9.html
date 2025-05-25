@@ -42,10 +42,18 @@
 						<div class="detail-wrap">
 							<nav class="navigation">
 								<ul>
-									<li><button type="button" class="nav-btn" id="lottoTab1">로또</button> </li>
-									<li><button type="button" class="nav-btn active" id="lottoTab2">구매 하기</button> </li>
-									<li><button type="button" class="nav-btn" id="lottoTab3">구매 내역</button> </li>
-									<li><button type="button" class="nav-btn" id="lottoTab4">배분 방식</button> </li>
+									<li>
+										<button type="button" class="nav-btn" id="lottoTab1">로또</button>
+									</li>
+									<li>
+										<button type="button" class="nav-btn active" id="lottoTab2">구매 하기</button>
+									</li>
+									<li>
+										<button type="button" class="nav-btn" id="lottoTab3">구매 내역</button>
+									</li>
+									<li>
+										<button type="button" class="nav-btn" id="lottoTab4">배분 방식</button>
+									</li>
 								</ul>
 							</nav>
 
@@ -1924,7 +1932,6 @@
 																</div>
 
 
-
 																<div class="num-option">
 																	<div class="option-box">
 																		<label>
@@ -1955,19 +1962,18 @@
 											</div>
 
 											<div class="option-box">
-												<button type="button" class="btn result " id="resultBtn">당첨 결과</button>
+												<button type="button" class="btn result " id="showResultBtn">당첨 결과</button>
 											</div>
 										</div>
 
 										<div class="modal" id="resultModal">
-											<div class="modal-box" >
+											<div class="modal-box">
 												<div class="subject">당첨 결과</div>
-												<div class="txt">여기에 당첨 결과가 표시됩니다.</div>
+												<div class="txt" id="lottoResult">여기에 당첨 결과가 표시됩니다.</div>
 												<button type="button" class="btn" id="closeModalBtn">닫기</button>
 											</div>
 										</div>
 									</div>
-
 
 
 									<div class="item-box">
@@ -1989,116 +1995,128 @@
 </div>
 
 
-
-
-
 <script>
 
-    const resultBtn = document.getElementById('resultBtn');
-    const resultModal = document.getElementById('resultModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
+    // 로또 번호 생성 함수
+    function generateLottoNumbers() {
+        const numbers = [];
+        while (numbers.length < 6) {
+            const num = Math.floor(Math.random() * 45) + 1;
+            if (!numbers.includes(num)) {
+                numbers.push(num);
+            }
+        }
+        numbers.sort((a, b) => a - b); // 오름차순 정렬
+        return numbers;
+    }
 
-    resultBtn.addEventListener('click', function() {
-        resultModal.style.display = 'block';
-    });
+    // 모달 띄우기 및 결과 표시
+    document.getElementById('showResultBtn').onclick = function () {
+        const lottoNumbers = generateLottoNumbers();
+        document.getElementById('lottoResult').textContent = `당첨 번호: ${lottoNumbers.join(', ')}`;
+        document.getElementById('resultModal').style.display = 'block';
+    };
 
-    closeModalBtn.addEventListener('click', function() {
-        resultModal.style.display = 'none';
-    });
+    // 모달 닫기
+    document.getElementById('closeModalBtn').onclick = function () {
+        document.getElementById('resultModal').style.display = 'none';
+    };
 
     // 모달 바깥 클릭 시 닫기
-    resultModal.addEventListener('click', function(e) {
+    resultModal.addEventListener('click', function (e) {
         if (e.target === resultModal) {
             resultModal.style.display = 'none';
         }
     });
 
-	const lottoTabs = document.querySelectorAll('.nav-btn');
-  console.log(lottoTabs)
 
-	lottoTabs.forEach(function (lottoTab){
-        lottoTab.addEventListener('click', function(){
+    // nav 버튼
+    const lottoTabs = document.querySelectorAll('.nav-btn');
+    console.log(lottoTabs)
 
-            lottoTabs.forEach(function (tabBtn){
+    lottoTabs.forEach(function (lottoTab) {
+        lottoTab.addEventListener('click', function () {
+
+            lottoTabs.forEach(function (tabBtn) {
                 tabBtn.classList.remove('active');
             })
 
             this.classList.add('active');
 
         });
-	});
+    });
 
-	//numBtn들을 5개까지만 클릭가능, 5개 이상 클릭 시 알림창 띄움
-  let numBtns = document.querySelectorAll('.num-btn');
-  console.log(numBtns)
-	numBtns.forEach(function (numBtn){
+    //numBtn들을 5개까지만 클릭가능, 5개 이상 클릭 시 알림창 띄움
+    let numBtns = document.querySelectorAll('.num-btn');
+    console.log(numBtns)
+    numBtns.forEach(function (numBtn) {
 
-        numBtn.querySelector('input[type=checkbox]').addEventListener('change',function (){
+        numBtn.querySelector('input[type=checkbox]').addEventListener('change', function () {
             const numInner = this.closest('.num-list');
 
             const checkedList = numInner.querySelectorAll('input[type=checkbox]:checked');
 
-            if(checkedList.length > 5 ){
+            if (checkedList.length > 5) {
                 this.checked = false;
 
                 alert('5개 까지만 체크 됩니다.')
             }
         });
-	});
+    });
 
 
-  //createBtn을 눌렀을 때 create()함수를 실행
-  const createBtn = document.querySelector('.create');
-  console.log(createBtn)
-	createBtn.addEventListener('click',function (){
+    //createBtn을 눌렀을 때 create()함수를 실행
+    const createBtn = document.querySelector('.create');
+    console.log(createBtn)
+    createBtn.addEventListener('click', function () {
         //create 함수 호출
         create();
 
 
-	});
+    });
 
-  function create(){
-      const gameList = document.querySelectorAll('.num-list');
-      const chkResult = document.querySelector('.create-container');
-      let selected = [];
+    function create() {
+        const gameList = document.querySelectorAll('.num-list');
+        const chkResult = document.querySelector('.create-container');
+        let selected = [];
 
-      gameList.forEach(function (game){
-          const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
-          if (checkedList.length == 5){
-              let numbers = [];
-              checkedList.forEach(function (chk){
-                  numbers.push(chk.value);
-              });
-              selected.push(numbers);
-          }
-      });
+        gameList.forEach(function (game) {
+            const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
+            if (checkedList.length == 5) {
+                let numbers = [];
+                checkedList.forEach(function (chk) {
+                    numbers.push(chk.value);
+                });
+                selected.push(numbers);
+            }
+        });
 
-      if(selected.length === 0){
-          alert('번호를 선택해 주세요.');
-          return;
-      }
+        if (selected.length === 0) {
+            alert('번호를 선택해 주세요.');
+            return;
+        }
 
-      let str = '';
-      selected.forEach(function (numbers){
-          str += `<div class="number-list">`;
-          numbers.forEach(function (number){
-              let bgColor;
-              if (number >= 1 && number <= 10) {
-                  bgColor = "bg-yellow";
-              } else if (number >= 11 && number <= 20){
-                  bgColor = "bg-blue";
-              } else if (number >= 21 && number <= 30){
-                  bgColor = "bg-red";
-              } else {
-                  bgColor = "bg-green";
-              }
-              str += `<span class="number ${bgColor}">${number}</span>`;
-          });
-          str += '</div>';
-      });
+        let str = '';
+        selected.forEach(function (numbers) {
+            str += `<div class="number-list">`;
+            numbers.forEach(function (number) {
+                let bgColor;
+                if (number >= 1 && number <= 10) {
+                    bgColor = "bg-yellow";
+                } else if (number >= 11 && number <= 20) {
+                    bgColor = "bg-blue";
+                } else if (number >= 21 && number <= 30) {
+                    bgColor = "bg-red";
+                } else {
+                    bgColor = "bg-green";
+                }
+                str += `<span class="number ${bgColor}">${number}</span>`;
+            });
+            str += '</div>';
+        });
 
-      chkResult.innerHTML = str;
-  }
+        chkResult.innerHTML = str;
+    }
 
 
 </script>
