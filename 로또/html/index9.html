@@ -2001,12 +2001,15 @@
     function generateLottoNumbers() {
         const numbers = [];
         while (numbers.length < 6) {
+            //  1부터 45까지의 랜덤 정수를 만들기 위한 공식
             const num = Math.floor(Math.random() * 45) + 1;
+            //includes() 배열이나 문자열에 특정 값이 포함되어 있는지 확인하는 내장함수 불리언 값을 반환함. 대소문자 구분함
             if (!numbers.includes(num)) {
                 numbers.push(num);
             }
         }
-        numbers.sort((a, b) => a - b); // 오름차순 정렬
+        // 오름차순으로 정렬
+        numbers.sort((a, b) => a - b);
         return numbers;
     }
 
