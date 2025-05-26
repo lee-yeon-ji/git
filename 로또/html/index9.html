@@ -2002,7 +2002,9 @@
         const numbers = [];
         while (numbers.length < 6) {
             //  1부터 45까지의 랜덤 정수를 만들기 위한 공식
+		        // 0 이상 1 미만의 난수를 랜덤으로 생성하고 math.random에 * 45를 한 뒤 소수점 이하를 버리고  +1 을 해 1~45의 정수를 만듬
             const num = Math.floor(Math.random() * 45) + 1;
+
             //includes() 배열이나 문자열에 특정 값이 포함되어 있는지 확인하는 내장함수 불리언 값을 반환함. 대소문자 구분함
             if (!numbers.includes(num)) {
                 numbers.push(num);
