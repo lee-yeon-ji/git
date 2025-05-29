@@ -2011,18 +2011,76 @@
         return numbers;
     }
 
+    // 사용자가 선택한 모든 번호(중복 없이) 반환
+    function getUserSelectedNumbers() {
+        const gameList = document.querySelectorAll('.num-list');
+        let selectedNumbers = [];
+        gameList.forEach(function (game) {
+            const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
+            checkedList.forEach(function (chk) {
+                const num = parseInt(chk.value, 10);
+                if (!selectedNumbers.includes(num)) {
+                    selectedNumbers.push(num);
+                }
+            });
+        });
+        selectedNumbers.sort((a, b) => a - b);
+        return selectedNumbers;
+    }
+
     // 모달 띄우기 및 결과 표시
     document.getElementById('showResultBtn').onclick = function () {
         const lottoNumbers = generateLottoNumbers();
-        document.getElementById('lottoResult').textContent = `당첨 번호: ${lottoNumbers.join(', ')}`;
-        document.getElementById('resultModal').style.display = 'block';
-
-        // 사용자가 선택한 번호와 당첨 번호 비교
         const userNumbers = getUserSelectedNumbers();
-        if (userNumbers.length > 0) {
-            const matched = userNumbers.filter(num => lottoNumbers.includes(num));
-            alert(`일치하는 번호: ${matched.join(', ') || '없음'}`);
-        }
+        const matched = userNumbers.filter(num => lottoNumbers.includes(num));
+
+        // 당첨 번호: 일치 번호만 색상, 나머지는 회색
+        let lottoHtml = lottoNumbers.map(num => {
+            let colorClass = 'bg-gray';
+            if (matched.includes(num)) {
+                if (num >= 1 && num <= 10) colorClass = 'bg-yellow';
+                else if (num >= 11 && num <= 20) colorClass = 'bg-blue';
+                else if (num >= 21 && num <= 30) colorClass = 'bg-red';
+                else colorClass = 'bg-green';
+            }
+            return `<span class="number ${colorClass}">${num}</span>`;
+        }).join(' ');
+
+        // 내가 선택한 번호: 기존 색상
+        let userHtml = userNumbers.map(num => {
+            let colorClass = '';
+            if (num >= 1 && num <= 10) colorClass = 'bg-yellow';
+            else if (num >= 11 && num <= 20) colorClass = 'bg-blue';
+            else if (num >= 21 && num <= 30) colorClass = 'bg-red';
+            else colorClass = 'bg-green';
+            return `<span class="number ${colorClass}">${num}</span>`;
+        }).join(' ');
+
+        // 일치 번호: 색상
+        let matchHtml = matched.length > 0
+            ? matched.map(num => {
+                let colorClass = '';
+                if (num >= 1 && num <= 10) colorClass = 'bg-yellow';
+                else if (num >= 11 && num <= 20) colorClass = 'bg-blue';
+                else if (num >= 21 && num <= 30) colorClass = 'bg-red';
+                else colorClass = 'bg-green';
+                return `<span class="number ${colorClass}">${num}</span>`;
+            }).join(' ')
+            : '없음';
+
+        let html = `
+      <h3>당첨 번호</h3>
+      <p>${lottoHtml}</p>
+      <h3>내가 선택한 번호</h3>
+      <p>${userNumbers.length > 0 ? userHtml : '선택한 번호 없음'}</p>
+      <h3>일치하는 번호 (${matched.length}개)</h3>
+      <p>${matchHtml}</p>
+    `;
+
+
+
+        document.getElementById('lottoResult').innerHTML = html;
+        document.getElementById('resultModal').style.display = 'block';
     };
 
     // 모달 닫기
@@ -2068,22 +2126,6 @@
         create();
     });
 
-    // 사용자가 선택한 모든 번호(중복 없이) 반환
-    function getUserSelectedNumbers() {
-        const gameList = document.querySelectorAll('.num-list');
-        let selectedNumbers = [];
-        gameList.forEach(function (game) {
-            const checkedList = game.querySelectorAll('input[type=checkbox]:checked');
-            checkedList.forEach(function (chk) {
-                const num = parseInt(chk.value, 10);
-                if (!selectedNumbers.includes(num)) {
-                    selectedNumbers.push(num);
-                }
-            });
-        });
-        return selectedNumbers;
-    }
-
     function create() {
         const gameList = document.querySelectorAll('.num-list');
         const chkResult = document.querySelector('.create-container');
@@ -2126,6 +2168,10 @@
 
         chkResult.innerHTML = str;
     }
+
+
+
+
 
     // // 로또 번호 생성 함수
     // function generateLottoNumbers() {
@@ -2260,8 +2306,6 @@
     // });
     // console.log(matchedNumbers);
 		//
-
-
 </script>
 </body>
 
