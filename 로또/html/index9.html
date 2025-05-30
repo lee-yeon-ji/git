@@ -2069,11 +2069,11 @@
             : '없음';
 
         let html = `
-      <h3>당첨 번호</h3>
+      <h3 style="color: cadetblue;">당첨 번호</h3>
       <p>${lottoHtml}</p>
-      <h3>내가 선택한 번호</h3>
-      <p>${userNumbers.length > 0 ? userHtml : '선택한 번호 없음'}</p>
-      <h3>일치하는 번호 (${matched.length}개)</h3>
+      <h3 style="padding-top: 10px; color: cadetblue;">내가 선택한 번호</h3>
+      <p >${userNumbers.length > 0 ? userHtml : '선택한 번호 없음'}</p>
+      <h3 style="padding-top: 10px; color: cadetblue;">일치하는 번호 (${matched.length}개)</h3>
       <p>${matchHtml}</p>
     `;
 

@@ -479,11 +479,23 @@ article.desc{
 			padding-top: 20px;
 			font-size: 15px;
 			font-weight: 500;
+
 		}
 
 
 		.btn{
-
+			background-color: #34B5F7;
+			font-size: 18px;
+			font-weight: 600;
+			color: #FFF;
+			border-radius: 5px;
+			height: 40px;
+			padding: 0 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			border: 1px solid transparent;
 
 		}
 	}
