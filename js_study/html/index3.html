@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/style3.css">
+	<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<title>버튼 클릭 시 몇번 클릭 했는지 확인하는 어플 만들기</title>
+</head>
+
+
+<body>
+
+<div id="root"></div>
+
+<script>
+
+    const root = document.getElementById("root");
+    const h3 = React.createElement("h3",
+        {
+            id : "tittle",
+         onMouseEnter: () => console.log("mouse enter"),
+        },
+		    "Hello I'm a span");
+    const btn = React.createElement("button",
+        {
+            style : {backgroundColor: "tomato"},
+            onClick: () => console.log("im clicked"),
+        },
+        "Click me");
+    const container = React.createElement("div", null, [h3, btn]);
+    ReactDOM.render(container, root);
+
+
+</script>
+
+
+</body>
+</html>
