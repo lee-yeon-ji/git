@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/style3.css">
+	<title>버튼 클릭 시 몇번 클릭 했는지 확인하는 어플 만들기</title>
+
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+
+
+<body>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+    //리렌더링 하기 위한 React 최적화 방법
+    //React 어플리케이션을 다룰 때 데이터를 담을 위치
+    const root = document.getElementById("root");
+    let counter = 0;
+
+    function App() {
+        const [counter, setCounter] = React.useState(0);
+        const onClick = () =>{
+            //직접 값을 할당하는 방법
+            // setCounter(counter + 1);
+		        //위에 값 보단 아래처럼 함수를 전달해서 현재 상태를 기반으로 계산을 해야함을 명확하게 값이 나올 수 있도록 하는 방법
+		        setCounter((current) => current + 1);
+        };
+        return (
+            <div>
+                <h3>Total clicks : {counter}</h3>
+                <button onClick={onClick}>Click me</button>
+            </div>
+        );
+
+    }
+
+
+    ReactDOM.render(<App/>, root);
+
+
+    //리렌더링 하기 위해 React에서 함수로 계속 가지고 호출하는 방법
+    // const root = document.getElementById("root");
+    // let counter = 0;
+    //
+    // function countUp() {
+    //     counter = counter + 1;
+    //     render();
+    // }
+    //
+    // function render() {
+    //     ReactDOM.render(<Container/>, root);
+    //
+    // }
+    //
+    // const Container = () => (
+    //     <div>
+    //         <h3>Total clicks : {counter}</h3>
+    //         <button onClick={countUp}>Click me</button>
+    //     </div>
+    // );
+    // render();
+
+</script>
+
+</body>
+</html>

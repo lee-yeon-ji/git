@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/style3.css">
+	<title>단위 변환 앱 만들기</title>
+
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+
+
+<body>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+
+
+    function App() {
+        //React.useState()는 괄호 안에 디폴트 값으로 줄 때 빈칸이거나, "", 0 으로 적어줌.
+        const [amount, setAmount] = React.useState();
+        // flipped는 false, true를 확인하는 변수
+        const [inverted, setInverted] =  React.useState(false);
+        const onChange = (event) => {
+            setAmount(event.target.value);
+        };
+        const reset = () => setAmount(0);
+        const onFlip = () => {
+            reset();
+            setFlipped((current) => !current);
+        };
+
+        //input 안에 value 값이 들어가는 이유는 외부에서도 값을 수정해주기 위함.
+        return (
+            <div>
+                <h1>Super Converter</h1>
+		            <div>
+                    <label htmlFor="minutes">Minutes</label>
+                    <input value={inverted ? amount * 60 : amount}
+                           id="minutes"
+                           placeholder="Minutes"
+                           type="number"
+                           onChange={onChange}
+                           disabled={inverted}
+                    />
+		            </div>
+
+
+		            <div>
+                    <label htmlFor="hours">Hours</label>
+                    <input
+                        value={inverted ? amount : Math.round(amount / 60 )}
+                        id="hours"
+                        placeholder="Hours"
+                        type="number"
+                        onChange={onChange}
+                        disabled={!inverted}
+                    />
+		            </div>
+
+                <button onClick={reset}>Reset</button>
+                <button onClick={onFlip}>
+                    {inverted ? "Turn back" : "Invert"}</button>
+            </div>
+        );
+
+    }
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<App/>, root);
+
+
+</script>
+
+</body>
+</html>

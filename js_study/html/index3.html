@@ -6,25 +6,14 @@
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="../css/style3.css">
+	<title>버튼 클릭 시 몇번 클릭 했는지 확인하는 어플 만들기</title>
+
 	<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-	<script type="text/babel">
-      //JSX를 이용
-      const root = document.getElementById("root");
-      const Title = (<h3 id="title" onMouseEnter={() => console.log("mouse enter")}>Hello I'm a span</h3>
-      );
-      const Button = (
-          <button style={{backgroundColor: "tomato",}} onClick={() => console.log("im clicked")}>Click me</button>
-
-      );
-
-      const container = React.createElement("div", null, [Title, Button]);
-      ReactDOM.render(container, root);
-	</script>
 
 
-	<title>버튼 클릭 시 몇번 클릭 했는지 확인하는 어플 만들기</title>
+
 </head>
 
 
@@ -32,7 +21,59 @@
 
 <div id="root"></div>
 
-<script>
+
+<script type="text/babel">
+
+    //JSX를 이용
+    const root = document.getElementById("root");
+    //arrow function으로 만들거나 일반 함수로 만들거나
+    function Title(){
+        return(
+            <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>Hello I'm a span</h3>
+        );
+    }
+
+    const Button = () => (
+        <button style={{backgroundColor: "tomato",}} onClick={() => console.log("im clicked")}>Click me</button>
+    );
+
+
+		//여러 요소를 잘 쪼개 만든 뒤 합쳐주는 걸 잘해야 함. 관리가 편리함
+    //각 요소를 만든 부분을 합친 뒤 렌더링 하는 부분
+    //렌더링을 해줄 때는 <title/>로 주면 html태그로 인식해서 안되고, 앞 글자는 대문자로 <Title/>로 해서 적어야 만든 함수를 인식함.
+    const Container = () => (
+        <div>
+            <Title/>
+            <Button/>
+        </div>
+		    );
+    ReactDOM.render(<Container/>, root);
+
+
+
+
+
+
+
+
+
+
+
+    // //JSX를 이용
+    // const root = document.getElementById("root");
+    // const Title = (<h3 id="title" onMouseEnter={() => console.log("mouse enter")}>Hello I'm a span</h3>
+    // );
+    // const Button = (
+    //     <button style={{backgroundColor: "tomato",}} onClick={() => console.log("im clicked")}>Click me</button>
+		//
+    // );
+		//
+    // const container = React.createElement("div", null, [Title, Button]);
+    // ReactDOM.render(container, root);
+    //
+
+
+
 
     // const root = document.getElementById("root");
     // const h3 = React.createElement("h3",
@@ -53,9 +94,7 @@
 
 
 
-
 </script>
-
 
 </body>
 </html>
