@@ -24,25 +24,25 @@
 <script type="text/babel">
 
 
-    function App() {
+
+    function MinutesToHours () {
         //React.useState()는 괄호 안에 디폴트 값으로 줄 때 빈칸이거나, "", 0 으로 적어줌.
         const [amount, setAmount] = React.useState();
-        // flipped는 false, true를 확인하는 변수
+        // inverted는 false, true를 확인하는 변수
         const [inverted, setInverted] =  React.useState(false);
         const onChange = (event) => {
             setAmount(event.target.value);
         };
         const reset = () => setAmount(0);
-        const onFlip = () => {
+        const onInvert = () => {
             reset();
-            setFlipped((current) => !current);
+            setInverted((current) => !current);
         };
 
         //input 안에 value 값이 들어가는 이유는 외부에서도 값을 수정해주기 위함.
         return (
             <div>
-                <h1>Super Converter</h1>
-		            <div>
+                <div>
                     <label htmlFor="minutes">Minutes</label>
                     <input value={inverted ? amount * 60 : amount}
                            id="minutes"
@@ -51,10 +51,10 @@
                            onChange={onChange}
                            disabled={inverted}
                     />
-		            </div>
+                </div>
 
 
-		            <div>
+                <div>
                     <label htmlFor="hours">Hours</label>
                     <input
                         value={inverted ? amount : Math.round(amount / 60 )}
@@ -64,15 +64,91 @@
                         onChange={onChange}
                         disabled={!inverted}
                     />
-		            </div>
+                </div>
 
                 <button onClick={reset}>Reset</button>
-                <button onClick={onFlip}>
+                <button onClick={onInvert}>
                     {inverted ? "Turn back" : "Invert"}</button>
             </div>
         );
 
     }
+
+    function KmToMiles() {
+        //React.useState()는 괄호 안에 디폴트 값으로 줄 때 빈칸이거나, "", 0 으로 적어줌.
+        const [amount, setAmount] = React.useState();
+        // inverted는 false, true를 확인하는 변수
+        const [inverted, setInverted] =  React.useState(false);
+        const onChange = (event) => {
+            setAmount(event.target.value);
+        };
+        const reset = () => setAmount(0);
+        const onInvert = () => {
+            reset();
+            setInverted((current) => !current);
+        };
+
+        //input 안에 value 값이 들어가는 이유는 외부에서도 값을 수정해주기 위함.
+        return (
+            <div>
+                <div>
+                    <label htmlFor="Miles">Miles</label>
+                    <input value={inverted ? amount * 1.609 : amount}
+                           id="Miles"
+                           placeholder="Miles"
+                           type="number"
+                           onChange={onChange}
+                           disabled={inverted}
+                    />
+                </div>
+
+
+                <div>
+                    <label htmlFor="km">km</label>
+                    <input
+                        value={inverted ? amount : Math.round(amount / 1.609)}
+                        id="km"
+                        placeholder="km"
+                        type="number"
+                        onChange={onChange}
+                        disabled={!inverted}
+                    />
+                </div>
+
+                <button onClick={reset}>Reset</button>
+                <button onClick={onInvert}>
+                    {inverted ? "Turn back" : "Invert"}</button>
+            </div>
+        );
+
+
+    }
+
+    function App() {
+        //index - 데이터, setIndex - 데이터를 수정하는 함수로 이 함수를 실행하면 모든 컴포넌트들이 다시 렌더링 됨.
+        const [index, setIndex] = React.useState("xx")
+		    const onSelect = (event) => {
+            setIndex(event.target.value);
+		    };
+        console.log("render w/", index)
+        return (
+            <div>
+                <h1>Super Converter</h1>
+		            <select value={index} onChange={onSelect}>
+				            <option value="xx">Select your units</option>
+				            <option value="0"> Minutes & Hours</option>
+				            <option value="1">Km & Miles</option>
+		            </select>
+								<hr/>
+		            {index === "xx" ? "Please select your units" : null}
+		            {index === "0" ? <MinutesToHours /> : null}
+		            {index === "1" ? <KmToMiles /> : null}
+            </div>
+		        //if문을 사용하려면 {}를 사용해야 js를 사용 할 수 있음.
+        );
+
+    }
+
 
     const root = document.getElementById("root");
     ReactDOM.render(<App/>, root);
