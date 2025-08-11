@@ -1,0 +1,510 @@
+@charset "UTF-8";
+
+@mixin m{
+	@media (max-width: 800px) {
+		@content
+	}
+}
+
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+
+	ul{
+		list-style: none;
+	}
+
+	a{
+		text-decoration: none;
+	}
+}
+
+section.mania-visual{
+
+	.inner{
+		position: relative;
+
+		.info-box{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 1620px;
+			width: calc(100% - 150px);//좌우 패딩값으로 주지 않고 calc으로 주는 이유 max-width를 1620px에 맞추고 패딩값을 주면 패딩 값만큼 안으로 밀리기 때문
+			z-index: 100;
+			color: white;
+
+			@include m  {
+				width: 100%;
+				padding: 0 76px 0 28px;
+				//모바일일 때는 width: 100%;로 주고 패딩으로 여백을 잡는다. 
+			}
+
+			.subject-box{
+				font-size: 36px;
+				font-weight: 300;
+				@include m{
+					font-size: 14px;
+				}
+			}
+
+			.con-box{
+				padding-top: 14px;
+				font-size: 96px;
+				font-weight: 700;
+				line-height: 100%;
+				@include m{
+					padding-top: 6px;
+					font-size: 14px;
+
+				}
+			}
+
+			.sub-box{
+				padding-top: 26px;
+				font-size: 22px;
+				font-weight: 400;
+
+				@include m{
+					padding-top: 6px;
+					line-height: 130%;
+					font-size: 10px;
+				}
+			}
+
+		}
+
+		.img-box{
+			display: flex;
+			aspect-ratio: 1920 / 624; //종횡비로 가로,세로의 비율을 뜻함
+			@include m {
+				aspect-ratio: 360 / 176;
+			}
+
+
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover; //부모 요소의 전체 너비와 높이의 비율에 맞게 화면에 꽉차게 확대, 단 이미지가 일부 잘려서 보일 수 있음.
+
+
+				&.mobile{
+					display: none;
+				}
+
+				@include m{
+					&.web{
+						display: none;
+					}
+					&.mobile{
+						display: block;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+section.mania-home-benefit {
+
+	padding: 100px 0 200px;
+
+	@include m{
+		padding: 30px 0 30px;
+	}
+	.inner{
+		max-width: 1620px;
+		width: calc(100% - 40px);
+		margin: 0 auto;
+
+
+		.benefit-content-group{
+			ul.benefit-content-list{
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 80px 100px;
+				@include m{
+					grid-template-columns: repeat(1, 1fr);
+					gap: 20px ;
+				}
+
+				li{
+					min-width: 0; //긴 문자열이나, 옆칸으로 밀리는 것에 대한 방지 grid,flex를 사용 시 자식은 기본 값으로 min-width:auto를 가짐.
+
+					.item-box{
+						width: 100%;
+						height: 288px;
+						border-radius: 10px;
+						padding: 55px 40px;
+						position: relative;
+						overflow: hidden;
+
+						@include m{
+							height: 114px;
+							padding: 14px 14px;
+						}
+
+						&:after{
+							content:'';
+							position: absolute;
+							right:0;
+							bottom:0;
+							width: 304px;
+							aspect-ratio: 304  / 232;
+
+							@include m{
+								width: 86px;
+							}
+
+						}
+
+						&.img-listen{
+							background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
+							// background-image처럼 동작하므로 background에 선언이 가능. 원의 모양 안적어주면 기본값 타원, at 뒤에는 원의 위치, 원의 그라데이션 색상을 ,을 기준으로 시작, 중간, 끝으로 색을 지정하고 어디까지 색을 표현할지 위치를 조정할 수 있다.
+
+							&:after{
+								background:  url("./img/img_mania_item1.png")no-repeat center / cover;
+
+								@include m{
+									background:  url("./img/img_mania_item1_m.png")no-repeat center / cover;
+
+								}
+							}
+
+						}
+
+						&.img-gift{
+							background: linear-gradient(180deg, rgba(245, 253, 255, 0.00) 0%, #F5FDFF 82.47%, #ECF6FF 97.11%, #D9E6FF 111.4%);
+
+
+							&:after{
+								background:  url("./img/img_mania_item4.png")no-repeat center / cover;
+
+								@include m{
+									background:  url("./img/img_mania_item4_m.png")no-repeat center / cover;
+
+								}
+							}
+						}
+
+						&.img-coin{
+							background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFFFF8 32.38%, #FFE 55.5%, #FFFEE8 100%);
+
+
+							&:after{
+								background:  url("./img/img_mania_item5.png")no-repeat center / cover;
+
+								@include m{
+									background:  url("./img/img_mania_item5_m.png")no-repeat center / cover;
+
+								}
+							}
+
+
+						}
+						.info-box{
+							position: relative;
+							z-index: 10;
+
+							.subject-box{
+								font-size: 20px;
+
+								@include m{
+									font-size: 20px;
+
+								}
+							}
+
+							.con-box{
+								padding-top: 24px;
+								padding-left: 23px;
+								@include m{
+									padding-top: 4px;
+									padding-left: 13px;
+
+								}
+
+
+								.desc-box{
+									font-size: 20px;
+									color: #000000;
+
+									@include m{
+										font-size: 20px;
+									}
+
+									&.br-none{
+										br{
+											@include m{
+												display: none;
+											}
+										}
+
+									}
+								}
+
+
+								.btn-box{
+									padding-top: 10px;
+									@include m{
+										padding-top: 6px;
+									}
+
+
+									&.install-btn{
+
+										.btn{
+											.txt{
+												color: yellow;
+											}
+										}
+									}
+
+									.btn{
+										display: inline-flex;
+										align-items: center;
+										justify-content: center;
+										.txt{
+											font-size: 20px;
+											color: lightblue;
+											line-height: 18px;
+											@include m{
+												font-size: 20px;
+												line-height: 12px;
+											}
+
+										}
+
+										.ic{
+											width: 18px;
+											height: 18px;
+											@include m{
+												width: 12px;
+												height: 12px;
+											}
+
+											&.ic-blue{
+												background: url("./img/ic_mania_right_blue.svg")no-repeat center/ cover;
+
+											}
+
+											&.ic-yellow{
+												background: url("./img/ic_mania_right_yellow.svg")no-repeat center/ cover;
+
+											}
+
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+section.mania-home-banner{
+
+	padding-bottom: 122px;
+
+	@include m{
+		padding-bottom: 18px;
+	}
+
+
+	.banner-wrap{
+		max-width: 1320px;
+		width: calc(100% - 40px);
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+
+
+		.banner-title-box{
+			text-align: center;
+			font-size: 20px;
+
+			@include m{
+				padding-top: 10px;
+				order:2;
+				font-size: 20px;
+				text-align: left;
+
+				br{
+					@include m {
+						display: none;
+					}
+				}
+			}
+
+			.point{
+				color: red;
+			}
+
+		}
+
+		.banner-contents-box{
+			margin-top: 70px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: 155px;
+			border: 3px solid #DD3C3C;
+			height: 181px;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+
+			@include m{
+				margin-top: 96px;
+				order:1; //flex에 순서를 변경함. 숫자가 작을 수록 앞쪽에 배치된다.
+				border-width:2px;
+				border-radius: 38px;
+				overflow: visible; //요소의 넘치는 콘텐츠를 자르지 않고 보여줌.
+			}
+
+
+			.info-box{
+				width: 657px;
+				padding: 26px 33px 26px 112px;
+
+				@include m{
+					width: 100%;
+					padding: 33px 10px 10px;
+				}
+
+				.main-box{
+
+					@include m{
+						text-align: center;
+					}
+
+					.subject-box{
+						font-size: 20px;
+
+						@include m{
+							font-size: 20px;
+						}
+
+
+					}
+
+					.con-box{
+						font-size: 20px;
+
+						@include m{
+							font-size: 20px;
+						}
+
+					}
+				}
+
+				.sub-box{
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					@include m{
+						flex-direction: column;
+						align-items: center;
+						padding-top: 2px;
+
+					}
+
+					.price-box{
+						.price-txt{
+							font-size: 20px;
+							color: red;
+							@include m{
+								font-size: 20px;
+							}
+
+							.month{
+								font-size: 20px;
+								color: #000000;
+								@include m{
+									font-size: 20px;
+								}
+							}
+
+							.desc{
+								font-size: 20px;
+								color: #eeeeee;
+								@include m{
+									font-size: 20px;
+								}
+							}
+
+						}
+					}
+
+					.sign-btn-box{
+						@include m{
+							padding-top: 6px;
+						}
+						.sign-btn{
+							display: inline-flex;
+							align-items: center;
+							justify-content: center;
+							.txt{
+								color: red;
+								font-size: 20px;
+								text-decoration: underline red 2px;
+								text-underline-offset: 4px;
+								@include m{
+									font-size: 20px;
+									text-decoration: underline red 1px;
+									text-underline-offset: 2px;
+								}
+							}
+
+							.ic-red{
+								background: url("./img/ic_mania_right_red.svg")no-repeat center/cover;
+								width: 20px;
+								height: 20px;
+								@include m{
+									width: 14px;
+									height: 14px;
+								}
+							}
+						}
+					}
+
+				}
+			}
+
+			.img-box{
+				margin-right: -4px;
+				flex:1;
+				min-width: 0;
+				height: 100%;
+				background: url("./img/img_mania_banner.png") no-repeat center / 100% 100%;
+
+				@include m{
+					position: absolute;
+					background: url("./img/img_mania_banner_m.png") no-repeat center / cover;
+					width: 118px;
+					aspect-ratio: 1/1;
+					height: auto;
+					left:50%;
+					top:-66px;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}
