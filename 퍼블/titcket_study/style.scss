@@ -20,6 +20,9 @@
 	}
 }
 
+
+
+
 section.mania-visual{
 
 	.inner{
@@ -43,7 +46,7 @@ section.mania-visual{
 			@include m  {
 				width: 100%;
 				padding: 0 76px 0 28px;
-				//모바일일 때는 width: 100%;로 주고 패딩으로 여백을 잡는다. 
+				//모바일일 때는 width: 100%;로 주고 패딩으로 여백을 잡는다.
 			}
 
 			.subject-box{
@@ -311,9 +314,6 @@ section.mania-home-benefit {
 		}
 	}
 }
-
-
-
 
 section.mania-home-banner{
 
