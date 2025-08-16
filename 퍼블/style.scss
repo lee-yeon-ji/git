@@ -21,301 +21,97 @@
 }
 
 
-section.mania-visual{
-	.inner{
-		position: relative;
-		margin: 0 auto;
-
-		.info-box{
-			max-width: 1620px;
-			width: calc(100% - 150px);
-			margin: 0 auto;
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			bottom: 0;
-			flex-direction: column;
-			justify-content: center;
-			display: flex;
-
-			@include m{
-			    width: 100%;
-				padding: 43px 72px 49px 29px ;
-			}
-
-
-			.subject-box{
-
-			}
-			.con-box{
-
-			}
-
-			.sub-box{
-
-			}
-		}
-
-		.img-box{
-			width: 100%;
-			height: 624px;
-			min-width: 0;
-			aspect-ratio: 1920 / 624;
-
-			@include m{
-				height: 176px;
-				aspect-ratio: 360/ 176;
-			}
-
-			img{
-				width: 100%;
-				height: 100%;
-
-
-				&.web{
-					@include m{
-						display: none;
-					}
-				}
-
-				&.mobile{
-					display: none;
-					@include m{
-					    display: block;
-					}
-
-				}
-			}
-		}
-	}
-}
-
-
-section.mania-contents{
-	padding: 100px 0 200px;
-	@include m{
-		padding: 30px 0 30px;
-	}
-
-	.inner{
-		max-width: 1620px;
-		width: calc(100% - 150px);
-		margin: 0 auto;
-
-
-		ul.card-wrap{
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 80px 100px;
-			@include m{
-			    grid-template-columns: repeat(1, 1fr);
-				gap: 20px ;
-			}
-
-
-			li{
-				position: relative;
-
-
-				@include m{
-				    height: 114px;
-				}
-
-				.item-box{
-					width: 100%;
-					height: 288px;
-					border-radius: 10px;
-					overflow: hidden;
-					@include m{
-						height: 114px;
-
-					}
-
-					&:after{
-						content: '';
-						position: absolute;
-						right: 0;
-						bottom: 0;
-						display: flex;
-						min-width: 0;
-						height: 232px;
-						aspect-ratio: 304/232;
-
-
-						@include m{
-							height:73px;
-							aspect-ratio: 86/73;
-						}
-					}
-					&.img-listen{
-						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF9FF 29.04%, #FFEBFF 55.5%, #FFE5FF 100%);
-
-						&:after{
-
-							background: url("./img/img_mania_item1.png")no-repeat center/ cover;
-
-							@include m{
-								background: url("./img/img_mania_item1_m.png")no-repeat center/ cover;
-
-							}
-						}
-					}
-
-					&.img-gift{
-						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #F5FDFF 32.38%, #ECF6FF 55.5%, #D9E6FF 100%);
-
-						&:after{
-
-							background: url("./img/img_mania_item2.png")no-repeat center/ cover;
-
-							@include m{
-								background: url("./img/img_mania_item2_m.png")no-repeat center/ cover;
-
-							}
-						}
-
-					}
-
-
-					&.img-sale{
-						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF9FF 29.04%, #FFEBFF 55.5%, #FFE5FF 100%);
-
-						&:after{
-
-							background: url("./img/img_mania_item4.png")no-repeat center/ cover;
-
-							@include m{
-								background: url("./img/img_mania_item4_m.png")no-repeat center/ cover;
-
-							}
-
-
-						}
-
-					}
-
-
-
-
-
-					.info-box{
-						padding: 55px 40px;
-						z-index: 100;
-						position: absolute;
-						@include m{
-							padding: 14px 14px;
-
-						}
-						@include m{
-
-						}
-						.subject-box{
-
-						}
-
-						.con-box{
-
-						}
-
-						.sub-box{
-							.msg-box{
-
-							}
-
-
-							.button-box{
-
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 
 section.mania-banner{
-	.inner{
+	padding-top: 200px;
 
+	.inner{
 		.banner-wrap{
-			margin: 0 auto;
 			max-width: 1320px;
 			width: calc(100% - 40px);
+			margin: 0 auto;
 			display: flex;
+			justify-content: center;
 			flex-direction: column;
 			align-items: center;
 
+
 			.title-box{
 				text-align: center;
-				order:2;
+
+
 			}
 
 			.banner-contents{
-				margin-top: 80px;
+				margin-top: 70px;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				border-radius: 155px;
-				border: 3px solid red;
-				width: 100%;
+				border: 3px solid #DD3C3C;
 				height: 181px;
-				overflow: hidden;
+				width: 100%;
 				position: relative;
-
 				@include m{
-
-					border-radius: 38px;
-					border: 2px solid red;
-					margin-top: 96px;
-					overflow: visible;
+				    height: 125px;
+					border-radius:  38px;
+					justify-content: center;
 
 				}
+
+
 				.info-box{
 					width: 657px;
-					padding: 26px 112px;
+					padding: 26px 43px 26px 112px;
 					@include m{
+					    width: 100%;
+						padding: 0;
 						text-align: center;
-						width: 100%;
-						padding: 33px 10px 10px;
+
 					}
 
-					.subject-box{}
-					.con-box{}
+					.subject-box{
+					}
+
+					.con-box{
+					}
+
 					.sub-box{
 						display: flex;
-						align-items: center;
 						justify-content: space-between;
-
+						align-items: center;
+						padding-top: 20px;
 						@include m{
-							align-items: center;
-							flex-direction: column;
+						    display: block;
+							padding-top: 0;
 
 						}
-						.price-box{}
-						.button-box{}
+						.price-box{
+						}
+
+						.button-box{
+						}
 					}
 				}
 
-				.img-box{
-					flex: 1;
+
+				.img-box {
 					min-width: 0;
+					flex: 1;
+					background: url("./img/img_mania_banner.png") no-repeat center / 100% 100%;
 					height: 100%;
-					background: url("./img/img_mania_banner.png")no-repeat center/ 100% 100%;
 
-					@include m{
-					    position: absolute;
-						background: url("./img/img_mania_banner_m.png") no-repeat center / cover;
-						width: 118px;
-						aspect-ratio: 1/1;
-						height: auto;
-						left:50%;
+					@include m {
+						position: absolute;
+						content: '';
+						top: -80px;
+						left: 50%;
 						transform: translateX(-50%);
-						top:-66px;
+						background: url("./img/img_mania_banner_m.png") no-repeat center /  cover;
+						aspect-ratio: 1/1;
+						z-index: 10;
+
 					}
-
-
 				}
 			}
 		}

@@ -7,175 +7,64 @@
   * a {
     text-decoration: none; }
 
-section.mania-visual .inner {
-  position: relative;
-  margin: 0 auto; }
-  section.mania-visual .inner .info-box {
-    max-width: 1620px;
-    width: calc(100% - 150px);
+section.mania-banner {
+  padding-top: 200px; }
+  section.mania-banner .inner .banner-wrap {
+    max-width: 1320px;
+    width: calc(100% - 40px);
     margin: 0 auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    flex-direction: column;
-    justify-content: center;
-    display: flex; }
-    @media (max-width: 800px) {
-      section.mania-visual .inner .info-box {
-        width: 100%;
-        padding: 43px 72px 49px 29px; } }
-  section.mania-visual .inner .img-box {
-    width: 100%;
-    height: 624px;
-    min-width: 0;
-    aspect-ratio: 1920 / 624; }
-    @media (max-width: 800px) {
-      section.mania-visual .inner .img-box {
-        height: 176px;
-        aspect-ratio: 360/ 176; } }
-    section.mania-visual .inner .img-box img {
-      width: 100%;
-      height: 100%; }
-      @media (max-width: 800px) {
-        section.mania-visual .inner .img-box img.web {
-          display: none; } }
-      section.mania-visual .inner .img-box img.mobile {
-        display: none; }
-        @media (max-width: 800px) {
-          section.mania-visual .inner .img-box img.mobile {
-            display: block; } }
-
-section.mania-contents {
-  padding: 100px 0 200px; }
-  @media (max-width: 800px) {
-    section.mania-contents {
-      padding: 30px 0 30px; } }
-  section.mania-contents .inner {
-    max-width: 1620px;
-    width: calc(100% - 150px);
-    margin: 0 auto; }
-    section.mania-contents .inner ul.card-wrap {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 80px 100px; }
-      @media (max-width: 800px) {
-        section.mania-contents .inner ul.card-wrap {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 20px; } }
-      section.mania-contents .inner ul.card-wrap li {
-        position: relative; }
-        @media (max-width: 800px) {
-          section.mania-contents .inner ul.card-wrap li {
-            height: 114px; } }
-        section.mania-contents .inner ul.card-wrap li .item-box {
-          width: 100%;
-          height: 288px;
-          border-radius: 10px;
-          overflow: hidden; }
-          @media (max-width: 800px) {
-            section.mania-contents .inner ul.card-wrap li .item-box {
-              height: 114px; } }
-          section.mania-contents .inner ul.card-wrap li .item-box:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            min-width: 0;
-            height: 232px;
-            aspect-ratio: 304/232; }
-            @media (max-width: 800px) {
-              section.mania-contents .inner ul.card-wrap li .item-box:after {
-                height: 73px;
-                aspect-ratio: 86/73; } }
-          section.mania-contents .inner ul.card-wrap li .item-box.img-listen {
-            background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF9FF 29.04%, #FFEBFF 55.5%, #FFE5FF 100%); }
-            section.mania-contents .inner ul.card-wrap li .item-box.img-listen:after {
-              background: url("./img/img_mania_item1.png") no-repeat center/cover; }
-              @media (max-width: 800px) {
-                section.mania-contents .inner ul.card-wrap li .item-box.img-listen:after {
-                  background: url("./img/img_mania_item1_m.png") no-repeat center/cover; } }
-          section.mania-contents .inner ul.card-wrap li .item-box.img-gift {
-            background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #F5FDFF 32.38%, #ECF6FF 55.5%, #D9E6FF 100%); }
-            section.mania-contents .inner ul.card-wrap li .item-box.img-gift:after {
-              background: url("./img/img_mania_item2.png") no-repeat center/cover; }
-              @media (max-width: 800px) {
-                section.mania-contents .inner ul.card-wrap li .item-box.img-gift:after {
-                  background: url("./img/img_mania_item2_m.png") no-repeat center/cover; } }
-          section.mania-contents .inner ul.card-wrap li .item-box.img-sale {
-            background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF9FF 29.04%, #FFEBFF 55.5%, #FFE5FF 100%); }
-            section.mania-contents .inner ul.card-wrap li .item-box.img-sale:after {
-              background: url("./img/img_mania_item4.png") no-repeat center/cover; }
-              @media (max-width: 800px) {
-                section.mania-contents .inner ul.card-wrap li .item-box.img-sale:after {
-                  background: url("./img/img_mania_item4_m.png") no-repeat center/cover; } }
-          section.mania-contents .inner ul.card-wrap li .item-box .info-box {
-            padding: 55px 40px;
-            z-index: 100;
-            position: absolute; }
-            @media (max-width: 800px) {
-              section.mania-contents .inner ul.card-wrap li .item-box .info-box {
-                padding: 14px 14px; } }
-
-section.mania-banner .inner .banner-wrap {
-  margin: 0 auto;
-  max-width: 1320px;
-  width: calc(100% - 40px);
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  section.mania-banner .inner .banner-wrap .title-box {
-    text-align: center;
-    order: 2; }
-  section.mania-banner .inner .banner-wrap .banner-contents {
-    margin-top: 80px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 155px;
-    border: 3px solid red;
-    width: 100%;
-    height: 181px;
-    overflow: hidden;
-    position: relative; }
-    @media (max-width: 800px) {
-      section.mania-banner .inner .banner-wrap .banner-contents {
-        border-radius: 38px;
-        border: 2px solid red;
-        margin-top: 96px;
-        overflow: visible; } }
-    section.mania-banner .inner .banner-wrap .banner-contents .info-box {
-      width: 657px;
-      padding: 26px 112px; }
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+    section.mania-banner .inner .banner-wrap .title-box {
+      text-align: center; }
+    section.mania-banner .inner .banner-wrap .banner-contents {
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 155px;
+      border: 3px solid #DD3C3C;
+      height: 181px;
+      width: 100%;
+      position: relative; }
       @media (max-width: 800px) {
-        section.mania-banner .inner .banner-wrap .banner-contents .info-box {
-          text-align: center;
-          width: 100%;
-          padding: 33px 10px 10px; } }
-      section.mania-banner .inner .banner-wrap .banner-contents .info-box .sub-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; }
+        section.mania-banner .inner .banner-wrap .banner-contents {
+          height: 125px;
+          border-radius: 38px;
+          justify-content: center; } }
+      section.mania-banner .inner .banner-wrap .banner-contents .info-box {
+        width: 657px;
+        padding: 26px 43px 26px 112px; }
         @media (max-width: 800px) {
-          section.mania-banner .inner .banner-wrap .banner-contents .info-box .sub-box {
-            align-items: center;
-            flex-direction: column; } }
-    section.mania-banner .inner .banner-wrap .banner-contents .img-box {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      background: url("./img/img_mania_banner.png") no-repeat center/100% 100%; }
-      @media (max-width: 800px) {
-        section.mania-banner .inner .banner-wrap .banner-contents .img-box {
-          position: absolute;
-          background: url("./img/img_mania_banner_m.png") no-repeat center/cover;
-          width: 118px;
-          aspect-ratio: 1/1;
-          height: auto;
-          left: 50%;
-          transform: translateX(-50%);
-          top: -66px; } }
+          section.mania-banner .inner .banner-wrap .banner-contents .info-box {
+            width: 100%;
+            padding: 0;
+            text-align: center; } }
+        section.mania-banner .inner .banner-wrap .banner-contents .info-box .sub-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 20px; }
+          @media (max-width: 800px) {
+            section.mania-banner .inner .banner-wrap .banner-contents .info-box .sub-box {
+              display: block;
+              padding-top: 0; } }
+      section.mania-banner .inner .banner-wrap .banner-contents .img-box {
+        min-width: 0;
+        flex: 1;
+        background: url("./img/img_mania_banner.png") no-repeat center/100% 100%;
+        height: 100%; }
+        @media (max-width: 800px) {
+          section.mania-banner .inner .banner-wrap .banner-contents .img-box {
+            position: absolute;
+            content: '';
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url("./img/img_mania_banner_m.png") no-repeat center/cover;
+            aspect-ratio: 1/1;
+            z-index: 10; } }
 
 /*# sourceMappingURL=style.css.map */
