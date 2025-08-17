@@ -256,7 +256,6 @@ section.mania-home-banner {
           @media (max-width: 800px) {
             section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box {
               flex-direction: column;
-              align-items: center;
               padding-top: 2px; } }
           section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt {
             font-size: 20px;
