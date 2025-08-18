@@ -20,57 +20,66 @@
 	}
 }
 
-
-section.mania-visual {
-	.inner {
+section.visual{
+	.inner{
 		position: relative;
-
-
-		.info-box {
-			max-width: 1620px;
-			width: calc(100% - 150px);
-			margin: 0 auto;
-			padding: 100px 0 200px;
+		.info-box{
 			position: absolute;
 			top: 0;
-			left: 0;
 			right: 0;
 			bottom: 0;
+			left: 0;
+			margin: 0 auto;
+			max-width: 1620px;
+			width: calc(100% - 155px);
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
+			flex-direction: column;
 			z-index: 100;
-			@include m {
-				width: 100%;
-				padding: 0 76px 0 28px;
+			@include m{
+			    width: 100%;
+				padding: 0 72px 0 28px;
 			}
+
+			.subject-box{
+
+			}
+
+			.con-box{
+
+			}
+
+			.sub-box{
+
+			}
+
+
 		}
 
-		.img-box {
-			display: flex;
+		.img-box{
 			aspect-ratio: 1920 / 624;
 
-			@include m {
+			@include m{
 				aspect-ratio: 360 / 176;
+
 			}
 
-			img {
+			img{
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 
-				&.mobile {
-					display: none;
-				}
 
-				@include m {
-
-					&.web {
+				&.web{
+					@include m{
 						display: none;
 					}
+				}
 
-					&.mobile {
-						display: flex;
+				&.mobile{
+					display: none;
+					@include m{
+					    display: flex;
 					}
 				}
 			}
@@ -79,189 +88,235 @@ section.mania-visual {
 }
 
 
-	section.mania-contents {
-		padding: 100px 0 200px;
+section.card{
 
-		.inner {
-			width: calc(100% - 155px);
-			max-width: 1620px;
-			margin: 0 auto;
+	.inner{
+		max-width: 1620px;
+		width: calc(100% - 155px);
+		margin: 0 auto;
+		padding: 100px  0 200px;
+		@include m{
+			width: calc(100% - 40px);
+			padding: 30px  0 80px;
+
+		}
+
+		ul.card-wrap{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 80px 100px;
+			@include m{
+				grid-template-columns: repeat(1, 1fr);
+				gap: 20px;
+
+			}
 
 
-			ul.card-wrap {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 80px 100px;
-				@include m {
-					grid-template-columns: repeat(1, 1fr);
-					gap: 20px;
-				}
 
 
-				li {
-					min-width: 0;
+			li{
+				min-width: 0;
 
 
-					.item-box {
-						width: 100%;
-						height: 288px;
-						border-radius: 10px;
-						padding: 55px 40px;
+				.item-box{
+					border-radius: 10px;
+					width: 100%;
+					height: 288px;
+					position: relative;
+					@include m{
+						height: 114px;
+					}
+
+					&:after{
+						content: '';
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						aspect-ratio: 304 / 232;
+						height: 232px;
+
+						@include m{
+							height: 73px;
+						}
+					}
+
+					&.img-listen{
+						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
+
+
+						&:after{
+							background: url("./img/img_mania_item1.png")no-repeat center/cover;
+							@include m{
+								background: url("./img/img_mania_item1_m.png")no-repeat center/cover;
+
+							}
+
+						}
+
+
+					}
+
+					&.img-sale{
+						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF9FF 29.04%, #FFEBFF 55.5%, #FFE5FF 100%);
+
+						&:after{
+							background: url("./img/img_mania_item2.png")no-repeat center/cover;
+							@include m{
+								background: url("./img/img_mania_item2_m.png")no-repeat center/cover;
+
+							}
+						}
+
+
+
+					}
+
+					&.img-gift{
+						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #F5FDFF 32.38%, #ECF6FF 55.5%, #D9E6FF 100%);
+
+						&:after{
+							background: url("./img/img_mania_item4.png")no-repeat center/cover;
+
+							@include m{
+								background: url("./img/img_mania_item4_m.png")no-repeat center/cover;
+
+							}
+
+						}
+
+
+
+					}
+
+
+					.info-box{
 						position: relative;
-						overflow: hidden;
-
-
-						@include m {
-							height: 114px;
+						z-index: 10;
+						padding: 55px 40px;
+						@include m{
 							padding: 14px 14px;
-
-						}
-
-						&:after {
-							content: '';
-							position: absolute;
-							right: 0;
-							bottom: 0;
-							width: 304px;
-							aspect-ratio: 304 / 232;
-
-							@include m {
-								width: 86px;
-							}
-						}
-
-						&.img-listen {
-							background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
-
-
-							&:after {
-								background: url("./img/img_mania_item1.png") no-repeat center / cover;
-								@include m {
-									background: url("./img/img_mania_item1_m.png") no-repeat center / cover;
-								}
-							}
-						}
-
-						&.img-gift {
-							background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFFFF8 32.38%, #FFE 55.5%, #FFFEE8 100%);
-
-							&:after {
-								background: url("./img/img_mania_item2.png") no-repeat center / cover;
-								@include m {
-									background: url("./img/img_mania_item2_m.png") no-repeat center / cover;
-								}
-							}
-
-						}
-
-						&.img-sale {
-							background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF9FF 29.04%, #FFEBFF 55.5%, #FFE5FF 100%);
-
-							&:after {
-								background: url("./img/img_mania_item5.png") no-repeat center / cover;
-								@include m {
-									background: url("./img/img_mania_item5_m.png") no-repeat center / cover;
-								}
-							}
 						}
 
 
-						.info-box {
-							position: absolute;
-							z-index: 100;
+						.subject-box{
 
-							.subject-box {
+						}
 
-							}
+						.con-box{
 
-							.con-box {
+						}
+
+						.sub-box{
+							.price-box{}
+
+							.btn-box{
 
 							}
 						}
 					}
+
 				}
 			}
 		}
 	}
 
+}
 
-	section.mania-banner {
-		padding-top: 200px;
 
-		.inner {
+section.banner{
+	.inner{
+		max-width: 1320px;
+		width: calc(100% - 40px);
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
 
-			.banner-wrap {
-				max-width: 1320px;
-				width: calc(100% - 40px);
-				margin: 0 auto;
+
+		.title-box{
+			text-align: center;
+
+
+			@include m{
+				order: 2;
+			}
+
+		}
+
+		.banner-wrap{
+			display: flex;
+			border-radius: 155px;
+			border: 3px solid red;
+			overflow: hidden;
+			margin-top: 80px;
+			position: relative;
+			height: 181px;
+			width: 100%;
+			@include m{
+				overflow: visible;
+				margin-top: auto;
+				margin-bottom: 50px;
+
+
+			}
+
+			.info-box{
+				width: 657px;
+				padding: 26px 33px 26px 112px;
 				display: flex;
-				justify-content: center;
 				flex-direction: column;
+				justify-content: center;
+				@include m{
+					width: 100%;
+					align-items: center;
+					padding: 33px 33px 26px ;
 
 
-				.title-box {
-					text-align: center;
+
 				}
 
-				.banner-contents {
-					border-radius: 155px;
-					border: 3px solid #DD3C3C;
-					height: 181px;
-					width: 100%;
-					overflow: hidden;
-					position: relative;
+
+				.subject-box{
+
+				}
+
+				.con-box{
+
+				}
+
+				.sub-box{
 					display: flex;
 					justify-content: space-between;
-					margin-top: 80px;
+					align-items: center;
 
-					@include m {
-						overflow: visible;
-						border-radius: 38px;
-						height: 100%;
+					@include m{
+							flex-direction: column;
+
 					}
 
-					.info-box {
-						width: 657px;
-						padding: 26px 33px 26px 112px;
-
-						@include m {
-							width: 100%;
-							padding: 33px 22px 11px;
-							text-align: center;
-						}
-
-
-						.sub-box {
-							display: flex;
-							align-items: center;
-							justify-content: space-between;
-
-							@include m {
-								flex-direction: column;
-							}
-						}
-					}
-
-					.img-box {
-						min-width: 0;
-						flex: 1;
-						background: url("./img/img_mania_banner.png") no-repeat center / 100% 100%;
-						height: 100%;
-
-						@include m {
-							background: url("./img/img_mania_banner_m.png") no-repeat center / cover;
-							aspect-ratio: 1/1;
-							width: 118px;
-							height: auto;
-							position: absolute;
-							left: 50%;
-							transform: translateX(-50%);
-							top: -85px;
-						}
-					}
 				}
+			}
+
+			.img-box{
+				min-width: 0;
+				flex: 1;
+				background: url("./img/img_mania_banner.png")no-repeat center/ 100% 100%;
+				height: 100%;
+
+				@include m{
+					background: url("./img/img_mania_banner_m.png")no-repeat center/ cover;
+					height: auto;
+					width: 118px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					top: -65px;
+					left: 50%;
+					transform: translateX(-50%);
+
+
+				}
+
+
 			}
 		}
 	}
-
-
+}
