@@ -20,48 +20,33 @@
 	}
 }
 
+
+
 section.visual{
 	.inner{
 		position: relative;
+
 		.info-box{
 			position: absolute;
-			top: 0;
+			top:0;
 			right: 0;
-			bottom: 0;
 			left: 0;
+			bottom: 0;
 			margin: 0 auto;
-			max-width: 1620px;
-			width: calc(100% - 155px);
 			display: flex;
-			justify-content: center;
 			flex-direction: column;
+			justify-content: center;
+			max-width: 1620px;
+			width: calc(100% - 150px);
 			z-index: 100;
-			@include m{
-			    width: 100%;
-				padding: 0 72px 0 28px;
-			}
-
-			.subject-box{
-
-			}
-
-			.con-box{
-
-			}
-
-			.sub-box{
-
-			}
-
+			color: white;
 
 		}
 
 		.img-box{
 			aspect-ratio: 1920 / 624;
-
 			@include m{
-				aspect-ratio: 360 / 176;
-
+			    aspect-ratio: 360 / 176;
 			}
 
 			img{
@@ -69,17 +54,17 @@ section.visual{
 				height: 100%;
 				object-fit: cover;
 
-
 				&.web{
+
 					@include m{
-						display: none;
+					    display: none;
 					}
 				}
 
 				&.mobile{
 					display: none;
 					@include m{
-					    display: flex;
+					    display: block;
 					}
 				}
 			}
@@ -87,18 +72,15 @@ section.visual{
 	}
 }
 
-
-section.card{
-
+section.card-box{
 	.inner{
 		max-width: 1620px;
-		width: calc(100% - 155px);
+		width: calc(100% - 150px);
 		margin: 0 auto;
-		padding: 100px  0 200px;
-		@include m{
-			width: calc(100% - 40px);
-			padding: 30px  0 80px;
+		padding: 100px 0;
 
+		@include m{
+		    width: calc(100% - 40px);
 		}
 
 		ul.card-wrap{
@@ -106,63 +88,51 @@ section.card{
 			grid-template-columns: repeat(2, 1fr);
 			gap: 80px 100px;
 			@include m{
-				grid-template-columns: repeat(1, 1fr);
-				gap: 20px;
-
+			    grid-template-columns: repeat(1, 1fr);
+			    gap: 20px ;
 			}
 
-
-
-
 			li{
-				min-width: 0;
-
 
 				.item-box{
-					border-radius: 10px;
-					width: 100%;
 					height: 288px;
+					border-radius: 10px;
+					padding: 55px 40px;
 					position: relative;
+					overflow: hidden;
 					@include m{
 						height: 114px;
+						padding: 14px 14px;
+
 					}
+
 
 					&:after{
-						content: '';
+						content:'';
 						position: absolute;
-						right: 0;
-						bottom: 0;
-						aspect-ratio: 304 / 232;
-						height: 232px;
-
+						right:0;
+						bottom:0;
+						width: 304px;
+						aspect-ratio: 304  / 232;
 						@include m{
-							height: 73px;
+						    width: 86px;
 						}
+
+
 					}
 
-					&.img-listen{
+
+					&.listen{
+
 						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
 
 
-						&:after{
-							background: url("./img/img_mania_item1.png")no-repeat center/cover;
-							@include m{
-								background: url("./img/img_mania_item1_m.png")no-repeat center/cover;
-
-							}
-
-						}
-
-
-					}
-
-					&.img-sale{
-						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF9FF 29.04%, #FFEBFF 55.5%, #FFE5FF 100%);
 
 						&:after{
-							background: url("./img/img_mania_item2.png")no-repeat center/cover;
+							background:  url("./img/img_mania_item1.png")no-repeat center / cover;
+
 							@include m{
-								background: url("./img/img_mania_item2_m.png")no-repeat center/cover;
+								background:  url("./img/img_mania_item1_m.png")no-repeat center / cover;
 
 							}
 						}
@@ -171,48 +141,38 @@ section.card{
 
 					}
 
-					&.img-gift{
-						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #F5FDFF 32.38%, #ECF6FF 55.5%, #D9E6FF 100%);
+					&.gift{
+						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
 
 						&:after{
-							background: url("./img/img_mania_item4.png")no-repeat center/cover;
-
+							background:  url("./img/img_mania_item1.png")no-repeat center / cover;
 							@include m{
-								background: url("./img/img_mania_item4_m.png")no-repeat center/cover;
+								background:  url("./img/img_mania_item1_m.png")no-repeat center / cover;
 
 							}
-
 						}
 
+
+					}
+
+					&.coin{
+						background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
+
+						&:after{
+							background:  url("./img/img_mania_item1.png")no-repeat center / cover;
+							@include m{
+								background:  url("./img/img_mania_item1_m.png")no-repeat center / cover;
+
+							}
+						}
 
 
 					}
 
 
 					.info-box{
-						position: relative;
-						z-index: 10;
-						padding: 55px 40px;
-						@include m{
-							padding: 14px 14px;
-						}
-
-
-						.subject-box{
-
-						}
-
-						.con-box{
-
-						}
-
-						.sub-box{
-							.price-box{}
-
-							.btn-box{
-
-							}
-						}
+						position: absolute;
+						z-index: 100;
 					}
 
 				}
@@ -223,100 +183,79 @@ section.card{
 }
 
 
+
+
 section.banner{
 	.inner{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		max-width: 1320px;
 		width: calc(100% - 40px);
 		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
+		@include m{
+		}
 
 
 		.title-box{
 			text-align: center;
-
-
 			@include m{
-				order: 2;
+			    order: 2;
+				padding-top: 30px;
 			}
 
 		}
 
+
 		.banner-wrap{
+			margin-top: 100px;
 			display: flex;
-			border-radius: 155px;
-			border: 3px solid red;
-			overflow: hidden;
-			margin-top: 80px;
-			position: relative;
+			align-items: center;
+			border: 3px solid #000000;
+			border-radius: 150px;
 			height: 181px;
-			width: 100%;
+			overflow: hidden;
+			position: relative;
 			@include m{
-				overflow: visible;
-				margin-top: auto;
-				margin-bottom: 50px;
-
-
+			    height: 125px;
+			    overflow: visible;
 			}
+
 
 			.info-box{
-				width: 657px;
+				width: 567px;
 				padding: 26px 33px 26px 112px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
 				@include m{
-					width: 100%;
-					align-items: center;
-					padding: 33px 33px 26px ;
+				    width: 100%;
+				    padding:  50px 0;
 
-
-
+					text-align: center;
 				}
 
 
-				.subject-box{
-
-				}
-
-				.con-box{
-
-				}
-
-				.sub-box{
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-
-					@include m{
-							flex-direction: column;
-
-					}
-
-				}
 			}
+
 
 			.img-box{
 				min-width: 0;
 				flex: 1;
-				background: url("./img/img_mania_banner.png")no-repeat center/ 100% 100%;
-				height: 100%;
-
+				background: url("./img/img_mania_banner.png")no-repeat center / 100% 100%;
+				width: 100%;
+				height: 181px;
 				@include m{
-					background: url("./img/img_mania_banner_m.png")no-repeat center/ cover;
-					height: auto;
+				    position: absolute;
+					background: url("./img/img_mania_banner_m.png")no-repeat center / cover;
 					width: 118px;
+					height: 118px;
 					aspect-ratio: 1/1;
-					position: absolute;
+					border-radius: 0;
 					top: -65px;
 					left: 50%;
 					transform: translateX(-50%);
-
-
 				}
-
 
 			}
 		}
+
 	}
 }
