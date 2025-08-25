@@ -16,8 +16,8 @@ section.visual .inner {
 section.visual .inner .info-box {
   position: absolute;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   bottom: 0;
   margin: 0 auto;
   display: flex;
@@ -51,33 +51,41 @@ section.visual .inner .img-box img.mobile {
 }
 @media (max-width: 800px) {
   section.visual .inner .img-box img.mobile {
-    display: block;
+    display: flex;
   }
 }
 
-section.card-box .inner {
-  max-width: 1620px;
-  width: calc(100% - 150px);
-  margin: 0 auto;
-  padding: 100px 0;
+section.card {
+  padding: 100px 0 100px;
 }
 @media (max-width: 800px) {
-  section.card-box .inner {
-    width: calc(100% - 40px);
+  section.card {
+    padding: 30px 0 30px;
   }
 }
-section.card-box .inner ul.card-wrap {
+section.card .inner {
+  max-width: 1620px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+section.card .inner .title-box {
+  text-align: center;
+}
+section.card .inner ul.card-wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px 100px;
 }
 @media (max-width: 800px) {
-  section.card-box .inner ul.card-wrap {
+  section.card .inner ul.card-wrap {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
 }
-section.card-box .inner ul.card-wrap li .item-box {
+section.card .inner ul.card-wrap li {
+  min-width: 0;
+}
+section.card .inner ul.card-wrap li .item {
   height: 288px;
   border-radius: 10px;
   padding: 55px 40px;
@@ -85,12 +93,17 @@ section.card-box .inner ul.card-wrap li .item-box {
   overflow: hidden;
 }
 @media (max-width: 800px) {
-  section.card-box .inner ul.card-wrap li .item-box {
+  section.card .inner ul.card-wrap li .item {
     height: 114px;
     padding: 14px 14px;
   }
 }
-section.card-box .inner ul.card-wrap li .item-box:after {
+@media (max-width: 800px) {
+  section.card .inner ul.card-wrap li .item {
+    overflow: visible;
+  }
+}
+section.card .inner ul.card-wrap li .item:after {
   content: "";
   position: absolute;
   right: 0;
@@ -99,44 +112,44 @@ section.card-box .inner ul.card-wrap li .item-box:after {
   aspect-ratio: 304/232;
 }
 @media (max-width: 800px) {
-  section.card-box .inner ul.card-wrap li .item-box:after {
+  section.card .inner ul.card-wrap li .item:after {
     width: 86px;
   }
 }
-section.card-box .inner ul.card-wrap li .item-box.listen {
+section.card .inner ul.card-wrap li .item.listen {
   background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
 }
-section.card-box .inner ul.card-wrap li .item-box.listen:after {
+section.card .inner ul.card-wrap li .item.listen:after {
   background: url("./img/img_mania_item1.png") no-repeat center/cover;
 }
 @media (max-width: 800px) {
-  section.card-box .inner ul.card-wrap li .item-box.listen:after {
+  section.card .inner ul.card-wrap li .item.listen:after {
     background: url("./img/img_mania_item1_m.png") no-repeat center/cover;
   }
 }
-section.card-box .inner ul.card-wrap li .item-box.gift {
-  background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
+section.card .inner ul.card-wrap li .item.gift {
+  background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #F5FDFF 32.38%, #ECF6FF 55.5%, #D9E6FF 100%);
 }
-section.card-box .inner ul.card-wrap li .item-box.gift:after {
+section.card .inner ul.card-wrap li .item.gift:after {
   background: url("./img/img_mania_item1.png") no-repeat center/cover;
 }
 @media (max-width: 800px) {
-  section.card-box .inner ul.card-wrap li .item-box.gift:after {
+  section.card .inner ul.card-wrap li .item.gift:after {
     background: url("./img/img_mania_item1_m.png") no-repeat center/cover;
   }
 }
-section.card-box .inner ul.card-wrap li .item-box.coin {
-  background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
+section.card .inner ul.card-wrap li .item.coin {
+  background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFFFF8 32.38%, #FFE 55.5%, #FFFEE8 100%);
 }
-section.card-box .inner ul.card-wrap li .item-box.coin:after {
+section.card .inner ul.card-wrap li .item.coin:after {
   background: url("./img/img_mania_item1.png") no-repeat center/cover;
 }
 @media (max-width: 800px) {
-  section.card-box .inner ul.card-wrap li .item-box.coin:after {
+  section.card .inner ul.card-wrap li .item.coin:after {
     background: url("./img/img_mania_item1_m.png") no-repeat center/cover;
   }
 }
-section.card-box .inner ul.card-wrap li .item-box .info-box {
+section.card .inner ul.card-wrap li .item .info-box {
   position: absolute;
   z-index: 100;
 }
@@ -148,6 +161,7 @@ section.banner .inner {
   max-width: 1320px;
   width: calc(100% - 40px);
   margin: 0 auto;
+  height: 181px;
 }
 section.banner .inner .title-box {
   text-align: center;
@@ -155,54 +169,43 @@ section.banner .inner .title-box {
 @media (max-width: 800px) {
   section.banner .inner .title-box {
     order: 2;
-    padding-top: 30px;
   }
 }
 section.banner .inner .banner-wrap {
-  margin-top: 100px;
+  border-radius: 155px;
+  border: 3px solid #E5E5E5;
   display: flex;
-  align-items: center;
-  border: 3px solid #000000;
-  border-radius: 150px;
-  height: 181px;
   overflow: hidden;
+  align-items: center;
   position: relative;
 }
 @media (max-width: 800px) {
   section.banner .inner .banner-wrap {
-    height: 125px;
     overflow: visible;
   }
 }
 section.banner .inner .banner-wrap .info-box {
-  width: 567px;
-  padding: 26px 33px 26px 112px;
-}
-@media (max-width: 800px) {
-  section.banner .inner .banner-wrap .info-box {
-    width: 100%;
-    padding: 50px 0;
-    text-align: center;
-  }
+  width: 657px;
+  padding: 28px 33px;
 }
 section.banner .inner .banner-wrap .img-box {
-  min-width: 0;
   flex: 1;
+  min-width: 0;
   background: url("./img/img_mania_banner.png") no-repeat center/100% 100%;
-  width: 100%;
   height: 181px;
+  width: 100%;
 }
 @media (max-width: 800px) {
   section.banner .inner .banner-wrap .img-box {
-    position: absolute;
-    background: url("./img/img_mania_banner_m.png") no-repeat center/cover;
     width: 118px;
-    height: 118px;
+    height: auto;
     aspect-ratio: 1/1;
-    border-radius: 0;
-    top: -65px;
+    position: absolute;
+    top: -64px;
     left: 50%;
     transform: translateX(-50%);
+    background: url("./img/img_mania_banner_m.png") no-repeat center/cover;
+    order: 1;
   }
 }
 

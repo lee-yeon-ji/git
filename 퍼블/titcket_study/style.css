@@ -1,320 +1,443 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
-  * ul {
-    list-style: none; }
-  * a {
-    text-decoration: none; }
+  box-sizing: border-box;
+}
+* ul {
+  list-style: none;
+}
+* a {
+  text-decoration: none;
+}
 
 section.mania-visual .inner {
-  position: relative; }
+  position: relative;
+}
+section.mania-visual .inner .info-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1620px;
+  width: calc(100% - 150px);
+  z-index: 100;
+  color: white;
+}
+@media (max-width: 800px) {
   section.mania-visual .inner .info-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1620px;
-    width: calc(100% - 150px);
-    z-index: 100;
-    color: white; }
-    @media (max-width: 800px) {
-      section.mania-visual .inner .info-box {
-        width: 100%;
-        padding: 0 76px 0 28px; } }
-    section.mania-visual .inner .info-box .subject-box {
-      font-size: 36px;
-      font-weight: 300; }
-      @media (max-width: 800px) {
-        section.mania-visual .inner .info-box .subject-box {
-          font-size: 14px; } }
-    section.mania-visual .inner .info-box .con-box {
-      padding-top: 14px;
-      font-size: 96px;
-      font-weight: 700;
-      line-height: 100%; }
-      @media (max-width: 800px) {
-        section.mania-visual .inner .info-box .con-box {
-          padding-top: 6px;
-          font-size: 14px; } }
-    section.mania-visual .inner .info-box .sub-box {
-      padding-top: 26px;
-      font-size: 22px;
-      font-weight: 400; }
-      @media (max-width: 800px) {
-        section.mania-visual .inner .info-box .sub-box {
-          padding-top: 6px;
-          line-height: 130%;
-          font-size: 10px; } }
+    width: 100%;
+    padding: 0 76px 0 28px;
+  }
+}
+section.mania-visual .inner .info-box .subject-box {
+  font-size: 36px;
+  font-weight: 300;
+}
+@media (max-width: 800px) {
+  section.mania-visual .inner .info-box .subject-box {
+    font-size: 14px;
+  }
+}
+section.mania-visual .inner .info-box .con-box {
+  padding-top: 14px;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 100%;
+}
+@media (max-width: 800px) {
+  section.mania-visual .inner .info-box .con-box {
+    padding-top: 6px;
+    font-size: 14px;
+  }
+}
+section.mania-visual .inner .info-box .sub-box {
+  padding-top: 26px;
+  font-size: 22px;
+  font-weight: 400;
+}
+@media (max-width: 800px) {
+  section.mania-visual .inner .info-box .sub-box {
+    padding-top: 6px;
+    line-height: 130%;
+    font-size: 10px;
+  }
+}
+section.mania-visual .inner .img-box {
+  display: flex;
+  aspect-ratio: 1920/624;
+}
+@media (max-width: 800px) {
   section.mania-visual .inner .img-box {
-    display: flex;
-    aspect-ratio: 1920 / 624; }
-    @media (max-width: 800px) {
-      section.mania-visual .inner .img-box {
-        aspect-ratio: 360 / 176; } }
-    section.mania-visual .inner .img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-      section.mania-visual .inner .img-box img.mobile {
-        display: none; }
-      @media (max-width: 800px) {
-        section.mania-visual .inner .img-box img.web {
-          display: none; }
-        section.mania-visual .inner .img-box img.mobile {
-          display: block; } }
+    aspect-ratio: 360/176;
+  }
+}
+section.mania-visual .inner .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.mania-visual .inner .img-box img.mobile {
+  display: none;
+}
+@media (max-width: 800px) {
+  section.mania-visual .inner .img-box img.web {
+    display: none;
+  }
+  section.mania-visual .inner .img-box img.mobile {
+    display: block;
+  }
+}
 
 section.mania-home-benefit {
-  padding: 100px 0 200px; }
-  @media (max-width: 800px) {
-    section.mania-home-benefit {
-      padding: 30px 0 30px; } }
-  section.mania-home-benefit .inner {
-    max-width: 1620px;
-    width: calc(100% - 40px);
-    margin: 0 auto; }
-    section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 80px 100px; }
-      @media (max-width: 800px) {
-        section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 20px; } }
-      section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li {
-        min-width: 0; }
-        section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box {
-          width: 100%;
-          height: 288px;
-          border-radius: 10px;
-          padding: 55px 40px;
-          position: relative;
-          overflow: hidden; }
-          @media (max-width: 800px) {
-            section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box {
-              height: 114px;
-              padding: 14px 14px; } }
-          section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 304px;
-            aspect-ratio: 304  / 232; }
-            @media (max-width: 800px) {
-              section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box:after {
-                width: 86px; } }
-          section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-listen {
-            background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%); }
-            section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-listen:after {
-              background: url("./img/img_mania_item1.png") no-repeat center/cover; }
-              @media (max-width: 800px) {
-                section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-listen:after {
-                  background: url("./img/img_mania_item1_m.png") no-repeat center/cover; } }
-          section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-gift {
-            background: linear-gradient(180deg, rgba(245, 253, 255, 0) 0%, #F5FDFF 82.47%, #ECF6FF 97.11%, #D9E6FF 111.4%); }
-            section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-gift:after {
-              background: url("./img/img_mania_item4.png") no-repeat center/cover; }
-              @media (max-width: 800px) {
-                section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-gift:after {
-                  background: url("./img/img_mania_item4_m.png") no-repeat center/cover; } }
-          section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-coin {
-            background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFFFF8 32.38%, #FFE 55.5%, #FFFEE8 100%); }
-            section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-coin:after {
-              background: url("./img/img_mania_item5.png") no-repeat center/cover; }
-              @media (max-width: 800px) {
-                section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-coin:after {
-                  background: url("./img/img_mania_item5_m.png") no-repeat center/cover; } }
-          section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box {
-            position: relative;
-            z-index: 10; }
-            section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .subject-box {
-              font-size: 20px; }
-              @media (max-width: 800px) {
-                section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .subject-box {
-                  font-size: 20px; } }
-            section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box {
-              padding-top: 24px;
-              padding-left: 23px; }
-              @media (max-width: 800px) {
-                section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box {
-                  padding-top: 4px;
-                  padding-left: 13px; } }
-              section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .desc-box {
-                font-size: 20px;
-                color: #000000; }
-                @media (max-width: 800px) {
-                  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .desc-box {
-                    font-size: 20px; } }
-                @media (max-width: 800px) {
-                  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .desc-box.br-none br {
-                    display: none; } }
-              section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box {
-                padding-top: 10px; }
-                @media (max-width: 800px) {
-                  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box {
-                    padding-top: 6px; } }
-                section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box.install-btn .btn .txt {
-                  color: yellow; }
-                section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn {
-                  display: inline-flex;
-                  align-items: center;
-                  justify-content: center; }
-                  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .txt {
-                    font-size: 20px;
-                    color: lightblue;
-                    line-height: 18px; }
-                    @media (max-width: 800px) {
-                      section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .txt {
-                        font-size: 20px;
-                        line-height: 12px; } }
-                  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .ic {
-                    width: 18px;
-                    height: 18px; }
-                    @media (max-width: 800px) {
-                      section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .ic {
-                        width: 12px;
-                        height: 12px; } }
-                    section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .ic.ic-blue {
-                      background: url("./img/ic_mania_right_blue.svg") no-repeat center/cover; }
-                    section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .ic.ic-yellow {
-                      background: url("./img/ic_mania_right_yellow.svg") no-repeat center/cover; }
+  padding: 100px 0 200px;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit {
+    padding: 30px 0 30px;
+  }
+}
+section.mania-home-benefit .inner {
+  max-width: 1620px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 100px;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li {
+  min-width: 0;
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box {
+  width: 100%;
+  height: 288px;
+  border-radius: 10px;
+  padding: 55px 40px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box {
+    height: 114px;
+    padding: 14px 14px;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 304px;
+  aspect-ratio: 304/232;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box:after {
+    width: 86px;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-listen {
+  background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFF8FC 32.38%, #FFEEF8 55.5%, #FFE8F5 100%);
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-listen:after {
+  background: url("./img/img_mania_item1.png") no-repeat center/cover;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-listen:after {
+    background: url("./img/img_mania_item1_m.png") no-repeat center/cover;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-gift {
+  background: linear-gradient(180deg, rgba(245, 253, 255, 0) 0%, #F5FDFF 82.47%, #ECF6FF 97.11%, #D9E6FF 111.4%);
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-gift:after {
+  background: url("./img/img_mania_item4.png") no-repeat center/cover;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-gift:after {
+    background: url("./img/img_mania_item4_m.png") no-repeat center/cover;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-coin {
+  background: radial-gradient(113.06% 86.59% at 28.75% 27.49%, #FFFFF8 32.38%, #FFE 55.5%, #FFFEE8 100%);
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-coin:after {
+  background: url("./img/img_mania_item5.png") no-repeat center/cover;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box.img-coin:after {
+    background: url("./img/img_mania_item5_m.png") no-repeat center/cover;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box {
+  position: relative;
+  z-index: 10;
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .subject-box {
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .subject-box {
+    font-size: 20px;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box {
+  padding-top: 24px;
+  padding-left: 23px;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box {
+    padding-top: 4px;
+    padding-left: 13px;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .desc-box {
+  font-size: 20px;
+  color: #000000;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .desc-box {
+    font-size: 20px;
+  }
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .desc-box.br-none br {
+    display: none;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box {
+  padding-top: 10px;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box {
+    padding-top: 6px;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box.install-btn .btn .txt {
+  color: yellow;
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .txt {
+  font-size: 20px;
+  color: lightblue;
+  line-height: 18px;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .txt {
+    font-size: 20px;
+    line-height: 12px;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .ic {
+  width: 18px;
+  height: 18px;
+}
+@media (max-width: 800px) {
+  section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .ic {
+    width: 12px;
+    height: 12px;
+  }
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .ic.ic-blue {
+  background: url("./img/ic_mania_right_blue.svg") no-repeat center/cover;
+}
+section.mania-home-benefit .inner .benefit-content-group ul.benefit-content-list li .item-box .info-box .con-box .btn-box .btn .ic.ic-yellow {
+  background: url("./img/ic_mania_right_yellow.svg") no-repeat center/cover;
+}
 
 section.mania-home-banner {
-  padding-bottom: 122px; }
-  @media (max-width: 800px) {
-    section.mania-home-banner {
-      padding-bottom: 18px; } }
-  section.mania-home-banner .banner-wrap {
-    max-width: 1320px;
-    width: calc(100% - 40px);
-    margin: 0 auto;
-    display: flex;
+  padding-bottom: 122px;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner {
+    padding-bottom: 18px;
+  }
+}
+section.mania-home-banner .banner-wrap {
+  max-width: 1320px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.mania-home-banner .banner-wrap .banner-title-box {
+  text-align: center;
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-title-box {
+    padding-top: 10px;
+    order: 2;
+    font-size: 20px;
+    text-align: left;
+  }
+}
+@media (max-width: 800px) and (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-title-box br {
+    display: none;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-title-box .point {
+  color: red;
+}
+section.mania-home-banner .banner-wrap .banner-contents-box {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 155px;
+  border: 3px solid #DD3C3C;
+  height: 181px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box {
+    margin-top: 96px;
+    order: 1;
+    border-width: 2px;
+    border-radius: 38px;
+    overflow: visible;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box {
+  width: 657px;
+  padding: 26px 33px 26px 112px;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box {
+    width: 100%;
+    padding: 33px 10px 10px;
+  }
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box {
+    text-align: center;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box .subject-box {
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box .subject-box {
+    font-size: 20px;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box .con-box {
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box .con-box {
+    font-size: 20px;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box {
     flex-direction: column;
-    align-items: center; }
-    section.mania-home-banner .banner-wrap .banner-title-box {
-      text-align: center;
-      font-size: 20px; }
-      @media (max-width: 800px) {
-        section.mania-home-banner .banner-wrap .banner-title-box {
-          padding-top: 10px;
-          order: 2;
-          font-size: 20px;
-          text-align: left; } }
-  @media (max-width: 800px) and (max-width: 800px) {
-    section.mania-home-banner .banner-wrap .banner-title-box br {
-      display: none; } }
-      section.mania-home-banner .banner-wrap .banner-title-box .point {
-        color: red; }
-    section.mania-home-banner .banner-wrap .banner-contents-box {
-      margin-top: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-radius: 155px;
-      border: 3px solid #DD3C3C;
-      height: 181px;
-      width: 100%;
-      position: relative;
-      overflow: hidden; }
-      @media (max-width: 800px) {
-        section.mania-home-banner .banner-wrap .banner-contents-box {
-          margin-top: 96px;
-          order: 1;
-          border-width: 2px;
-          border-radius: 38px;
-          overflow: visible; } }
-      section.mania-home-banner .banner-wrap .banner-contents-box .info-box {
-        width: 657px;
-        padding: 26px 33px 26px 112px; }
-        @media (max-width: 800px) {
-          section.mania-home-banner .banner-wrap .banner-contents-box .info-box {
-            width: 100%;
-            padding: 33px 10px 10px; } }
-        @media (max-width: 800px) {
-          section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box {
-            text-align: center; } }
-        section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box .subject-box {
-          font-size: 20px; }
-          @media (max-width: 800px) {
-            section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box .subject-box {
-              font-size: 20px; } }
-        section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box .con-box {
-          font-size: 20px; }
-          @media (max-width: 800px) {
-            section.mania-home-banner .banner-wrap .banner-contents-box .info-box .main-box .con-box {
-              font-size: 20px; } }
-        section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box {
-          display: flex;
-          align-items: center;
-          justify-content: space-between; }
-          @media (max-width: 800px) {
-            section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box {
-              flex-direction: column;
-              padding-top: 2px; } }
-          section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt {
-            font-size: 20px;
-            color: red; }
-            @media (max-width: 800px) {
-              section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt {
-                font-size: 20px; } }
-            section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt .month {
-              font-size: 20px;
-              color: #000000; }
-              @media (max-width: 800px) {
-                section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt .month {
-                  font-size: 20px; } }
-            section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt .desc {
-              font-size: 20px;
-              color: #eeeeee; }
-              @media (max-width: 800px) {
-                section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt .desc {
-                  font-size: 20px; } }
-          @media (max-width: 800px) {
-            section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box {
-              padding-top: 6px; } }
-          section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center; }
-            section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn .txt {
-              color: red;
-              font-size: 20px;
-              text-decoration: underline red 2px;
-              text-underline-offset: 4px; }
-              @media (max-width: 800px) {
-                section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn .txt {
-                  font-size: 20px;
-                  text-decoration: underline red 1px;
-                  text-underline-offset: 2px; } }
-            section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn .ic-red {
-              background: url("./img/ic_mania_right_red.svg") no-repeat center/cover;
-              width: 20px;
-              height: 20px; }
-              @media (max-width: 800px) {
-                section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn .ic-red {
-                  width: 14px;
-                  height: 14px; } }
-      section.mania-home-banner .banner-wrap .banner-contents-box .img-box {
-        margin-right: -4px;
-        flex: 1;
-        min-width: 0;
-        height: 100%;
-        background: url("./img/img_mania_banner.png") no-repeat center/100% 100%; }
-        @media (max-width: 800px) {
-          section.mania-home-banner .banner-wrap .banner-contents-box .img-box {
-            position: absolute;
-            background: url("./img/img_mania_banner_m.png") no-repeat center/cover;
-            width: 118px;
-            aspect-ratio: 1/1;
-            height: auto;
-            left: 50%;
-            top: -66px;
-            transform: translateX(-50%); } }
+    padding-top: 2px;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt {
+  font-size: 20px;
+  color: red;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt {
+    font-size: 20px;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt .month {
+  font-size: 20px;
+  color: #000000;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt .month {
+    font-size: 20px;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt .desc {
+  font-size: 20px;
+  color: #eeeeee;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .price-box .price-txt .desc {
+    font-size: 20px;
+  }
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box {
+    padding-top: 6px;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn .txt {
+  color: red;
+  font-size: 20px;
+  text-decoration: underline red 2px;
+  text-underline-offset: 4px;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn .txt {
+    font-size: 20px;
+    text-decoration: underline red 1px;
+    text-underline-offset: 2px;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn .ic-red {
+  background: url("./img/ic_mania_right_red.svg") no-repeat center/cover;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .info-box .sub-box .sign-btn-box .sign-btn .ic-red {
+    width: 14px;
+    height: 14px;
+  }
+}
+section.mania-home-banner .banner-wrap .banner-contents-box .img-box {
+  margin-right: -4px;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  background: url("./img/img_mania_banner.png") no-repeat center/100% 100%;
+}
+@media (max-width: 800px) {
+  section.mania-home-banner .banner-wrap .banner-contents-box .img-box {
+    position: absolute;
+    background: url("./img/img_mania_banner_m.png") no-repeat center/cover;
+    width: 118px;
+    aspect-ratio: 1/1;
+    height: auto;
+    left: 50%;
+    top: -66px;
+    transform: translateX(-50%);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
