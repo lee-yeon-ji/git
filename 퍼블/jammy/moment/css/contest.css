@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*
+AUTH : ssooya
+VERSION : version 2
+*/
+/**********
+펑션
+***********/
+/**********
+텍스트 자간
+***********/
+/**********
+텍스트 말줄임
+***********/
+/**********
+아이콘
+***********/
+section.moment-page section.page-title {
+  padding-top: 60px;
+}
+@media (max-width: 1160px) {
+  section.moment-page section.page-title {
+    padding-top: 0;
+  }
+}
+section.moment-page section.page-title .title-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.moment-page section.page-title .title-img-box img.web {
+  aspect-ratio: 1273/224;
+}
+@media (max-width: 1160px) {
+  section.moment-page section.page-title .title-img-box img.web {
+    display: none;
+  }
+}
+section.moment-page section.page-title .title-img-box img.mobile {
+  display: none;
+  width: 100%;
+  aspect-ratio: 375/142;
+}
+@media (max-width: 1160px) {
+  section.moment-page section.page-title .title-img-box img.mobile {
+    display: block;
+  }
+}
+section.moment-page section.page-title .title-con-box {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+  text-align: center;
+  padding-top: 15px;
+}
+@media (max-width: 1160px) {
+  section.moment-page section.page-title .title-con-box .mobile-enter {
+    display: block;
+  }
+  section.moment-page section.page-title .title-con-box br {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=contest.css.map */

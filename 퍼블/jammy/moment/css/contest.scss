@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import "global.scss";
+
+section.moment-page {
+
+	section.page-title {
+		padding-top: 60px;
+
+		@include m{
+		    padding-top: 0 ;
+		}
+
+		.title-img-box{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+
+			img{
+
+				&.web{
+					aspect-ratio: 1273 / 224;
+
+					@include m{
+					    display: none;
+					}
+
+				}
+
+				&.mobile{
+					display: none;
+					width: 100%;
+					aspect-ratio: 375 / 142;
+
+					@include m{
+						display: block;
+					}
+				}
+			}
+		}
+
+		.title-con-box{
+			font-size: 18px;
+			letter-spacing: -0.02em;
+			line-height: 140%;
+			text-align: center;
+			padding-top: 15px;
+
+			@include m{
+
+				.mobile-enter{
+					display: block;
+
+				}
+
+				br{
+					display: none;
+				}
+			}
+
+
+		}
+
+
+	}
+
+	section.contest-page-event{
+		.event-box{
+
+			.event-wrap{
+				.swiper-group-box{
+
+
+					.swiper{
+
+						&.swiper-event{
+							.swiper-title-box{
+
+								.swiper-button-prev{
+
+								}
+
+								.txt-box{
+
+								}
+
+								.swiper-button-next{
+
+								}
+							}
+
+
+							.item-wrap{
+
+								.img-box{
+
+
+
+								}
+
+
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
